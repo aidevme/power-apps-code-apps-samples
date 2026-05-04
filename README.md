@@ -1,5 +1,7 @@
 # Power Apps Code Apps Samples
 
+![Dataverse Actions, Functions & Flows in Power Apps Code Apps](assets/dataverse-actions-functions-flows-code-apps-social-preview.png)
+
 Community samples for Power Apps Code Apps built with React, TypeScript, and the Power Platform CLI. Covers Dataverse integration, connectors, ALM, and pro-code patterns. Curated for Power Platform architects and senior developers.
 
 ## Overview
