@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Power Apps Code Apps Documentation
+    url: https://learn.microsoft.com/power-apps/developer/component-framework/code-components-overview
+    about: Official Microsoft documentation for Power Apps Code Apps
+  - name: Power Platform CLI Reference
+    url: https://learn.microsoft.com/power-platform/developer/cli/introduction
+    about: Full reference for the Power Platform CLI (pac)
+  - name: Power Platform Community
+    url: https://powerusers.microsoft.com
+    about: Ask questions and connect with the Power Platform community
