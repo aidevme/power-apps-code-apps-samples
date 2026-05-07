@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const README_URL =
-  'https://raw.githubusercontent.com/aidevme/power-apps-code-apps-samples/main/README.md'
+  'https://raw.githubusercontent.com/aidevme/power-apps-code-apps-samples/main/docs/code-apps/README.md'
 
 /** Result returned by {@link useReadme}. */
 export interface IUseReadmeResult {

@@ -47,15 +47,24 @@ This repository contains community-contributed samples demonstrating how to buil
 
 ## Repository Structure
 
-```
-power-apps-code-apps-samples/
-├── samples/
-│   └── <sample-name>/          # Individual sample folders
-│       ├── src/                # React/TypeScript source code
-│       ├── public/
-│       ├── package.json
-│       └── README.md           # Sample-specific documentation
-└── README.md
+```mermaid
+graph TD
+    ROOT["📁 power-apps-code-apps-samples/"]
+    README_ROOT["📄 README.md"]
+    SAMPLES["📁 samples/"]
+    SAMPLE["📁 &lt;sample-name&gt;/"]
+    SRC["📁 src/\nReact/TypeScript source code"]
+    PUBLIC["📁 public/"]
+    PKG["📄 package.json"]
+    README_SAMPLE["📄 README.md\nSample-specific documentation"]
+
+    ROOT --> README_ROOT
+    ROOT --> SAMPLES
+    SAMPLES --> SAMPLE
+    SAMPLE --> SRC
+    SAMPLE --> PUBLIC
+    SAMPLE --> PKG
+    SAMPLE --> README_SAMPLE
 ```
 
 ## Contributing

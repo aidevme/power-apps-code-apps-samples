@@ -4,8 +4,10 @@ import remarkGfm from 'remark-gfm'
 import { useReadme } from '../../hooks'
 import { useDocumentationsAppStyles } from '../../styles/documentationsapp.styles'
 
-const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/aidevme/power-apps-code-apps-samples/main/'
-const GITHUB_BLOB_BASE = 'https://github.com/aidevme/power-apps-code-apps-samples/blob/main/'
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/aidevme/power-apps-code-apps-samples/main/docs/code-apps/'
+const GITHUB_BLOB_BASE = 'https://github.com/aidevme/power-apps-code-apps-samples/blob/main/docs/code-apps/'
+const GITHUB_RAW_ROOT = 'https://raw.githubusercontent.com/aidevme/power-apps-code-apps-samples/main/'
+const GITHUB_BLOB_ROOT = 'https://github.com/aidevme/power-apps-code-apps-samples/blob/main/'
 
 /**
  * Resolves relative URLs found in the README against the GitHub raw content
@@ -13,12 +15,17 @@ const GITHUB_BLOB_BASE = 'https://github.com/aidevme/power-apps-code-apps-sample
  */
 function resolveReadmeUrl(url: string): string {
   if (/^https?:\/\//i.test(url) || url.startsWith('#')) return url
-  // Images: serve from raw so <img> src works
+
+  // Resolve ../.. traversal relative to docs/code-apps/
+  const resolved = new URL(url, GITHUB_RAW_BASE).href
+
   if (/\.(png|jpe?g|gif|webp|svg)$/i.test(url)) {
-    return GITHUB_RAW_BASE + url.replace(/^\.?\//, '')
+    return resolved
   }
-  // Other relative links: point to GitHub blob view
-  return GITHUB_BLOB_BASE + url.replace(/^\.?\//, '')
+  // For non-image relative links swap raw base for blob base
+  return resolved
+    .replace(GITHUB_RAW_ROOT, GITHUB_BLOB_ROOT)
+    .replace(GITHUB_RAW_BASE, GITHUB_BLOB_BASE)
 }
 
 /** Props for {@link DocumentationsApp}. */
