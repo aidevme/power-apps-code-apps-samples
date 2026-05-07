@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "appId": null,
+  "appDisplayName": "Dataverse Actions Sample App",
+  "region": "prod",
+  "environmentId": "8a15a5d2-99b7-e4a6-9d7b-d595c9131107",
+  "description": " ",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:3000",
+  "logoPath": "Default",
+  "connectionReferences": {
+    "f27818e7-1414-4ea1-8333-4ac4700f31c9": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+      "displayName": "Logic flows",
+      "dataSources": [
+        "follow_upflow"
+      ],
+      "workflowDetails": {
+        "workflowEntityId": "74601614-c947-f111-bec6-00224805f0c7",
+        "workflowDisplayName": "Follow-up flow",
+        "workflowName": "110a4767-6bea-065f-9d4f-15bf58293c16"
+      }
+    }
+  },
+  "databaseReferences": {
+    "default.cds": {
+      "dataSources": {
+        "environment_39a902ba": {
+          "entitySetName": "Environment",
+          "logicalName": "environment_39a902ba",
+          "isHidden": false
+        },
+        "users": {
+          "entitySetName": "systemusers",
+          "logicalName": "systemuser"
+        },
+        "entities": {
+          "entitySetName": "entities",
+          "logicalName": "entity"
+        },
+        "accounts": {
+          "entitySetName": "accounts",
+          "logicalName": "account"
+        },
+        "contacts": {
+          "entitySetName": "contacts",
+          "logicalName": "contact"
+        },
+        "leads": {
+          "entitySetName": "leads",
+          "logicalName": "lead"
+        },
+        "opportunities": {
+          "entitySetName": "opportunities",
+          "logicalName": "opportunity"
+        },
+        "businessunits": {
+          "entitySetName": "businessunits",
+          "logicalName": "businessunit"
+        },
+        "currencies": {
+          "entitySetName": "transactioncurrencies",
+          "logicalName": "transactioncurrency"
+        },
+        "teams": {
+          "entitySetName": "teams",
+          "logicalName": "team"
+        },
+        "tasks": {
+          "entitySetName": "tasks",
+          "logicalName": "task"
+        },
+        "emailmessages": {
+          "entitySetName": "emails",
+          "logicalName": "email"
+        },
+        "appointments": {
+          "entitySetName": "appointments",
+          "logicalName": "appointment"
+        },
+        "processes": {
+          "entitySetName": "workflows",
+          "logicalName": "workflow"
+        }
+      },
+      "environmentVariableName": ""
+    }
+  }
+}

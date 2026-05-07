@@ -1,0 +1,140 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-footer {
+  margin-top: auto;
+}
+
+/* Header */
+.app-header {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 60px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #888;
+  margin: 0;
+}
+
+/* Footer */
+.app-footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.85em;
+  color: #888;
+}
+
+.app-footer p {
+  margin: 0 0 0.5rem;
+}
+
+.app-footer a {
+  color: #9ca3ff;
+}
+
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card p {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.95em;
+}
+
+.card label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  font-weight: 500;
+  gap: 0.2rem;
+}
+
+.card button {
+  align-self: flex-start;
+}
+
+.result {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.85em;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+}
+
+.result--loading {
+  background: rgba(100, 108, 255, 0.1);
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  color: #aaa;
+}
+
+.result--success {
+  background: rgba(0, 200, 100, 0.1);
+  border: 1px solid rgba(0, 200, 100, 0.3);
+  color: #6effc0;
+}
+
+.result--error {
+  background: rgba(255, 80, 80, 0.1);
+  border: 1px solid rgba(255, 80, 80, 0.3);
+  color: #ff9090;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.65em;
+  font-weight: 600;
+  padding: 0.2em 0.55em;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-left: 0.4em;
+}
+
+.badge--function {
+  background: rgba(100, 108, 255, 0.15);
+  border: 1px solid rgba(100, 108, 255, 0.4);
+  color: #9ca3ff;
+}
+
+.badge--action {
+  background: rgba(0, 200, 120, 0.15);
+  border: 1px solid rgba(0, 200, 120, 0.4);
+  color: #6effc0;
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .card p {
+    color: #555;
+  }
+  .result--success {
+    color: #1a7a4a;
+  }
+  .result--error {
+    color: #a00;
+  }
+}
