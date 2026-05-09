@@ -35,16 +35,21 @@ Follow the prompts to authenticate and select your environment. This creates `po
 
 ## Step 3: Add Dataverse data sources
 
-Use the PAC CLI to generate TypeScript services and models for each Dataverse table you want to use:
+Use the PAC CLI to generate TypeScript services and models for each Dataverse tabx#le you want to use:
 
 ```bash
+# Custumer tables
 pac code add-data-source -a dataverse -t account
 pac code add-data-source -a dataverse -t contact
+# Sales tables
 pac code add-data-source -a dataverse -t lead
 pac code add-data-source -a dataverse -t opportunity
+# System tables
 pac code add-data-source -a dataverse -t systemuser
+pac code add-data-source -a dataverse -t aaduser
 pac code add-data-source -a dataverse -t businessunit
 pac code add-data-source -a dataverse -t transactioncurrency
+
 pac code add-data-source -a dataverse -t team
 pac code add-data-source -a dataverse -t entity
 
@@ -55,7 +60,19 @@ pac code add-data-source -a dataverse -t appointment
 # Elastic table (Cosmos DB-backed, high-volume, supports TTL and JSON columns)
 pac code add-data-source -a dataverse -t aidevme_appeventlog
 
+# Workflow
 pac code add-data-source -a dataverse -t workflow
+
+pac code add-data-source -a dataverse -t environmentvariablevalue
+pac code add-data-source -a dataverse -t environmentvariabledefinition
+
+
+pac code add-data-source -a dataverse -t usersettings
+pac code add-data-source -a dataverse -t savedquery
+pac code add-data-source -a dataverse -t systemform
+pac code add-data-source -a dataverse -t organization
+
+
 ```
 
 Each command generates:

@@ -8,8 +8,9 @@ export const useDataverseTableStyles = makeStyles({
   selectedRow: {
     backgroundColor: tokens.colorNeutralBackground1Selected,
   },
-  toolbar: {
-    paddingBottom: tokens.spacingVerticalS,
+  viewSelector: {
+    display: 'inline-flex',
+    alignItems: 'center',
   },
   statusBar: {
     display: 'inline-flex',

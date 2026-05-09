@@ -5,6 +5,7 @@
 
 import type { IOperationResult } from '@microsoft/power-apps/data';
 import type { ManualTriggerInput } from '../models/Follow_upflowModel';
+import type { ResponseActionOutput } from '../models/Follow_upflowModel';
 import { dataSourcesInfo } from '../../../.power/schemas/appschemas/dataSourcesInfo';
 import { getClient } from '@microsoft/power-apps/data';
 
@@ -13,10 +14,10 @@ export class Follow_upflowService {
 
   private static readonly client = getClient(dataSourcesInfo);
 
-  public static async Run(input: ManualTriggerInput): Promise<IOperationResult<void>> {
+  public static async Run(input: ManualTriggerInput): Promise<IOperationResult<ResponseActionOutput>> {
     const params: { input: ManualTriggerInput } = { input };
     const allParams = { ...params, "api-version": "2015-02-01-preview" };
-    const result = await Follow_upflowService.client.executeAsync<{ input: ManualTriggerInput }, void>(
+    const result = await Follow_upflowService.client.executeAsync<{ input: ManualTriggerInput }, ResponseActionOutput>(
       {
         connectorOperation: {
           tableName: Follow_upflowService.dataSourceName,

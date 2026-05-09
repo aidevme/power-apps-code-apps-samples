@@ -1,6 +1,10 @@
 import { Title1, Body1, Caption1, Badge, Button, Tooltip, ToggleButton } from '@fluentui/react-components'
 import { DatabasePlugConnectedRegular, SettingsRegular, WeatherSunnyRegular, WeatherMoonRegular } from '@fluentui/react-icons'
-import { useHeaderStyles } from '../styles/header.styles'
+import { useHeaderStyles } from '../../styles/header.styles'
+import { AppSearchBox } from '../search/SearchBox'
+import { LanguageSelector } from '../selectors/LanguageSelector'
+import { useLocation } from 'react-router-dom'
+import { ROUTES } from '../../tools'
 
 /** Props for {@link Header}. */
 interface IHeaderProps {
@@ -16,6 +20,14 @@ interface IHeaderProps {
   onThemeToggle: () => void;
   /** Called when the user clicks the Settings button. */
   onSettings: () => void;
+  /** Current value of the search input. */
+  searchValue?: string;
+  /** Called when the search input value changes. */
+  onSearchChange?: (value: string) => void;
+  /** Currently selected language LCID. @defaultValue `1033` */
+  selectedLanguage?: number;
+  /** Called when the user selects a different language. */
+  onLanguageChange?: (lcid: number) => void;
 }
 
 /**
@@ -36,8 +48,10 @@ interface IHeaderProps {
  * ```
  */
 
-export function Header({ title, description, tags, isDark, onThemeToggle, onSettings }: IHeaderProps) {
+export function Header({ title, description, tags, isDark, onThemeToggle, onSettings, searchValue, onSearchChange, selectedLanguage, onLanguageChange }: IHeaderProps) {
   const styles = useHeaderStyles()
+  const { pathname } = useLocation()
+  const isSearchEnabled = pathname === ROUTES.DOCS
   return (
     <header className={styles.header}>
       <div className={styles.top}>
@@ -57,6 +71,7 @@ export function Header({ title, description, tags, isDark, onThemeToggle, onSett
           ))}
         </div>
       )}
+      <AppSearchBox value={searchValue} onChange={onSearchChange} isDisabled={!isSearchEnabled} />
       <div className={styles.controls}>
         <Tooltip
           content={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
@@ -81,6 +96,11 @@ export function Header({ title, description, tags, isDark, onThemeToggle, onSett
             onClick={onSettings}
             aria-label="Settings"
           />
+        </Tooltip>
+        <Tooltip content="Select display language" relationship="description" positioning="below" withArrow>
+          <span>
+            <LanguageSelector value={selectedLanguage} onChange={onLanguageChange} />
+          </span>
         </Tooltip>
       </div>
     </header>

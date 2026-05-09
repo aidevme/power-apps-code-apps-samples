@@ -30,6 +30,7 @@ import { Tasksprioritycode, Tasksstatuscode } from '../generated/models/TasksMod
 import type { Tasks } from '../generated/models/TasksModel'
 import type { Teams } from '../generated/models/TeamsModel'
 import type { Transactioncurrencies } from '../generated/models/TransactioncurrenciesModel'
+import { formatDate } from './formating'
 
 /**
  * Column definition for a Dataverse entity table of record type `T`.
@@ -80,7 +81,7 @@ export const accountColumns: IColumn<Accounts>[] = [
   { key: 'emailaddress1',         label: 'Email (Primary Contact)', render: (i) => i.emailaddress1 ?? '\u2014' },
   { key: 'statecode',             label: 'Status',                  render: (i) => Accountsstatecode[i.statecode] },
   { key: 'createdBy',             label: 'Created By',              render: (i) => i._createdby_value ?? '\u2014' },
-  { key: 'createdon',             label: 'Created On',              render: (i) => i.createdon ? new Date(i.createdon).toLocaleDateString() : '\u2014' },
+  { key: 'createdon',             label: 'Created On',              render: (i) => formatDate(i.createdon) },
 ]
 
 /**
@@ -97,7 +98,7 @@ export const contactColumns: IColumn<Contacts>[] = [
   { key: 'telephone1',           label: 'Business Phone', render: (i) => i.telephone1 ?? '\u2014' },
   { key: 'statecode',            label: 'Status',         render: (i) => Contactsstatecode[i.statecode] },
   { key: 'createdBy',            label: 'Created By',     render: (i) => i._createdby_value ?? '\u2014' },
-  { key: 'createdon',            label: 'Created On',     render: (i) => i.createdon ? new Date(i.createdon).toLocaleDateString() : '\u2014' },
+  { key: 'createdon',            label: 'Created On',     render: (i) => formatDate(i.createdon) },
 ]
 
 /**
@@ -141,8 +142,8 @@ export const appointmentColumns: IColumn<Appointments>[] = [
   { key: 'regardingobjectidname',  label: 'Regarding',           render: (i) => i.regardingobjectidname ?? '\u2014' },
   { key: 'requiredattendees',      label: 'Required Attendees',  render: (i) => i.requiredattendees ?? '\u2014' },
   { key: 'prioritycode',           label: 'Priority',            render: (i) => i.prioritycode != null ? Appointmentsprioritycode[i.prioritycode] : '\u2014' },
-  { key: 'scheduledstart',         label: 'Start Time',          render: (i) => new Date(i.scheduledstart).toLocaleString() },
-  { key: 'scheduledend',           label: 'End Time',            render: (i) => new Date(i.scheduledend).toLocaleString() },
+  { key: 'scheduledstart',         label: 'Start Time',          render: (i) => formatDate(i.scheduledstart) },
+  { key: 'scheduledend',           label: 'End Time',            render: (i) => formatDate(i.scheduledend) },
   { key: 'location',               label: 'Location',            render: (i) => i.location ?? '\u2014' },
   { key: 'statecode',              label: 'Status',              render: (i) => Appointmentsstatecode[i.statecode] },
   { key: 'owneridname',            label: 'Owner',               render: (i) => i.owneridname },
@@ -162,7 +163,7 @@ export const emailColumns: IColumn<Emails>[] = [
   { key: 'regardingobjectidname', label: 'Regarding',     render: (i) => i.regardingobjectidname ?? '\u2014' },
   { key: 'prioritycode',          label: 'Priority',      render: (i) => i.prioritycode != null ? Emailsprioritycode[i.prioritycode] : '\u2014' },
   { key: 'statuscode',            label: 'Status Reason', render: (i) => i.statuscode != null ? Emailsstatuscode[i.statuscode] : '\u2014' },
-  { key: 'modifiedon',            label: 'Modified On',   render: (i) => i.modifiedon ? new Date(i.modifiedon).toLocaleDateString() : '\u2014' },
+  { key: 'modifiedon',            label: 'Modified On',   render: (i) => formatDate(i.modifiedon) },
 ]
 
 /**
@@ -178,7 +179,7 @@ export const leadColumns: IColumn<Leads>[] = [
   { key: 'owneridname', label: 'Owner',         render: (i) => i.owneridname },
   { key: 'statuscode',  label: 'Status Reason', render: (i) => i.statuscode != null ? Leadsstatuscode[i.statuscode] : '\u2014' },
   { key: 'createdBy',   label: 'Created By',    render: (i) => i._createdby_value ?? '\u2014' },
-  { key: 'createdon',   label: 'Created On',    render: (i) => i.createdon ? new Date(i.createdon).toLocaleDateString() : '\u2014' },
+  { key: 'createdon',   label: 'Created On',    render: (i) => formatDate(i.createdon) },
 ]
 
 /**
@@ -194,9 +195,9 @@ export const opportunityColumns: IColumn<Opportunities>[] = [
   { key: 'customeridname',        label: 'Potential Customer',  render: (i) => i.customeridname },
   { key: 'emailaddress',          label: 'Email Address',       render: (i) => i.emailaddress ?? '\u2014' },
   { key: 'statecode',             label: 'Status',              render: (i) => Opportunitiesstatecode[i.statecode] },
-  { key: 'actualclosedate',       label: 'Actual Close Date',   render: (i) => i.actualclosedate ? new Date(i.actualclosedate).toLocaleDateString() : '\u2014' },
+  { key: 'actualclosedate',       label: 'Actual Close Date',   render: (i) => formatDate(i.actualclosedate) },
   { key: 'actualvalue',           label: 'Actual Revenue',      render: (i) => i.actualvalue != null ? i.actualvalue.toLocaleString() : '\u2014' },
-  { key: 'estimatedclosedate',    label: 'Est. Close Date',     render: (i) => i.estimatedclosedate ? new Date(i.estimatedclosedate).toLocaleDateString() : '\u2014' },
+  { key: 'estimatedclosedate',    label: 'Est. Close Date',     render: (i) => formatDate(i.estimatedclosedate) },
   { key: 'estimatedvalue',        label: 'Est. Revenue',        render: (i) => i.estimatedvalue != null ? i.estimatedvalue.toLocaleString() : '\u2014' },
   { key: 'opportunityratingcode', label: 'Rating',              render: (i) => i.opportunityratingcode != null ? Opportunitiesopportunityratingcode[i.opportunityratingcode] : '\u2014' },
   { key: 'closeprobability',      label: 'Probability',         render: (i) => i.closeprobability != null ? `${i.closeprobability}%` : '\u2014' },
@@ -214,7 +215,7 @@ export const taskColumns: IColumn<Tasks>[] = [
   { key: 'regardingobjectidname', label: 'Regarding',     render: (i) => i.regardingobjectidname ?? '\u2014' },
   { key: 'owneridname',           label: 'Owner',         render: (i) => i.owneridname },
   { key: 'prioritycode',          label: 'Priority',      render: (i) => i.prioritycode != null ? Tasksprioritycode[i.prioritycode] : '\u2014' },
-  { key: 'scheduledend',          label: 'Due Date',      render: (i) => i.scheduledend ? new Date(i.scheduledend).toLocaleDateString() : '\u2014' },
+  { key: 'scheduledend',          label: 'Due Date',      render: (i) => formatDate(i.scheduledend) },
   { key: 'statuscode',            label: 'Status Reason', render: (i) => i.statuscode != null ? Tasksstatuscode[i.statuscode] : '\u2014' },
 ]
 
@@ -256,8 +257,8 @@ export const appEventLogColumns: IColumn<Aidevme_appeventlogs>[] = [
   { key: 'aidevme_eventtype',         label: 'Event Type',     render: (i) => i.aidevme_eventtype != null ? Aidevme_appeventlogseventtype[i.aidevme_eventtype] : '\u2014' },
   { key: 'aidevme_status',            label: 'Status',         render: (i) => i.aidevme_status != null ? Aidevme_appeventlogsstatus[i.aidevme_status] : '\u2014' },
   { key: 'aidevme_entitylogicalname', label: 'Entity',         render: (i) => i.aidevme_entitylogicalname ?? '\u2014' },
-  { key: 'aidevme_durationms',        label: 'Duration (ms)',  render: (i) => i.aidevme_durationms != null ? String(i.aidevme_durationms) : '\u2014' },
+  { key: 'aidevme_duration',          label: 'Duration (ms)',  render: (i) => { const d = (i as unknown as { aidevme_duration?: number }).aidevme_duration; return d != null ? String(d) : '\u2014' } },
   { key: 'aidevme_sessionid',         label: 'Session ID',     render: (i) => i.aidevme_sessionid ?? '\u2014' },
-  { key: 'createdon',                 label: 'Created On',     render: (i) => i.createdon ? new Date(i.createdon).toLocaleString() : '\u2014' },
+  { key: 'createdon',                 label: 'Created On',     render: (i) => formatDate(i.createdon) },
   { key: 'ttlinseconds',              label: 'TTL (s)',         render: (i) => i.ttlinseconds != null ? String(i.ttlinseconds) : '\u2014' },
 ]

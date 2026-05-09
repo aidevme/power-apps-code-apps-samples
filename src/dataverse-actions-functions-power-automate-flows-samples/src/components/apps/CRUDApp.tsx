@@ -1,4 +1,5 @@
 import {
+  Caption1,
   Dropdown,
   Field,
   Option,
@@ -98,6 +99,7 @@ export function CRUDApp({ entities, entitiesLoading: _entitiesLoading }: ICRUDAp
     const commonProps = {
       selectedIds,
       onSelectionChange: (ids: Set<string>) => setSelectedIds(ids),
+      entityTypeCode: selectedEntity?.meta?.objecttypecode ?? undefined,
     }
     if (selectedLogicalName === 'account') {
       return <DataverseTable entityType="account" records={accounts} loading={accountsLoading} populated createdByNames={createdByNames}
@@ -212,6 +214,8 @@ export function CRUDApp({ entities, entitiesLoading: _entitiesLoading }: ICRUDAp
 
   return (
     <div className={styles.root}>
+      
+      <Caption1 className={styles.description}>Perform create, read, update, and delete operations against Dataverse table records via the OData v4 REST API. Select an entity from the dropdown to load its records. Use the toolbar to create or edit records (opens the Dataverse form), delete selected rows, and refresh the list. Demonstrates typed entity models, query options ($select, $filter, $expand), and the PAC CLI-generated service layer.</Caption1>
       <div className={styles.fieldWrapper}>
         <Field label="Select an Entity" required>
           <Dropdown

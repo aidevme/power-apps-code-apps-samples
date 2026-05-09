@@ -54,8 +54,17 @@
               }
             ],
             "responses": {
-              "202": {
-                "description": "Accepted"
+              "200": {
+                "description": "Ok",
+                "schema": {
+                  "$ref": "#/definitions/ResponseActionOutput"
+                }
+              },
+              "default": {
+                "description": "The Flow Response.",
+                "schema": {
+                  "type": "object"
+                }
               }
             }
           }
@@ -71,11 +80,34 @@
               "x-ms-dynamically-added": true,
               "description": "Please enter your input",
               "x-ms-content-hint": "TEXT"
+            },
+            "text_1": {
+              "title": "description",
+              "type": "string",
+              "x-ms-dynamically-added": true,
+              "description": "Please enter your input",
+              "x-ms-content-hint": "TEXT"
             }
           },
           "required": [
-            "text"
+            "text",
+            "text_1"
           ]
+        },
+        "ResponseActionOutput": {
+          "type": "object",
+          "properties": {
+            "issuccess": {
+              "title": "isSuccess",
+              "x-ms-dynamically-added": true,
+              "type": "boolean"
+            },
+            "message": {
+              "title": "message",
+              "x-ms-dynamically-added": true,
+              "type": "string"
+            }
+          }
         }
       },
       "basePath": "/apim/logicflows"

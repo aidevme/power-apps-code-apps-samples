@@ -5,7 +5,7 @@ import {
   mergeClasses,
 } from '@fluentui/react-components'
 import { OpenRegular } from '@fluentui/react-icons'
-import { useFooterStyles } from '../styles/footer.styles'
+import { useFooterStyles } from '../../styles/footer.styles'
 
 interface IFooterProps {
   description: string

@@ -10,4 +10,7 @@ export const useCRUDAppStyles = makeStyles({
   fieldWrapper: {
     maxWidth: '400px',
   },
+  description: {
+    color: tokens.colorNeutralForeground3,
+  },
 })

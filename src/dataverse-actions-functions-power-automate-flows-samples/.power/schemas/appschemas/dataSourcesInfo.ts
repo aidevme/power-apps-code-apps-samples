@@ -54,10 +54,31 @@ export const dataSourcesInfo = {
     "dataSourceType": "Dataverse",
     "apis": {}
   },
+  "environmentvariabledefinitions": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "environmentvariabledefinitionid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "environmentvariablevalues": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "environmentvariablevalueid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
   "leads": {
     "tableId": "",
     "version": "",
     "primaryKey": "leadid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "aadusers": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "aaduserid",
     "dataSourceType": "Dataverse",
     "apis": {}
   },
@@ -68,10 +89,24 @@ export const dataSourcesInfo = {
     "dataSourceType": "Dataverse",
     "apis": {}
   },
+  "organizations": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "organizationid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
   "workflows": {
     "tableId": "",
     "version": "",
     "primaryKey": "workflowid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "systemforms": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "formid",
     "dataSourceType": "Dataverse",
     "apis": {}
   },
@@ -96,10 +131,17 @@ export const dataSourcesInfo = {
     "dataSourceType": "Dataverse",
     "apis": {}
   },
-  "aidevme_appeventlogs": {
+  "usersettingscollection": {
     "tableId": "",
     "version": "",
-    "primaryKey": "aidevme_appeventlogid",
+    "primaryKey": "systemuserid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "savedqueries": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "savedqueryid",
     "dataSourceType": "Dataverse",
     "apis": {}
   },
@@ -133,8 +175,11 @@ export const dataSourcesInfo = {
           }
         ],
         "responseInfo": {
-          "202": {
-            "type": "void"
+          "200": {
+            "type": "object"
+          },
+          "default": {
+            "type": "object"
           }
         }
       }

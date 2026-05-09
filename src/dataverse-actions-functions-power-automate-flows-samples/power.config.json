@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "appId": null,
+  "appId": "86e58a9d-fee3-4e37-98bc-1d7f14fe3458",
   "appDisplayName": "Dataverse Actions Sample App",
   "region": "prod",
   "environmentId": "8a15a5d2-99b7-e4a6-9d7b-d595c9131107",
@@ -15,12 +15,14 @@
       "displayName": "Logic flows",
       "dataSources": [
         "follow_upflow"
-      ],
-      "workflowDetails": {
-        "workflowEntityId": "74601614-c947-f111-bec6-00224805f0c7",
-        "workflowDisplayName": "Follow-up flow",
-        "workflowName": "110a4767-6bea-065f-9d4f-15bf58293c16"
-      }
+      ]
+    },
+    "ca112a9d-7c88-4f2f-960d-d956f038c0cc": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+      "displayName": "Logic flows",
+      "dataSources": [
+        "follow_upflow"
+      ]
     }
   },
   "databaseReferences": {
@@ -82,6 +84,34 @@
         "processes": {
           "entitySetName": "workflows",
           "logicalName": "workflow"
+        },
+        "environmentvariablevalues": {
+          "entitySetName": "environmentvariablevalues",
+          "logicalName": "environmentvariablevalue"
+        },
+        "environmentvariabledefinitions": {
+          "entitySetName": "environmentvariabledefinitions",
+          "logicalName": "environmentvariabledefinition"
+        },
+        "microsoftentraids": {
+          "entitySetName": "aadusers",
+          "logicalName": "aaduser"
+        },
+        "usersettings": {
+          "entitySetName": "usersettingscollection",
+          "logicalName": "usersettings"
+        },
+        "views": {
+          "entitySetName": "savedqueries",
+          "logicalName": "savedquery"
+        },
+        "systemforms": {
+          "entitySetName": "systemforms",
+          "logicalName": "systemform"
+        },
+        "organizations": {
+          "entitySetName": "organizations",
+          "logicalName": "organization"
         }
       },
       "environmentVariableName": ""

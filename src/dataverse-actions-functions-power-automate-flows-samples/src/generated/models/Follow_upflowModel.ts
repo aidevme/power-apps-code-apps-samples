@@ -6,4 +6,11 @@
 export interface ManualTriggerInput {
   // Please enter your input
   text: string;
+  // Please enter your input
+  text_1: string;
+}
+
+export interface ResponseActionOutput {
+  issuccess?: boolean;
+  message?: string;
 }

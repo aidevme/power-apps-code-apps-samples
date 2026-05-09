@@ -11,6 +11,7 @@ import {
   Input,
   Option,
   Spinner,
+  Textarea,
   makeStyles,
   tokens,
 } from '@fluentui/react-components'
@@ -104,6 +105,7 @@ export function PowerAutomateFlowsApp(_props: IPowerAutomateFlowsAppProps) {
   const [detailFlow, setDetailFlow] = useState<Workflows | null>(null)
   const [detailLoading, setDetailLoading] = useState(false)
   const [accountId, setAccountId] = useState('')
+  const [description, setDescription] = useState('')
   const [running, setRunning] = useState(false)
   const [runResult, setRunResult] = useState<'success' | 'error' | null>(null)
 
@@ -113,6 +115,8 @@ export function PowerAutomateFlowsApp(_props: IPowerAutomateFlowsAppProps) {
     setSelectedId(id)
     setDetailFlow(null)
     setRunResult(null)
+    setAccountId('')
+    setDescription('')
     if (!id) return
     setDetailLoading(true)
     const detail = await fetchWorkflowDetail(id)
@@ -124,13 +128,22 @@ export function PowerAutomateFlowsApp(_props: IPowerAutomateFlowsAppProps) {
     iso ? new Date(iso).toLocaleDateString(undefined, { dateStyle: 'medium' }) : '—'
 
   const handleRun = async () => {
-    if (!accountId.trim()) return
+    if (!accountId.trim() || !description.trim()) return
     setRunning(true)
     setRunResult(null)
     try {
-      await Follow_upflowService.Run({ text: accountId.trim() })
-      setRunResult('success')
-    } catch {
+      const result = await Follow_upflowService.Run({ text: accountId.trim(), text_1: description.trim() })
+      if (!result.success) {
+        console.error('[Follow_upflowService.Run] SDK error:', result.error)
+        setRunResult('error')
+      } else if (result.data?.issuccess === false) {
+        console.error('[Follow_upflowService.Run] Flow returned failure:', result.data.message)
+        setRunResult('error')
+      } else {
+        setRunResult('success')
+      }
+    } catch (err) {
+      console.error('[Follow_upflowService.Run] Exception:', err)
       setRunResult('error')
     } finally {
       setRunning(false)
@@ -195,28 +208,39 @@ export function PowerAutomateFlowsApp(_props: IPowerAutomateFlowsAppProps) {
               )}
 
               {!detailLoading && isFollowUpFlow(selectedFlow) && (
-                <div className={styles.runForm}>
+                <div className={styles.runForm} style={{ colorScheme: 'light' }}>
                   <Body2>Trigger flow</Body2>
+                  <Field label="Account ID">
+                    <Input
+                      appearance="outline"
+                      value={accountId}
+                      onChange={(_, d) => setAccountId(d.value)}
+                      placeholder="Enter account GUID…"
+                      disabled={running}
+                    />
+                  </Field>
                   <div className={styles.runRow}>
-                    <Field label="Account ID" className={styles.inputGrow}>
-                      <Input
-                        value={accountId}
-                        onChange={(_, d) => setAccountId(d.value)}
-                        placeholder="Enter account GUID…"
+                    <Field label="Description" className={styles.inputGrow}>
+                      <Textarea
+                        appearance="outline"
+                        value={description}
+                        onChange={(_, d) => setDescription(d.value)}
+                        placeholder="Enter description…"
                         disabled={running}
+                        rows={5}
                       />
                     </Field>
-                    <Button
-                      appearance="primary"
-                      icon={running ? <Spinner size="tiny" /> : <SendRegular />}
-                      onClick={handleRun}
-                      disabled={running || !accountId.trim()}
-                    >
-                      Run
-                    </Button>
                   </div>
+                  <Button
+                    appearance="primary"
+                    icon={running ? <Spinner size="tiny" /> : <SendRegular />}
+                    onClick={handleRun}
+                    disabled={running || !accountId.trim() || !description.trim()}
+                  >
+                    Run
+                  </Button>
                   {runResult === 'success' && <Caption1 style={{ color: tokens.colorPaletteGreenForeground1 }}>Flow triggered successfully.</Caption1>}
-                  {runResult === 'error' && <Caption1 style={{ color: tokens.colorPaletteRedForeground1 }}>Failed to trigger flow.</Caption1>}
+                  {runResult === 'error' && <Caption1 style={{ color: tokens.colorPaletteRedForeground1 }}>Failed to trigger flow. Check the browser console for details.</Caption1>}
                 </div>
               )}
             </Card>

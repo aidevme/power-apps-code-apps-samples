@@ -8,18 +8,11 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
-  Toolbar,
-  ToolbarButton,
-  ToolbarDivider,
   TableSelectionCell,
-  Tooltip,
 } from '@fluentui/react-components'
-import {
-  AddRegular,
-  EditRegular,
-  DeleteRegular,
-  ArrowClockwiseRegular,
-} from '@fluentui/react-icons'
+
+import { ViewSelector } from '../selectors/ViewSelector'
+import { DataverseTableToolbar } from '../toolbars/DataverseTableToolbars'
 import type { Accounts } from '../../generated/models/AccountsModel'
 import {
   accountColumns, appEventLogColumns, contactColumns, systemUserColumns, businessUnitColumns,
@@ -60,6 +53,11 @@ interface IDataverseTableBaseProps {
    * @defaultValue `{}`
    */
   companyNames?: Record<string, string>
+  /**
+   * Dataverse object type code for the entity (e.g. `1` for account, `2` for contact).
+   * Sourced from `objecttypecode` on the {@link Entities} metadata record.
+   */
+  entityTypeCode?: number
   /** Currently selected record IDs. */
   selectedIds?: Set<string>
   /** Called when the selection changes. */
@@ -225,6 +223,7 @@ export function DataverseTable(props: IDataverseTableProps) {
     populated = false,
     createdByNames = {},
     companyNames = {},
+    entityTypeCode,
     selectedIds = new Set<string>(),
     onSelectionChange,
     onNew,
@@ -234,22 +233,15 @@ export function DataverseTable(props: IDataverseTableProps) {
   } = props
   const businessUnitNames = (props.entityType === 'systemuser' || props.entityType === 'businessunit') ? (props.businessUnitNames ?? {}) : {}
 
+  const entityTypeCodeLabel = entityTypeCode !== undefined ? (
+    <ViewSelector key={props.entityType} entityType={props.entityType} />
+  ) : null
+
   const toolbar = (
-    <Toolbar className={styles.toolbar}>
-      <Tooltip content="Create a new record" relationship="description" positioning="below" withArrow>
-        <ToolbarButton icon={<AddRegular />} onClick={onNew}>New</ToolbarButton>
-      </Tooltip>
-      <Tooltip content={selectedIds.size !== 1 ? 'Select exactly one record to edit' : 'Edit the selected record'} relationship="description" positioning="below" withArrow>
-        <ToolbarButton icon={<EditRegular />} disabled={selectedIds.size !== 1} onClick={() => { const id = [...selectedIds][0]; if (id) onEdit?.(id) }}>Edit</ToolbarButton>
-      </Tooltip>
-      <Tooltip content={selectedIds.size === 0 ? 'Select one or more records to delete' : `Delete ${selectedIds.size} selected record${selectedIds.size > 1 ? 's' : ''}`} relationship="description" positioning="below" withArrow>
-        <ToolbarButton icon={<DeleteRegular />} disabled={selectedIds.size === 0} onClick={() => onDelete?.([...selectedIds])}>Delete</ToolbarButton>
-      </Tooltip>
-      <ToolbarDivider />
-      <Tooltip content="Reload data from Dataverse" relationship="description" positioning="below" withArrow>
-        <ToolbarButton icon={<ArrowClockwiseRegular />} onClick={onRefresh}>Refresh</ToolbarButton>
-      </Tooltip>
-    </Toolbar>
+    <>
+      {entityTypeCodeLabel}
+      <DataverseTableToolbar selectedIds={selectedIds} onNew={onNew} onEdit={onEdit} onDelete={onDelete} onRefresh={onRefresh} />
+    </>
   )
 
   const handleRowClick = (id: string) => {
