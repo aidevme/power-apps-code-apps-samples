@@ -13,6 +13,10 @@
 export { AppBreadcrumb } from './breadcrumbs/Breadcrumb'
 export type { IBreadcrumbProps } from './breadcrumbs/Breadcrumb'
 
+/** Read-only monospaced code block for displaying code, XML, or JSON strings. */
+export { SyntaxHighlighter } from './syntax-highlighter/SyntaxHighlighter'
+export type { ISyntaxHighlighterProps } from './syntax-highlighter/SyntaxHighlighter'
+
 /** Fluent UI Table of account records with fixed columns. */
 export { DataverseTable } from './tables/DataverseTable'
 export type { IDataverseTableProps } from './tables/DataverseTable'
@@ -47,11 +51,18 @@ export type { IDataverseCustomAPIsAppProps } from './apps/DataverseCustomAPIsApp
 
 /** Dataverse Custom API Functions section view. */
 export { DataverseFunctionsApp } from './apps/DataverseFunctionsApp'
-export type { IDataverseFunctionsAppProps } from './apps/DataverseFunctionsApp'
 
 /** Documentation reference section view. */
 export { DocumentationsApp } from './apps/DocumentationsApp'
 export type { IDocumentationsAppProps } from './apps/DocumentationsApp'
+
+/** ERD Diagram section view — visualises Dataverse entity relationships. */
+export { ERDDiagramApp } from './apps/ERDDiagramApp'
+export type { IERDDiagramAppProps } from './apps/ERDDiagramApp'
+
+/** Entity Details section view — displays schema and metadata for a selected Dataverse table. */
+export { EntityDetailsApp } from './apps/EntityDetailsApp'
+export type { IEntityDetailsAppProps } from './apps/EntityDetailsApp'
 
 /** Environment Variables section view. */
 export { EnvironmentVariablesApp } from './apps/EnvironmentVariablesApp'
@@ -61,8 +72,16 @@ export type { IEnvironmentVariablesAppProps } from './apps/EnvironmentVariablesA
 export { EnvironmentVariablesTable } from './tables/EnvironmentVariablesTable'
 export type { IEnvironmentVariablesTableProps } from './tables/EnvironmentVariablesTable'
 
+/** Fluent UI `Dropdown` that lists all registered Dataverse entities for selection. */
+export { EntitySelector } from './selectors/EntitySelector'
+export type { IEntitySelectorProps } from './selectors/EntitySelector'
+
+/** Toggle-button row for filtering the entity list by table type (All, Standard, Activity, Virtual, Elastic). */
+export { EntityTypeSelector } from './selectors/EntityTypeSelector'
+export type { IEntityTypeSelectorProps, EntityTypeFilter } from './selectors/EntityTypeSelector'
+
 /** App-wide footer with gradient background, description, and source link. */
-export { Footer } from './Footer'
+export { Footer } from './header-footer/Footer'
 
 /** App-wide header with purple gradient banner, icon, title, and tag badges. */
 export { Header } from './header-footer/Header'
@@ -84,6 +103,10 @@ export type { IMainAppProps } from './apps/MainApp'
 /** Placeholder for the Microsoft Graph API sample view. */
 export { MicrosoftGraphApp } from './apps/MicrosoftGraphApp'
 export type { IMicrosoftGraphAppProps } from './apps/MicrosoftGraphApp'
+
+/** Styled note block with a brand-coloured left border for contextual descriptions. */
+export { Notes } from './misc/Notes'
+export type { INotesProps, NoteType } from './misc/Notes'
 
 /** Power Automate instant-flow section view. */
 export { PowerAutomateFlowsApp } from './apps/PowerAutomatFlowsApp'

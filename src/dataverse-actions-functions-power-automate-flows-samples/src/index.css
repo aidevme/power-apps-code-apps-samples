@@ -61,9 +61,9 @@ button:disabled {
   cursor: not-allowed;
 }
 
-input[type='text'],
-input[type='url'],
-textarea {
+.app input[type='text'],
+.app input[type='url'],
+.app textarea {
   width: 100%;
   box-sizing: border-box;
   background: #1a1a1a;
@@ -88,9 +88,9 @@ textarea {
   button {
     background-color: #f9f9f9;
   }
-  input[type='text'],
-  input[type='url'],
-  textarea {
+  .app input[type='text'],
+  .app input[type='url'],
+  .app textarea {
     background: #f9f9f9;
     border-color: #ccc;
   }

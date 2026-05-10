@@ -17,8 +17,24 @@ export const ROUTES = {
   SHAREPOINT:     '/sharepoint',
   ENV_VARIABLES:  '/env-variables',
   GRAPH:          '/graph',
-  DOCS:           '/docs',
+  ERD_DIAGRAM:      '/erd-diagram',
+  ENTITY_DETAILS:   '/entity-details',
+  DOCS:             '/docs',
 } as const
+
+/**
+ * Maps child route paths to their logical parent route path.
+ *
+ * Used by {@link AppBreadcrumb} to render an intermediate crumb between
+ * Home and the current page when navigating into a sub-section.
+ *
+ * Example: `/erd-diagram` is a child of `/crud`, so the breadcrumb renders
+ * `Home > CRUD Operations > ERD Diagram`.
+ */
+export const routeParents: Partial<Record<string, string>> = {
+  [ROUTES.ERD_DIAGRAM]:    ROUTES.CRUD,
+  [ROUTES.ENTITY_DETAILS]: ROUTES.CRUD,
+}
 
 /**
  * Maps application route paths to their human-readable section labels.
@@ -38,5 +54,7 @@ export const routeLabels: Record<string, string> = {
   [ROUTES.SHAREPOINT]:     'SharePoint',
   [ROUTES.ENV_VARIABLES]:  'Environment Variables',
   [ROUTES.GRAPH]:          'Microsoft Graph API',
+  [ROUTES.ERD_DIAGRAM]:    'ERD Diagram',
+  [ROUTES.ENTITY_DETAILS]: 'Entity Details',
   [ROUTES.DOCS]:           'Documentation',
 }

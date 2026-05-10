@@ -7,6 +7,7 @@
 export * as AadusersModel from './models/AadusersModel';
 export * as AccountsModel from './models/AccountsModel';
 export * as Aidevme_appeventlogsModel from './models/Aidevme_appeventlogsModel';
+export * as Aidevme_codeappssamplesconfigurationsettingsModel from './models/Aidevme_codeappssamplesconfigurationsettingsModel';
 export * as AppointmentsModel from './models/AppointmentsModel';
 export * as BusinessunitsModel from './models/BusinessunitsModel';
 export * as CommonModels from './models/CommonModels';
@@ -33,6 +34,7 @@ export * from './services/AadusersService';
 export * from './services/AccountsService';
 export * from './services/AddToQueueService';
 export * from './services/Aidevme_appeventlogsService';
+export * from './services/Aidevme_codeappssamplesconfigurationsettingsService';
 export * from './services/AppointmentsService';
 export * from './services/BusinessunitsService';
 export * from './services/ContactsService';

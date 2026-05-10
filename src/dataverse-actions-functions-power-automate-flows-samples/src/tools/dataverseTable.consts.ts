@@ -12,6 +12,8 @@
  */
 import { Aidevme_appeventlogseventtype, Aidevme_appeventlogsstatus } from '../generated/models/Aidevme_appeventlogsModel'
 import type { Aidevme_appeventlogs } from '../generated/models/Aidevme_appeventlogsModel'
+import { Aidevme_codeappssamplesconfigurationsettingsaidevme_configurationvaluetype } from '../generated/models/Aidevme_codeappssamplesconfigurationsettingsModel'
+import type { Aidevme_codeappssamplesconfigurationsettings } from '../generated/models/Aidevme_codeappssamplesconfigurationsettingsModel'
 import { Accountsstatecode } from '../generated/models/AccountsModel'
 import type { Accounts } from '../generated/models/AccountsModel'
 import { Contactsstatecode } from '../generated/models/ContactsModel'
@@ -30,6 +32,8 @@ import { Tasksprioritycode, Tasksstatuscode } from '../generated/models/TasksMod
 import type { Tasks } from '../generated/models/TasksModel'
 import type { Teams } from '../generated/models/TeamsModel'
 import type { Transactioncurrencies } from '../generated/models/TransactioncurrenciesModel'
+import { Systemformstype, Systemformsformactivationstate } from '../generated/models/SystemformsModel'
+import type { Systemforms } from '../generated/models/SystemformsModel'
 import { formatDate } from './formating'
 
 /**
@@ -252,6 +256,31 @@ export const transactionCurrencyColumns: IColumn<Transactioncurrencies>[] = [
  * Columns: Name (link), Event Type, Status, Entity, Duration (ms),
  * Session ID, Created On, TTL (s).
  */
+/**
+ * Column definitions for the Code Apps sample configuration setting
+ * (`aidevme_codeappssamplesconfigurationsetting`) table view.
+ *
+ * @remarks
+ * Columns: Key (link), Value (masked when secured), Type, Description,
+ * Secured, Valid, Modified On.
+ */
+export const configurationSettingColumns: IColumn<Aidevme_codeappssamplesconfigurationsettings>[] = [
+  { key: 'aidevme_key',                     label: 'Key',         render: (i) => i.aidevme_key },
+  { key: 'aidevme_value',                   label: 'Value',       render: (i) => i.aidevme_issecured ? '\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022' : (i.aidevme_value ?? '\u2014') },
+  { key: 'aidevme_configurationvaluetype',  label: 'Type',        render: (i) => i.aidevme_configurationvaluetype != null ? (Aidevme_codeappssamplesconfigurationsettingsaidevme_configurationvaluetype[i.aidevme_configurationvaluetype] ?? '\u2014') : '\u2014' },
+  { key: 'aidevme_description',             label: 'Description', render: (i) => i.aidevme_description ?? '\u2014' },
+  { key: 'aidevme_issecured',               label: 'Secured',     render: (i) => i.aidevme_issecured ? 'Yes' : 'No' },
+  { key: 'aidevme_isvalid',                 label: 'Valid',       render: (i) => i.aidevme_isvalid == null ? '\u2014' : i.aidevme_isvalid ? 'Yes' : 'No' },
+  { key: 'modifiedon',                      label: 'Modified On', render: (i) => formatDate(i.modifiedon) },
+]
+
+/**
+ * Column definitions for the App Event Log (`aidevme_appeventlog`) Elastic table view.
+ *
+ * @remarks
+ * Columns: Name (link), Event Type, Status, Entity, Duration (ms),
+ * Session ID, Created On, TTL (s).
+ */
 export const appEventLogColumns: IColumn<Aidevme_appeventlogs>[] = [
   { key: 'aidevme_name',              label: 'Name',           render: (i) => i.aidevme_name ?? '\u2014' },
   { key: 'aidevme_eventtype',         label: 'Event Type',     render: (i) => i.aidevme_eventtype != null ? Aidevme_appeventlogseventtype[i.aidevme_eventtype] : '\u2014' },
@@ -261,4 +290,19 @@ export const appEventLogColumns: IColumn<Aidevme_appeventlogs>[] = [
   { key: 'aidevme_sessionid',         label: 'Session ID',     render: (i) => i.aidevme_sessionid ?? '\u2014' },
   { key: 'createdon',                 label: 'Created On',     render: (i) => formatDate(i.createdon) },
   { key: 'ttlinseconds',              label: 'TTL (s)',         render: (i) => i.ttlinseconds != null ? String(i.ttlinseconds) : '\u2014' },
+]
+
+/**
+ * Column definitions for the system form (`systemform`) table view.
+ *
+ * @remarks
+ * Columns: Form Name (link), Entity, Form Type, State, Is Default, Published On.
+ */
+export const systemFormColumns: IColumn<Systemforms>[] = [
+  { key: 'name',                label: 'Form Name',    render: (i) => i.name },
+  { key: 'objecttypecode',      label: 'Entity',       render: (i) => i.objecttypecode ?? '\u2014' },
+  { key: 'type',                label: 'Form Type',    render: (i) => i.type != null ? (Systemformstype[i.type] ?? '\u2014') : '\u2014' },
+  { key: 'formactivationstate', label: 'State',        render: (i) => Systemformsformactivationstate[i.formactivationstate] },
+  { key: 'isdefault',           label: 'Is Default',   render: (i) => i.isdefault ? 'Yes' : 'No' },
+  { key: 'publishedon',         label: 'Published On', render: (i) => formatDate(i.publishedon) },
 ]

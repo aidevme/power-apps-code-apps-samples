@@ -12,11 +12,13 @@ import {
   DataverseCustomActionsApp, DataverseCustomAPIsApp,
   PowerAutomateFlowsApp, DocumentationsApp,
   AzureSQLApp, SharePointApp, EnvironmentVariablesApp, AzureFunctionsApp, MicrosoftGraphApp,
+  ERDDiagramApp, EntityDetailsApp,
 } from './components'
 import { useEntities, useContext, useEnvironmentVariable, useSystemUsers, useUserSettings } from './hooks'
 import { useAppStyles } from './styles/app.styles'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation, useSearchParams } from 'react-router-dom'
 import { ROUTES } from './tools'
+import { ThemeContext } from './context/ThemeContext'
 
 export default function App() {
   const styles = useAppStyles()
@@ -31,6 +33,18 @@ export default function App() {
   const { userSettings, loadUserSettings } = useUserSettings()
   const [dataverseUserId, setDataverseUserId] = useState<string | null>(null)
 
+  const { pathname } = useLocation()
+  const [searchParams] = useSearchParams()
+  const breadcrumbDynamicLabel = (() => {
+    if (pathname === ROUTES.ENTITY_DETAILS) {
+      const logicalName = searchParams.get('entity')
+      const match = entities.find(e => e.logicalname === logicalName)
+      const displayName = match?.name ?? logicalName
+      return displayName ? `${displayName} - Details` : undefined
+    }
+    return undefined
+  })()
+
   useEffect(() => {
     if (context?.user.objectId) {
       getSystemUserIdByAadObjectId(context.user.objectId).then(id => {
@@ -41,6 +55,7 @@ export default function App() {
   }, [context?.user.objectId])
 
   return (
+    <ThemeContext.Provider value={{ isDark }}>
     <FluentProvider theme={isDark ? webDarkTheme : webLightTheme}>
       <div className="app">
         <Header
@@ -55,7 +70,7 @@ export default function App() {
           selectedLanguage={language}
           onLanguageChange={setLanguage}
         />
-        <AppBreadcrumb />
+        <AppBreadcrumb dynamicLabel={breadcrumbDynamicLabel} />
         <Routes>
           <Route path={ROUTES.HOME} element={<MainApp />} />
           <Route path={ROUTES.CRUD} element={<CRUDApp entities={entities} entitiesLoading={entitiesLoading} />} />
@@ -69,6 +84,8 @@ export default function App() {
           <Route path={ROUTES.SHAREPOINT} element={<SharePointApp />} />
           <Route path={ROUTES.ENV_VARIABLES} element={<EnvironmentVariablesApp />} />
           <Route path={ROUTES.GRAPH} element={<MicrosoftGraphApp />} />
+          <Route path={ROUTES.ERD_DIAGRAM} element={<ERDDiagramApp />} />
+          <Route path={ROUTES.ENTITY_DETAILS} element={<EntityDetailsApp entities={entities} />} />
           <Route path={ROUTES.DOCS} element={<DocumentationsApp />} />
         </Routes>
         <Footer
@@ -87,6 +104,7 @@ export default function App() {
         </div>
       )}
     </FluentProvider>
+    </ThemeContext.Provider>
   )
 }
 

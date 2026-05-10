@@ -1,10 +1,9 @@
 import { Title1, Body1, Caption1, Badge, Button, Tooltip, ToggleButton } from '@fluentui/react-components'
 import { DatabasePlugConnectedRegular, SettingsRegular, WeatherSunnyRegular, WeatherMoonRegular } from '@fluentui/react-icons'
 import { useHeaderStyles } from '../../styles/header.styles'
+import { useHeader } from '../../hooks'
 import { AppSearchBox } from '../search/SearchBox'
 import { LanguageSelector } from '../selectors/LanguageSelector'
-import { useLocation } from 'react-router-dom'
-import { ROUTES } from '../../tools'
 
 /** Props for {@link Header}. */
 interface IHeaderProps {
@@ -50,8 +49,7 @@ interface IHeaderProps {
 
 export function Header({ title, description, tags, isDark, onThemeToggle, onSettings, searchValue, onSearchChange, selectedLanguage, onLanguageChange }: IHeaderProps) {
   const styles = useHeaderStyles()
-  const { pathname } = useLocation()
-  const isSearchEnabled = pathname === ROUTES.DOCS
+  const { isSearchEnabled } = useHeader()
   return (
     <header className={styles.header}>
       <div className={styles.top}>

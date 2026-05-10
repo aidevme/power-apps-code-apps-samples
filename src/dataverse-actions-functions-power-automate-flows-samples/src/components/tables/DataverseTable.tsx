@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Caption2,
   Link,
@@ -13,23 +14,18 @@ import {
 
 import { ViewSelector } from '../selectors/ViewSelector'
 import { DataverseTableToolbar } from '../toolbars/DataverseTableToolbars'
-import type { Accounts } from '../../generated/models/AccountsModel'
+import type {
+  AccountsModel, Aidevme_appeventlogsModel, Aidevme_codeappssamplesconfigurationsettingsModel,
+  ContactsModel, SystemusersModel, BusinessunitsModel, AppointmentsModel,
+  EmailsModel, LeadsModel, OpportunitiesModel, TasksModel, TeamsModel,
+  TransactioncurrenciesModel, SystemformsModel,
+} from '../../generated'
+import type { IColumn } from '../../tools/dataverseTable.consts'
 import {
-  accountColumns, appEventLogColumns, contactColumns, systemUserColumns, businessUnitColumns,
+  accountColumns, appEventLogColumns, configurationSettingColumns, contactColumns, systemUserColumns, businessUnitColumns,
   appointmentColumns, emailColumns, leadColumns, opportunityColumns,
-  taskColumns, teamColumns, transactionCurrencyColumns,
+  taskColumns, teamColumns, transactionCurrencyColumns, systemFormColumns,
 } from '../../tools/dataverseTable.consts'
-import type { Aidevme_appeventlogs } from '../../generated/models/Aidevme_appeventlogsModel'
-import type { Contacts } from '../../generated/models/ContactsModel'
-import type { Systemusers } from '../../generated/models/SystemusersModel'
-import type { Businessunits } from '../../generated/models/BusinessunitsModel'
-import type { Appointments } from '../../generated/models/AppointmentsModel'
-import type { Emails } from '../../generated/models/EmailsModel'
-import type { Leads } from '../../generated/models/LeadsModel'
-import type { Opportunities } from '../../generated/models/OpportunitiesModel'
-import type { Tasks } from '../../generated/models/TasksModel'
-import type { Teams } from '../../generated/models/TeamsModel'
-import type { Transactioncurrencies } from '../../generated/models/TransactioncurrenciesModel'
 import { useDataverseTableStyles } from '../../styles/dataversetable.styles'
 
 /** Shared props for all {@link DataverseTable} variants. */
@@ -77,7 +73,7 @@ interface IDataverseTableAccountProps extends IDataverseTableBaseProps {
   /** Selects the account column set. */
   entityType: 'account'
   /** Account records to display. */
-  records: Accounts[]
+  records: AccountsModel.Accounts[]
 }
 
 /** Props for a contact-mode {@link DataverseTable}. */
@@ -85,7 +81,7 @@ interface IDataverseTableContactProps extends IDataverseTableBaseProps {
   /** Selects the contact column set. */
   entityType: 'contact'
   /** Contact records to display. */
-  records: Contacts[]
+  records: ContactsModel.Contacts[]
 }
 
 /** Props for a systemuser-mode {@link DataverseTable}. */
@@ -93,7 +89,7 @@ interface IDataverseTableSystemUserProps extends IDataverseTableBaseProps {
   /** Selects the system user column set. */
   entityType: 'systemuser'
   /** System user records to display. */
-  records: Systemusers[]
+  records: SystemusersModel.Systemusers[]
   /**
    * Map of business unit GUID → display name, provided by {@link useLookupResolver}.
    * Used to populate the "Business Unit" column.
@@ -107,7 +103,7 @@ interface IDataverseTableBusinessUnitProps extends IDataverseTableBaseProps {
   /** Selects the business unit column set. */
   entityType: 'businessunit'
   /** Business unit records to display. */
-  records: Businessunits[]
+  records: BusinessunitsModel.Businessunits[]
   /**
    * Map of business unit GUID → display name, provided by {@link useLookupResolver}.
    * Used to populate the "Parent Business" column.
@@ -121,7 +117,7 @@ interface IDataverseTableAppointmentProps extends IDataverseTableBaseProps {
   /** Selects the appointment column set. */
   entityType: 'appointment'
   /** Appointment records to display. */
-  records: Appointments[]
+  records: AppointmentsModel.Appointments[]
 }
 
 /** Props for an email-mode {@link DataverseTable}. */
@@ -129,7 +125,7 @@ interface IDataverseTableEmailProps extends IDataverseTableBaseProps {
   /** Selects the email column set. */
   entityType: 'email'
   /** Email activity records to display. */
-  records: Emails[]
+  records: EmailsModel.Emails[]
 }
 
 /** Props for a lead-mode {@link DataverseTable}. */
@@ -137,7 +133,7 @@ interface IDataverseTableLeadProps extends IDataverseTableBaseProps {
   /** Selects the lead column set. */
   entityType: 'lead'
   /** Lead records to display. */
-  records: Leads[]
+  records: LeadsModel.Leads[]
 }
 
 /** Props for an opportunity-mode {@link DataverseTable}. */
@@ -145,7 +141,7 @@ interface IDataverseTableOpportunityProps extends IDataverseTableBaseProps {
   /** Selects the opportunity column set. */
   entityType: 'opportunity'
   /** Opportunity records to display. */
-  records: Opportunities[]
+  records: OpportunitiesModel.Opportunities[]
 }
 
 /** Props for a task-mode {@link DataverseTable}. */
@@ -153,7 +149,7 @@ interface IDataverseTableTaskProps extends IDataverseTableBaseProps {
   /** Selects the task column set. */
   entityType: 'task'
   /** Task records to display. */
-  records: Tasks[]
+  records: TasksModel.Tasks[]
 }
 
 /** Props for a team-mode {@link DataverseTable}. */
@@ -161,7 +157,7 @@ interface IDataverseTableTeamProps extends IDataverseTableBaseProps {
   /** Selects the team column set. */
   entityType: 'team'
   /** Team records to display. */
-  records: Teams[]
+  records: TeamsModel.Teams[]
 }
 
 /** Props for a transaction currency-mode {@link DataverseTable}. */
@@ -169,7 +165,7 @@ interface IDataverseTableTransactionCurrencyProps extends IDataverseTableBasePro
   /** Selects the transaction currency column set. */
   entityType: 'transactioncurrency'
   /** Transaction currency records to display. */
-  records: Transactioncurrencies[]
+  records: TransactioncurrenciesModel.Transactioncurrencies[]
 }
 
 /** Props for an App Event Log (Elastic table)-mode {@link DataverseTable}. */
@@ -177,11 +173,27 @@ interface IDataverseTableAppEventLogProps extends IDataverseTableBaseProps {
   /** Selects the App Event Log Elastic table column set. */
   entityType: 'aidevme_appeventlog'
   /** App Event Log records to display. */
-  records: Aidevme_appeventlogs[]
+  records: Aidevme_appeventlogsModel.Aidevme_appeventlogs[]
+}
+
+/** Props for a Code Apps sample configuration setting-mode {@link DataverseTable}. */
+interface IDataverseTableConfigurationSettingProps extends IDataverseTableBaseProps {
+  /** Selects the configuration setting column set. */
+  entityType: 'aidevme_codeappssamplesconfigurationsetting'
+  /** Configuration setting records to display. */
+  records: Aidevme_codeappssamplesconfigurationsettingsModel.Aidevme_codeappssamplesconfigurationsettings[]
+}
+
+/** Props for a system form-mode {@link DataverseTable}. */
+interface IDataverseTableSystemFormProps extends IDataverseTableBaseProps {
+  /** Selects the system form column set. */
+  entityType: 'systemform'
+  /** System form records to display. */
+  records: SystemformsModel.Systemforms[]
 }
 
 /** Props for {@link DataverseTable} — discriminated by `entityType`. */
-export type IDataverseTableProps = IDataverseTableAccountProps | IDataverseTableContactProps | IDataverseTableSystemUserProps | IDataverseTableBusinessUnitProps | IDataverseTableAppointmentProps | IDataverseTableEmailProps | IDataverseTableLeadProps | IDataverseTableOpportunityProps | IDataverseTableTaskProps | IDataverseTableTeamProps | IDataverseTableTransactionCurrencyProps | IDataverseTableAppEventLogProps
+export type IDataverseTableProps = IDataverseTableAccountProps | IDataverseTableContactProps | IDataverseTableSystemUserProps | IDataverseTableBusinessUnitProps | IDataverseTableAppointmentProps | IDataverseTableEmailProps | IDataverseTableLeadProps | IDataverseTableOpportunityProps | IDataverseTableTaskProps | IDataverseTableTeamProps | IDataverseTableTransactionCurrencyProps | IDataverseTableAppEventLogProps | IDataverseTableConfigurationSettingProps | IDataverseTableSystemFormProps
 
 /** Renders a record name as a Fluent UI {@link Link} to the Dataverse record form. */
 function RecordLink({ id, etn, label }: { id: string | undefined; etn: string; label: string | undefined }) {
@@ -203,6 +215,19 @@ function CreatedByLink({ userId, nameMap }: { userId: string | undefined; nameMa
       {name}
     </Link>
   )
+}
+
+/** Returns a sorted copy of `records` using the rendered string value of the active column; returns the original array when `sort` is `null`. */
+function sortedRecords<T>(records: T[], sort: { key: string; direction: 'asc' | 'desc' } | null, columns: IColumn<T>[]): T[] {
+  if (!sort) return records
+  const col = columns.find(c => c.key === sort.key)
+  if (!col) return records
+  return [...records].sort((a, b) => {
+    const av = col.render(a).toLowerCase()
+    const bv = col.render(b).toLowerCase()
+    const cmp = av < bv ? -1 : av > bv ? 1 : 0
+    return sort.direction === 'asc' ? cmp : -cmp
+  })
 }
 
 /**
@@ -232,6 +257,16 @@ export function DataverseTable(props: IDataverseTableProps) {
     onRefresh,
   } = props
   const businessUnitNames = (props.entityType === 'systemuser' || props.entityType === 'businessunit') ? (props.businessUnitNames ?? {}) : {}
+
+  const [sortState, setSortState] = useState<{ entityType: string; key: string; direction: 'asc' | 'desc' } | null>(null)
+  const sort = sortState?.entityType === props.entityType ? sortState : null
+  const handleHeaderClick = (key: string) => {
+    setSortState(prev => {
+      const same = prev?.entityType === props.entityType && prev?.key === key
+      if (same) return prev!.direction === 'asc' ? { entityType: props.entityType, key, direction: 'desc' } : null
+      return { entityType: props.entityType, key, direction: 'asc' }
+    })
+  }
 
   const entityTypeCodeLabel = entityTypeCode !== undefined ? (
     <ViewSelector key={props.entityType} entityType={props.entityType} />
@@ -282,12 +317,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {systemUserColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((user) => (
+            {populated && sortedRecords(props.records, sort, systemUserColumns).map((user) => (
               <TableRow
                 key={user.systemuserid}
                 className={selectedIds.has(user.systemuserid) ? styles.selectedRow : undefined}
@@ -332,12 +374,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {appointmentColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((appt) => (
+            {populated && sortedRecords(props.records, sort, appointmentColumns).map((appt) => (
               <TableRow
                 key={appt.activityid}
                 className={selectedIds.has(appt.activityid) ? styles.selectedRow : undefined}
@@ -384,12 +433,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {businessUnitColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((bu) => (
+            {populated && sortedRecords(props.records, sort, businessUnitColumns).map((bu) => (
               <TableRow
                 key={bu.businessunitid}
                 className={selectedIds.has(bu.businessunitid) ? styles.selectedRow : undefined}
@@ -436,12 +492,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {contactColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((contact) => (
+            {populated && sortedRecords(props.records, sort, contactColumns).map((contact) => (
               <TableRow
                 key={contact.contactid}
                 className={selectedIds.has(contact.contactid) ? styles.selectedRow : undefined}
@@ -488,12 +551,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {emailColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((email) => (
+            {populated && sortedRecords(props.records, sort, emailColumns).map((email) => (
               <TableRow
                 key={email.activityid}
                 className={selectedIds.has(email.activityid) ? styles.selectedRow : undefined}
@@ -534,12 +604,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {leadColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((lead) => (
+            {populated && sortedRecords(props.records, sort, leadColumns).map((lead) => (
               <TableRow
                 key={lead.leadid}
                 className={selectedIds.has(lead.leadid) ? styles.selectedRow : undefined}
@@ -582,12 +659,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {opportunityColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((opp) => (
+            {populated && sortedRecords(props.records, sort, opportunityColumns).map((opp) => (
               <TableRow
                 key={opp.opportunityid}
                 className={selectedIds.has(opp.opportunityid) ? styles.selectedRow : undefined}
@@ -628,12 +712,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {taskColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((task) => (
+            {populated && sortedRecords(props.records, sort, taskColumns).map((task) => (
               <TableRow
                 key={task.activityid}
                 className={selectedIds.has(task.activityid) ? styles.selectedRow : undefined}
@@ -676,12 +767,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {teamColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((team) => (
+            {populated && sortedRecords(props.records, sort, teamColumns).map((team) => (
               <TableRow
                 key={team.teamid}
                 className={selectedIds.has(team.teamid) ? styles.selectedRow : undefined}
@@ -722,12 +820,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {transactionCurrencyColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((currency) => (
+            {populated && sortedRecords(props.records, sort, transactionCurrencyColumns).map((currency) => (
               <TableRow
                 key={currency.transactioncurrencyid}
                 className={selectedIds.has(currency.transactioncurrencyid) ? styles.selectedRow : undefined}
@@ -766,12 +871,19 @@ export function DataverseTable(props: IDataverseTableProps) {
                 }}
               />
               {appEventLogColumns.map((col) => (
-                <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {populated && props.records.map((log) => (
+            {populated && sortedRecords(props.records, sort, appEventLogColumns).map((log) => (
               <TableRow
                 key={log.aidevme_appeventlogid}
                 className={selectedIds.has(log.aidevme_appeventlogid) ? styles.selectedRow : undefined}
@@ -783,6 +895,108 @@ export function DataverseTable(props: IDataverseTableProps) {
                     {col.key === 'aidevme_name'
                       ? <RecordLink id={log.aidevme_appeventlogid} etn="aidevme_appeventlog" label={log.aidevme_name} />
                       : col.render(log)}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        {statusBar}
+      </>
+    )
+  }
+
+  if (props.entityType === 'aidevme_codeappssamplesconfigurationsetting') {
+    return (
+      <>
+        {toolbar}
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableSelectionCell
+                type="checkbox"
+                checked={props.records.length > 0 && props.records.every(r => selectedIds.has(r.aidevme_codeappssamplesconfigurationsettingid)) ? true : props.records.some(r => selectedIds.has(r.aidevme_codeappssamplesconfigurationsettingid)) ? 'mixed' : false}
+                onChange={() => {
+                  const allIds = props.records.map(r => r.aidevme_codeappssamplesconfigurationsettingid)
+                  onSelectionChange?.(allIds.every(id => selectedIds.has(id)) ? new Set() : new Set(allIds))
+                }}
+              />
+              {configurationSettingColumns.map((col) => (
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
+              ))}
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {populated && sortedRecords(props.records, sort, configurationSettingColumns).map((setting) => (
+              <TableRow
+                key={setting.aidevme_codeappssamplesconfigurationsettingid}
+                className={selectedIds.has(setting.aidevme_codeappssamplesconfigurationsettingid) ? styles.selectedRow : undefined}
+                onClick={() => handleRowClick(setting.aidevme_codeappssamplesconfigurationsettingid)}
+              >
+                <TableSelectionCell type="checkbox" checked={selectedIds.has(setting.aidevme_codeappssamplesconfigurationsettingid)} onChange={() => {}} />
+                {configurationSettingColumns.map((col) => (
+                  <TableCell key={col.key}>
+                    {col.key === 'aidevme_key'
+                      ? <RecordLink id={setting.aidevme_codeappssamplesconfigurationsettingid} etn="aidevme_codeappssamplesconfigurationsetting" label={setting.aidevme_key} />
+                      : col.render(setting)}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        {statusBar}
+      </>
+    )
+  }
+
+  if (props.entityType === 'systemform') {
+    return (
+      <>
+        {toolbar}
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableSelectionCell
+                type="checkbox"
+                checked={props.records.length > 0 && props.records.every(f => selectedIds.has(f.formid)) ? true : props.records.some(f => selectedIds.has(f.formid)) ? 'mixed' : false}
+                onChange={() => {
+                  const allIds = props.records.map(f => f.formid)
+                  onSelectionChange?.(allIds.every(id => selectedIds.has(id)) ? new Set() : new Set(allIds))
+                }}
+              />
+              {systemFormColumns.map((col) => (
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
+              ))}
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {populated && sortedRecords(props.records, sort, systemFormColumns).map((form) => (
+              <TableRow
+                key={form.formid}
+                className={selectedIds.has(form.formid) ? styles.selectedRow : undefined}
+                onClick={() => handleRowClick(form.formid)}
+              >
+                <TableSelectionCell type="checkbox" checked={selectedIds.has(form.formid)} onChange={() => {}} />
+                {systemFormColumns.map((col) => (
+                  <TableCell key={col.key}>
+                    {col.key === 'name'
+                      ? <RecordLink id={form.formid} etn="systemform" label={form.name} />
+                      : col.render(form)}
                   </TableCell>
                 ))}
               </TableRow>
@@ -809,12 +1023,19 @@ export function DataverseTable(props: IDataverseTableProps) {
               }}
             />
             {accountColumns.map((col) => (
-              <TableHeaderCell key={col.key} className={styles.headerCell}>{col.label}</TableHeaderCell>
+              <TableHeaderCell
+                key={col.key}
+                className={styles.headerCell}
+                sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                onClick={() => handleHeaderClick(col.key)}
+              >
+                {col.label}
+              </TableHeaderCell>
             ))}
           </TableRow>
         </TableHeader>
         <TableBody>
-          {populated && props.records.map((account) => (
+          {populated && sortedRecords(props.records, sort, accountColumns).map((account) => (
             <TableRow
               key={account.accountid}
               className={selectedIds.has(account.accountid) ? styles.selectedRow : undefined}

@@ -20,6 +20,19 @@ import { useState } from 'react'
 import { useWorkflows, fetchWorkflowDetail } from '../../hooks'
 import type { Workflows } from '../../generated/models/WorkflowsModel'
 import { Follow_upflowService } from '../../generated/services/Follow_upflowService'
+import { Notes } from '../misc/Notes'
+import type { NoteType } from '../misc/Notes'
+
+const POWER_AUTOMATE_FLOWS_APP_DESCRIPTION =
+  'Lists Power Automate cloud flows registered in Dataverse. Select a flow to inspect its metadata. ' +
+  'Flows registered via pac code add-logic-flow expose a typed trigger form backed by the PAC CLI-generated service layer.'
+
+const POWER_AUTOMATE_FLOWS_APP_NOTE_TYPE: NoteType = 'info'
+const POWER_AUTOMATE_FLOWS_APP_INFO_LABEL_TEXT =
+  'Flows are queried from the workflow entity via /api/data/v9.2. ' +
+  'Flows registered with pac code add-logic-flow are triggered via a PAC CLI-generated service class using a POST to the flow HTTP trigger. ' +
+  'Trigger input schema is derived from the Power Apps v2 connector action definition.'
+const POWER_AUTOMATE_FLOWS_APP_INFO_LABEL_LINK = 'https://aidevme.com'
 
 /** Dataverse `uniquename` of the Follow-up flow registered via `pac code add-logic-flow`. */
 const FOLLOW_UP_FLOW_UNIQUENAME = 'follow_upflow'
@@ -52,7 +65,6 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     gap: tokens.spacingVerticalL,
-    maxWidth: '560px',
   },
   detail: {
     display: 'grid',
@@ -152,6 +164,13 @@ export function PowerAutomateFlowsApp(_props: IPowerAutomateFlowsAppProps) {
 
   return (
     <div className={styles.root}>
+      <Notes
+        noteType={POWER_AUTOMATE_FLOWS_APP_NOTE_TYPE}
+        showInfoLabel={POWER_AUTOMATE_FLOWS_APP_INFO_LABEL_TEXT}
+        infoLabelLink={POWER_AUTOMATE_FLOWS_APP_INFO_LABEL_LINK}
+      >
+        {POWER_AUTOMATE_FLOWS_APP_DESCRIPTION}
+      </Notes>
       {loading ? (
         <Spinner label="Loading flows…" size="medium" />
       ) : (

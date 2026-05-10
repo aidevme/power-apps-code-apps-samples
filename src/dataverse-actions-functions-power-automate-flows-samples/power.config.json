@@ -4,7 +4,7 @@
   "appDisplayName": "Dataverse Actions Sample App",
   "region": "prod",
   "environmentId": "8a15a5d2-99b7-e4a6-9d7b-d595c9131107",
-  "description": " ",
+  "description": "An interactive Power Apps Code App demonstrating how to call Dataverse Custom API Actions and Functions, trigger Power Automate flows via HTTP, and query Dataverse entity data using typed generated services. It covers common integration patterns including CRUD operations, saved-view browsing, environment variables, and activity records across multiple entity types. Built with React, TypeScript, and Fluent UI v9 as a community reference sample for the Power Platform.",
   "buildPath": "./dist",
   "buildEntryPoint": "index.html",
   "localAppUrl": "http://localhost:3000",
@@ -112,6 +112,10 @@
         "organizations": {
           "entitySetName": "organizations",
           "logicalName": "organization"
+        },
+        "codeappssamplesconfigurationsettings": {
+          "entitySetName": "aidevme_codeappssamplesconfigurationsettings",
+          "logicalName": "aidevme_codeappssamplesconfigurationsetting"
         }
       },
       "environmentVariableName": ""

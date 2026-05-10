@@ -9,7 +9,7 @@
 export { formatDate } from './formating'
 export { LANGUAGES } from './languages'
 export type { ILanguage } from './languages'
-export { ROUTES, routeLabels } from './routes'
+export { ROUTES, routeLabels, routeParents } from './routes'
 export type { IColumn } from './dataverseTable.consts'
 export {
   accountColumns,

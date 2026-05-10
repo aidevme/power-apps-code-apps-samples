@@ -17,3 +17,22 @@ export function formatDate(iso: string | undefined): string {
     hour: '2-digit', minute: '2-digit', second: '2-digit',
   });
 }
+
+/**
+ * Formats an ISO date string to a 12-hour time with AM/PM, or returns `'—'` when absent.
+ *
+ * @param iso - An ISO 8601 date string (e.g. from a Dataverse `modifiedon` field).
+ * @returns A time string in `h:mm AM/PM` format, or `'—'` when `iso` is `undefined`.
+ *
+ * @example
+ * ```ts
+ * formatTime('2026-05-08T14:32:05Z') // '2:32 PM'
+ * formatTime(undefined)              // '—'
+ * ```
+ */
+export function formatTime(iso: string | undefined): string {
+  if (!iso) return '—';
+  return new Date(iso).toLocaleTimeString(undefined, {
+    hour: 'numeric', minute: '2-digit', hour12: true,
+  });
+}

@@ -37,4 +37,10 @@ export const useDataverseTableStyles = makeStyles({
     color: tokens.colorBrandForeground1,
     fontWeight: tokens.fontWeightSemibold,
   },
+  truncatedCell: {
+    maxWidth: '220px',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  },
 })

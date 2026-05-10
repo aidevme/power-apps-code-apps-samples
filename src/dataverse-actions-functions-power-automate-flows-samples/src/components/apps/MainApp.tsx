@@ -20,6 +20,7 @@ import {
   KeyMultipleRegular,
   FlashSparkleRegular,
   BranchRegular,
+  DataTrendingRegular,
 } from '@fluentui/react-icons'
 
 // ---------------------------------------------------------------------------
@@ -166,6 +167,13 @@ export function MainApp(): ReactElement {
             category="Microsoft Graph"
             icon={<BranchRegular />}
             onMore={() => navigate('/graph')}
+          />
+          <SectionCard
+            title="Azure Application Insights"
+            description="Integrate Azure Application Insights telemetry into a Power Apps Code App. Demonstrates initialising the SDK, wiring the platform logger to forward session load and network request metrics, configuring Content Security Policy, and querying custom events in the Azure portal."
+            category="Azure Monitor"
+            icon={<DataTrendingRegular />}
+            onMore={() => navigate('/app-insights')}
           />
         </div>
       </section>

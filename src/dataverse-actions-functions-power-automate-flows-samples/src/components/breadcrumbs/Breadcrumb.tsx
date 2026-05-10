@@ -4,7 +4,7 @@ import {
 } from '@fluentui/react-components'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useBreadcrumbStyles } from '../../styles/breadcrumb.styles'
-import { routeLabels } from '../../tools'
+import { routeLabels, routeParents } from '../../tools'
 import { Crumb } from './Crumb'
 
 /** Props for {@link AppBreadcrumb}. */
@@ -14,6 +14,11 @@ export interface IBreadcrumbProps {
    * @defaultValue `'Home'`
    */
   homeLabel?: string
+  /**
+   * Overrides the current-page crumb label derived from {@link routeLabels}.
+   * Use this to show a dynamic value such as an entity display name.
+   */
+  dynamicLabel?: string
 }
 
 /**
@@ -27,11 +32,13 @@ export interface IBreadcrumbProps {
  * <AppBreadcrumb />
  * ```
  */
-export function AppBreadcrumb({ homeLabel = 'Home' }: IBreadcrumbProps) {
+export function AppBreadcrumb({ homeLabel = 'Home', dynamicLabel }: IBreadcrumbProps) {
   const styles = useBreadcrumbStyles()
   const { pathname } = useLocation()
   const navigate = useNavigate()
-  const currentLabel = routeLabels[pathname] ?? null
+  const currentLabel = dynamicLabel ?? routeLabels[pathname] ?? null
+  const parentPath = routeParents[pathname] ?? null
+  const parentLabel = parentPath ? (routeLabels[parentPath] ?? null) : null
 
   return (
     <Breadcrumb aria-label="Navigation">
@@ -42,6 +49,18 @@ export function AppBreadcrumb({ homeLabel = 'Home' }: IBreadcrumbProps) {
         className={styles.crumb}
         onClick={() => navigate('/')}
       />
+      {parentLabel !== null && parentPath !== null && (
+        <>
+          <BreadcrumbDivider />
+          <Crumb
+            label={parentLabel}
+            tooltip={`Go back to ${parentLabel}`}
+            current={false}
+            className={styles.crumb}
+            onClick={() => navigate(parentPath)}
+          />
+        </>
+      )}
       {currentLabel !== null && (
         <>
           <BreadcrumbDivider />

@@ -6,7 +6,9 @@ import {
 } from '@fluentui/react-components'
 import { OpenRegular } from '@fluentui/react-icons'
 import { useFooterStyles } from '../../styles/footer.styles'
+import { useFooter } from '../../hooks'
 
+/** Props for the {@link Footer} component. */
 interface IFooterProps {
   description: string
   sourceLabel: string
@@ -15,7 +17,7 @@ interface IFooterProps {
 
 export function Footer({ description, sourceLabel, sourceUrl }: IFooterProps) {
   const styles = useFooterStyles()
-  const year = new Date().getFullYear()
+  const { year } = useFooter()
 
   return (
     <footer className={styles.footer}>

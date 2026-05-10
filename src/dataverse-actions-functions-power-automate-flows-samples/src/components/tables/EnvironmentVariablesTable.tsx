@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import {
   Badge,
   Link,
   Spinner,
+  Switch,
   Table,
   TableBody,
   TableCell,
@@ -9,6 +11,7 @@ import {
   TableHeaderCell,
   TableRow,
   Text,
+  Tooltip,
 } from '@fluentui/react-components'
 import type { Environmentvariabledefinitions } from '../../generated/models/EnvironmentvariabledefinitionsModel'
 import { useDataverseTableStyles } from '../../styles/dataversetable.styles'
@@ -81,6 +84,19 @@ export interface IEnvironmentVariablesTableProps {
   environmentId?: string
 }
 
+/** Returns a comparable lowercase string value for a given column key on a definition record. */
+function getColumnValue(def: Environmentvariabledefinitions, key: typeof COLUMNS[number]['key']): string {
+  switch (key) {
+    case 'displayname':    return def.displayname ?? ''
+    case 'schemaname':     return def.schemaname ?? ''
+    case 'typename':       return def.typename ?? ''
+    case 'ismanaged':      return def.ismanaged ? 'Managed' : 'Unmanaged'
+    case 'iscustomizable': { const v = resolveIsCustomizable(def.iscustomizable); return v == null ? '' : v ? 'Yes' : 'No' }
+    case 'modifiedon':     return def.modifiedon ?? ''
+    case 'owneridname':    return def.owneridname ?? ''
+  }
+}
+
 /**
  * Read-only Fluent UI table listing all Power Platform environment variable
  * definitions with their display name, schema name, type, managed state,
@@ -98,6 +114,22 @@ export interface IEnvironmentVariablesTableProps {
 export function EnvironmentVariablesTable({ definitions, loading, error, environmentId }: IEnvironmentVariablesTableProps) {
   const styles = useDataverseTableStyles();
 
+  const [sortState, setSortState] = useState<{ key: typeof COLUMNS[number]['key']; direction: 'asc' | 'desc' } | null>(null)
+  const handleHeaderClick = (key: typeof COLUMNS[number]['key']) => {
+    setSortState(prev => {
+      if (prev?.key === key) return prev.direction === 'asc' ? { key, direction: 'desc' } : null
+      return { key, direction: 'asc' }
+    })
+  }
+  const sortedDefinitions = sortState
+    ? [...definitions].sort((a, b) => {
+        const av = getColumnValue(a, sortState.key).toLowerCase()
+        const bv = getColumnValue(b, sortState.key).toLowerCase()
+        const cmp = av < bv ? -1 : av > bv ? 1 : 0
+        return sortState.direction === 'asc' ? cmp : -cmp
+      })
+    : definitions
+
   if (loading) {
     return <Spinner size="medium" label="Loading environment variables…" />;
   }
@@ -111,29 +143,42 @@ export function EnvironmentVariablesTable({ definitions, loading, error, environ
       <TableHeader>
         <TableRow>
           {COLUMNS.map(col => (
-            <TableHeaderCell key={col.key} className={styles.headerCell}>
+            <TableHeaderCell
+              key={col.key}
+              className={styles.headerCell}
+              sortDirection={sortState?.key === col.key ? (sortState.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+              onClick={() => handleHeaderClick(col.key)}
+            >
               {col.label}
             </TableHeaderCell>
           ))}
         </TableRow>
       </TableHeader>
       <TableBody>
-        {definitions.map(def => {
+        {sortedDefinitions.map(def => {
           const isCustomizable = resolveIsCustomizable(def.iscustomizable);
           return (
             <TableRow key={def.environmentvariabledefinitionid}>
-              <TableCell>
-                {environmentId ? (
-                  <Link
-                    href={makerPortalUrl(environmentId, def.environmentvariabledefinitionid)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {def.displayname}
-                  </Link>
-                ) : def.displayname}
+              <TableCell className={styles.truncatedCell}>
+                <Tooltip content={def.displayname ?? ''} relationship="description" withArrow>
+                  <span>
+                    {environmentId ? (
+                      <Link
+                        href={makerPortalUrl(environmentId, def.environmentvariabledefinitionid)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {def.displayname}
+                      </Link>
+                    ) : def.displayname}
+                  </span>
+                </Tooltip>
               </TableCell>
-              <TableCell>{def.schemaname}</TableCell>
+              <TableCell className={styles.truncatedCell}>
+                <Tooltip content={def.schemaname ?? ''} relationship="description" withArrow>
+                  <span>{def.schemaname}</span>
+                </Tooltip>
+              </TableCell>
               <TableCell>{def.typename ?? '—'}</TableCell>
               <TableCell>
                 <Badge
@@ -144,14 +189,7 @@ export function EnvironmentVariablesTable({ definitions, loading, error, environ
                 </Badge>
               </TableCell>
               <TableCell>
-                {isCustomizable == null ? '—' : (
-                  <Badge
-                    appearance="filled"
-                    color={isCustomizable ? 'success' : 'subtle'}
-                  >
-                    {isCustomizable ? 'Yes' : 'No'}
-                  </Badge>
-                )}
+                <Switch checked={isCustomizable ?? false} style={{ pointerEvents: 'none', cursor: 'default' }} />
               </TableCell>
               <TableCell>{formatDate(def.modifiedon)}</TableCell>
               <TableCell>{def.owneridname ?? '—'}</TableCell>

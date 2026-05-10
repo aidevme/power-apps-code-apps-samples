@@ -26,6 +26,13 @@ export const dataSourcesInfo = {
     "dataSourceType": "Dataverse",
     "apis": {}
   },
+  "aidevme_codeappssamplesconfigurationsettings": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "aidevme_codeappssamplesconfigurationsettingid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
   "contacts": {
     "tableId": "",
     "version": "",

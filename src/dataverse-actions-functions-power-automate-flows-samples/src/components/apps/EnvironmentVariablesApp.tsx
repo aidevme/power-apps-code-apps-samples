@@ -2,6 +2,19 @@ import { Body1, Button, makeStyles, tokens } from '@fluentui/react-components'
 import { ArrowClockwise20Regular } from '@fluentui/react-icons'
 import { useEnvironmentVariables, useContext } from '../../hooks'
 import { EnvironmentVariablesTable } from '../tables/EnvironmentVariablesTable'
+import { Notes } from '../misc/Notes'
+import type { NoteType } from '../misc/Notes'
+
+const ENVIRONMENT_VARIABLES_APP_DESCRIPTION =
+  'Lists all Power Platform environment variable definitions for the current environment. ' +
+  'Retrieves definition metadata (schema name, type, default value) via the PAC CLI-generated service layer.'
+
+const ENVIRONMENT_VARIABLES_APP_NOTE_TYPE: NoteType = 'info'
+const ENVIRONMENT_VARIABLES_APP_INFO_LABEL_TEXT =
+  'Environment variables are solution-aware configuration values stored in Dataverse. ' +
+  'Definition records (environmentvariabledefinition) hold the schema name, type, and default value. ' +
+  'Value overrides are stored in a separate environmentvariablevalue record linked by definition ID.'
+const ENVIRONMENT_VARIABLES_APP_INFO_LABEL_LINK = 'https://aidevme.com'
 
 /** Styles for {@link EnvironmentVariablesApp}. */
 const useStyles = makeStyles({
@@ -42,6 +55,13 @@ export function EnvironmentVariablesApp() {
 
   return (
     <div className={styles.root}>
+      <Notes
+        noteType={ENVIRONMENT_VARIABLES_APP_NOTE_TYPE}
+        showInfoLabel={ENVIRONMENT_VARIABLES_APP_INFO_LABEL_TEXT}
+        infoLabelLink={ENVIRONMENT_VARIABLES_APP_INFO_LABEL_LINK}
+      >
+        {ENVIRONMENT_VARIABLES_APP_DESCRIPTION}
+      </Notes>
       <div className={styles.toolbar}>
         <Button
           icon={<ArrowClockwise20Regular />}

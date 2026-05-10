@@ -73,6 +73,9 @@ pac code add-data-source -a dataverse -t systemform
 pac code add-data-source -a dataverse -t organization
 
 
+pac code add-data-source -a dataverse -t aidevme_codeappssamplesconfigurationsetting
+pac code add-data-source -a dataverse -t systemform
+
 ```
 
 Each command generates:
