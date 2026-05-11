@@ -1,9 +1,9 @@
 import { Body1, Button, makeStyles, tokens } from '@fluentui/react-components'
 import { ArrowClockwise20Regular } from '@fluentui/react-icons'
-import { useEnvironmentVariables, useContext } from '../../hooks'
-import { EnvironmentVariablesTable } from '../tables/EnvironmentVariablesTable'
-import { Notes } from '../misc/Notes'
-import type { NoteType } from '../misc/Notes'
+import { useEnvironmentVariables, useContext } from '../../../hooks'
+import { EnvironmentVariablesTable } from '../../tables/EnvironmentVariablesTable'
+import { Notes } from '../../misc/Notes'
+import type { NoteType } from '../../misc/Notes'
 
 const ENVIRONMENT_VARIABLES_APP_DESCRIPTION =
   'Lists all Power Platform environment variable definitions for the current environment. ' +

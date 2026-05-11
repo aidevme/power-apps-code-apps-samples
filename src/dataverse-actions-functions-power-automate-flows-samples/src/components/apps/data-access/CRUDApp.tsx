@@ -1,4 +1,4 @@
-import type { Entities } from '../../generated/models/EntitiesModel'
+import type { Entities } from '../../../generated/models/EntitiesModel'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
@@ -13,15 +13,14 @@ import {
   Tooltip,
 } from '@fluentui/react-components'
 import { DiagramRegular, MoreHorizontal20Regular } from '@fluentui/react-icons'
-import { useCRUDApp } from '../../hooks/component-hooks/apps/useCRUDApp'
-import { DataverseTable } from '../tables/DataverseTable'
-import { EntitySelector } from '../selectors/EntitySelector'
-import { EntityTypeSelector } from '../selectors/EntityTypeSelector'
-import type { EntityTypeFilter } from '../selectors/EntityTypeSelector'
-import { Notes } from '../misc/Notes'
-import type { NoteType } from '../misc/Notes'
-import { useCRUDAppStyles } from '../../styles/crudapp.styles'
-import { ROUTES } from '../../tools'
+import { useCRUDApp } from '../../../hooks/component-hooks/apps/useCRUDApp'
+import { DataverseTable } from '../../tables/DataverseTable'
+import { EntitySelector } from '../../selectors/EntitySelector'
+import { EntityTypeSelector } from '../../selectors/EntityTypeSelector'
+import type { EntityTypeFilter } from '../../selectors/EntityTypeSelector'
+import { Notes } from '../../misc/Notes'
+import { useCRUDAppStyles } from '../../../styles/crudapp.styles'
+import { ROUTES, CRUD_APP_DESCRIPTION, CRUD_APP_NOTE_TYPE, CRUD_APP_INFO_LABEL_TEXT, CRUD_APP_INFO_LABEL_LINK } from '../../../tools'
 
 /** Props for {@link CRUDApp}. */
 export interface ICRUDAppProps {
@@ -40,21 +39,6 @@ export interface ICRUDAppProps {
  * <CRUDApp />
  * ```
  */
-const CRUD_APP_DESCRIPTION =
-  'Perform create, read, update, and delete operations against Dataverse table records via the OData v4 REST API. ' +
-  'Select an entity from the dropdown to load its records. ' +
-  'Use the toolbar to create or edit records (opens the Dataverse form), delete selected rows, and refresh the list. ' +
-  'Demonstrates typed entity models, query options ($select, $filter, $expand), and the PAC CLI-generated service layer.'
-
-const CRUD_APP_NOTE_TYPE: NoteType = 'info'
-const CRUD_APP_INFO_LABEL_TEXT =
-  'Uses the PAC CLI-generated typed service layer to call the Dataverse OData v4 REST API (/api/data/v9.2). ' +
-  'Queries leverage $select, $filter, and $expand options. ' +
-  'Record create, update, and delete operations are dispatched via the host Power Apps navigation API (openRecord). ' +
-  'Entity metadata is resolved at startup to populate the selector and drive table column schemas.'
-const CRUD_APP_INFO_LABEL_LINK = 'https://aidevme.com'
-
-
 export function CRUDApp({ entities }: ICRUDAppProps) {
   const styles = useCRUDAppStyles()
   const navigate = useNavigate()
@@ -71,6 +55,7 @@ export function CRUDApp({ entities }: ICRUDAppProps) {
     companyNames,
     businessUnitNames,
     accounts, accountsLoading, loadAccounts,
+    aadUsers, aadUsersLoading, loadAadUsers,
     appEventLogs, appEventLogsLoading, loadAppEventLogs,
     appointments, appointmentsLoading, loadAppointments,
     businessUnits, businessUnitsLoading, loadBusinessUnits,
@@ -93,17 +78,9 @@ export function CRUDApp({ entities }: ICRUDAppProps) {
 
   const filteredEntities = entityTypeFilters.length === 0 || entityTypeFilters.includes('all')
     ? registeredEntities
-    : registeredEntities.filter(({ meta }) => {
-      const isElastic = meta?.physicalname?.toLowerCase().endsWith('_elastic') ?? false
-      const isVirtual = !!meta?.externalname && !isElastic
-      const isActivity = meta?.isactivity === true
-      const isStandard = !!meta && !isActivity && !isElastic && !isVirtual
-      if (entityTypeFilters.includes('activity') && isActivity) return true
-      if (entityTypeFilters.includes('elastic') && isElastic) return true
-      if (entityTypeFilters.includes('virtual') && isVirtual) return true
-      if (entityTypeFilters.includes('standard') && (isStandard || !meta)) return true
-      return false
-    })
+    : registeredEntities.filter(({ tableType }) =>
+        entityTypeFilters.some(f => f !== 'all' && f.toLowerCase() === tableType.toLowerCase())
+      )
 
   const commonProps = {
     selectedIds,
@@ -112,6 +89,15 @@ export function CRUDApp({ entities }: ICRUDAppProps) {
   }
 
   const renderTable = () => {
+    if (selectedLogicalName === 'aaduser') {
+      return <DataverseTable entityType="aaduser" records={aadUsers} loading={aadUsersLoading} populated
+        {...commonProps}
+        onNew={() => openRecord('aaduser')}
+        onEdit={(id) => openRecord('aaduser', id)}
+        onDelete={(ids) => ids.forEach(id => openRecord('aaduser', id))}
+        onRefresh={() => { handleSelectionChange(new Set()); loadAadUsers() }}
+      />
+    }
     if (selectedLogicalName === 'account') {
       return <DataverseTable entityType="account" records={accounts} loading={accountsLoading} populated createdByNames={createdByNames}
         {...commonProps}

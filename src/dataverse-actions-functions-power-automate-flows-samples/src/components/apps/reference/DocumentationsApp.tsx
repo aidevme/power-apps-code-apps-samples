@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
-import { Spinner, Text } from '@fluentui/react-components'
+import { makeStyles, Spinner, Text } from '@fluentui/react-components'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import type { Components } from 'react-markdown'
 import mermaid from 'mermaid'
-import { useReadme } from '../../hooks'
-import { useDocumentationsAppStyles } from '../../styles/documentationsapp.styles'
+import { useReadme } from '../../../hooks'
+import { useDocumentationsAppStyles } from '../../../styles/documentationsapp.styles'
 
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/aidevme/power-apps-code-apps-samples/main/docs/code-apps/'
 const GITHUB_BLOB_BASE = 'https://github.com/aidevme/power-apps-code-apps-samples/blob/main/docs/code-apps/'
@@ -33,8 +33,13 @@ function resolveReadmeUrl(url: string): string {
 
 mermaid.initialize({ startOnLoad: false, theme: 'default' })
 
+const useMermaidStyles = makeStyles({
+  diagram: { overflowX: 'auto', margin: '16px 0' },
+})
+
 /** Renders a Mermaid diagram string into an SVG using the mermaid library. */
 function MermaidDiagram({ chart }: { chart: string }) {
+  const styles = useMermaidStyles()
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -47,7 +52,7 @@ function MermaidDiagram({ chart }: { chart: string }) {
     })
   }, [chart])
 
-  return <div ref={ref} style={{ overflowX: 'auto', margin: '16px 0' }} />
+  return <div ref={ref} className={styles.diagram} />
 }
 
 /** Custom code block renderer — delegates mermaid fences to {@link MermaidDiagram}. */

@@ -17,11 +17,11 @@ import {
 } from '@fluentui/react-components'
 import { FlowRegular, SendRegular } from '@fluentui/react-icons'
 import { useState } from 'react'
-import { useWorkflows, fetchWorkflowDetail } from '../../hooks'
-import type { Workflows } from '../../generated/models/WorkflowsModel'
-import { Follow_upflowService } from '../../generated/services/Follow_upflowService'
-import { Notes } from '../misc/Notes'
-import type { NoteType } from '../misc/Notes'
+import { useWorkflows, fetchWorkflowDetail } from '../../../hooks'
+import type { Workflows } from '../../../generated/models/WorkflowsModel'
+import { Follow_upflowService } from '../../../generated/services/Follow_upflowService'
+import { Notes } from '../../misc/Notes'
+import type { NoteType } from '../../misc/Notes'
 
 const POWER_AUTOMATE_FLOWS_APP_DESCRIPTION =
   'Lists Power Automate cloud flows registered in Dataverse. Select a flow to inspect its metadata. ' +

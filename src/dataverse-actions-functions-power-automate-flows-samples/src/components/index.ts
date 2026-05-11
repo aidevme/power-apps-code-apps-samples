@@ -25,36 +25,48 @@ export type { IDataverseTableProps } from './tables/DataverseTable'
 export { DataverseTableToolbar } from './toolbars/DataverseTableToolbars'
 export type { IDataverseTableToolbarProps } from './toolbars/DataverseTableToolbars'
 
+/** Azure Blob Storage integration placeholder view. */
+export { AzureBlobStorageApp } from './apps/integrations/AzureBlobStorageApp'
+export type { IAzureBlobStorageAppProps } from './apps/integrations/AzureBlobStorageApp'
+
 /** Azure Functions integration placeholder view. */
-export { AzureFunctionsApp } from './apps/AzureFunctionsApp'
-export type { IAzureFunctionsAppProps } from './apps/AzureFunctionsApp'
+export { AzureFunctionsApp } from './apps/integrations/AzureFunctionsApp'
+export type { IAzureFunctionsAppProps } from './apps/integrations/AzureFunctionsApp'
 
 /** Azure SQL integration placeholder view. */
-export { AzureSQLApp } from './apps/AzureSQLApp'
-export type { IAzureSQLAppProps } from './apps/AzureSQLApp'
+export { AzureSQLApp } from './apps/integrations/AzureSQLApp'
+export type { IAzureSQLAppProps } from './apps/integrations/AzureSQLApp'
+
+/** Configuration Settings section view — lists app-level Dataverse configuration setting records. */
+export { ConfigurationSettingsApp } from './apps/miscellaneous/ConfigurationSettingsApp'
+export type { IConfigurationSettingsAppProps } from './apps/miscellaneous/ConfigurationSettingsApp'
+
+/** Content Security Policy Management section view. */
+export { ContentSecurityPolicyManagementApp } from './apps/miscellaneous/ContentSecurityPolicyManagementApp'
+export type { IContentSecurityPolicyManagementAppProps } from './apps/miscellaneous/ContentSecurityPolicyManagementApp'
 
 /** CRUD Operations section view. */
-export { CRUDApp } from './apps/CRUDApp'
-export type { ICRUDAppProps } from './apps/CRUDApp'
+export { CRUDApp } from './apps/data-access/CRUDApp'
+export type { ICRUDAppProps } from './apps/data-access/CRUDApp'
 
 /** Dataverse Custom API Actions section view. */
-export { DataverseActionsApp } from './apps/DataverseActionsApp'
-export type { IDataverseActionsAppProps } from './apps/DataverseActionsApp'
+export { DataverseActionsApp } from './apps/dataverse-apis/DataverseActionsApp'
+export type { IDataverseActionsAppProps } from './apps/dataverse-apis/DataverseActionsApp'
 
 /** Dataverse Custom Actions section view (user-defined). */
-export { DataverseCustomActionsApp } from './apps/DataverseCustomActionsApp'
-export type { IDataverseCustomActionsAppProps } from './apps/DataverseCustomActionsApp'
+export { DataverseCustomActionsApp } from './apps/dataverse-apis/DataverseCustomActionsApp'
+export type { IDataverseCustomActionsAppProps } from './apps/dataverse-apis/DataverseCustomActionsApp'
 
 /** Dataverse Custom APIs section view. */
-export { DataverseCustomAPIsApp } from './apps/DataverseCustomAPIsApp'
-export type { IDataverseCustomAPIsAppProps } from './apps/DataverseCustomAPIsApp'
+export { DataverseCustomAPIsApp } from './apps/dataverse-apis/DataverseCustomAPIsApp'
+export type { IDataverseCustomAPIsAppProps } from './apps/dataverse-apis/DataverseCustomAPIsApp'
 
 /** Dataverse Custom API Functions section view. */
-export { DataverseFunctionsApp } from './apps/DataverseFunctionsApp'
+export { DataverseFunctionsApp } from './apps/dataverse-apis/DataverseFunctionsApp'
 
 /** Documentation reference section view. */
-export { DocumentationsApp } from './apps/DocumentationsApp'
-export type { IDocumentationsAppProps } from './apps/DocumentationsApp'
+export { DocumentationsApp } from './apps/reference/DocumentationsApp'
+export type { IDocumentationsAppProps } from './apps/reference/DocumentationsApp'
 
 /** ERD Diagram section view — visualises Dataverse entity relationships. */
 export { ERDDiagramApp } from './apps/ERDDiagramApp'
@@ -65,8 +77,8 @@ export { EntityDetailsApp } from './apps/EntityDetailsApp'
 export type { IEntityDetailsAppProps } from './apps/EntityDetailsApp'
 
 /** Environment Variables section view. */
-export { EnvironmentVariablesApp } from './apps/EnvironmentVariablesApp'
-export type { IEnvironmentVariablesAppProps } from './apps/EnvironmentVariablesApp'
+export { EnvironmentVariablesApp } from './apps/miscellaneous/EnvironmentVariablesApp'
+export type { IEnvironmentVariablesAppProps } from './apps/miscellaneous/EnvironmentVariablesApp'
 
 /** Read-only table of Power Platform environment variable definitions. */
 export { EnvironmentVariablesTable } from './tables/EnvironmentVariablesTable'
@@ -101,20 +113,22 @@ export { MainApp } from './apps/MainApp'
 export type { IMainAppProps } from './apps/MainApp'
 
 /** Placeholder for the Microsoft Graph API sample view. */
-export { MicrosoftGraphApp } from './apps/MicrosoftGraphApp'
-export type { IMicrosoftGraphAppProps } from './apps/MicrosoftGraphApp'
+export { MicrosoftGraphApp } from './apps/miscellaneous/MicrosoftGraphApp'
+export type { IMicrosoftGraphAppProps } from './apps/miscellaneous/MicrosoftGraphApp'
 
 /** Styled note block with a brand-coloured left border for contextual descriptions. */
 export { Notes } from './misc/Notes'
 export type { INotesProps, NoteType } from './misc/Notes'
+export { CustomSpinner } from './misc/spinners/CustomSpinner'
+export type { ICustomSpinnerProps, SpinnerType } from './misc/spinners/CustomSpinner'
 
 /** Power Automate instant-flow section view. */
-export { PowerAutomateFlowsApp } from './apps/PowerAutomatFlowsApp'
-export type { IPowerAutomateFlowsAppProps } from './apps/PowerAutomatFlowsApp'
+export { PowerAutomateFlowsApp } from './apps/integrations/PowerAutomatFlowsApp'
+export type { IPowerAutomateFlowsAppProps } from './apps/integrations/PowerAutomatFlowsApp'
 
 /** SharePoint integration placeholder view. */
-export { SharePointApp } from './apps/SharePointApp'
-export type { ISharePointAppProps } from './apps/SharePointApp'
+export { SharePointApp } from './apps/integrations/SharePointApp'
+export type { ISharePointAppProps } from './apps/integrations/SharePointApp'
 
 /** Themed search input for the app header banner. */
 export { AppSearchBox } from './search/SearchBox'

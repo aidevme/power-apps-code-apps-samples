@@ -1,4 +1,4 @@
-# Power Apps Code Apps Samples
+# 🚀 Power Apps Code Apps Samples
 
 ![Dataverse Actions, Functions & Flows in Power Apps Code Apps](assets/dataverse-actions-functions-flows-code-apps-social-preview.png)
 

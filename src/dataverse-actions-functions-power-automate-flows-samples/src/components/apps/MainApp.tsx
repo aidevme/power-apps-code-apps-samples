@@ -21,6 +21,8 @@ import {
   FlashSparkleRegular,
   BranchRegular,
   DataTrendingRegular,
+  SettingsRegular,
+  ShieldRegular,
 } from '@fluentui/react-icons'
 
 // ---------------------------------------------------------------------------
@@ -131,6 +133,13 @@ export function MainApp(): ReactElement {
             onMore={() => navigate('/azure-sql')}
           />
           <SectionCard
+            title="Azure Blob Storage"
+            description="Read and write files in Azure Blob Storage from a Power Apps Code App. Demonstrates uploading, downloading, listing, and deleting blobs via Power Automate flows or a custom connector, with typed request and response payloads surfaced in a React UI."
+            category="Azure Storage"
+            icon={<CloudRegular />}
+            onMore={() => navigate('/azure-blob-storage')}
+          />
+          <SectionCard
             title="Azure Functions"
             description="Invoke Azure Functions HTTP triggers from a Power Apps Code App. Demonstrates calling serverless endpoints with typed request and response payloads, handling authentication, and integrating custom compute logic into a React UI using PAC CLI-generated service stubs."
             category="Azure Functions"
@@ -174,6 +183,20 @@ export function MainApp(): ReactElement {
             category="Azure Monitor"
             icon={<DataTrendingRegular />}
             onMore={() => navigate('/app-insights')}
+          />
+          <SectionCard
+            title="Configuration Settings"
+            description="Read app-level configuration setting records from the Dataverse aidevme_codeappssamplesconfigurationsetting table. Demonstrates listing key/value pairs stored as Dataverse table rows and surfacing them in a typed React UI using the PAC CLI-generated service layer."
+            category="Dataverse Table"
+            icon={<SettingsRegular />}
+            onMore={() => navigate('/configuration-settings')}
+          />
+          <SectionCard
+            title="Content Security Policy Management"
+            description="Manage Power Apps Code App Content Security Policy (CSP) headers to control which external resources the browser is permitted to load. Demonstrates reading and updating CSP directives stored in Dataverse, and how misconfigured policies surface as blocked network requests in the browser console."
+            category="Security"
+            icon={<ShieldRegular />}
+            onMore={() => navigate('/csp-management')}
           />
         </div>
       </section>

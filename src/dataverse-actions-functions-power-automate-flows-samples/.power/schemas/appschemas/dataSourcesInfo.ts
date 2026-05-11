@@ -12,6 +12,13 @@ export const dataSourcesInfo = {
     "dataSourceType": "Dataverse",
     "apis": {}
   },
+  "aidevme_appeventlogs": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "aidevme_appeventlogid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
   "appointments": {
     "tableId": "",
     "version": "",

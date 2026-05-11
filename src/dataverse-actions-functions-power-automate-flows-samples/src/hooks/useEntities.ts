@@ -23,6 +23,7 @@ const DEFAULT_SORT_ORDER = 'name asc';
  * `pac code add-data-source`. Update this list whenever a new data source is added.
  */
 export const REGISTERED_TABLE_COLLECTIONS: readonly string[] = [
+  'aadusers',
   'accounts',
   'aidevme_appeventlogs',
   'aidevme_codeappssamplesconfigurationsettings',

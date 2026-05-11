@@ -11,6 +11,8 @@ export { useContext } from './useContext'
 
 /** Loads and manages Account records from Dataverse. */
 export { useAccounts } from './useAccounts'
+/** Loads and manages AAD User records from the Dataverse aaduser virtual table. */
+export { useAadUsers } from './useAadUsers'
 /** Loads and manages Appointment activity records from Dataverse. */
 export { useAppointments } from './useAppointments'
 /** Loads and manages Business Unit records from Dataverse. */
@@ -40,6 +42,24 @@ export { useWorkflows, fetchWorkflowDetail } from './useWorkflows'
 
 /** Provides the list of registered entity table collections and the entity registry. */
 export { useEntities, REGISTERED_TABLE_COLLECTIONS } from './useEntities'
+/** Shared entity metadata field list, table-info interface, and derivation helper used by all metadata hooks. */
+export type { IEntityTableInfo } from './metadata-hooks/entityMetadata.types'
+export { ALL_ENTITY_METADATA_FIELDS } from './metadata-hooks/entityMetadata.types'
+/** Fetches entity and column metadata for the AAD User table, including display names and required-field flags. */
+export { useAadUserMetadata } from './metadata-hooks/useAadUserMetadata'
+export type { IUseAadUserMetadataResult, IAadUserAttributeMetadata } from './metadata-hooks/useAadUserMetadata'
+/** Fetches entity and column metadata for the Account table, including display names and required-field flags. */
+export { useAccountMetadata } from './metadata-hooks/useAccountMetadata'
+export type { IUseAccountMetadataResult, IAccountAttributeMetadata } from './metadata-hooks/useAccountMetadata'
+/** Fetches entity and column metadata for the AppEventLog table, including display names and required-field flags. */
+export { useAppEventLogMetadata } from './metadata-hooks/useAppEventLogMetadata'
+export type { IUseAppEventLogMetadataResult, IAppEventLogAttributeMetadata } from './metadata-hooks/useAppEventLogMetadata'
+/** Fetches entity and column metadata for the Contact table, including display names and required-field flags. */
+export { useContactMetadata } from './metadata-hooks/useContactMetadata'
+export type { IUseContactMetadataResult, IContactAttributeMetadata } from './metadata-hooks/useContactMetadata'
+/** Fetches entity and column metadata for the Task table, including display names and required-field flags. */
+export { useTaskMetadata } from './metadata-hooks/useTaskMetadata'
+export type { IUseTaskMetadataResult, ITaskAttributeMetadata } from './metadata-hooks/useTaskMetadata'
 /** Resolves a Dataverse lookup reference to its display name and entity type. */
 export { useLookupResolver } from './useLookupResolver'
 /** Loads saved queries (public views) for a given entity type. */

@@ -10,7 +10,7 @@
  *   Fluent UI `Link` elements by the `RecordLink` helper in `DataverseTable`.
  * - These arrays are intentionally read-only; never mutate them at runtime.
  */
-import { Aidevme_appeventlogseventtype, Aidevme_appeventlogsstatus } from '../generated/models/Aidevme_appeventlogsModel'
+import { Aidevme_appeventlogsaidevme_eventtype, Aidevme_appeventlogsaidevme_status } from '../generated/models/Aidevme_appeventlogsModel'
 import type { Aidevme_appeventlogs } from '../generated/models/Aidevme_appeventlogsModel'
 import { Aidevme_codeappssamplesconfigurationsettingsaidevme_configurationvaluetype } from '../generated/models/Aidevme_codeappssamplesconfigurationsettingsModel'
 import type { Aidevme_codeappssamplesconfigurationsettings } from '../generated/models/Aidevme_codeappssamplesconfigurationsettingsModel'
@@ -34,6 +34,7 @@ import type { Teams } from '../generated/models/TeamsModel'
 import type { Transactioncurrencies } from '../generated/models/TransactioncurrenciesModel'
 import { Systemformstype, Systemformsformactivationstate } from '../generated/models/SystemformsModel'
 import type { Systemforms } from '../generated/models/SystemformsModel'
+import type { Aadusers } from '../generated/models/AadusersModel'
 import { formatDate } from './formating'
 
 /**
@@ -283,8 +284,8 @@ export const configurationSettingColumns: IColumn<Aidevme_codeappssamplesconfigu
  */
 export const appEventLogColumns: IColumn<Aidevme_appeventlogs>[] = [
   { key: 'aidevme_name',              label: 'Name',           render: (i) => i.aidevme_name ?? '\u2014' },
-  { key: 'aidevme_eventtype',         label: 'Event Type',     render: (i) => i.aidevme_eventtype != null ? Aidevme_appeventlogseventtype[i.aidevme_eventtype] : '\u2014' },
-  { key: 'aidevme_status',            label: 'Status',         render: (i) => i.aidevme_status != null ? Aidevme_appeventlogsstatus[i.aidevme_status] : '\u2014' },
+  { key: 'aidevme_eventtype',         label: 'Event Type',     render: (i) => i.aidevme_eventtype != null ? Aidevme_appeventlogsaidevme_eventtype[i.aidevme_eventtype] : '—' },
+  { key: 'aidevme_status',            label: 'Status',         render: (i) => i.aidevme_status != null ? Aidevme_appeventlogsaidevme_status[i.aidevme_status] : '—' },
   { key: 'aidevme_entitylogicalname', label: 'Entity',         render: (i) => i.aidevme_entitylogicalname ?? '\u2014' },
   { key: 'aidevme_duration',          label: 'Duration (ms)',  render: (i) => { const d = (i as unknown as { aidevme_duration?: number }).aidevme_duration; return d != null ? String(d) : '\u2014' } },
   { key: 'aidevme_sessionid',         label: 'Session ID',     render: (i) => i.aidevme_sessionid ?? '\u2014' },
@@ -305,4 +306,20 @@ export const systemFormColumns: IColumn<Systemforms>[] = [
   { key: 'formactivationstate', label: 'State',        render: (i) => Systemformsformactivationstate[i.formactivationstate] },
   { key: 'isdefault',           label: 'Is Default',   render: (i) => i.isdefault ? 'Yes' : 'No' },
   { key: 'publishedon',         label: 'Published On', render: (i) => formatDate(i.publishedon) },
+]
+
+/**
+ * Column definitions for the AAD User (`aaduser`) virtual table view.
+ *
+ * @remarks
+ * Columns: Display Name (link), UPN, Email, Job Title, Company, Account Enabled, User Type.
+ */
+export const aadUserColumns: IColumn<Aadusers>[] = [
+  { key: 'displayname',        label: 'Display Name',    render: (i) => i.displayname ?? '\u2014' },
+  { key: 'userprincipalname',  label: 'UPN',             render: (i) => i.userprincipalname ?? '\u2014' },
+  { key: 'mail',               label: 'Email',           render: (i) => i.mail ?? '\u2014' },
+  { key: 'jobtitle',           label: 'Job Title',       render: (i) => i.jobtitle ?? '\u2014' },
+  { key: 'companyname',        label: 'Company',         render: (i) => i.companyname ?? '\u2014' },
+  { key: 'accountenabled',     label: 'Account Enabled', render: (i) => i.accountenabled == null ? '\u2014' : i.accountenabled ? 'Yes' : 'No' },
+  { key: 'usertype',           label: 'User Type',       render: (i) => i.usertype ?? '\u2014' },
 ]

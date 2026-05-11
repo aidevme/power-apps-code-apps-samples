@@ -1,0 +1,351 @@
+{
+  "name": "aidevme_appeventlog",
+  "title": "App Event Logs",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "aidevme_appeventlogs",
+      "x-ms-dataverse-primary-id": "aidevme_appeventlogid",
+      "x-ms-dataverse-primary-name": "aidevme_name",
+      "properties": {
+        "aidevme_appeventlogid": {
+          "type": "string",
+          "title": "App Event Log",
+          "x-ms-dataverse-attribute": "aidevme_appeventlogid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "aidevme_AppEventLogId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "aidevme_duration": {
+          "type": "string",
+          "title": "Duration (ms)",
+          "x-ms-dataverse-attribute": "aidevme_duration",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "aidevme_Duration"
+        },
+        "aidevme_entityid": {
+          "type": "string",
+          "title": "Entity ID",
+          "x-ms-dataverse-attribute": "aidevme_entityid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "aidevme_EntityID",
+          "maxLength": 36
+        },
+        "aidevme_entitylogicalname": {
+          "type": "string",
+          "title": "Entity Logical Name",
+          "x-ms-dataverse-attribute": "aidevme_entitylogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "aidevme_EntityLogicalName",
+          "maxLength": 100
+        },
+        "aidevme_errormessage": {
+          "type": "string",
+          "title": "Error Message",
+          "x-ms-dataverse-attribute": "aidevme_errormessage",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "aidevme_ErrorMessage",
+          "maxLength": 4000
+        },
+        "aidevme_eventtype": {
+          "type": "string",
+          "title": "Event Type",
+          "x-ms-dataverse-attribute": "aidevme_eventtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "aidevme_EventType",
+          "enum": [
+            "PageView",
+            "ButtonClick",
+            "ApiCall",
+            "Error",
+            "Custom"
+          ],
+          "x-ms-enum-values": [
+            100000000,
+            100000001,
+            100000002,
+            100000003,
+            100000004
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "2a9fa8fa-ec49-f111-bec6-00224805f0c7",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Event Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "aidevme_eventtypename": {
+          "type": "string",
+          "title": "aidevme_eventtypename",
+          "x-ms-dataverse-attribute": "aidevme_eventtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "aidevme_eventtypeName",
+          "x-ms-read-only": true
+        },
+        "aidevme_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "aidevme_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "aidevme_Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 850
+        },
+        "aidevme_properties": {
+          "type": "string",
+          "title": "Properties",
+          "x-ms-dataverse-attribute": "aidevme_properties",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "aidevme_Properties",
+          "maxLength": 1048576
+        },
+        "aidevme_sessionid": {
+          "type": "string",
+          "title": "Session ID",
+          "x-ms-dataverse-attribute": "aidevme_sessionid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "aidevme_SessionID",
+          "maxLength": 100
+        },
+        "aidevme_status": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "aidevme_status",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "aidevme_Status",
+          "enum": [
+            "Success",
+            "Failure",
+            "Warning"
+          ],
+          "x-ms-enum-values": [
+            100000000,
+            100000001,
+            100000002
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "365da35d-ee49-f111-bec6-00224805fa6c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "aidevme_statusname": {
+          "type": "string",
+          "title": "aidevme_statusname",
+          "x-ms-dataverse-attribute": "aidevme_statusname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "aidevme_statusName",
+          "x-ms-read-only": true
+        },
+        "aidevme_systemuser": {
+          "type": "string",
+          "title": "User",
+          "x-ms-dataverse-attribute": "aidevme_systemuser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "aidevme_SystemUser"
+        },
+        "aidevme_systemusername": {
+          "type": "string",
+          "title": "aidevme_systemusername",
+          "x-ms-dataverse-attribute": "aidevme_systemusername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "aidevme_SystemUserName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "aidevme_systemuseryominame": {
+          "type": "string",
+          "title": "aidevme_systemuseryominame",
+          "x-ms-dataverse-attribute": "aidevme_systemuseryominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "aidevme_SystemUserYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "partitionid": {
+          "type": "string",
+          "title": "Partition Id",
+          "x-ms-dataverse-attribute": "partitionid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PartitionId",
+          "maxLength": 100
+        },
+        "ttlinseconds": {
+          "type": "string",
+          "title": "Time to live",
+          "x-ms-dataverse-attribute": "ttlinseconds",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TTLInSeconds"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "aidevme_appeventlogid",
+        "aidevme_name",
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame"
+      ]
+    }
+  }
+}

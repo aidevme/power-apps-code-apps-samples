@@ -116,6 +116,10 @@
         "codeappssamplesconfigurationsettings": {
           "entitySetName": "aidevme_codeappssamplesconfigurationsettings",
           "logicalName": "aidevme_codeappssamplesconfigurationsetting"
+        },
+        "appeventlogs": {
+          "entitySetName": "aidevme_appeventlogs",
+          "logicalName": "aidevme_appeventlog"
         }
       },
       "environmentVariableName": ""

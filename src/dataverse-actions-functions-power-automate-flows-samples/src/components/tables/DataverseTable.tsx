@@ -18,13 +18,13 @@ import type {
   AccountsModel, Aidevme_appeventlogsModel, Aidevme_codeappssamplesconfigurationsettingsModel,
   ContactsModel, SystemusersModel, BusinessunitsModel, AppointmentsModel,
   EmailsModel, LeadsModel, OpportunitiesModel, TasksModel, TeamsModel,
-  TransactioncurrenciesModel, SystemformsModel,
+  TransactioncurrenciesModel, SystemformsModel, AadusersModel,
 } from '../../generated'
 import type { IColumn } from '../../tools/dataverseTable.consts'
 import {
   accountColumns, appEventLogColumns, configurationSettingColumns, contactColumns, systemUserColumns, businessUnitColumns,
   appointmentColumns, emailColumns, leadColumns, opportunityColumns,
-  taskColumns, teamColumns, transactionCurrencyColumns, systemFormColumns,
+  taskColumns, teamColumns, transactionCurrencyColumns, systemFormColumns, aadUserColumns,
 } from '../../tools/dataverseTable.consts'
 import { useDataverseTableStyles } from '../../styles/dataversetable.styles'
 
@@ -192,8 +192,16 @@ interface IDataverseTableSystemFormProps extends IDataverseTableBaseProps {
   records: SystemformsModel.Systemforms[]
 }
 
+/** Props for an AAD User virtual table-mode {@link DataverseTable}. */
+interface IDataverseTableAadUserProps extends IDataverseTableBaseProps {
+  /** Selects the AAD User column set. */
+  entityType: 'aaduser'
+  /** AAD User records to display. */
+  records: AadusersModel.Aadusers[]
+}
+
 /** Props for {@link DataverseTable} — discriminated by `entityType`. */
-export type IDataverseTableProps = IDataverseTableAccountProps | IDataverseTableContactProps | IDataverseTableSystemUserProps | IDataverseTableBusinessUnitProps | IDataverseTableAppointmentProps | IDataverseTableEmailProps | IDataverseTableLeadProps | IDataverseTableOpportunityProps | IDataverseTableTaskProps | IDataverseTableTeamProps | IDataverseTableTransactionCurrencyProps | IDataverseTableAppEventLogProps | IDataverseTableConfigurationSettingProps | IDataverseTableSystemFormProps
+export type IDataverseTableProps = IDataverseTableAccountProps | IDataverseTableContactProps | IDataverseTableSystemUserProps | IDataverseTableBusinessUnitProps | IDataverseTableAppointmentProps | IDataverseTableEmailProps | IDataverseTableLeadProps | IDataverseTableOpportunityProps | IDataverseTableTaskProps | IDataverseTableTeamProps | IDataverseTableTransactionCurrencyProps | IDataverseTableAppEventLogProps | IDataverseTableConfigurationSettingProps | IDataverseTableSystemFormProps | IDataverseTableAadUserProps
 
 /** Renders a record name as a Fluent UI {@link Link} to the Dataverse record form. */
 function RecordLink({ id, etn, label }: { id: string | undefined; etn: string; label: string | undefined }) {
@@ -997,6 +1005,57 @@ export function DataverseTable(props: IDataverseTableProps) {
                     {col.key === 'name'
                       ? <RecordLink id={form.formid} etn="systemform" label={form.name} />
                       : col.render(form)}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        {statusBar}
+      </>
+    )
+  }
+
+  if (props.entityType === 'aaduser') {
+    return (
+      <>
+        {toolbar}
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableSelectionCell
+                type="checkbox"
+                checked={props.records.length > 0 && props.records.every(u => selectedIds.has(u.aaduserid)) ? true : props.records.some(u => selectedIds.has(u.aaduserid)) ? 'mixed' : false}
+                onChange={() => {
+                  const allIds = props.records.map(u => u.aaduserid)
+                  onSelectionChange?.(allIds.every(id => selectedIds.has(id)) ? new Set() : new Set(allIds))
+                }}
+              />
+              {aadUserColumns.map((col) => (
+                <TableHeaderCell
+                  key={col.key}
+                  className={styles.headerCell}
+                  sortDirection={sort?.key === col.key ? (sort.direction === 'asc' ? 'ascending' : 'descending') : undefined}
+                  onClick={() => handleHeaderClick(col.key)}
+                >
+                  {col.label}
+                </TableHeaderCell>
+              ))}
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {populated && sortedRecords(props.records, sort, aadUserColumns).map((user) => (
+              <TableRow
+                key={user.aaduserid}
+                className={selectedIds.has(user.aaduserid) ? styles.selectedRow : undefined}
+                onClick={() => handleRowClick(user.aaduserid)}
+              >
+                <TableSelectionCell type="checkbox" checked={selectedIds.has(user.aaduserid)} onChange={() => {}} />
+                {aadUserColumns.map((col) => (
+                  <TableCell key={col.key}>
+                    {col.key === 'displayname'
+                      ? <RecordLink id={user.aaduserid} etn="aaduser" label={user.displayname} />
+                      : col.render(user)}
                   </TableCell>
                 ))}
               </TableRow>

@@ -4,11 +4,16 @@ import type { Entities } from '../../generated/models/EntitiesModel'
 
 
 /** A single entry in the entity selector list. */
-interface IRegisteredEntity {
+export interface IRegisteredEntity {
   /** OData collection name used as the stable key. */
   collectionName: string
   /** Dataverse entity metadata record, or `undefined` when not yet loaded. */
   meta: Entities | undefined
+  /**
+   * Derived table type: `'Standard'`, `'Activity'`, `'Virtual'`, or `'Elastic'`.
+   * Computed once in {@link useCRUDApp} from the entity metadata fields.
+   */
+  tableType: string
 }
 
 /** Props for {@link EntitySelector}. */
@@ -69,13 +74,13 @@ export function EntitySelector({
           onEntitySelect(data.optionValue ?? null)
         }}
       >
-        {registeredEntities.map(({ collectionName, meta }) => (
-          <Option key={collectionName} value={meta?.logicalname ?? collectionName}>
-            {meta
-              ? `${meta.name ?? meta.originallocalizedname ?? meta.logicalname ?? meta.entityid} (${meta.isactivity ? 'Activity' : meta.physicalname?.toLowerCase().endsWith('_elastic') ? 'Elastic' : meta.externalname ? 'Virtual' : 'Standard'})`
-              : collectionName}
-          </Option>
-        ))}
+        {registeredEntities.map(({ collectionName, meta, tableType }) => (
+            <Option key={collectionName} value={meta?.logicalname ?? collectionName}>
+              {meta
+                ? `${meta.name ?? meta.originallocalizedname ?? meta.logicalname ?? meta.entityid} (${tableType})`
+                : collectionName}
+            </Option>
+          ))}
       </Dropdown>
     </Field>
   )

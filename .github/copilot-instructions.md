@@ -147,35 +147,65 @@ Every sample that has a `src/<sample-name>/src/components/` folder must maintain
 - Re-export both the component function and its props interface (if exported).
 - Do **not** barrel-export internal helpers, style hooks (`useXxxStyles`), or non-component utilities that are not part of the public API.
 
+---
+
 ## TSDoc Documentation
 
-Whenever a `.ts` or `.tsx` file is **created or updated**, generate or regenerate TSDoc-style comments for all public API surface in that file. Apply the following rules:
+Whenever a `.ts` or `.tsx` file is **created or updated**, generate or regenerate documentation for all exported symbols in that file. Apply both layers described below: **TSDoc block comments** (for Intellisense and TypeDoc) and **AI-Context inline annotations** (for AI coding agents).
 
-### What to document
+### Layer 1 — TSDoc block comments (`/** ... */`)
+
+TSDoc comments are the primary documentation surface. They power VS Code Intellisense hover cards, TypeDoc site generation, and provide structured context to AI coding agents.
+
+#### What to document
 
 | Symbol | Required tags |
 |---|---|
-| Exported `interface` / `type` | Summary sentence on the type itself; `@param`-style inline `/** ... */` on every property |
-| Exported `function` / arrow function | Summary sentence; `@param` for every parameter; `@returns` if non-void; `@example` block when the usage is non-obvious |
+| Exported `interface` / `type` | Summary sentence on the type itself; `/** ... */` on every property |
+| Exported `function` / arrow function | Summary sentence; `@param` for every parameter; `@returns` if non-void; `@throws` for known error conditions; `@example` when usage is non-obvious |
 | Exported React component | Summary of what it renders; prop descriptions via the companion `interface`; `@example` with a minimal JSX snippet |
 | Exported `class` | Class-level summary; doc on every `public` method and property |
-| Exported `const` (non-trivial) | One-line `/** ... */` describing purpose |
+| Exported `const` (non-trivial) | One-line `/** ... */` describing purpose; include `@remarks` for lookup maps or registries |
+| Exported `enum` / enum member | Summary on the enum; `/** ... */` on every member explaining the Dataverse or domain value it maps to |
 
-### Style rules
+#### Required tags by scenario
 
-- Use `/** ... */` block comments, never `//` line comments for documentation.
-- Write the summary as a single declarative sentence (no "This component…" prefix).
+| Tag | When to use |
+|---|---|
+| `@param` | Every parameter of exported functions and methods |
+| `@returns` | Every non-void function; describe the shape, not just the type |
+| `@throws` | When the function throws or rejects for known conditions (e.g. 401, missing config) |
+| `@remarks` | Design decisions, constraints, cross-file dependencies, Dataverse table/field mappings, fallback behaviour |
+| `@example` | At least one per exported function or component; prefer realistic Power Platform scenarios |
+| `@defaultValue` | Every optional prop with a default value |
+| `@deprecated` | When superseded; always name the replacement |
+| `@see` | Link to related symbols (`{@link SymbolName}`) or external docs (Dataverse, Fluent UI, react-spinners) |
+
+#### Style rules
+
+- Use `/** ... */` block comments — never `//` line comments for TSDoc.
+- Write the summary as a single declarative sentence. Do not start with "This component…" or "This function…".
+- For multi-branch functions (e.g. a component with a fallback render path), document each branch in `@remarks` as a numbered list.
+- For Dataverse-integrated code, include the logical table name, publisher prefix, and relevant field logical names in `@remarks`.
+- For OData filters or FetchXML, include a concrete example in `@example`.
 - Use `{@link SymbolName}` for cross-references within the same file or package.
-- For React component props interfaces use `@defaultValue` on optional props that have a default.
-- Do **not** add doc comments to:
-  - Private / internal helpers not exported from the module.
-  - Auto-generated files under `src/generated/` or `.power/schemas/`.
-  - Style objects returned by `makeStyles` (`useXxxStyles`).
 
-### Example
+#### Do NOT add TSDoc to
+
+- Private or internal helpers not exported from the module.
+- Auto-generated files under `src/generated/` or `.power/schemas/`.
+- Style hooks (`useXxxStyles`) and their returned class maps — document the consuming component instead.
+
+#### TSDoc example
 
 ```ts
-/** Result returned by a Dataverse Custom API call. */
+/**
+ * Result returned by a Dataverse Custom API call.
+ *
+ * @remarks
+ * Used as the return type of all service functions in `hooks/`.
+ * When `success` is `false`, `data` is `undefined` and `error` is populated.
+ */
 export interface IOperationResult<T> {
   /** Whether the call succeeded. */
   success: boolean
@@ -189,6 +219,7 @@ export interface IOperationResult<T> {
  * Calls the WhoAmI Custom API Function and returns the current user context.
  *
  * @returns The user ID, business unit, and organisation ID from Dataverse.
+ * @throws {Error} When the Dataverse API returns 401 or 403.
  * @example
  * ```ts
  * const result = await whoAmI()
@@ -196,4 +227,112 @@ export interface IOperationResult<T> {
  * ```
  */
 export async function whoAmI(): Promise<IOperationResult<IWhoAmIResult>> { ... }
+
+/**
+ * Displays a loading indicator with an accessible label.
+ *
+ * @remarks
+ * Renders the Fluent UI {@link Spinner} when `spinnerType` is `'Default'`;
+ * delegates to the matching `react-spinners` component otherwise.
+ * Falls back silently to the Fluent UI Spinner for unrecognised values.
+ *
+ * @example
+ * ```tsx
+ * <CustomSpinner label="Loading records…" />
+ * <CustomSpinner spinnerType="MoonLoader" label="Syncing…" labelPosition="after" />
+ * ```
+ */
+export function CustomSpinner({ label, spinnerType = 'Default' }: ICustomSpinnerProps) { ... }
 ```
+
+---
+
+### Layer 2 — AI-Context inline annotations (`// AI-*:`)
+
+AI-Context annotations are machine-readable `//` inline comments that provide structured context to AI coding agents (GitHub Copilot, Claude Code, Windsurf Cascade). They complement TSDoc rather than replacing it.
+
+Place a module-level block at the top of every `.ts` / `.tsx` file, immediately before the first `import`:
+
+```ts
+// AI-CONTEXT: <one-line description of what this module does>
+// AI-FILE-RELATIONS:
+//   - <relation type>: <relative path>  (<why it matters>)
+// AI-CONSTRAINT: <hard rule the agent must never violate in this file>
+// AI-PATTERN: <coding convention or architectural pattern to follow>
+```
+
+Use inline `// AI-*:` annotations inside function bodies and next to non-obvious code to explain intent that TSDoc cannot capture:
+
+| Annotation | When to use |
+|---|---|
+| `// AI-CONTEXT:` | Explains *what* a variable, branch, or block represents in the domain (e.g. which Dataverse table, which SDK call) |
+| `// AI-CONSTRAINT:` | A rule the agent must not violate (e.g. "never edit generated files", "do not call this outside a browser context") |
+| `// AI-PATTERN:` | The architectural pattern to follow when extending this code (e.g. "add new variants here and nowhere else") |
+| `// AI-INTENT:` | The *why* behind a non-obvious implementation choice |
+| `// AI-FILE-RELATIONS:` | Cross-file dependencies that are not expressed by TypeScript imports |
+
+#### AI-Context rules
+
+- Keep every annotation to **one line**. If more is needed, use a TSDoc `@remarks` block instead.
+- Do not duplicate information already clear from TypeScript types or TSDoc.
+- Always annotate: generated-file boundaries, OData/FetchXML quirks, Dataverse field name mappings, SDK-specific browser-only constraints, and multi-step extension points.
+- Do **not** add AI-Context annotations to auto-generated files under `src/generated/` or `.power/schemas/`.
+
+#### AI-Context example
+
+```ts
+// AI-CONTEXT: Dataverse WebAPI service layer for the Configuration Settings table.
+// AI-FILE-RELATIONS:
+//   - types:    src/types/dataverse.d.ts        (entity interfaces)
+//   - consumer: src/hooks/useEnvironmentConfig.ts (the only caller)
+// AI-CONSTRAINT: Never call these functions outside a hook — components are props-only.
+// AI-PATTERN: Every new Dataverse entity gets its own service file; do not merge services.
+
+/**
+ * Reads a configuration value from `aidevme_configurationsettings`.
+ *
+ * @remarks
+ * Dataverse table: `aidevme_configurationsettings` (publisher: `aidevme_`)
+ * OData filter: `aidevme_key eq '<settingKey>' and statecode eq 0`
+ * Value fields: `aidevme_textvalue`, `aidevme_numbervalue`, `aidevme_boolvalue`
+ * The correct value field is selected based on `aidevme_valuetype`.
+ *
+ * @param settingKey - Logical key of the configuration entry (e.g. `'AZURE_FUNCTION_URL'`)
+ * @returns The resolved value as a string, or `null` when no active record exists.
+ * @throws {Error} When the Dataverse API returns a non-2xx response.
+ *
+ * @example
+ * ```ts
+ * const url = await getConfigValue('AZURE_FUNCTION_URL')
+ * if (!url) throw new Error('AZURE_FUNCTION_URL configuration is missing')
+ * ```
+ */
+export async function getConfigValue(settingKey: string): Promise<string | null> {
+  // AI-CONTEXT: `/api/data/v9.2` base path — auth handled by the pac connector, no token needed.
+  // AI-CONSTRAINT: Do not add Authorization headers; pac connector injects them automatically.
+  const response = await fetch(
+    `/api/data/v9.2/aidevme_configurationsettings?$filter=aidevme_key eq '${settingKey}' and statecode eq 0&$select=aidevme_textvalue,aidevme_valuetype`,
+    { headers: { Accept: 'application/json', 'OData-MaxVersion': '4.0', 'OData-Version': '4.0' } }
+  )
+  // AI-CONTEXT: 204 means success with no return value — not an error condition.
+  if (!response.ok) throw new Error(`Dataverse error: ${response.status}`)
+  const data = await response.json()
+  // AI-CONTEXT: `value` is the OData collection wrapper — always an array, even for single results.
+  return data.value?.[0]?.aidevme_textvalue ?? null
+}
+```
+
+---
+
+### Quick reference — documentation checklist
+
+When creating or modifying a `.ts` / `.tsx` file, verify:
+
+- [ ] Module-level `// AI-CONTEXT:` block present at the top (before imports)
+- [ ] Every exported `interface` / `type` has a TSDoc summary and per-property `/** */` comments
+- [ ] Every exported function has `@param`, `@returns`, `@throws` (if applicable), and `@example`
+- [ ] Every exported React component has a TSDoc summary and a JSX `@example`
+- [ ] Optional props have `@defaultValue`
+- [ ] Dataverse table names, publisher prefixes, and field logical names are in `@remarks`
+- [ ] Non-obvious branches or constraints inside function bodies have `// AI-CONTEXT:` or `// AI-CONSTRAINT:` annotations
+- [ ] No TSDoc added to `src/generated/`, `.power/schemas/`, or `useXxxStyles` hooks

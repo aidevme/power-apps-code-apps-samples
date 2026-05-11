@@ -1,5 +1,26 @@
 import { useState } from 'react'
 import type { Accounts } from '../../../generated/models/AccountsModel'
+import type { Aadusers } from '../../../generated/models/AadusersModel'
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+/**
+ * Derives the display table type from the fields available on a registered
+ * {@link Entities} record. Used to populate {@link IRegisteredEntity.tableType}.
+ *
+ * @param meta - The entity metadata record, or `undefined` when not yet loaded.
+ * @returns `'Activity'`, `'Elastic'`, `'Virtual'`, or `'Standard'`.
+ */
+function deriveTableType(meta: import('../../../generated/models/EntitiesModel').Entities | undefined): string {
+  if (!meta) return 'Standard'
+  if (meta.isactivity) return 'Activity'
+  if (meta.physicalname?.toLowerCase().endsWith('_elastic')) return 'Elastic'
+  // Virtual entities have an external name but no physical SQL storage (physicalname absent)
+  if (meta.externalname && !meta.physicalname) return 'Virtual'
+  return 'Standard'
+}
 import type { Aidevme_appeventlogs } from '../../../generated/models/Aidevme_appeventlogsModel'
 import type { Aidevme_codeappssamplesconfigurationsettings } from '../../../generated/models/Aidevme_codeappssamplesconfigurationsettingsModel'
 import type { Appointments } from '../../../generated/models/AppointmentsModel'
@@ -16,6 +37,7 @@ import type { Transactioncurrencies } from '../../../generated/models/Transactio
 import type { Systemforms } from '../../../generated/models/SystemformsModel'
 import {
   REGISTERED_TABLE_COLLECTIONS,
+  useAadUsers,
   useAccounts,
   useAppEventLogs,
   useAppointments,
@@ -45,8 +67,8 @@ export interface IUseCRUDAppResult {
   selectedIds: Set<string>
   /** Display label for the Dropdown's `value` prop. */
   selectedLabel: string
-  /** Ordered list of registered entity entries, each pairing a collection name with optional metadata. */
-  registeredEntities: { collectionName: string; meta: Entities | undefined }[]
+  /** Ordered list of registered entity entries, each pairing a collection name with optional metadata and a derived table type. */
+  registeredEntities: { collectionName: string; meta: Entities | undefined; tableType: string }[]
   /** Dataverse object type code for the currently selected entity, if available. */
   entityTypeCode: number | undefined
 
@@ -95,6 +117,13 @@ export interface IUseCRUDAppResult {
   accountsLoading: boolean
   /** Reloads account records from Dataverse. */
   loadAccounts: () => void
+
+  /** AAD User records from the virtual table. */
+  aadUsers: Aadusers[]
+  /** Whether AAD User records are loading. */
+  aadUsersLoading: boolean
+  /** Reloads AAD User records from Dataverse. */
+  loadAadUsers: () => void
 
   /** App Event Log records. */
   appEventLogs: Aidevme_appeventlogs[]
@@ -216,6 +245,7 @@ export function useCRUDApp(entities: Entities[]): IUseCRUDAppResult {
 
   const { settings: configurationSettings, loading: configurationSettingsLoading, reload: loadConfigurationSettings } = useConfigurationSettings()
   const { accounts, loading: accountsLoading, loadAccounts } = useAccounts()
+  const { aadUsers, loading: aadUsersLoading, loadAadUsers } = useAadUsers()
   const { appEventLogs, loading: appEventLogsLoading, loadAppEventLogs } = useAppEventLogs()
   const { appointments, loading: appointmentsLoading, loadAppointments } = useAppointments()
   const { businessUnits, loading: businessUnitsLoading, loadBusinessUnits } = useBusinessUnits()
@@ -245,10 +275,14 @@ export function useCRUDApp(entities: Entities[]): IUseCRUDAppResult {
   const entitiesByCollection = new Map(entities.map(e => [e.logicalcollectionname, e]))
 
   const registeredEntities = [...REGISTERED_TABLE_COLLECTIONS]
-    .map(collectionName => ({
-      collectionName,
-      meta: entitiesByCollection.get(collectionName),
-    }))
+    .map(collectionName => {
+      const meta = entitiesByCollection.get(collectionName)
+      return {
+        collectionName,
+        meta,
+        tableType: deriveTableType(meta),
+      }
+    })
 
   const selectedEntity = registeredEntities.find(e => (e.meta?.logicalname ?? e.collectionName) === selectedLogicalName)
   const selectedLabel = selectedEntity
@@ -279,6 +313,9 @@ export function useCRUDApp(entities: Entities[]): IUseCRUDAppResult {
     accounts,
     accountsLoading,
     loadAccounts,
+    aadUsers,
+    aadUsersLoading,
+    loadAadUsers,
     appEventLogs,
     appEventLogsLoading,
     loadAppEventLogs,
