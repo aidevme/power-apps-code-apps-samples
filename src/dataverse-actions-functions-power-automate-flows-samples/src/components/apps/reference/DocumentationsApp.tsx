@@ -6,6 +6,19 @@ import type { Components } from 'react-markdown'
 import mermaid from 'mermaid'
 import { useReadme } from '../../../hooks'
 import { useDocumentationsAppStyles } from '../../../styles/documentationsapp.styles'
+import { Notes } from '../../misc/notes/Notes'
+import type { NoteType } from '../../misc/notes/Notes'
+
+const DOCUMENTATIONS_APP_NOTE_TYPE: NoteType = 'info'
+const DOCUMENTATIONS_APP_DESCRIPTION =
+  'This panel renders the repository README live from GitHub, including formatted markdown, ' +
+  'tables, code blocks, and Mermaid diagrams.'
+const DOCUMENTATIONS_APP_INFO_LABEL_TEXT =
+  'Content is fetched at runtime from the raw GitHub URL. Diagrams are rendered client-side ' +
+  'using the Mermaid library. Relative image and link URLs are automatically resolved against ' +
+  'the GitHub repository base so they display correctly outside of the GitHub interface.'
+const DOCUMENTATIONS_APP_INFO_LABEL_LINK =
+  'https://github.com/aidevme/power-apps-code-apps-samples'
 
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/aidevme/power-apps-code-apps-samples/main/docs/code-apps/'
 const GITHUB_BLOB_BASE = 'https://github.com/aidevme/power-apps-code-apps-samples/blob/main/docs/code-apps/'
@@ -96,6 +109,13 @@ export function DocumentationsApp() {
 
   return (
     <div className={styles.root}>
+      <Notes
+        noteType={DOCUMENTATIONS_APP_NOTE_TYPE}
+        showInfoLabel={DOCUMENTATIONS_APP_INFO_LABEL_TEXT}
+        infoLabelLink={DOCUMENTATIONS_APP_INFO_LABEL_LINK}
+      >
+        {DOCUMENTATIONS_APP_DESCRIPTION}
+      </Notes>
       <div className={styles.markdown}>
         <ReactMarkdown remarkPlugins={[remarkGfm]} urlTransform={resolveReadmeUrl} components={markdownComponents}>{markdown ?? ''}</ReactMarkdown>
       </div>

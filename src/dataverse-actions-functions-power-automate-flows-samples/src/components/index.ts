@@ -13,6 +13,10 @@
 export { AppBreadcrumb } from './breadcrumbs/Breadcrumb'
 export type { IBreadcrumbProps } from './breadcrumbs/Breadcrumb'
 
+/** All client-side routes for the application — extracted from App.tsx to keep it layout-only. */
+export { AppRoutes } from './routes/AppRoutes'
+export type { IAppRoutesProps } from './routes/AppRoutes'
+
 /** Read-only monospaced code block for displaying code, XML, or JSON strings. */
 export { SyntaxHighlighter } from './syntax-highlighter/SyntaxHighlighter'
 export type { ISyntaxHighlighterProps } from './syntax-highlighter/SyntaxHighlighter'
@@ -45,6 +49,14 @@ export type { IConfigurationSettingsAppProps } from './apps/miscellaneous/Config
 export { ContentSecurityPolicyManagementApp } from './apps/miscellaneous/ContentSecurityPolicyManagementApp'
 export type { IContentSecurityPolicyManagementAppProps } from './apps/miscellaneous/ContentSecurityPolicyManagementApp'
 
+/** Metadata Browser section view — browse Dataverse entity and attribute metadata. */
+export { MetadataBrowserApp } from './apps/miscellaneous/MetadataBrowserApp'
+export type { IMetadataBrowserAppProps } from './apps/miscellaneous/MetadataBrowserApp'
+
+/** Entity Metadata section view — tabbed schema, columns, keys, relationships, privileges, and solutions viewer. */
+export { EntityMetadataApp } from './apps/miscellaneous/metadata/EntityMetadataApp'
+export type { IEntityMetadataAppProps } from './apps/miscellaneous/metadata/EntityMetadataApp'
+
 /** CRUD Operations section view. */
 export { CRUDApp } from './apps/data-access/CRUDApp'
 export type { ICRUDAppProps } from './apps/data-access/CRUDApp'
@@ -69,12 +81,12 @@ export { DocumentationsApp } from './apps/reference/DocumentationsApp'
 export type { IDocumentationsAppProps } from './apps/reference/DocumentationsApp'
 
 /** ERD Diagram section view — visualises Dataverse entity relationships. */
-export { ERDDiagramApp } from './apps/ERDDiagramApp'
-export type { IERDDiagramAppProps } from './apps/ERDDiagramApp'
+export { ERDDiagramApp } from './apps/miscellaneous/metadata/ERDDiagramApp'
+export type { IERDDiagramAppProps } from './apps/miscellaneous/metadata/ERDDiagramApp'
 
 /** Entity Details section view — displays schema and metadata for a selected Dataverse table. */
-export { EntityDetailsApp } from './apps/EntityDetailsApp'
-export type { IEntityDetailsAppProps } from './apps/EntityDetailsApp'
+export { EntityDetailsApp } from './apps/miscellaneous/metadata/EntityDetailsApp'
+export type { IEntityDetailsAppProps } from './apps/miscellaneous/metadata/EntityDetailsApp'
 
 /** Environment Variables section view. */
 export { EnvironmentVariablesApp } from './apps/miscellaneous/EnvironmentVariablesApp'
@@ -84,9 +96,13 @@ export type { IEnvironmentVariablesAppProps } from './apps/miscellaneous/Environ
 export { EnvironmentVariablesTable } from './tables/EnvironmentVariablesTable'
 export type { IEnvironmentVariablesTableProps } from './tables/EnvironmentVariablesTable'
 
+/** Sortable metadata tables for each EntityDetailsApp tab (Table, Columns, Keys, relationships, Privileges, Solutions). */
+export { MetadataTableInfoTable, MetadataColumnsTable, MetadataKeysTable, MetadataRelationshipTable, MetadataManyToManyTable, MetadataPrivilegesTable, MetadataSolutionsTable } from './tables/metadata/MetadataTables'
+export type { IMetadataTableInfoTableProps, IMetadataColumnsTableProps, IMetadataKeysTableProps, IMetadataRelationshipTableProps, IMetadataManyToManyTableProps, IMetadataPrivilegesTableProps, IMetadataSolutionsTableProps, IAttributeRow, IRelationshipRow, IManyToManyRow, IPrivilegeRow, ISolutionRow } from './tables/metadata/MetadataTables'
+
 /** Fluent UI `Dropdown` that lists all registered Dataverse entities for selection. */
 export { EntitySelector } from './selectors/EntitySelector'
-export type { IEntitySelectorProps } from './selectors/EntitySelector'
+export type { IEntitySelectorProps, IEntityMetadataCacheEntry } from './selectors/EntitySelector'
 
 /** Toggle-button row for filtering the entity list by table type (All, Standard, Activity, Virtual, Elastic). */
 export { EntityTypeSelector } from './selectors/EntityTypeSelector'
@@ -117,8 +133,8 @@ export { MicrosoftGraphApp } from './apps/miscellaneous/MicrosoftGraphApp'
 export type { IMicrosoftGraphAppProps } from './apps/miscellaneous/MicrosoftGraphApp'
 
 /** Styled note block with a brand-coloured left border for contextual descriptions. */
-export { Notes } from './misc/Notes'
-export type { INotesProps, NoteType } from './misc/Notes'
+export { Notes } from './misc/notes/Notes'
+export type { INotesProps, NoteType } from './misc/notes/Notes'
 export { CustomSpinner } from './misc/spinners/CustomSpinner'
 export type { ICustomSpinnerProps, SpinnerType } from './misc/spinners/CustomSpinner'
 
@@ -137,6 +153,10 @@ export type { IAppSearchBoxProps } from './search/SearchBox'
 /** Reusable navigable section card with icon, category, description, and Open button. */
 export { SectionCard } from './cards/SectionCard'
 export type { ISectionCardProps } from './cards/SectionCard'
+
+/** Full home-page section-card grid (Data Access, Dataverse APIs, Integrations, Miscellaneous, Reference). */
+export { SectionCardsList } from './cards/SectionCardsList'
+export type { ISectionCardsListProps } from './cards/SectionCardsList'
 
 /** Side panel for configuring Power Automate flow trigger URL. */
 export { SettingsPanel } from './panels/SettingsPanel'

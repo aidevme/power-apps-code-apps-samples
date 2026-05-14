@@ -39,6 +39,8 @@ export function AppBreadcrumb({ homeLabel = 'Home', dynamicLabel }: IBreadcrumbP
   const currentLabel = dynamicLabel ?? routeLabels[pathname] ?? null
   const parentPath = routeParents[pathname] ?? null
   const parentLabel = parentPath ? (routeLabels[parentPath] ?? null) : null
+  const grandParentPath = parentPath ? (routeParents[parentPath] ?? null) : null
+  const grandParentLabel = grandParentPath ? (routeLabels[grandParentPath] ?? null) : null
 
   return (
     <Breadcrumb aria-label="Navigation">
@@ -49,6 +51,18 @@ export function AppBreadcrumb({ homeLabel = 'Home', dynamicLabel }: IBreadcrumbP
         className={styles.crumb}
         onClick={() => navigate('/')}
       />
+      {grandParentLabel !== null && grandParentPath !== null && (
+        <>
+          <BreadcrumbDivider />
+          <Crumb
+            label={grandParentLabel}
+            tooltip={`Go back to ${grandParentLabel}`}
+            current={false}
+            className={styles.crumb}
+            onClick={() => navigate(grandParentPath)}
+          />
+        </>
+      )}
       {parentLabel !== null && parentPath !== null && (
         <>
           <BreadcrumbDivider />

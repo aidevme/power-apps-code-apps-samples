@@ -1,5 +1,5 @@
 import { makeStyles, tokens } from '@fluentui/react-components'
-import { Notes } from '../../misc/Notes'
+import { Notes } from '../../misc/notes/Notes'
 import {
   AZURE_BLOB_STORAGE_APP_DESCRIPTION,
   AZURE_BLOB_STORAGE_APP_NOTE_TYPE,

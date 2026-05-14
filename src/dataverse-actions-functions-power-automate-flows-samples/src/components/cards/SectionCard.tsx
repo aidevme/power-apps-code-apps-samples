@@ -1,3 +1,10 @@
+// AI-CONTEXT: Presentational card component used to render navigable sample-section tiles on the home screen.
+// AI-FILE-RELATIONS:
+//   - styles:   src/styles/sectioncard.styles.ts  (Griffel styles for card layout, icon wrapper, and footer)
+//   - consumer: src/App.tsx                        (renders a SectionCard per registered sample route)
+// AI-CONSTRAINT: Pure presentational — no state, no hooks beyond useSectionCardStyles, no service calls.
+// AI-PATTERN: Add new optional props to ISectionCardProps; never add stateful logic to this component.
+
 import type { ReactNode } from 'react'
 import {
   Card,
@@ -11,19 +18,45 @@ import {
 import { MoreHorizontal20Regular, ArrowRight16Regular } from '@fluentui/react-icons'
 import { useSectionCardStyles } from '../../styles/sectioncard.styles'
 
-/** Props for {@link SectionCard}. */
+/**
+ * Props for {@link SectionCard}.
+ *
+ * @remarks
+ * The three category-related props serve different purposes:
+ * - `category` — legacy display label rendered directly under the title.
+ * - `sectionCardCategoryName` — machine-readable identifier for filtering or routing logic.
+ * - `sectionCardCategoryDisplayName` — localised UI label that replaces or augments `category` in future renderers.
+ */
 export interface ISectionCardProps {
   /** Primary heading displayed in the card header. */
   title: string
   /** Short body text describing the section's purpose. */
   description: string
-  /** Optional category / type label shown below the title (e.g. `"Custom API Function"`). */
+  /**
+   * Optional category / type label rendered as a `Caption1` subtitle below the title.
+   *
+   * @example `"Custom API Function"`
+   */
   category?: string
+  /**
+   * Machine-readable category identifier used for filtering, routing, or programmatic grouping.
+   * Should be a stable kebab-case or camelCase slug — not displayed directly in the UI.
+   *
+   * @example `"custom-api-function"`
+   */
+  sectionCardCategoryName?: string
+  /**
+   * Localised display name for the category, intended for future renderers that need a human-readable
+   * label independently of the `category` prop (e.g. filter chips, grouped lists).
+   *
+   * @example `"Custom API Function"`
+   */
+  sectionCardCategoryDisplayName?: string
   /** Optional icon rendered inside a brand-tinted square in the card header. */
   icon?: ReactNode
   /**
    * Called when the user clicks either the overflow ("⋯") button or the primary "Open" button.
-   * When omitted both buttons are hidden.
+   * When omitted, both buttons are hidden.
    */
   onMore?: () => void
 }
@@ -31,18 +64,38 @@ export interface ISectionCardProps {
 /**
  * A Fluent UI card representing a navigable sample section.
  *
- * Displays an icon, title, category label, and description. When `onMore` is
- * provided, an overflow button and a primary "Open" button are rendered to let
- * the user navigate into the section.
+ * @remarks
+ * **Render branches:**
  *
- * @example
+ * 1. **Without `onMore`** — renders the card header (icon, title, optional `category` subtitle)
+ *    and the description body only. No interactive controls are shown.
+ *
+ * 2. **With `onMore`** — additionally renders an overflow (`⋯`) button in the header action slot
+ *    and a primary "Open" button in the card footer. Both call `onMore` on click.
+ *
+ * `sectionCardCategoryName` and `sectionCardCategoryDisplayName` are accepted but not currently
+ * rendered — they are available for consumer-side filtering and future UI enhancements.
+ *
+ * @example Minimal (no navigation)
  * ```tsx
  * <SectionCard
  *   title="Dataverse Functions"
  *   description="Call WhoAmI via the typed service layer."
  *   category="Custom API Function"
  *   icon={<CodeRegular />}
- *   onMore={() => setView('functions')}
+ * />
+ * ```
+ *
+ * @example With navigation callback and category metadata
+ * ```tsx
+ * <SectionCard
+ *   title="Dataverse Functions"
+ *   description="Call WhoAmI via the typed service layer."
+ *   category="Custom API Function"
+ *   sectionCardCategoryName="custom-api-function"
+ *   sectionCardCategoryDisplayName="Custom API Function"
+ *   icon={<CodeRegular />}
+ *   onMore={() => navigate(ROUTES.CUSTOM_FUNCTIONS)}
  * />
  * ```
  */

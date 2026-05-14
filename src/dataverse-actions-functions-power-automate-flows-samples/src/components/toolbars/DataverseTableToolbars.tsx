@@ -1,3 +1,9 @@
+// AI-CONTEXT: CRUD + Refresh toolbar component for Dataverse table views.
+// AI-FILE-RELATIONS:
+//   - consumer: src/components/tables/DataverseTable.tsx  (primary host; passes selectedIds and CRUD callbacks)
+// AI-CONSTRAINT: Pure presentation — no service calls, no state. All behaviour is driven by callback props.
+// AI-PATTERN: Add new toolbar actions as ToolbarButton + Tooltip pairs; place them before the ToolbarDivider for data-mutation actions, after for utility actions.
+
 import type { ReactElement } from 'react'
 import {
   Toolbar,
@@ -18,23 +24,39 @@ import {
 // Types
 // ---------------------------------------------------------------------------
 
-/** Props for {@link DataverseTableToolbar}. */
+/**
+ * Props for {@link DataverseTableToolbar}.
+ *
+ * @remarks
+ * All action callbacks are optional — omitting a callback does not hide the button,
+ * but the button becomes a no-op when clicked.
+ * Enable/disable state is computed from `selectedIds.size` regardless of whether
+ * the corresponding callback is provided.
+ */
 export interface IDataverseTableToolbarProps {
-  /** Currently selected record IDs — drives enabled/disabled state of Edit and Delete. */
+  /**
+   * Set of currently selected record IDs.
+   * Controls the enabled/disabled state of the Edit and Delete buttons:
+   * - Edit is enabled only when `selectedIds.size === 1`.
+   * - Delete is enabled when `selectedIds.size >= 1`.
+   */
   selectedIds: Set<string>
-  /** Called when the New button is clicked. */
+  /** Invoked when the **New** button is clicked. */
   onNew?: () => void
   /**
-   * Called when the Edit button is clicked.
-   * Receives the single selected record ID. Enabled only when exactly one row is selected.
+   * Invoked when the **Edit** button is clicked.
+   *
+   * @param id - The single selected record ID. The button is disabled unless exactly one row is selected,
+   * so `id` is always a valid GUID when this callback fires.
    */
   onEdit?: (id: string) => void
   /**
-   * Called when the Delete button is clicked.
-   * Receives all currently selected record IDs. Enabled only when at least one row is selected.
+   * Invoked when the **Delete** button is clicked.
+   *
+   * @param ids - All currently selected record IDs as an array. Always non-empty when this callback fires.
    */
   onDelete?: (ids: string[]) => void
-  /** Called when the Refresh button is clicked. */
+  /** Invoked when the **Refresh** button is clicked. */
   onRefresh?: () => void
 }
 
@@ -53,11 +75,21 @@ const useDataverseTableToolbarStyles = makeStyles({
 // ---------------------------------------------------------------------------
 
 /**
- * CRUD + Refresh toolbar for {@link DataverseTable}.
+ * CRUD + Refresh action toolbar for Dataverse table views.
  *
- * Renders New, Edit, Delete, and Refresh toolbar buttons with Fluent UI
- * `Tooltip` descriptions. Edit is disabled unless exactly one row is selected;
- * Delete is disabled when no rows are selected.
+ * @remarks
+ * Renders four Fluent UI {@link ToolbarButton} controls — **New**, **Edit**, **Delete**, and **Refresh** —
+ * each wrapped in a {@link Tooltip} with context-aware descriptions:
+ *
+ * - **New** — always enabled; calls `onNew`.
+ * - **Edit** — enabled only when exactly one row is selected; tooltip explains the requirement otherwise; calls `onEdit` with the selected ID.
+ * - **Delete** — enabled when one or more rows are selected; tooltip shows the count; calls `onDelete` with all selected IDs.
+ * - **Refresh** — always enabled; separated from the mutation actions by a {@link ToolbarDivider}; calls `onRefresh`.
+ *
+ * This component is stateless — all selection state and action handlers are provided via props.
+ *
+ * @param props - See {@link IDataverseTableToolbarProps}.
+ * @returns A Fluent UI `Toolbar` element.
  *
  * @example
  * ```tsx

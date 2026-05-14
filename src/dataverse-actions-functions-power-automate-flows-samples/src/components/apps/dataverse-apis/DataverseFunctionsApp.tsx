@@ -1,5 +1,5 @@
-import { Notes } from '../../misc/Notes'
-import type { NoteType } from '../../misc/Notes'
+import { Notes } from '../../misc/notes/Notes'
+import type { NoteType } from '../../misc/notes/Notes'
 
 const DATAVERSE_FUNCTIONS_APP_DESCRIPTION =
   'Invoke Dataverse Custom API Functions (unbound GET operations) and display their responses. ' +

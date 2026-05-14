@@ -1,6 +1,6 @@
 import { makeStyles, tokens } from '@fluentui/react-components'
-import { Notes } from '../../misc/Notes'
-import type { NoteType } from '../../misc/Notes'
+import { Notes } from '../../misc/notes/Notes'
+import type { NoteType } from '../../misc/notes/Notes'
 
 const CONFIGURATION_SETTINGS_APP_NOTE_TYPE: NoteType = 'info'
 const CONFIGURATION_SETTINGS_APP_DESCRIPTION =

@@ -101,6 +101,7 @@ export const ALL_ENTITY_METADATA_FIELDS = [
   'PrimaryIdAttribute',
   'PrimaryImageAttribute',
   'PrimaryNameAttribute',
+  'Privileges',
   'ReportViewName',
   'SchemaName',
   'SyncToExternalSearchIndex',
@@ -411,7 +412,9 @@ export function deriveTableInfo(metadata: Partial<EntityMetadata> | null): IEnti
     metadataId:                          metadata?.MetadataId ?? null,
     mobileOfflineFilters:                metadata?.MobileOfflineFilters ?? null,
     objectTypeCode:                      metadata?.ObjectTypeCode ?? null,
-    ownershipType:                       metadata?.OwnershipType != null ? getOwnershipTypeName(metadata.OwnershipType) : null,
+    // AI-INTENT: Dataverse EntityDefinitions API returns OwnershipType as a string label (e.g. "UserOwned"),
+    // but getOwnershipTypeName expects a numeric key. Fall back to the raw string so the value is always visible.
+    ownershipType:                       metadata?.OwnershipType != null ? (getOwnershipTypeName(metadata.OwnershipType) ?? String(metadata.OwnershipType)) : null,
     primaryIdAttribute:                  metadata?.PrimaryIdAttribute ?? null,
     primaryImageAttribute:               metadata?.PrimaryImageAttribute ?? null,
     primaryNameAttribute:                metadata?.PrimaryNameAttribute ?? null,

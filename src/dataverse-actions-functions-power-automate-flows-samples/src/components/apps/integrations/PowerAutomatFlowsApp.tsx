@@ -20,8 +20,8 @@ import { useState } from 'react'
 import { useWorkflows, fetchWorkflowDetail } from '../../../hooks'
 import type { Workflows } from '../../../generated/models/WorkflowsModel'
 import { Follow_upflowService } from '../../../generated/services/Follow_upflowService'
-import { Notes } from '../../misc/Notes'
-import type { NoteType } from '../../misc/Notes'
+import { Notes } from '../../misc/notes/Notes'
+import type { NoteType } from '../../misc/notes/Notes'
 
 const POWER_AUTOMATE_FLOWS_APP_DESCRIPTION =
   'Lists Power Automate cloud flows registered in Dataverse. Select a flow to inspect its metadata. ' +

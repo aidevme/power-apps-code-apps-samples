@@ -1,4 +1,4 @@
-import type { NoteType } from '../components/misc/Notes'
+import type { NoteType } from '../components/misc/notes/Notes'
 
 /** Description shown in the Notes banner for {@link CRUDApp}. */
 export const CRUD_APP_DESCRIPTION =

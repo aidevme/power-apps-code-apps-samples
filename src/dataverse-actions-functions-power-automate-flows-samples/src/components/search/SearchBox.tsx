@@ -47,7 +47,7 @@ export function AppSearchBox({ value, onChange, placeholder = 'Search…', isDis
   } as React.CSSProperties : undefined
 
   return (
-    <div style={disabledTokenOverrides}>
+    <div style={{ width: '100%', ...disabledTokenOverrides }}>
       <FluentSearchBox
         className={styles.fieldWrapper}
         placeholder={placeholder}

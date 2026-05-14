@@ -26,6 +26,13 @@ export const dataSourcesInfo = {
     "dataSourceType": "Dataverse",
     "apis": {}
   },
+  "audits": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "auditid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
   "businessunits": {
     "tableId": "",
     "version": "",
@@ -51,6 +58,27 @@ export const dataSourcesInfo = {
     "tableId": "",
     "version": "",
     "primaryKey": "transactioncurrencyid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "customapirequestparameters": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "customapirequestparameterid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "customapiresponseproperties": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "customapiresponsepropertyid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "customapis": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "customapiid",
     "dataSourceType": "Dataverse",
     "apis": {}
   },
@@ -117,6 +145,27 @@ export const dataSourcesInfo = {
     "dataSourceType": "Dataverse",
     "apis": {}
   },
+  "solutioncomponentdefinitions": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "solutioncomponentdefinitionid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "solutioncomponents": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "solutioncomponentid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "solutions": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "solutionid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
   "systemforms": {
     "tableId": "",
     "version": "",
@@ -156,6 +205,13 @@ export const dataSourcesInfo = {
     "tableId": "",
     "version": "",
     "primaryKey": "savedqueryid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "webresourceset": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "webresourceid",
     "dataSourceType": "Dataverse",
     "apis": {}
   },

@@ -20,5 +20,6 @@ export const useSearchBoxStyles = makeStyles({
   },
   fieldWrapper: {
     padding: `${tokens.spacingVerticalMNudge} ${tokens.spacingHorizontalMNudge}`,
+    width: '100%',
   },
 })

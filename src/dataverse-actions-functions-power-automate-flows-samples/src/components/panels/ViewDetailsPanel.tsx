@@ -15,7 +15,7 @@ import { DismissRegular, EyeRegular } from '@fluentui/react-icons'
 import type { Savedqueries } from '../../generated/models/SavedqueriesModel'
 import { useViewDetailsPanelStyles } from '../../styles/viewdetailspanel.styles'
 import { SyntaxHighlighter } from '../syntax-highlighter/SyntaxHighlighter'
-import { Notes } from '../misc/Notes'
+import { Notes } from '../misc/notes/Notes'
 
 // ---------------------------------------------------------------------------
 // Constants

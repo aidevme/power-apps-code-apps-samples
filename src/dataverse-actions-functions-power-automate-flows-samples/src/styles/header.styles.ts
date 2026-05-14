@@ -76,6 +76,11 @@ export const useHeaderStyles = makeStyles({
     backgroundColor: 'rgba(255, 255, 255, 0.15)',
     color: 'rgba(255, 255, 255, 0.9)',
   },
+  searchBox: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+  },
   controls: {
     position: 'absolute',
     top: tokens.spacingVerticalM,

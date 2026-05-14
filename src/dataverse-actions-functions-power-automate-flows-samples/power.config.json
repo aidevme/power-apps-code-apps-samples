@@ -120,6 +120,38 @@
         "appeventlogs": {
           "entitySetName": "aidevme_appeventlogs",
           "logicalName": "aidevme_appeventlog"
+        },
+        "customapis": {
+          "entitySetName": "customapis",
+          "logicalName": "customapi"
+        },
+        "customapirequestparameters": {
+          "entitySetName": "customapirequestparameters",
+          "logicalName": "customapirequestparameter"
+        },
+        "customapiresponseproperties": {
+          "entitySetName": "customapiresponseproperties",
+          "logicalName": "customapiresponseproperty"
+        },
+        "webresources": {
+          "entitySetName": "webresourceset",
+          "logicalName": "webresource"
+        },
+        "solutions": {
+          "entitySetName": "solutions",
+          "logicalName": "solution"
+        },
+        "solutioncomponents": {
+          "entitySetName": "solutioncomponents",
+          "logicalName": "solutioncomponent"
+        },
+        "solutioncomponentdefinitions": {
+          "entitySetName": "solutioncomponentdefinitions",
+          "logicalName": "solutioncomponentdefinition"
+        },
+        "audits": {
+          "entitySetName": "audits",
+          "logicalName": "audit"
         }
       },
       "environmentVariableName": ""

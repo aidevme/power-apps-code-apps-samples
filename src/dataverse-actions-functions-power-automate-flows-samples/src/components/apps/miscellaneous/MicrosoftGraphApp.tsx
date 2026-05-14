@@ -1,5 +1,5 @@
-import { Notes } from '../../misc/Notes'
-import type { NoteType } from '../../misc/Notes'
+import { Notes } from '../../misc/notes/Notes'
+import type { NoteType } from '../../misc/notes/Notes'
 
 const MICROSOFT_GRAPH_APP_DESCRIPTION =
   'Call Microsoft Graph API endpoints from a Power Apps Code App using the authenticated user context. ' +

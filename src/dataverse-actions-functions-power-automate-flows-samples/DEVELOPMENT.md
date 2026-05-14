@@ -76,6 +76,23 @@ pac code add-data-source -a dataverse -t organization
 pac code add-data-source -a dataverse -t aidevme_codeappssamplesconfigurationsetting
 pac code add-data-source -a dataverse -t systemform
 
+
+
+# Custom APIs tables
+
+pac code add-data-source -a dataverse -t customapi
+pac code add-data-source -a dataverse -t customapirequestparameter
+pac code add-data-source -a dataverse -t customapiresponseproperty
+
+
+
+pac code add-data-source -a dataverse -t webresource
+pac code add-data-source -a dataverse -t solution
+pac code add-data-source -a dataverse -t solutioncomponent
+pac code add-data-source -a dataverse -t solutioncomponentdefinition
+
+pac code add-data-source -a dataverse -t audit
+
 ```
 
 Each command generates:

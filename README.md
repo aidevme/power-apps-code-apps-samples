@@ -57,6 +57,15 @@ power-apps-code-apps-samples/
 │       └── README.md           # Sample-specific documentation
 └── README.md
 ```
+## Samples
+
+| Sample | Description |
+|---|---|
+| [Basic Sample](src/basic-sample/) | Minimal Code App scaffolded from the official Vite template. Covers `pac code init`, local HMR dev, and `pac code push` deployment. · [Docs](src/basic-sample/docs/index.md) |
+| [Dataverse Actions, Functions & Power Automate Flows](src/dataverse-actions-functions-power-automate-flows-samples/) | Demonstrates calling unbound Dataverse Custom API Actions (POST), Custom API Functions (GET with OData parameters), and triggering Power Automate instant flows via HTTP Request triggers. · [Docs](src/dataverse-actions-functions-power-automate-flows-samples/docs/index.md) |
+| [IFrame Samples](src/iframe-samples/) | Shows how to embed external web content inside a Power Apps Code App using iframes, including communication patterns between the host app and embedded pages. · [Docs](src/iframe-samples/docs/index.md) |
+| [Localization Samples](src/localization-samples/) | Demonstrates multi-language support in a Code App using Power Apps locale context, dynamic string resources, and LCID-driven UI rendering. · [Docs](src/localization-samples/docs/index.md) |
+| [Metadata Samples](src/metadata-samples/) | Shows how to retrieve Dataverse table metadata at runtime using `getMetadata` on generated service classes — covering entity definitions, attribute metadata, and relationships with localized labels. · [Docs](src/metadata-samples/docs/index.md) |
 
 ## Contributing
 

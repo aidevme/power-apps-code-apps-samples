@@ -22,6 +22,8 @@ export const ROUTES = {
   CSP_MANAGEMENT:  '/csp-management',
   ERD_DIAGRAM:      '/erd-diagram',
   ENTITY_DETAILS:   '/entity-details',
+  ENTITY_METADATA:  '/entity-metadata',
+  METADATA:         '/metadata',
   DOCS:             '/docs',
 } as const
 
@@ -35,8 +37,9 @@ export const ROUTES = {
  * `Home > CRUD Operations > ERD Diagram`.
  */
 export const routeParents: Partial<Record<string, string>> = {
-  [ROUTES.ERD_DIAGRAM]:    ROUTES.CRUD,
-  [ROUTES.ENTITY_DETAILS]: ROUTES.CRUD,
+  [ROUTES.ERD_DIAGRAM]:      ROUTES.METADATA,
+  [ROUTES.ENTITY_DETAILS]:   ROUTES.ENTITY_METADATA,
+  [ROUTES.ENTITY_METADATA]:  ROUTES.METADATA,
 }
 
 /**
@@ -61,6 +64,8 @@ export const routeLabels: Record<string, string> = {
   [ROUTES.CONFIG_SETTINGS]:'Configuration Settings',
   [ROUTES.CSP_MANAGEMENT]: 'Content Security Policy Management',
   [ROUTES.ERD_DIAGRAM]:    'ERD Diagram',
-  [ROUTES.ENTITY_DETAILS]: 'Entity Details',
+  [ROUTES.ENTITY_DETAILS]: 'Entity Metadata',
+  [ROUTES.ENTITY_METADATA]:'Entity Metadata',
+  [ROUTES.METADATA]:       'Metadata Browser',
   [ROUTES.DOCS]:           'Documentation',
 }

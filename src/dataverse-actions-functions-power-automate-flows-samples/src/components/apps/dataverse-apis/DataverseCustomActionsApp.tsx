@@ -1,5 +1,5 @@
-import { Notes } from '../../misc/Notes'
-import type { NoteType } from '../../misc/Notes'
+import { Notes } from '../../misc/notes/Notes'
+import type { NoteType } from '../../misc/notes/Notes'
 
 const DATAVERSE_CUSTOM_ACTIONS_APP_DESCRIPTION =
   'Invoke Dataverse Custom API Actions (unbound POST operations) and display their responses. ' +
