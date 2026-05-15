@@ -9,19 +9,13 @@ import { useNavigate } from 'react-router-dom'
 import { makeStyles, tokens } from '@fluentui/react-components'
 import { DiagramRegular, TableRegular } from '@fluentui/react-icons'
 import { Notes } from '../../misc/notes/Notes'
-import type { NoteType } from '../../misc/notes/Notes'
+import {
+  METADATA_BROWSER_APP_NOTE_TYPE,
+  METADATA_BROWSER_APP_DESCRIPTION,
+  METADATA_BROWSER_APP_INFO_LABEL_TEXT,
+  METADATA_BROWSER_APP_INFO_LABEL_LINK,
+} from '../../../tools/notes.const'
 import { SectionCard } from '../../cards/SectionCard'
-
-const METADATA_BROWSER_APP_NOTE_TYPE: NoteType = 'info'
-const METADATA_BROWSER_APP_DESCRIPTION =
-  'Browse and inspect Dataverse entity metadata, including table definitions, column schemas, ' +
-  'relationships, and option sets registered in the current environment.'
-const METADATA_BROWSER_APP_INFO_LABEL_TEXT =
-  'Metadata is retrieved from the Dataverse Web API via the EntityDefinitions and GlobalOptionSetDefinitions endpoints. ' +
-  'Only entities and fields visible to the current security role are returned. ' +
-  'Use the OData $select and $expand parameters to limit payload size when loading large schemas.'
-const METADATA_BROWSER_APP_INFO_LABEL_LINK =
-  'https://learn.microsoft.com/power-apps/developer/data-platform/webapi/query-metadata-web-api'
 
 /** Styles for {@link MetadataBrowserApp}. */
 const useStyles = makeStyles({

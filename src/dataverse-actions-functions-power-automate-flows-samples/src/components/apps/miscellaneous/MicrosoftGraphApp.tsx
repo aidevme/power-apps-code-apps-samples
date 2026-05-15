@@ -1,16 +1,10 @@
 import { Notes } from '../../misc/notes/Notes'
-import type { NoteType } from '../../misc/notes/Notes'
-
-const MICROSOFT_GRAPH_APP_DESCRIPTION =
-  'Call Microsoft Graph API endpoints from a Power Apps Code App using the authenticated user context. ' +
-  'Demonstrates REST calls to Graph, response parsing, and typed result models.'
-
-const MICROSOFT_GRAPH_APP_NOTE_TYPE: NoteType = 'info'
-const MICROSOFT_GRAPH_APP_INFO_LABEL_TEXT =
-  "Microsoft Graph API calls are made via fetch() to https://graph.microsoft.com/v1.0. " +
-  "Authentication is handled transparently by the Power Apps connector — no token management is required in app code. " +
-  "Responses follow the Graph OData envelope: value[] for collections, or a single resource object for individual lookups."
-const MICROSOFT_GRAPH_APP_INFO_LABEL_LINK = 'https://aidevme.com'
+import {
+  MICROSOFT_GRAPH_APP_DESCRIPTION,
+  MICROSOFT_GRAPH_APP_NOTE_TYPE,
+  MICROSOFT_GRAPH_APP_INFO_LABEL_TEXT,
+  MICROSOFT_GRAPH_APP_INFO_LABEL_LINK,
+} from '../../../tools/notes.const'
 
 /** Props for {@link MicrosoftGraphApp}. */
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type

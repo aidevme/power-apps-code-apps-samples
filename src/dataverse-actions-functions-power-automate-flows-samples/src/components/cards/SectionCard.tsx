@@ -14,6 +14,7 @@ import {
   Text,
   Caption1,
   Tooltip,
+  mergeClasses,
 } from '@fluentui/react-components'
 import { MoreHorizontal20Regular, ArrowRight16Regular } from '@fluentui/react-icons'
 import { useSectionCardStyles } from '../../styles/sectioncard.styles'
@@ -54,6 +55,16 @@ export interface ISectionCardProps {
   sectionCardCategoryDisplayName?: string
   /** Optional icon rendered inside a brand-tinted square in the card header. */
   icon?: ReactNode
+  /**
+   * Optional Griffel class name merged onto the icon wrapper `<div>`.
+   * Use to apply per-category color overrides (color + backgroundColor) from the consumer's styles.
+   *
+   * @example
+   * ```tsx
+   * <SectionCard iconWrapperClassName={styles.iconWrapperBlue} ... />
+   * ```
+   */
+  iconWrapperClassName?: string
   /**
    * Called when the user clicks either the overflow ("⋯") button or the primary "Open" button.
    * When omitted, both buttons are hidden.
@@ -99,12 +110,16 @@ export interface ISectionCardProps {
  * />
  * ```
  */
-export function SectionCard({ title, description, category, icon, onMore }: ISectionCardProps) {
+export function SectionCard({ title, description, category, icon, iconWrapperClassName, onMore }: ISectionCardProps) {
   const styles = useSectionCardStyles()
   return (
-    <Card className={styles.card}>
+    <Card className={styles.card} appearance="subtle">
       <CardHeader
-        image={icon ? <div className={styles.iconWrapper}>{icon}</div> : undefined}
+        image={icon ? (
+          <div className={mergeClasses(styles.iconWrapper, iconWrapperClassName)}>
+            {icon}
+          </div>
+        ) : undefined}
         header={
           <Text as="h5" weight="semibold" style={{ margin: 0 }}>
             {title}

@@ -140,6 +140,9 @@ export { useLookupResolver } from './dataverse-hooks/useLookupResolver'
 /** Loads saved queries (public views) for a given entity type. */
 export { useSavedQueries } from './dataverse-hooks/useSavedQueries'
 export type { IUseSavedQueriesResult } from './dataverse-hooks/useSavedQueries'
+/** Loads solution component records, optionally scoped to a specific solution and/or component type. */
+export { useSolutionComponents, useSolutionComponentsByType } from './dataverse-hooks/useSolutionComponents'
+export type { IUseSolutionComponentsResult, IUseSolutionComponentsByTypeResult, ISolutionInfo } from './dataverse-hooks/useSolutionComponents'
 /** Loads system forms, optionally scoped to a specific entity. */
 export { useSystemForms } from './dataverse-hooks/useSystemForms'
 export type { IUseSystemFormsResult } from './dataverse-hooks/useSystemForms'
@@ -184,3 +187,6 @@ export type { IUseSyntaxHighlighterResult } from './component-hooks/syntax-highl
 /** Manages entity selection, all Dataverse entity hooks, lookup resolution, and record-open callbacks for the CRUDApp component. */
 export { useCRUDApp } from './component-hooks/apps/useCRUDApp'
 export type { IUseCRUDAppResult } from './component-hooks/apps/useCRUDApp'
+/** Manages filter state, visible categories, sample counts, and navigation for the home-page section-card grid. */
+export { useSectionCards, SECTION_CATEGORIES, SECTION_CARDS } from './component-hooks/cards/useSectionCards'
+export type { IUseSectionCardsResult, ICardConfig, CategoryId } from './component-hooks/cards/useSectionCards'

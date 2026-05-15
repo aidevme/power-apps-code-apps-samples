@@ -88,10 +88,10 @@ const useStyles = makeStyles({
 })
 
 function getTableTypeIcon(tableType: string | null, isActivity: boolean | null): React.ReactElement | null {
-  if (isActivity) return <CalendarCheckmarkRegular style={{ color: tokens.colorPaletteTealForeground1 }} />
+  if (isActivity) return <CalendarCheckmarkRegular style={{ color: tokens.colorPaletteTealForeground2 }} />
   switch (tableType) {
     case 'Standard': return <TableRegular style={{ color: tokens.colorBrandForeground1 }} />
-    case 'Virtual':  return <CubeRegular style={{ color: tokens.colorPalettePurpleForeground1 }} />
+    case 'Virtual':  return <CubeRegular style={{ color: tokens.colorPalettePurpleForeground2 }} />
     case 'Elastic':  return <TableLightningRegular style={{ color: tokens.colorPaletteMarigoldForeground1 }} />
     default: return null
   }
@@ -101,10 +101,10 @@ function getOwnershipTypeIcon(ownershipType: string | null): React.ReactElement 
   switch (ownershipType) {
     case 'None':             return <ProhibitedRegular style={{ color: tokens.colorPaletteRedForeground1 }} />
     case 'UserOwned':        return <PersonRegular style={{ color: tokens.colorBrandForeground1 }} />
-    case 'TeamOwned':        return <PeopleRegular style={{ color: tokens.colorPalettePurpleForeground1 }} />
+    case 'TeamOwned':        return <PeopleRegular style={{ color: tokens.colorPalettePurpleForeground2 }} />
     case 'BusinessOwned':    return <BriefcaseRegular style={{ color: tokens.colorPaletteMarigoldForeground1 }} />
     case 'OrganizationOwned': return <BuildingRegular style={{ color: tokens.colorPaletteGreenForeground1 }} />
-    case 'BusinessParented': return <OrganizationRegular style={{ color: tokens.colorPaletteTealForeground1 }} />
+    case 'BusinessParented': return <OrganizationRegular style={{ color: tokens.colorPaletteTealForeground2 }} />
     case 'Filtered':         return <FilterRegular style={{ color: tokens.colorPaletteBerryForeground1 }} />
     default: return null
   }

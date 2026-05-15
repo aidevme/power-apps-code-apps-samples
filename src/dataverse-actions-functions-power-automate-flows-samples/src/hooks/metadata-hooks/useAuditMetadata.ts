@@ -4,13 +4,14 @@
 //   - types:    src/hooks/metadata-hooks/entityMetadata.types.ts    (IEntityTableInfo, ALL_ENTITY_METADATA_FIELDS, deriveTableInfo)
 //   - consumer: src/components/apps/EntityDetailsApp.tsx            (primary caller)
 // AI-CONSTRAINT: Never call AuditsService or fetch directly from components — all data flows through this hook.
-// AI-PATTERN: Two-effect pattern: effect 1 fetches entity metadata on mount/retry; effect 2 fetches solution components once MetadataId resolves.
+// AI-PATTERN: Single-effect hook body: effect 1 fetches entity metadata on mount/retry; useSolutionComponentsByType handles solution components and skips automatically while MetadataId is unresolved.
 
 import { useState, useEffect } from 'react'
 import type { EntityMetadata } from '@microsoft/power-apps/data/metadata/dataverse'
 import { getPrivilegeTypeName } from '@microsoft/power-apps/data/metadata/dataverse'
 import { AuditsService } from '../../generated/services/AuditsService'
 import { type IEntityTableInfo, ALL_ENTITY_METADATA_FIELDS, deriveTableInfo } from './entityMetadata.types'
+import { useSolutionComponentsByType } from '../dataverse-hooks/useSolutionComponents'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -197,8 +198,8 @@ export interface IAuditManyToManyRelationship {
  * A Dataverse solution that contains the Audit table as a component.
  *
  * @remarks
- * Fetched from `solutioncomponents?$filter=componenttype eq 1 and objectid eq {MetadataId}`
- * with `$expand=solutionid`. Component type 1 represents an Entity.
+ * Populated by {@link useSolutionComponentsByType} with `componenttype 1` and `metadata.MetadataId`.
+ * Component type 1 represents an Entity.
  */
 export interface IAuditSolution {
   /** Unique programmatic name of the solution, e.g. `"Active"`. */
@@ -348,9 +349,10 @@ export function useAuditMetadata(): IUseAuditMetadataResult {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [attempt, setAttempt] = useState(0)
-  const [solutions, setSolutions] = useState<IAuditSolution[]>([])
-  const [solutionsLoading, setSolutionsLoading] = useState(false)
-  const [solutionsError, setSolutionsError] = useState<string | null>(null)
+  // AI-CONTEXT: useSolutionComponentsByType skips fetching when metadataId is empty string — safe to call unconditionally while MetadataId resolves from the primary effect.
+  const { solutions: rawSolutions, loading: solutionsLoading, error: solutionsErrorObj } = useSolutionComponentsByType(1, metadata?.MetadataId ?? '')
+  const solutions: IAuditSolution[] = rawSolutions as IAuditSolution[]
+  const solutionsError = solutionsErrorObj?.message ?? null
 
   useEffect(() => {
     let cancelled = false
@@ -382,54 +384,6 @@ export function useAuditMetadata(): IUseAuditMetadataResult {
     doFetch()
     return () => { cancelled = true }
   }, [attempt])
-
-  // AI-CONTEXT: Secondary fetch — triggered once MetadataId is known. Uses raw fetch because
-  // there is no PAC-generated service for solutioncomponents.
-  // AI-CONSTRAINT: Do not add Authorization headers; pac connector injects them automatically.
-  useEffect(() => {
-    const metadataId = metadata?.MetadataId
-    if (!metadataId) return
-    let cancelled = false
-    const fetchSolutions = async () => {
-      try {
-        setSolutionsLoading(true)
-        setSolutionsError(null)
-        // AI-CONTEXT: componenttype eq 1 = Entity in the Dataverse SolutionComponent type enum.
-        const url =
-          `/api/data/v9.2/solutioncomponents` +
-          `?$filter=componenttype eq 1 and objectid eq ${metadataId}` +
-          `&$expand=solutionid($select=uniquename,friendlyname,version,ismanaged,solutionid)`
-        const response = await fetch(url, {
-          headers: { Accept: 'application/json', 'OData-MaxVersion': '4.0', 'OData-Version': '4.0' },
-        })
-        // AI-CONTEXT: 403 is expected for non-admin users — solutioncomponents requires Solution Manager or System Administrator role.
-        if (response.status === 403) throw new Error('Insufficient privileges to read solution components (Solution Manager or System Administrator role required)')
-        if (!response.ok) throw new Error(`Dataverse solutioncomponents error: ${response.status}`)
-        const data = await response.json()
-        if (cancelled) return
-        // AI-CONTEXT: `value` is the OData collection wrapper — always an array.
-        type SolutionComponentRecord = { solutionid: { uniquename: string; friendlyname: string; version: string; ismanaged: boolean; solutionid: string } }
-        const components: SolutionComponentRecord[] = data.value ?? []
-        setSolutions(components.map(c => ({
-          uniqueName: c.solutionid?.uniquename ?? '',
-          friendlyName: c.solutionid?.friendlyname ?? '',
-          version: c.solutionid?.version ?? '',
-          isManaged: c.solutionid?.ismanaged ?? false,
-          solutionId: c.solutionid?.solutionid ?? '',
-        })))
-      } catch (err) {
-        if (!cancelled) {
-          const message = err instanceof Error ? err.message : String(err)
-          console.error('useAuditMetadata: failed to load solution components', message)
-          setSolutionsError(message)
-        }
-      } finally {
-        if (!cancelled) setSolutionsLoading(false)
-      }
-    }
-    fetchSolutions()
-    return () => { cancelled = true }
-  }, [metadata?.MetadataId])
 
   const REQUIRED_LEVEL_NAMES: Record<number, string> = { 0: 'None', 1: 'SystemRequired', 2: 'ApplicationRequired', 3: 'Recommended' }
 
