@@ -1,0 +1,106 @@
+{
+  "name": "provisionlanguageforuser",
+  "title": "ProvisionLanguageForUser",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "provisionlanguageforusers",
+      "x-ms-dataverse-primary-id": "provisionlanguageforuserid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "asyncoperationid": {
+          "type": "string",
+          "title": "AsyncOperationId",
+          "x-ms-dataverse-attribute": "asyncoperationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AsyncOperationId"
+        },
+        "lcid": {
+          "type": "string",
+          "title": "Lcid",
+          "x-ms-dataverse-attribute": "lcid",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Lcid"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "operationstatus": {
+          "type": "string",
+          "title": "OperationStatus",
+          "x-ms-dataverse-attribute": "operationstatus",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "OperationStatus",
+          "enum": [
+            "Queued",
+            "Completed",
+            "Waiting For Language Provision",
+            "Failed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "4d311b6d-3219-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Operation Status",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "operationstatusname": {
+          "type": "string",
+          "title": "operationstatusname",
+          "x-ms-dataverse-attribute": "operationstatusname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "operationstatusName",
+          "x-ms-read-only": true
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "provisionlanguageforuserid": {
+          "type": "string",
+          "title": "ProvisionLanguageForUser",
+          "x-ms-dataverse-attribute": "provisionlanguageforuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ProvisionLanguageForUserId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "userid": {
+          "type": "string",
+          "title": "UserId",
+          "x-ms-dataverse-attribute": "userid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UserId"
+        }
+      },
+      "required": [
+        "name",
+        "provisionlanguageforuserid"
+      ]
+    }
+  }
+}

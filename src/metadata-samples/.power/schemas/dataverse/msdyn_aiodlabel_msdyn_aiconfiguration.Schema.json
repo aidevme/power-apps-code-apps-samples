@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_aiodlabel_msdyn_aiconfiguration",
+  "title": "msdyn_aiodlabel_msdyn_aiconfiguration",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_aiodlabel_msdyn_aiconfigurationset",
+      "x-ms-dataverse-primary-id": "msdyn_aiodlabel_msdyn_aiconfigurationid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_aiconfigurationid": {
+          "type": "string",
+          "title": "msdyn_aiconfigurationid",
+          "x-ms-dataverse-attribute": "msdyn_aiconfigurationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_aiconfigurationid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_aiodlabel_msdyn_aiconfigurationid": {
+          "type": "string",
+          "title": "msdyn_aiodlabel_msdyn_aiconfigurationid",
+          "x-ms-dataverse-attribute": "msdyn_aiodlabel_msdyn_aiconfigurationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_aiodlabel_msdyn_aiconfigurationId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_aiodlabelid": {
+          "type": "string",
+          "title": "msdyn_aiodlabelid",
+          "x-ms-dataverse-attribute": "msdyn_aiodlabelid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_aiodlabelid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_aiconfigurationid",
+        "msdyn_aiodlabel_msdyn_aiconfigurationid",
+        "msdyn_aiodlabelid"
+      ]
+    }
+  }
+}

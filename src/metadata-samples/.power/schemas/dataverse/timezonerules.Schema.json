@@ -1,0 +1,310 @@
+{
+  "name": "timezonerule",
+  "title": "Time Zone Rules",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "timezonerules",
+      "x-ms-dataverse-primary-id": "timezoneruleid",
+      "x-ms-dataverse-primary-name": "timezoneruleversionnumber",
+      "properties": {
+        "bias": {
+          "type": "string",
+          "title": "Bias",
+          "x-ms-dataverse-attribute": "bias",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Bias",
+          "required": true
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "daylightbias": {
+          "type": "string",
+          "title": "Daylight Bias",
+          "x-ms-dataverse-attribute": "daylightbias",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DaylightBias",
+          "required": true
+        },
+        "daylightday": {
+          "type": "string",
+          "title": "Daylight Day",
+          "x-ms-dataverse-attribute": "daylightday",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DaylightDay",
+          "required": true
+        },
+        "daylightdayofweek": {
+          "type": "string",
+          "title": "Daylight Day Of Week",
+          "x-ms-dataverse-attribute": "daylightdayofweek",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DaylightDayOfWeek",
+          "required": true
+        },
+        "daylighthour": {
+          "type": "string",
+          "title": "Daylight Hour",
+          "x-ms-dataverse-attribute": "daylighthour",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DaylightHour",
+          "required": true
+        },
+        "daylightminute": {
+          "type": "string",
+          "title": "Daylight Minute",
+          "x-ms-dataverse-attribute": "daylightminute",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DaylightMinute",
+          "required": true
+        },
+        "daylightmonth": {
+          "type": "string",
+          "title": "Daylight Month",
+          "x-ms-dataverse-attribute": "daylightmonth",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DaylightMonth",
+          "required": true
+        },
+        "daylightsecond": {
+          "type": "string",
+          "title": "Daylight Second",
+          "x-ms-dataverse-attribute": "daylightsecond",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DaylightSecond",
+          "required": true
+        },
+        "daylightyear": {
+          "type": "string",
+          "title": "Daylight Year",
+          "x-ms-dataverse-attribute": "daylightyear",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DaylightYear",
+          "required": true
+        },
+        "effectivedatetime": {
+          "type": "string",
+          "title": "Effective Date Time",
+          "x-ms-dataverse-attribute": "effectivedatetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "EffectiveDateTime",
+          "required": true
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "standardbias": {
+          "type": "string",
+          "title": "Standard Bias",
+          "x-ms-dataverse-attribute": "standardbias",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StandardBias",
+          "required": true
+        },
+        "standardday": {
+          "type": "string",
+          "title": "Standard Day",
+          "x-ms-dataverse-attribute": "standardday",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StandardDay",
+          "required": true
+        },
+        "standarddayofweek": {
+          "type": "string",
+          "title": "Standard Day Of Week",
+          "x-ms-dataverse-attribute": "standarddayofweek",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StandardDayOfWeek",
+          "required": true
+        },
+        "standardhour": {
+          "type": "string",
+          "title": "Standard Hour",
+          "x-ms-dataverse-attribute": "standardhour",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StandardHour",
+          "required": true
+        },
+        "standardminute": {
+          "type": "string",
+          "title": "Standard Minute",
+          "x-ms-dataverse-attribute": "standardminute",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StandardMinute",
+          "required": true
+        },
+        "standardmonth": {
+          "type": "string",
+          "title": "Standard Month",
+          "x-ms-dataverse-attribute": "standardmonth",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StandardMonth",
+          "required": true
+        },
+        "standardsecond": {
+          "type": "string",
+          "title": "Standard Second",
+          "x-ms-dataverse-attribute": "standardsecond",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StandardSecond",
+          "required": true
+        },
+        "standardyear": {
+          "type": "string",
+          "title": "Standard Year",
+          "x-ms-dataverse-attribute": "standardyear",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StandardYear",
+          "required": true
+        },
+        "timezonedefinitionid": {
+          "type": "string",
+          "title": "Time Zone Definition",
+          "x-ms-dataverse-attribute": "timezonedefinitionid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "TimeZoneDefinitionId",
+          "required": true
+        },
+        "timezoneruleid": {
+          "type": "string",
+          "title": "Time Zone Rule",
+          "x-ms-dataverse-attribute": "timezoneruleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "TimeZoneRuleId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber",
+          "x-ms-dataverse-primary-name": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "bias",
+        "daylightbias",
+        "daylightday",
+        "daylightdayofweek",
+        "daylighthour",
+        "daylightminute",
+        "daylightmonth",
+        "daylightsecond",
+        "daylightyear",
+        "effectivedatetime",
+        "standardbias",
+        "standardday",
+        "standarddayofweek",
+        "standardhour",
+        "standardminute",
+        "standardmonth",
+        "standardsecond",
+        "standardyear",
+        "timezonedefinitionid",
+        "timezoneruleid",
+        "timezoneruleversionnumber"
+      ]
+    }
+  }
+}

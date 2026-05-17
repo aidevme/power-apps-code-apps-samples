@@ -1,0 +1,110 @@
+{
+  "name": "emailhash",
+  "title": "Email Hashes",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "emailhashes",
+      "x-ms-dataverse-primary-id": "emailhashid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "activityid": {
+          "type": "string",
+          "title": "activityid",
+          "x-ms-dataverse-attribute": "activityid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ActivityId"
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "emailhashid": {
+          "type": "string",
+          "title": "emailhashid",
+          "x-ms-dataverse-attribute": "emailhashid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "EmailHashId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "hash": {
+          "type": "string",
+          "title": "hash",
+          "x-ms-dataverse-attribute": "hash",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Hash",
+          "required": true
+        },
+        "hashtype": {
+          "type": "string",
+          "title": "hashtype",
+          "x-ms-dataverse-attribute": "hashtype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "HashType",
+          "required": true
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "emailhashid",
+        "hash",
+        "hashtype",
+        "ownerid",
+        "owneridtype",
+        "owningbusinessunit",
+        "owninguser"
+      ]
+    }
+  }
+}

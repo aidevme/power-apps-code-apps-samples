@@ -1,0 +1,315 @@
+{
+  "name": "syncattributemapping",
+  "title": "Sync Attribute Mappings",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "syncattributemappings",
+      "x-ms-dataverse-primary-id": "syncattributemappingid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "allowedsyncdirection": {
+          "type": "string",
+          "title": "Allowed Sync Directions",
+          "x-ms-dataverse-attribute": "allowedsyncdirection",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "AllowedSyncDirection",
+          "required": true
+        },
+        "attributecrmname": {
+          "type": "string",
+          "title": "CRM Name of the attribute for which this mapping is defined",
+          "x-ms-dataverse-attribute": "attributecrmname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AttributeCRMName",
+          "maxLength": 100
+        },
+        "attributeexchangename": {
+          "type": "string",
+          "title": "Exchange Name of the attribute for which this mapping is defined",
+          "x-ms-dataverse-attribute": "attributeexchangename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AttributeExchangeName",
+          "maxLength": 100
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "computedproperties": {
+          "type": "string",
+          "title": "Computed Properties for one attribute",
+          "x-ms-dataverse-attribute": "computedproperties",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ComputedProperties",
+          "maxLength": 500
+        },
+        "defaultsyncdirection": {
+          "type": "string",
+          "title": "Sync Direction",
+          "x-ms-dataverse-attribute": "defaultsyncdirection",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "DefaultSyncDirection",
+          "required": true,
+          "enum": [
+            "None",
+            "ToExchange",
+            "ToCRM",
+            "Bidirectional"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "a8c01f23-98d3-460c-afa9-b8881eb6399a",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Sync Direction",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "defaultsyncdirectionname": {
+          "type": "string",
+          "title": "defaultsyncdirectionname",
+          "x-ms-dataverse-attribute": "defaultsyncdirectionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "DefaultSyncDirectionName",
+          "x-ms-read-only": true
+        },
+        "entitytypecode": {
+          "type": "string",
+          "title": "Name of the Entity for which this attribute mapping is defined",
+          "x-ms-dataverse-attribute": "entitytypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "EntityTypeCode",
+          "required": true
+        },
+        "iscomputed": {
+          "type": "string",
+          "title": "Is Computed",
+          "x-ms-dataverse-attribute": "iscomputed",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsComputed",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "17e28900-4665-4c17-aa72-c8645b301317",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Computed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismanaged": {
+          "type": "string",
+          "title": "Is Managed",
+          "x-ms-dataverse-attribute": "ismanaged",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsManaged",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Unmanaged",
+            "Managed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9d04e035-5408-4c1d-a5aa-20445a02f691",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Component Managed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismanagedname": {
+          "type": "string",
+          "title": "ismanagedname",
+          "x-ms-dataverse-attribute": "ismanagedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsManagedName",
+          "x-ms-read-only": true
+        },
+        "mappingname": {
+          "type": "string",
+          "title": "Name of the attribute for which this mapping is defined",
+          "x-ms-dataverse-attribute": "mappingname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "MappingName",
+          "required": true,
+          "maxLength": 100
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "parentsyncattributemappingid": {
+          "type": "string",
+          "title": "Parent Sync-Attribute Mapping",
+          "x-ms-dataverse-attribute": "parentsyncattributemappingid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ParentSyncAttributeMappingId",
+          "required": true
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "supportingsolutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "supportingsolutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SupportingSolutionId",
+          "x-ms-read-only": true
+        },
+        "syncattributemappingid": {
+          "type": "string",
+          "title": "Sync-Attribute Mapping Id",
+          "x-ms-dataverse-attribute": "syncattributemappingid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SyncAttributeMappingId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "syncattributemappingidunique": {
+          "type": "string",
+          "title": "Sync-Attribute Mapping",
+          "x-ms-dataverse-attribute": "syncattributemappingidunique",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SyncAttributeMappingIdUnique",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "syncattributemappingprofileid": {
+          "type": "string",
+          "title": "Profile",
+          "x-ms-dataverse-attribute": "syncattributemappingprofileid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "SyncAttributeMappingProfileId",
+          "required": true
+        },
+        "syncdirection": {
+          "type": "string",
+          "title": "Sync Direction",
+          "x-ms-dataverse-attribute": "syncdirection",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "SyncDirection",
+          "required": true,
+          "enum": [
+            "None",
+            "ToExchange",
+            "ToCRM",
+            "Bidirectional"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "a8c01f23-98d3-460c-afa9-b8881eb6399a",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Sync Direction",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "syncdirectionname": {
+          "type": "string",
+          "title": "syncdirectionname",
+          "x-ms-dataverse-attribute": "syncdirectionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "SyncDirectionName",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "allowedsyncdirection",
+        "componentstate",
+        "defaultsyncdirection",
+        "entitytypecode",
+        "iscomputed",
+        "ismanaged",
+        "mappingname",
+        "overwritetime",
+        "parentsyncattributemappingid",
+        "solutionid",
+        "syncattributemappingid",
+        "syncattributemappingidunique",
+        "syncattributemappingprofileid",
+        "syncdirection"
+      ]
+    }
+  }
+}

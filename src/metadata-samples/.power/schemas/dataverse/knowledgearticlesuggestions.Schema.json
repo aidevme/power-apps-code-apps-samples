@@ -1,0 +1,102 @@
+{
+  "name": "msdyn_knowledgearticlesuggestion",
+  "title": "Knowledge Article Suggestions",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_knowledgearticlesuggestions",
+      "x-ms-dataverse-primary-id": "msdyn_knowledgearticlesuggestionid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "msdyn_additionalcontext": {
+          "type": "string",
+          "title": "Additional Context",
+          "x-ms-dataverse-attribute": "msdyn_additionalcontext",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_additionalcontext",
+          "maxLength": 10000
+        },
+        "msdyn_confidencescore": {
+          "type": "string",
+          "title": "Confidence Score",
+          "x-ms-dataverse-attribute": "msdyn_confidencescore",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "msdyn_confidencescore"
+        },
+        "msdyn_keyphrases": {
+          "type": "string",
+          "title": "Key Phrases",
+          "x-ms-dataverse-attribute": "msdyn_keyphrases",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_keyphrases",
+          "maxLength": 2000
+        },
+        "msdyn_knowledgearticlesuggestionid": {
+          "type": "string",
+          "title": "KnowledgeArticleSuggestion",
+          "x-ms-dataverse-attribute": "msdyn_knowledgearticlesuggestionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_knowledgearticlesuggestionId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_rank": {
+          "type": "string",
+          "title": "Rank",
+          "x-ms-dataverse-attribute": "msdyn_rank",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_rank"
+        },
+        "msdyn_suggestedentity": {
+          "type": "string",
+          "title": "Suggested Knowledge Article",
+          "x-ms-dataverse-attribute": "msdyn_suggestedentity",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_suggestedentity"
+        },
+        "msdyn_suggestedentityname": {
+          "type": "string",
+          "title": "msdyn_suggestedentityname",
+          "x-ms-dataverse-attribute": "msdyn_suggestedentityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_suggestedentityName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "msdyn_suggestionforentitylogicalname": {
+          "type": "string",
+          "title": "suggestion for entity  logical name",
+          "x-ms-dataverse-attribute": "msdyn_suggestionforentitylogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_suggestionforentitylogicalname",
+          "maxLength": 150
+        },
+        "msdyn_suggestionforid": {
+          "type": "string",
+          "title": "suggestion for entity id",
+          "x-ms-dataverse-attribute": "msdyn_suggestionforid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_suggestionforid",
+          "maxLength": 50
+        }
+      },
+      "required": [
+        "msdyn_knowledgearticlesuggestionid",
+        "msdyn_name"
+      ]
+    }
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "name": "plannersyncaction",
+  "title": "Planner Sync Actions",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "plannersyncactions",
+      "x-ms-dataverse-primary-id": "plannersyncactionid",
+      "x-ms-dataverse-primary-name": "title",
+      "properties": {
+        "assignments": {
+          "type": "string",
+          "title": "Assignments",
+          "x-ms-dataverse-attribute": "assignments",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Assignments",
+          "maxLength": 1000
+        },
+        "duedatetime": {
+          "type": "string",
+          "title": "Due Date Time",
+          "x-ms-dataverse-attribute": "duedatetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "DueDateTime"
+        },
+        "externalbucketid": {
+          "type": "string",
+          "title": "External Bucket Id",
+          "x-ms-dataverse-attribute": "externalbucketid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ExternalBucketId",
+          "required": true,
+          "maxLength": 100
+        },
+        "externalreferences": {
+          "type": "string",
+          "title": "External References",
+          "x-ms-dataverse-attribute": "externalreferences",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ExternalReferences",
+          "required": true,
+          "maxLength": 2000
+        },
+        "groupid": {
+          "type": "string",
+          "title": "Group Id",
+          "x-ms-dataverse-attribute": "groupid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "GroupId",
+          "required": true
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "lastattemptedon": {
+          "type": "string",
+          "title": "Last Attempted On",
+          "x-ms-dataverse-attribute": "lastattemptedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "LastAttemptedOn"
+        },
+        "lastsyncerror": {
+          "type": "string",
+          "title": "Last Sync Error",
+          "x-ms-dataverse-attribute": "lastsyncerror",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "LastSyncError",
+          "maxLength": 2000
+        },
+        "notes": {
+          "type": "string",
+          "title": "Notes",
+          "x-ms-dataverse-attribute": "notes",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Notes",
+          "maxLength": 2000
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "pendingattempts": {
+          "type": "string",
+          "title": "Pending Attempts",
+          "x-ms-dataverse-attribute": "pendingattempts",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "PendingAttempts"
+        },
+        "percentcomplete": {
+          "type": "string",
+          "title": "Percent Complete",
+          "x-ms-dataverse-attribute": "percentcomplete",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "PercentComplete"
+        },
+        "plannerbusinessscenarioid": {
+          "type": "string",
+          "title": "Planner Business Scenario Id",
+          "x-ms-dataverse-attribute": "plannerbusinessscenarioid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "PlannerBusinessScenarioId",
+          "required": true
+        },
+        "plannerbusinessscenarioidname": {
+          "type": "string",
+          "title": "plannerbusinessscenarioidname",
+          "x-ms-dataverse-attribute": "plannerbusinessscenarioidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "plannerbusinessscenarioidName",
+          "x-ms-read-only": true,
+          "maxLength": 50
+        },
+        "plannersyncactionid": {
+          "type": "string",
+          "title": "Planner Sync Action Id",
+          "x-ms-dataverse-attribute": "plannersyncactionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PlannerSyncActionId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "priority": {
+          "type": "string",
+          "title": "Priority",
+          "x-ms-dataverse-attribute": "priority",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Priority"
+        },
+        "queuedon": {
+          "type": "string",
+          "title": "Queued On",
+          "x-ms-dataverse-attribute": "queuedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "QueuedOn"
+        },
+        "sourcerecordentitylogicalname": {
+          "type": "string",
+          "title": "Source Record Entity Logical Name",
+          "x-ms-dataverse-attribute": "sourcerecordentitylogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SourceRecordEntityLogicalName",
+          "required": true,
+          "maxLength": 50
+        },
+        "sourcerecordid": {
+          "type": "string",
+          "title": "Source Record Id",
+          "x-ms-dataverse-attribute": "sourcerecordid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SourceRecordId",
+          "required": true
+        },
+        "startdatetime": {
+          "type": "string",
+          "title": "Start Date Time",
+          "x-ms-dataverse-attribute": "startdatetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "StartDateTime"
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "e2d16b5e-5019-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "ecd16b5e-5019-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title",
+          "x-ms-dataverse-attribute": "title",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Title",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 200
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "externalbucketid",
+        "externalreferences",
+        "groupid",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "owningbusinessunitname",
+        "plannerbusinessscenarioid",
+        "plannersyncactionid",
+        "sourcerecordentitylogicalname",
+        "sourcerecordid",
+        "statecode",
+        "title"
+      ]
+    }
+  }
+}

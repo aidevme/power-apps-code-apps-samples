@@ -1,0 +1,170 @@
+{
+  "name": "elasticfileattachment",
+  "title": "ElasticFileAttachments",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "elasticfileattachments",
+      "x-ms-dataverse-primary-id": "elasticfileattachmentid",
+      "x-ms-dataverse-primary-name": "filename",
+      "properties": {
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "elasticfileattachmentid": {
+          "type": "string",
+          "title": "ElasticFileAttachmentId",
+          "x-ms-dataverse-attribute": "elasticfileattachmentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ElasticFileAttachmentId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "filename": {
+          "type": "string",
+          "title": "File Name",
+          "x-ms-dataverse-attribute": "filename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FileName",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 255
+        },
+        "filepointer": {
+          "type": "string",
+          "title": "File Pointer",
+          "x-ms-dataverse-attribute": "filepointer",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FilePointer",
+          "x-ms-read-only": true,
+          "maxLength": 255
+        },
+        "filesizeinbytes": {
+          "type": "string",
+          "title": "File Size (Bytes)",
+          "x-ms-dataverse-attribute": "filesizeinbytes",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "FileSizeInBytes",
+          "x-ms-read-only": true
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "mimetype": {
+          "type": "string",
+          "title": "MIME Type",
+          "x-ms-dataverse-attribute": "mimetype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "MimeType",
+          "maxLength": 256
+        },
+        "objectid": {
+          "type": "string",
+          "title": "Regarding",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ObjectId"
+        },
+        "objectidtypecode": {
+          "type": "string",
+          "title": "Object Id Type Code",
+          "x-ms-dataverse-attribute": "objectidtypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectIdTypeCode"
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "Object Type ",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "9cd9f647-3219-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Object Type ",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "objecttypecodename": {
+          "type": "string",
+          "title": "objecttypecodename",
+          "x-ms-dataverse-attribute": "objecttypecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "objecttypecodeName",
+          "x-ms-read-only": true
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "partitionid": {
+          "type": "string",
+          "title": "Partition Id",
+          "x-ms-dataverse-attribute": "partitionid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PartitionId",
+          "maxLength": 100
+        },
+        "prefix": {
+          "type": "string",
+          "title": "Prefix",
+          "x-ms-dataverse-attribute": "prefix",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Prefix",
+          "x-ms-read-only": true,
+          "maxLength": 10
+        },
+        "regardingfieldname": {
+          "type": "string",
+          "title": "Regarding Attribute Schema Name",
+          "x-ms-dataverse-attribute": "regardingfieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingFieldName",
+          "maxLength": 255
+        },
+        "storagepointer": {
+          "type": "string",
+          "title": "Storage Pointer",
+          "x-ms-dataverse-attribute": "storagepointer",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "StoragePointer",
+          "x-ms-read-only": true,
+          "maxLength": 10
+        },
+        "ttlinseconds": {
+          "type": "string",
+          "title": "Time to live",
+          "x-ms-dataverse-attribute": "ttlinseconds",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TTLInSeconds"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "elasticfileattachmentid"
+      ]
+    }
+  }
+}

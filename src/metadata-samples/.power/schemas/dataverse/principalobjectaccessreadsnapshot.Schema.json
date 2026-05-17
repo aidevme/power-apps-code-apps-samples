@@ -1,0 +1,130 @@
+{
+  "name": "principalobjectaccessreadsnapshot",
+  "title": "principalobjectaccessreadsnapshot",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "principalobjectaccessreadsnapshots",
+      "x-ms-dataverse-primary-id": "principalobjectaccessreadsnapshotid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "childuserprincipalscount": {
+          "type": "string",
+          "title": "childuserprincipalscount",
+          "x-ms-dataverse-attribute": "childuserprincipalscount",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "ChildUserPrincipalsCount",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "count": {
+          "type": "string",
+          "title": "count",
+          "x-ms-dataverse-attribute": "count",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "Count",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "countpercentoftotalrows": {
+          "type": "string",
+          "title": "countpercentoftotalrows",
+          "x-ms-dataverse-attribute": "countpercentoftotalrows",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "CountPercentOfTotalRows",
+          "x-ms-read-only": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "principalid": {
+          "type": "string",
+          "title": "principalid",
+          "x-ms-dataverse-attribute": "principalid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PrincipalId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "principalobjectaccessreadsnapshotid": {
+          "type": "string",
+          "title": "principalobjectaccessreadsnapshotid",
+          "x-ms-dataverse-attribute": "principalobjectaccessreadsnapshotid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PrincipalObjectAccessReadSnapshotId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "principaltypecode": {
+          "type": "string",
+          "title": "PrincipalTypeCode",
+          "x-ms-dataverse-attribute": "principaltypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "PrincipalTypeCode",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "recordcountforownerid": {
+          "type": "string",
+          "title": "recordcountforownerid",
+          "x-ms-dataverse-attribute": "recordcountforownerid",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "RecordCountForOwnerID",
+          "x-ms-read-only": true
+        },
+        "recordcountforowneridpercentoftotalrows": {
+          "type": "string",
+          "title": "recordcountforowneridpercentoftotalrows",
+          "x-ms-dataverse-attribute": "recordcountforowneridpercentoftotalrows",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "RecordCountForOwnerIDPercentOfTotalRows",
+          "x-ms-read-only": true
+        },
+        "recordcountforowningbu": {
+          "type": "string",
+          "title": "recordcountforowningbu",
+          "x-ms-dataverse-attribute": "recordcountforowningbu",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "RecordCountForOwningBU",
+          "x-ms-read-only": true
+        },
+        "recordcountforowningbupercentoftotalrows": {
+          "type": "string",
+          "title": "recordcountforowningbupercentoftotalrows",
+          "x-ms-dataverse-attribute": "recordcountforowningbupercentoftotalrows",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "RecordCountForOwningBUPercentOfTotalRows",
+          "x-ms-read-only": true
+        },
+        "teamprincipalscount": {
+          "type": "string",
+          "title": "teamprincipalscount",
+          "x-ms-dataverse-attribute": "teamprincipalscount",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "TeamPrincipalsCount",
+          "x-ms-read-only": true,
+          "required": true
+        }
+      },
+      "required": [
+        "childuserprincipalscount",
+        "count",
+        "objecttypecode",
+        "principalid",
+        "principalobjectaccessreadsnapshotid",
+        "principaltypecode",
+        "teamprincipalscount"
+      ]
+    }
+  }
+}

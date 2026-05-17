@@ -1,0 +1,38 @@
+{
+  "name": "msdyn_suggestedcontactsdatasource",
+  "title": "Suggested Contacts Data Source",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_suggestedcontactsdatasources",
+      "x-ms-dataverse-primary-id": "msdyn_suggestedcontactsdatasourceid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "msdyn_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "msdyn_suggestedcontactsdatasourceid": {
+          "type": "string",
+          "title": "Suggested contacts data source",
+          "x-ms-dataverse-attribute": "msdyn_suggestedcontactsdatasourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_suggestedcontactsdatasourceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "msdyn_suggestedcontactsdatasourceid"
+      ]
+    }
+  }
+}

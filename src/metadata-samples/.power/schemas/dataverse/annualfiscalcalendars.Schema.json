@@ -1,0 +1,277 @@
+{
+  "name": "annualfiscalcalendar",
+  "title": "Annual Fiscal Calendars",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "annualfiscalcalendars",
+      "x-ms-dataverse-primary-id": "userfiscalcalendarid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "annual": {
+          "type": "string",
+          "title": "annual",
+          "x-ms-dataverse-attribute": "annual",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period1",
+          "required": true
+        },
+        "annual_base": {
+          "type": "string",
+          "title": "annual_base",
+          "x-ms-dataverse-attribute": "annual_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period1_Base",
+          "x-ms-read-only": true
+        },
+        "businessunitid": {
+          "type": "string",
+          "title": "businessunitid",
+          "x-ms-dataverse-attribute": "businessunitid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "BusinessUnitId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "businessunitidname": {
+          "type": "string",
+          "title": "businessunitidname",
+          "x-ms-dataverse-attribute": "businessunitidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BusinessUnitIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdby": {
+          "type": "string",
+          "title": "createdby",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "createdon",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "createdonbehalfby",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "effectiveon": {
+          "type": "string",
+          "title": "effectiveon",
+          "x-ms-dataverse-attribute": "effectiveon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "EffectiveOn",
+          "required": true
+        },
+        "exchangerate": {
+          "type": "string",
+          "title": "Exchange Rate",
+          "x-ms-dataverse-attribute": "exchangerate",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "ExchangeRate",
+          "x-ms-read-only": true
+        },
+        "fiscalperiodtype": {
+          "type": "string",
+          "title": "fiscalperiodtype",
+          "x-ms-dataverse-attribute": "fiscalperiodtype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FiscalPeriodType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "modifiedby",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "modifiedon",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "modifiedonbehalfby",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "salespersonid": {
+          "type": "string",
+          "title": "salespersonid",
+          "x-ms-dataverse-attribute": "salespersonid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "SalesPersonId",
+          "required": true
+        },
+        "salespersonidname": {
+          "type": "string",
+          "title": "salespersonidname",
+          "x-ms-dataverse-attribute": "salespersonidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SalesPersonIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "salespersonidyominame": {
+          "type": "string",
+          "title": "salespersonidyominame",
+          "x-ms-dataverse-attribute": "salespersonidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SalesPersonIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "timezoneruleversionnumber",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "transactioncurrencyid": {
+          "type": "string",
+          "title": "Currency",
+          "x-ms-dataverse-attribute": "transactioncurrencyid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "TransactionCurrencyId",
+          "required": true
+        },
+        "transactioncurrencyidname": {
+          "type": "string",
+          "title": "transactioncurrencyidname",
+          "x-ms-dataverse-attribute": "transactioncurrencyidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "TransactionCurrencyIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "userfiscalcalendarid": {
+          "type": "string",
+          "title": "userfiscalcalendarid",
+          "x-ms-dataverse-attribute": "userfiscalcalendarid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UserFiscalCalendarId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "utcconversiontimezonecode",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        }
+      },
+      "required": [
+        "annual",
+        "businessunitid",
+        "createdon",
+        "effectiveon",
+        "fiscalperiodtype",
+        "salespersonid",
+        "salespersonidname",
+        "salespersonidyominame",
+        "transactioncurrencyid",
+        "userfiscalcalendarid"
+      ]
+    }
+  }
+}

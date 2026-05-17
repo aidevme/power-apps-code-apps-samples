@@ -1,0 +1,501 @@
+{
+  "name": "msdyn_autocaseclosureagentactivity",
+  "title": "Case Management Agent for case closure Activities",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_autocaseclosureagentactivities",
+      "x-ms-dataverse-primary-id": "msdyn_autocaseclosureagentactivityid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_activityid": {
+          "type": "string",
+          "title": "Activity Id",
+          "x-ms-dataverse-attribute": "msdyn_activityid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_activityid"
+        },
+        "msdyn_activityidname": {
+          "type": "string",
+          "title": "msdyn_activityidname",
+          "x-ms-dataverse-attribute": "msdyn_activityidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_activityidName",
+          "x-ms-read-only": true,
+          "maxLength": 800
+        },
+        "msdyn_activitytype": {
+          "type": "string",
+          "title": "Activity Type",
+          "x-ms-dataverse-attribute": "msdyn_activitytype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_activitytype",
+          "required": true,
+          "enum": [
+            "GenerateFollowupEmail",
+            "AnalyzeCustomerResponse"
+          ],
+          "x-ms-enum-values": [
+            419550000,
+            419550001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "eafa5fee-8e4e-f111-bec6-7ced8d711f57",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Activity Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_activitytypename": {
+          "type": "string",
+          "title": "msdyn_activitytypename",
+          "x-ms-dataverse-attribute": "msdyn_activitytypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_activitytypeName",
+          "x-ms-read-only": true
+        },
+        "msdyn_aisimulationrunid": {
+          "type": "string",
+          "title": "AI Simulation Run ID",
+          "x-ms-dataverse-attribute": "msdyn_aisimulationrunid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_aisimulationrunid",
+          "maxLength": 100
+        },
+        "msdyn_autocaseclosureagentactivityid": {
+          "type": "string",
+          "title": "Case Management Agent for case closure Activity",
+          "x-ms-dataverse-attribute": "msdyn_autocaseclosureagentactivityid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_autocaseclosureagentactivityId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_autocaseclosureagentgeneratedemailid": {
+          "type": "string",
+          "title": "Id of Case Management Agent for case closure generated email",
+          "x-ms-dataverse-attribute": "msdyn_autocaseclosureagentgeneratedemailid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_autocaseclosureagentgeneratedemailid"
+        },
+        "msdyn_autocaseclosureagentgeneratedemailidname": {
+          "type": "string",
+          "title": "msdyn_autocaseclosureagentgeneratedemailidname",
+          "x-ms-dataverse-attribute": "msdyn_autocaseclosureagentgeneratedemailidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_autocaseclosureagentgeneratedemailidName",
+          "x-ms-read-only": true,
+          "maxLength": 800
+        },
+        "msdyn_autocaseclosureagentmonitoringid": {
+          "type": "string",
+          "title": "Id of Case Management Agent for case closure monitoring",
+          "x-ms-dataverse-attribute": "msdyn_autocaseclosureagentmonitoringid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_autocaseclosureagentmonitoringid",
+          "required": true
+        },
+        "msdyn_autocaseclosureagentmonitoringidname": {
+          "type": "string",
+          "title": "msdyn_autocaseclosureagentmonitoringidname",
+          "x-ms-dataverse-attribute": "msdyn_autocaseclosureagentmonitoringidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_autocaseclosureagentmonitoringidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_casefollowupandclosureconfigurationid": {
+          "type": "string",
+          "title": "Case Follow-up and Closure Configuration Id",
+          "x-ms-dataverse-attribute": "msdyn_casefollowupandclosureconfigurationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_casefollowupandclosureconfigurationid",
+          "required": true
+        },
+        "msdyn_casefollowupandclosureconfigurationidname": {
+          "type": "string",
+          "title": "msdyn_casefollowupandclosureconfigurationidname",
+          "x-ms-dataverse-attribute": "msdyn_casefollowupandclosureconfigurationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_casefollowupandclosureconfigurationidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_followupcount": {
+          "type": "string",
+          "title": "Followup Count",
+          "x-ms-dataverse-attribute": "msdyn_followupcount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_followupcount"
+        },
+        "msdyn_incidentid": {
+          "type": "string",
+          "title": "Incident Id",
+          "x-ms-dataverse-attribute": "msdyn_incidentid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_incidentid",
+          "required": true
+        },
+        "msdyn_incidentidname": {
+          "type": "string",
+          "title": "msdyn_incidentidname",
+          "x-ms-dataverse-attribute": "msdyn_incidentidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_incidentidName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_isfullautonomous": {
+          "type": "string",
+          "title": "Is Full Autonomous",
+          "x-ms-dataverse-attribute": "msdyn_isfullautonomous",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isfullautonomous",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "effa5fee-8e4e-f111-bec6-7ced8d711f57",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Full Autonomous",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isfullautonomousname": {
+          "type": "string",
+          "title": "msdyn_isfullautonomousname",
+          "x-ms-dataverse-attribute": "msdyn_isfullautonomousname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isfullautonomousName",
+          "x-ms-read-only": true
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "msdyn_regarding": {
+          "type": "string",
+          "title": "Regarding",
+          "x-ms-dataverse-attribute": "msdyn_regarding",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_regarding",
+          "required": true
+        },
+        "msdyn_regardingidtype": {
+          "type": "string",
+          "title": "msdyn_regardingidtype",
+          "x-ms-dataverse-attribute": "msdyn_regardingidtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "msdyn_regardingIdType"
+        },
+        "msdyn_regardingname": {
+          "type": "string",
+          "title": "msdyn_regardingname",
+          "x-ms-dataverse-attribute": "msdyn_regardingname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_regardingName",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "msdyn_regardingyominame": {
+          "type": "string",
+          "title": "msdyn_regardingyominame",
+          "x-ms-dataverse-attribute": "msdyn_regardingyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_regardingYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "msdyn_retrycount": {
+          "type": "string",
+          "title": "Retry Count",
+          "x-ms-dataverse-attribute": "msdyn_retrycount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_retrycount",
+          "required": true
+        },
+        "msdyn_triggertrackingid": {
+          "type": "string",
+          "title": "Trigger Tracking Id",
+          "x-ms-dataverse-attribute": "msdyn_triggertrackingid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_triggertrackingid",
+          "maxLength": 100
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "a7fa5fee-8e4e-f111-bec6-7ced8d711f57",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b1fa5fee-8e4e-f111-bec6-7ced8d711f57",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "msdyn_activitytype",
+        "msdyn_autocaseclosureagentactivityid",
+        "msdyn_autocaseclosureagentmonitoringid",
+        "msdyn_casefollowupandclosureconfigurationid",
+        "msdyn_incidentid",
+        "msdyn_regarding",
+        "msdyn_retrycount",
+        "organizationidname",
+        "statecode"
+      ]
+    }
+  }
+}

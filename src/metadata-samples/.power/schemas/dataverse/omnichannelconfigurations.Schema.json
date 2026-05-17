@@ -1,0 +1,2004 @@
+{
+  "name": "msdyn_omnichannelconfiguration",
+  "title": "Omnichannel Configurations",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_omnichannelconfigurations",
+      "x-ms-dataverse-primary-id": "msdyn_omnichannelconfigurationid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "componentidunique": {
+          "type": "string",
+          "title": "Row id unique",
+          "x-ms-dataverse-attribute": "componentidunique",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ComponentIdUnique",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "componentstatename": {
+          "type": "string",
+          "title": "componentstatename",
+          "x-ms-dataverse-attribute": "componentstatename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "componentstateName",
+          "x-ms-read-only": true
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "iscustomizable": {
+          "type": "string",
+          "title": "Is Customizable",
+          "x-ms-dataverse-attribute": "iscustomizable",
+          "x-ms-dataverse-type": "ManagedPropertyType",
+          "x-ms-schema-name": "IsCustomizable",
+          "required": true
+        },
+        "ismanaged": {
+          "type": "string",
+          "title": "Is Managed",
+          "x-ms-dataverse-attribute": "ismanaged",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsManaged",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Unmanaged",
+            "Managed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9d04e035-5408-4c1d-a5aa-20445a02f691",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Component Managed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismanagedname": {
+          "type": "string",
+          "title": "ismanagedname",
+          "x-ms-dataverse-attribute": "ismanagedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ismanagedName",
+          "x-ms-read-only": true
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_consultagentfilterconfig": {
+          "type": "string",
+          "title": "consult agent filter config",
+          "x-ms-dataverse-attribute": "msdyn_consultagentfilterconfig",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_consultagentfilterconfig",
+          "maxLength": 2000
+        },
+        "msdyn_consultqueuefilterconfig": {
+          "type": "string",
+          "title": "consult queue filter config",
+          "x-ms-dataverse-attribute": "msdyn_consultqueuefilterconfig",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_consultqueuefilterconfig",
+          "maxLength": 2000
+        },
+        "msdyn_consulttoqueuemessagingtimeoutvalue": {
+          "type": "string",
+          "title": "Consult to queue messaging timeout value",
+          "x-ms-dataverse-attribute": "msdyn_consulttoqueuemessagingtimeoutvalue",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_consulttoqueuemessagingtimeoutvalue",
+          "required": true
+        },
+        "msdyn_consulttoqueuevoicetimeoutvalue": {
+          "type": "string",
+          "title": "Consult to queue voice timeout value",
+          "x-ms-dataverse-attribute": "msdyn_consulttoqueuevoicetimeoutvalue",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_consulttoqueuevoicetimeoutvalue",
+          "required": true
+        },
+        "msdyn_defaultagentinputlanguage": {
+          "type": "string",
+          "title": "Default input language",
+          "x-ms-dataverse-attribute": "msdyn_defaultagentinputlanguage",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_defaultAgentInputLanguage",
+          "enum": [
+            "English - United States",
+            "Arabic - Saudi Arabia",
+            "Basque - Spain",
+            "Catalan - Spain",
+            "Bulgarian - Bulgaria",
+            "Croatian - Croatia",
+            "Czech - Czech Republic",
+            "Danish - Denmark",
+            "Dutch - Netherlands",
+            "Estonian - Estonia",
+            "Finnish - Finland",
+            "French - France",
+            "Galician - Spain",
+            "German - Germany",
+            "Greek - Greece",
+            "Hebrew - Israel",
+            "Hindi - India",
+            "Hungarian - Hungary",
+            "Italian - Italy",
+            "Indonesian - Indonesia",
+            "Japanese - Japan",
+            "Kazakh - Kazakhstan",
+            "Korean - Korea",
+            "Latvian - Latvia",
+            "Lithuanian - Lithuania",
+            "Malay - Malaysia",
+            "Norwegian Bokmal - Norway",
+            "Polish - Poland",
+            "Portuguese - Brazil",
+            "Portuguese - Portugal",
+            "Romanian - Romania",
+            "Russian - Russia",
+            "Serbian (Cyrillic) - Serbia",
+            "Serbian (Latin) - Serbia",
+            "Slovak - Slovakia",
+            "Slovenian - Slovenia",
+            "Spanish - Spain",
+            "Swedish - Sweden",
+            "Thai - Thailand",
+            "Turkish - Turkey",
+            "Ukrainian - Ukraine",
+            "Vietnamese - Vietnam",
+            "Chinese - China",
+            "Chinese - Hong Kong"
+          ],
+          "x-ms-enum-values": [
+            1033,
+            1025,
+            1069,
+            1027,
+            1026,
+            1050,
+            1029,
+            1030,
+            1043,
+            1061,
+            1035,
+            1036,
+            1110,
+            1031,
+            1032,
+            1037,
+            1081,
+            1038,
+            1040,
+            1057,
+            1041,
+            1087,
+            1042,
+            1062,
+            1063,
+            1086,
+            1044,
+            1045,
+            1046,
+            2070,
+            1048,
+            1049,
+            3098,
+            2074,
+            1051,
+            1060,
+            3082,
+            1053,
+            1054,
+            1055,
+            1058,
+            1066,
+            2052,
+            3076
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "74cd31e2-5e76-4dfc-a685-99fd27e6fd23",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Agent Input Languages",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_defaultagentinputlanguagename": {
+          "type": "string",
+          "title": "msdyn_defaultagentinputlanguagename",
+          "x-ms-dataverse-attribute": "msdyn_defaultagentinputlanguagename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_defaultagentinputlanguageName",
+          "x-ms-read-only": true
+        },
+        "msdyn_delegated_prioritization_migration": {
+          "type": "string",
+          "title": "Status of migration for Delegated Prioritization",
+          "x-ms-dataverse-attribute": "msdyn_delegated_prioritization_migration",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_delegated_prioritization_migration",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "30dd37b0-b619-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status of migration for Delegated Prioritization",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_delegated_prioritization_migrationname": {
+          "type": "string",
+          "title": "msdyn_delegated_prioritization_migrationname",
+          "x-ms-dataverse-attribute": "msdyn_delegated_prioritization_migrationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_delegated_prioritization_migrationName",
+          "x-ms-read-only": true
+        },
+        "msdyn_dnd_presence_lookup": {
+          "type": "string",
+          "title": "DND Presnce",
+          "x-ms-dataverse-attribute": "msdyn_dnd_presence_lookup",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_dnd_presence_lookup"
+        },
+        "msdyn_dnd_presence_lookupname": {
+          "type": "string",
+          "title": "msdyn_dnd_presence_lookupname",
+          "x-ms-dataverse-attribute": "msdyn_dnd_presence_lookupname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_dnd_presence_lookupName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_enable_advance_entity_routing": {
+          "type": "string",
+          "title": "Enable advance entity routing",
+          "x-ms-dataverse-attribute": "msdyn_enable_advance_entity_routing",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_advance_entity_routing",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "cc4e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable advance entity routing",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_advance_entity_routingname": {
+          "type": "string",
+          "title": "msdyn_enable_advance_entity_routingname",
+          "x-ms-dataverse-attribute": "msdyn_enable_advance_entity_routingname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_advance_entity_routingName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_agent_reject_notifications": {
+          "type": "string",
+          "title": "Enable Agent Reject Notification Setting",
+          "x-ms-dataverse-attribute": "msdyn_enable_agent_reject_notifications",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_agent_reject_notifications",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "c94e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Agent Reject Notification",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_agent_reject_notificationsname": {
+          "type": "string",
+          "title": "msdyn_enable_agent_reject_notificationsname",
+          "x-ms-dataverse-attribute": "msdyn_enable_agent_reject_notificationsname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_agent_reject_notificationsName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_conversation_orchestration": {
+          "type": "string",
+          "title": "Enable Conversation Orchestration",
+          "x-ms-dataverse-attribute": "msdyn_enable_conversation_orchestration",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_conversation_orchestration",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "1602619b-b04e-f111-bec6-7ced8d3c510c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Conversation Orchestration",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_conversation_orchestrationname": {
+          "type": "string",
+          "title": "msdyn_enable_conversation_orchestrationname",
+          "x-ms-dataverse-attribute": "msdyn_enable_conversation_orchestrationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_conversation_orchestrationName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_missed_notifications": {
+          "type": "string",
+          "title": "Enable missed notifications setting",
+          "x-ms-dataverse-attribute": "msdyn_enable_missed_notifications",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_missed_notifications",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "c64e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Presence update option set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_missed_notificationsname": {
+          "type": "string",
+          "title": "msdyn_enable_missed_notificationsname",
+          "x-ms-dataverse-attribute": "msdyn_enable_missed_notificationsname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_missed_notificationsName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_new_consult_exp": {
+          "type": "string",
+          "title": "Enable consult pane",
+          "x-ms-dataverse-attribute": "msdyn_enable_new_consult_exp",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_new_consult_exp",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "de4e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable consult pane",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_new_consult_expname": {
+          "type": "string",
+          "title": "msdyn_enable_new_consult_expname",
+          "x-ms-dataverse-attribute": "msdyn_enable_new_consult_expname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_new_consult_expName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_preferred_agent_routing": {
+          "type": "string",
+          "title": "Enable preferred agent routing",
+          "x-ms-dataverse-attribute": "msdyn_enable_preferred_agent_routing",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_preferred_agent_routing",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "2ddd37b0-b619-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Preferred Agent Routing",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_preferred_agent_routingname": {
+          "type": "string",
+          "title": "msdyn_enable_preferred_agent_routingname",
+          "x-ms-dataverse-attribute": "msdyn_enable_preferred_agent_routingname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_preferred_agent_routingName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_supervisor_assign": {
+          "type": "string",
+          "title": "Enable supervisor assign",
+          "x-ms-dataverse-attribute": "msdyn_enable_supervisor_assign",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_supervisor_assign",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "a84e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable supervisor assign",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_supervisor_assignname": {
+          "type": "string",
+          "title": "msdyn_enable_supervisor_assignname",
+          "x-ms-dataverse-attribute": "msdyn_enable_supervisor_assignname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_supervisor_assignName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_supervisor_forceclose": {
+          "type": "string",
+          "title": "Enable supervisor force close",
+          "x-ms-dataverse-attribute": "msdyn_enable_supervisor_forceclose",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_supervisor_forceclose",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "b44e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable supervisor force close",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_supervisor_forceclosename": {
+          "type": "string",
+          "title": "msdyn_enable_supervisor_forceclosename",
+          "x-ms-dataverse-attribute": "msdyn_enable_supervisor_forceclosename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_supervisor_forcecloseName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_supervisor_monitor": {
+          "type": "string",
+          "title": "Enable supervisor monitor",
+          "x-ms-dataverse-attribute": "msdyn_enable_supervisor_monitor",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_supervisor_monitor",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "ae4e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable supervisor monitor",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_supervisor_monitorname": {
+          "type": "string",
+          "title": "msdyn_enable_supervisor_monitorname",
+          "x-ms-dataverse-attribute": "msdyn_enable_supervisor_monitorname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_supervisor_monitorName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_supervisor_transfer": {
+          "type": "string",
+          "title": "Enable supervisor transfer",
+          "x-ms-dataverse-attribute": "msdyn_enable_supervisor_transfer",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_supervisor_transfer",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "ab4e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable supervisor transfer",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_supervisor_transfername": {
+          "type": "string",
+          "title": "msdyn_enable_supervisor_transfername",
+          "x-ms-dataverse-attribute": "msdyn_enable_supervisor_transfername",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_supervisor_transferName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_unified_routing_diagnostic": {
+          "type": "string",
+          "title": "Enable unified routing diagnostic",
+          "x-ms-dataverse-attribute": "msdyn_enable_unified_routing_diagnostic",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_unified_routing_diagnostic",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "29dd37b0-b619-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable unified routing diagnostic",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_unified_routing_diagnosticname": {
+          "type": "string",
+          "title": "msdyn_enable_unified_routing_diagnosticname",
+          "x-ms-dataverse-attribute": "msdyn_enable_unified_routing_diagnosticname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_unified_routing_diagnosticName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enable_visitorjourney": {
+          "type": "string",
+          "title": "Enable self service",
+          "x-ms-dataverse-attribute": "msdyn_enable_visitorjourney",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enable_visitorjourney",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "ba4e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable self service",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enable_visitorjourneyname": {
+          "type": "string",
+          "title": "msdyn_enable_visitorjourneyname",
+          "x-ms-dataverse-attribute": "msdyn_enable_visitorjourneyname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enable_visitorjourneyName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enablemarkdown": {
+          "type": "string",
+          "title": "Enable Markdown",
+          "x-ms-dataverse-attribute": "msdyn_enablemarkdown",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enablemarkdown",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "bd4e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Markdown",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enablemarkdownname": {
+          "type": "string",
+          "title": "msdyn_enablemarkdownname",
+          "x-ms-dataverse-attribute": "msdyn_enablemarkdownname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enablemarkdownName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enablenewconversationform": {
+          "type": "string",
+          "title": "Enable new conversation form",
+          "x-ms-dataverse-attribute": "msdyn_enablenewconversationform",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enablenewconversationform",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "db4e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable new conversation form",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enablenewconversationformname": {
+          "type": "string",
+          "title": "msdyn_enablenewconversationformname",
+          "x-ms-dataverse-attribute": "msdyn_enablenewconversationformname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enablenewconversationformName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enablerealtimetranslation": {
+          "type": "string",
+          "title": "Enable Real Time Translation",
+          "x-ms-dataverse-attribute": "msdyn_enablerealtimetranslation",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_EnableRealTimeTranslation",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "c04e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Real Time Translation",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enablerealtimetranslationname": {
+          "type": "string",
+          "title": "msdyn_enablerealtimetranslationname",
+          "x-ms-dataverse-attribute": "msdyn_enablerealtimetranslationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enablerealtimetranslationName",
+          "x-ms-read-only": true
+        },
+        "msdyn_enablesoundnotifications": {
+          "type": "string",
+          "title": "Enable sound notifications",
+          "x-ms-dataverse-attribute": "msdyn_enablesoundnotifications",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_enablesoundnotifications",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "cf4e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable sound notifications",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_enablesoundnotificationsname": {
+          "type": "string",
+          "title": "msdyn_enablesoundnotificationsname",
+          "x-ms-dataverse-attribute": "msdyn_enablesoundnotificationsname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_enablesoundnotificationsName",
+          "x-ms-read-only": true
+        },
+        "msdyn_encryptmaskedmessages": {
+          "type": "string",
+          "title": "Encrypt masked messages",
+          "x-ms-dataverse-attribute": "msdyn_encryptmaskedmessages",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_encryptmaskedmessages",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "206d6c0c-d719-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Encrypt masked messages",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_encryptmaskedmessagesname": {
+          "type": "string",
+          "title": "msdyn_encryptmaskedmessagesname",
+          "x-ms-dataverse-attribute": "msdyn_encryptmaskedmessagesname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_encryptmaskedmessagesName",
+          "x-ms-read-only": true
+        },
+        "msdyn_inactive_presence_lookup": {
+          "type": "string",
+          "title": "Inactive Presence",
+          "x-ms-dataverse-attribute": "msdyn_inactive_presence_lookup",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_inactive_presence_lookup"
+        },
+        "msdyn_inactive_presence_lookupname": {
+          "type": "string",
+          "title": "msdyn_inactive_presence_lookupname",
+          "x-ms-dataverse-attribute": "msdyn_inactive_presence_lookupname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_inactive_presence_lookupName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_isconsultagentfilterenabled": {
+          "type": "string",
+          "title": "consult agent filter",
+          "x-ms-dataverse-attribute": "msdyn_isconsultagentfilterenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isconsultagentfilterenabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "306d6c0c-d719-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "consult agent filter",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isconsultagentfilterenabledname": {
+          "type": "string",
+          "title": "msdyn_isconsultagentfilterenabledname",
+          "x-ms-dataverse-attribute": "msdyn_isconsultagentfilterenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isconsultagentfilterenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_isconsultcapacityblocking": {
+          "type": "string",
+          "title": "Is consult capacity blocking",
+          "x-ms-dataverse-attribute": "msdyn_isconsultcapacityblocking",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isconsultcapacityblocking",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "37dd37b0-b619-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Consult Capacity Blocking",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isconsultcapacityblockingname": {
+          "type": "string",
+          "title": "msdyn_isconsultcapacityblockingname",
+          "x-ms-dataverse-attribute": "msdyn_isconsultcapacityblockingname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isconsultcapacityblockingName",
+          "x-ms-read-only": true
+        },
+        "msdyn_isconsultqueuefilterenabled": {
+          "type": "string",
+          "title": "consult queue filter",
+          "x-ms-dataverse-attribute": "msdyn_isconsultqueuefilterenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isconsultqueuefilterenabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "296d6c0c-d719-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "consult queue filter",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isconsultqueuefilterenabledname": {
+          "type": "string",
+          "title": "msdyn_isconsultqueuefilterenabledname",
+          "x-ms-dataverse-attribute": "msdyn_isconsultqueuefilterenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isconsultqueuefilterenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_isconsulttoagentenabled": {
+          "type": "string",
+          "title": "Consult to agent",
+          "x-ms-dataverse-attribute": "msdyn_isconsulttoagentenabled",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_isconsulttoagentenabled",
+          "required": true
+        },
+        "msdyn_isconsulttoagentenabledformessaging": {
+          "type": "string",
+          "title": "Consult to agent for messaging",
+          "x-ms-dataverse-attribute": "msdyn_isconsulttoagentenabledformessaging",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_isconsulttoagentenabledformessaging",
+          "required": true
+        },
+        "msdyn_isconsulttoagentenabledforvoice": {
+          "type": "string",
+          "title": "Consult to agent for voice",
+          "x-ms-dataverse-attribute": "msdyn_isconsulttoagentenabledforvoice",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_isconsulttoagentenabledforvoice",
+          "required": true
+        },
+        "msdyn_isconsulttoqueueenabled": {
+          "type": "string",
+          "title": "Consult to queue",
+          "x-ms-dataverse-attribute": "msdyn_isconsulttoqueueenabled",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_isconsulttoqueueenabled",
+          "required": true
+        },
+        "msdyn_isconsulttoqueueenabledformessaging": {
+          "type": "string",
+          "title": "Consult to queue for messaging",
+          "x-ms-dataverse-attribute": "msdyn_isconsulttoqueueenabledformessaging",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_isconsulttoqueueenabledformessaging",
+          "required": true
+        },
+        "msdyn_isconsulttoqueueenabledforvoice": {
+          "type": "string",
+          "title": "Consult to queue for voice",
+          "x-ms-dataverse-attribute": "msdyn_isconsulttoqueueenabledforvoice",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_isconsulttoqueueenabledforvoice",
+          "required": true
+        },
+        "msdyn_isconsultwithaiagentenabled": {
+          "type": "string",
+          "title": "Is consult with AI agent enabled",
+          "x-ms-dataverse-attribute": "msdyn_isconsultwithaiagentenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isconsultwithaiagentenabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "0f02619b-b04e-f111-bec6-7ced8d3c510c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is consult with AI agent enabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isconsultwithaiagentenabledname": {
+          "type": "string",
+          "title": "msdyn_isconsultwithaiagentenabledname",
+          "x-ms-dataverse-attribute": "msdyn_isconsultwithaiagentenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isconsultwithaiagentenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_isdefaultpersonamapped": {
+          "type": "string",
+          "title": "isdefaultpersonamapped",
+          "x-ms-dataverse-attribute": "msdyn_isdefaultpersonamapped",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isdefaultpersonamapped",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "d84e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "isdefaultpersonamapped",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isdefaultpersonamappedname": {
+          "type": "string",
+          "title": "msdyn_isdefaultpersonamappedname",
+          "x-ms-dataverse-attribute": "msdyn_isdefaultpersonamappedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isdefaultpersonamappedName",
+          "x-ms-read-only": true
+        },
+        "msdyn_isnextpresenceenabled": {
+          "type": "string",
+          "title": "Is Next Presence Enabled",
+          "x-ms-dataverse-attribute": "msdyn_isnextpresenceenabled",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_isnextpresenceenabled",
+          "required": true
+        },
+        "msdyn_ispersonalizationofsoundenabled": {
+          "type": "string",
+          "title": "Allow agents to create personal sound settings",
+          "x-ms-dataverse-attribute": "msdyn_ispersonalizationofsoundenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_ispersonalizationofsoundenabled",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "d24e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Allow agents to create personal sound settings",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_ispersonalizationofsoundenabledname": {
+          "type": "string",
+          "title": "msdyn_ispersonalizationofsoundenabledname",
+          "x-ms-dataverse-attribute": "msdyn_ispersonalizationofsoundenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_ispersonalizationofsoundenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_ispersonalmessagesenabled": {
+          "type": "string",
+          "title": "Enable personal messages",
+          "x-ms-dataverse-attribute": "msdyn_ispersonalmessagesenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isPersonalMessagesEnabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "c34e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Personal Messages",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_ispersonalmessagesenabledname": {
+          "type": "string",
+          "title": "msdyn_ispersonalmessagesenabledname",
+          "x-ms-dataverse-attribute": "msdyn_ispersonalmessagesenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_ispersonalmessagesenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_ispersonasecurityrolemappingenabled": {
+          "type": "string",
+          "title": "ispersonasecurityrolemappingenabled",
+          "x-ms-dataverse-attribute": "msdyn_ispersonasecurityrolemappingenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_ispersonasecurityrolemappingenabled",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "d54e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "ispersonasecurityrolemappingenabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_ispersonasecurityrolemappingenabledname": {
+          "type": "string",
+          "title": "msdyn_ispersonasecurityrolemappingenabledname",
+          "x-ms-dataverse-attribute": "msdyn_ispersonasecurityrolemappingenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_ispersonasecurityrolemappingenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_isskillbasedroutingenabled": {
+          "type": "string",
+          "title": "Enable Skill Based Routing",
+          "x-ms-dataverse-attribute": "msdyn_isskillbasedroutingenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_IsSkillBasedRoutingEnabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "49cb4762-b819-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Skill Based Routing",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isskillbasedroutingenabledname": {
+          "type": "string",
+          "title": "msdyn_isskillbasedroutingenabledname",
+          "x-ms-dataverse-attribute": "msdyn_isskillbasedroutingenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isskillbasedroutingenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_istransferagentfilterenabled": {
+          "type": "string",
+          "title": "transfer agent filter",
+          "x-ms-dataverse-attribute": "msdyn_istransferagentfilterenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_istransferagentfilterenabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "346d6c0c-d719-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "transfer agent filter",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_istransferagentfilterenabledname": {
+          "type": "string",
+          "title": "msdyn_istransferagentfilterenabledname",
+          "x-ms-dataverse-attribute": "msdyn_istransferagentfilterenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_istransferagentfilterenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_istransferqueuefilterenabled": {
+          "type": "string",
+          "title": "transfer queue filter",
+          "x-ms-dataverse-attribute": "msdyn_istransferqueuefilterenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_istransferqueuefilterenabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "2c6d6c0c-d719-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "transfer queue filter",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_istransferqueuefilterenabledname": {
+          "type": "string",
+          "title": "msdyn_istransferqueuefilterenabledname",
+          "x-ms-dataverse-attribute": "msdyn_istransferqueuefilterenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_istransferqueuefilterenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_istransfertoagentenabled": {
+          "type": "string",
+          "title": "Transfer to agent",
+          "x-ms-dataverse-attribute": "msdyn_istransfertoagentenabled",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_istransfertoagentenabled",
+          "required": true
+        },
+        "msdyn_istransfertoagentenabledformessaging": {
+          "type": "string",
+          "title": "Transfer to agent for messaging",
+          "x-ms-dataverse-attribute": "msdyn_istransfertoagentenabledformessaging",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_istransfertoagentenabledformessaging",
+          "required": true
+        },
+        "msdyn_istransfertoagentenabledforvoice": {
+          "type": "string",
+          "title": "Transfer to agent for voice",
+          "x-ms-dataverse-attribute": "msdyn_istransfertoagentenabledforvoice",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_istransfertoagentenabledforvoice",
+          "required": true
+        },
+        "msdyn_istransfertoqueueawtdisplayenabled": {
+          "type": "string",
+          "title": "Is transfer to queue AWT display enabled",
+          "x-ms-dataverse-attribute": "msdyn_istransfertoqueueawtdisplayenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_istransfertoqueueawtdisplayenabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "1202619b-b04e-f111-bec6-7ced8d3c510c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is transfer to queue AWT display enabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_istransfertoqueueawtdisplayenabledname": {
+          "type": "string",
+          "title": "msdyn_istransfertoqueueawtdisplayenabledname",
+          "x-ms-dataverse-attribute": "msdyn_istransfertoqueueawtdisplayenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_istransfertoqueueawtdisplayenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_istransfertoqueueenabled": {
+          "type": "string",
+          "title": "Transfer to queue",
+          "x-ms-dataverse-attribute": "msdyn_istransfertoqueueenabled",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_istransfertoqueueenabled",
+          "required": true
+        },
+        "msdyn_istransfertoqueueenabledformessaging": {
+          "type": "string",
+          "title": "Transfer to queue for messaging",
+          "x-ms-dataverse-attribute": "msdyn_istransfertoqueueenabledformessaging",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_istransfertoqueueenabledformessaging",
+          "required": true
+        },
+        "msdyn_istransfertoqueueenabledforvoice": {
+          "type": "string",
+          "title": "Transfer to queue for voice",
+          "x-ms-dataverse-attribute": "msdyn_istransfertoqueueenabledforvoice",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_istransfertoqueueenabledforvoice",
+          "required": true
+        },
+        "msdyn_isupdateskillsenabled": {
+          "type": "string",
+          "title": "Enable update skill control",
+          "x-ms-dataverse-attribute": "msdyn_isupdateskillsenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_IsUpdateSkillsEnabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "3704a4df-b819-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Update Skills",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isupdateskillsenabledname": {
+          "type": "string",
+          "title": "msdyn_isupdateskillsenabledname",
+          "x-ms-dataverse-attribute": "msdyn_isupdateskillsenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isupdateskillsenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_iswemshiftbasedroutingenabled": {
+          "type": "string",
+          "title": "Enable Shift Based Routing",
+          "x-ms-dataverse-attribute": "msdyn_iswemshiftbasedroutingenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_IsWEMShiftBasedRoutingEnabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "e3b90e37-b719-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Shift Based Routing",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_iswemshiftbasedroutingenabledname": {
+          "type": "string",
+          "title": "msdyn_iswemshiftbasedroutingenabledname",
+          "x-ms-dataverse-attribute": "msdyn_iswemshiftbasedroutingenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_iswemshiftbasedroutingenabledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_maskforagent": {
+          "type": "string",
+          "title": "Mask for agent",
+          "x-ms-dataverse-attribute": "msdyn_maskforagent",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_maskforagent",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "b14e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Mask for agent",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_maskforagentname": {
+          "type": "string",
+          "title": "msdyn_maskforagentname",
+          "x-ms-dataverse-attribute": "msdyn_maskforagentname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_maskforagentName",
+          "x-ms-read-only": true
+        },
+        "msdyn_maskforcustomer": {
+          "type": "string",
+          "title": "Mask for customer",
+          "x-ms-dataverse-attribute": "msdyn_maskforcustomer",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_maskforcustomer",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "b74e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Mask for customer",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_maskforcustomername": {
+          "type": "string",
+          "title": "msdyn_maskforcustomername",
+          "x-ms-dataverse-attribute": "msdyn_maskforcustomername",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_maskforcustomerName",
+          "x-ms-read-only": true
+        },
+        "msdyn_maskingpermission": {
+          "type": "string",
+          "title": "Masking permission",
+          "x-ms-dataverse-attribute": "msdyn_maskingpermission",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_maskingpermission",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "236d6c0c-d719-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Masking permission",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_maskingpermissionname": {
+          "type": "string",
+          "title": "msdyn_maskingpermissionname",
+          "x-ms-dataverse-attribute": "msdyn_maskingpermissionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_maskingpermissionName",
+          "x-ms-read-only": true
+        },
+        "msdyn_maximumnumberofattemptsforconsulttoqueue": {
+          "type": "string",
+          "title": "Maximum consult attempts",
+          "x-ms-dataverse-attribute": "msdyn_maximumnumberofattemptsforconsulttoqueue",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_maximumnumberofattemptsforconsulttoqueue",
+          "required": true
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_number_of_declines_allowed": {
+          "type": "string",
+          "title": "Number Of Declines Allowed",
+          "x-ms-dataverse-attribute": "msdyn_number_of_declines_allowed",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_number_of_declines_allowed",
+          "required": true
+        },
+        "msdyn_omnichannelconfigurationid": {
+          "type": "string",
+          "title": "Omnichannel Configuration",
+          "x-ms-dataverse-attribute": "msdyn_omnichannelconfigurationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_omnichannelconfigurationId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_preferredagentbackupmode": {
+          "type": "string",
+          "title": "Preferred Agent Backup Mode",
+          "x-ms-dataverse-attribute": "msdyn_preferredagentbackupmode",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_preferredagentbackupmode",
+          "required": true,
+          "enum": [
+            "NoAssignment",
+            "NextBestAssignment"
+          ],
+          "x-ms-enum-values": [
+            192350000,
+            192350001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "5b51029e-d2ed-4350-9849-9b5863732f08",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Preferred Agent Backup Mode",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_preferredagentbackupmodename": {
+          "type": "string",
+          "title": "msdyn_preferredagentbackupmodename",
+          "x-ms-dataverse-attribute": "msdyn_preferredagentbackupmodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_preferredagentbackupmodeName",
+          "x-ms-read-only": true
+        },
+        "msdyn_publickeyurl": {
+          "type": "string",
+          "title": "Public Key URL",
+          "x-ms-dataverse-attribute": "msdyn_publickeyurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_publickeyurl",
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_shouldhonourwrapupduringtransfer": {
+          "type": "string",
+          "title": "Should honour wrapup during transfer",
+          "x-ms-dataverse-attribute": "msdyn_shouldhonourwrapupduringtransfer",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_shouldhonourwrapupduringtransfer",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "3cdd37b0-b619-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Should honour wrapup during transfer",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_shouldhonourwrapupduringtransfername": {
+          "type": "string",
+          "title": "msdyn_shouldhonourwrapupduringtransfername",
+          "x-ms-dataverse-attribute": "msdyn_shouldhonourwrapupduringtransfername",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_shouldhonourwrapupduringtransferName",
+          "x-ms-read-only": true
+        },
+        "msdyn_soundformcontrol": {
+          "type": "string",
+          "title": "Sound Form Control",
+          "x-ms-dataverse-attribute": "msdyn_soundformcontrol",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_SoundFormControl",
+          "maxLength": 100
+        },
+        "msdyn_timeoutrulecsroverride": {
+          "type": "string",
+          "title": "Timeout rule CSR override",
+          "x-ms-dataverse-attribute": "msdyn_timeoutrulecsroverride",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_timeoutrulecsroverride",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "266d6c0c-d719-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Timeout rule CSR override",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_timeoutrulecsroverridename": {
+          "type": "string",
+          "title": "msdyn_timeoutrulecsroverridename",
+          "x-ms-dataverse-attribute": "msdyn_timeoutrulecsroverridename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_timeoutrulecsroverrideName",
+          "x-ms-read-only": true
+        },
+        "msdyn_transferagentfilterconfig": {
+          "type": "string",
+          "title": "transfer agent filter config",
+          "x-ms-dataverse-attribute": "msdyn_transferagentfilterconfig",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_transferagentfilterconfig",
+          "maxLength": 2000
+        },
+        "msdyn_transferqueuefilterconfig": {
+          "type": "string",
+          "title": "transfer queue filter config",
+          "x-ms-dataverse-attribute": "msdyn_transferqueuefilterconfig",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_transferqueuefilterconfig",
+          "maxLength": 2000
+        },
+        "msdyn_translationwebresourceurl": {
+          "type": "string",
+          "title": "Web resource URL",
+          "x-ms-dataverse-attribute": "msdyn_translationwebresourceurl",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_translationwebresourceurl",
+          "maxLength": 2000
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "5b4e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "654e0e5d-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "supportingsolutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "supportingsolutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SupportingSolutionId",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "componentidunique",
+        "componentstate",
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "iscustomizable",
+        "ismanaged",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "msdyn_consulttoqueuemessagingtimeoutvalue",
+        "msdyn_consulttoqueuevoicetimeoutvalue",
+        "msdyn_enable_supervisor_assign",
+        "msdyn_enable_supervisor_forceclose",
+        "msdyn_enable_supervisor_monitor",
+        "msdyn_enable_supervisor_transfer",
+        "msdyn_enable_visitorjourney",
+        "msdyn_isconsulttoagentenabled",
+        "msdyn_isconsulttoagentenabledformessaging",
+        "msdyn_isconsulttoagentenabledforvoice",
+        "msdyn_isconsulttoqueueenabled",
+        "msdyn_isconsulttoqueueenabledformessaging",
+        "msdyn_isconsulttoqueueenabledforvoice",
+        "msdyn_isdefaultpersonamapped",
+        "msdyn_isnextpresenceenabled",
+        "msdyn_ispersonalizationofsoundenabled",
+        "msdyn_ispersonasecurityrolemappingenabled",
+        "msdyn_istransfertoagentenabled",
+        "msdyn_istransfertoagentenabledformessaging",
+        "msdyn_istransfertoagentenabledforvoice",
+        "msdyn_istransfertoqueueenabled",
+        "msdyn_istransfertoqueueenabledformessaging",
+        "msdyn_istransfertoqueueenabledforvoice",
+        "msdyn_maximumnumberofattemptsforconsulttoqueue",
+        "msdyn_name",
+        "msdyn_number_of_declines_allowed",
+        "msdyn_omnichannelconfigurationid",
+        "msdyn_preferredagentbackupmode",
+        "msdyn_publickeyurl",
+        "organizationidname",
+        "overwritetime",
+        "solutionid",
+        "statecode"
+      ]
+    }
+  }
+}

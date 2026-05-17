@@ -1,0 +1,64 @@
+{
+  "name": "gitrepository",
+  "title": "Git Repositories",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "gitrepositories",
+      "x-ms-dataverse-primary-id": "gitrepositoryid",
+      "x-ms-dataverse-primary-name": "repositoryname",
+      "properties": {
+        "defaultbranch": {
+          "type": "string",
+          "title": "Git Repository Default Branch",
+          "x-ms-dataverse-attribute": "defaultbranch",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DefaultBranch",
+          "maxLength": 100
+        },
+        "gitrepositoryid": {
+          "type": "string",
+          "title": "Git Repository",
+          "x-ms-dataverse-attribute": "gitrepositoryid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "GitRepositoryId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "organizationname": {
+          "type": "string",
+          "title": "Git Organization Name",
+          "x-ms-dataverse-attribute": "organizationname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationName",
+          "maxLength": 1000
+        },
+        "projectname": {
+          "type": "string",
+          "title": "Git Project Name",
+          "x-ms-dataverse-attribute": "projectname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ProjectName",
+          "maxLength": 1000
+        },
+        "repositoryname": {
+          "type": "string",
+          "title": "Git Repository Name",
+          "x-ms-dataverse-attribute": "repositoryname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RepositoryName",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "gitrepositoryid",
+        "repositoryname"
+      ]
+    }
+  }
+}

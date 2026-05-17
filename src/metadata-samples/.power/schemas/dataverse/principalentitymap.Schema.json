@@ -1,0 +1,63 @@
+{
+  "name": "principalentitymap",
+  "title": "principalentitymap",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "principalentitymaps",
+      "x-ms-dataverse-primary-id": "principalentitymapid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "c6620dd8-087a-4747-b9e1-103bcbe0af7e",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Picklist"
+        },
+        "principalentitymapid": {
+          "type": "string",
+          "title": "principalentitymapid",
+          "x-ms-dataverse-attribute": "principalentitymapid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PrincipalEntityMapId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "principalid": {
+          "type": "string",
+          "title": "principalid",
+          "x-ms-dataverse-attribute": "principalid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PrincipalId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "objecttypecode",
+        "principalentitymapid",
+        "principalid"
+      ]
+    }
+  }
+}

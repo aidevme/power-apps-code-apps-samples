@@ -1,0 +1,69 @@
+{
+  "name": "sharedobjectsforread",
+  "title": "sharedobjectsforread",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "sharedobjectsforread",
+      "x-ms-dataverse-primary-id": "sharedobjectsforreadid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "objectid": {
+          "type": "string",
+          "title": "objectid",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ObjectId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "sharedobjectsforreadid": {
+          "type": "string",
+          "title": "sharedobjectsforreadid",
+          "x-ms-dataverse-attribute": "sharedobjectsforreadid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SharedObjectsForReadId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "userids": {
+          "type": "string",
+          "title": "userids",
+          "x-ms-dataverse-attribute": "userids",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "UserIds",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 1073741823
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "objectid",
+        "objecttypecode",
+        "sharedobjectsforreadid",
+        "userids"
+      ]
+    }
+  }
+}

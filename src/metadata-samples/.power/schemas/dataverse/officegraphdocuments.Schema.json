@@ -1,0 +1,336 @@
+{
+  "name": "officegraphdocument",
+  "title": "Office Graph Documents",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "officegraphdocuments",
+      "x-ms-dataverse-primary-id": "officegraphdocumentid",
+      "x-ms-dataverse-primary-name": "title",
+      "properties": {
+        "authornames": {
+          "type": "string",
+          "title": "Author Names",
+          "x-ms-dataverse-attribute": "authornames",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AuthorNames",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdtime": {
+          "type": "string",
+          "title": "Created Time",
+          "x-ms-dataverse-attribute": "createdtime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedTime",
+          "x-ms-read-only": true
+        },
+        "documentid": {
+          "type": "string",
+          "title": "Document Id",
+          "x-ms-dataverse-attribute": "documentid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DocumentId",
+          "required": true,
+          "maxLength": 100
+        },
+        "documentlastmodifiedby": {
+          "type": "string",
+          "title": "Document Last Modified By",
+          "x-ms-dataverse-attribute": "documentlastmodifiedby",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DocumentLastModifiedBy",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "documentlastmodifiedon": {
+          "type": "string",
+          "title": "Document Last Modified On",
+          "x-ms-dataverse-attribute": "documentlastmodifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "DocumentLastModifiedOn",
+          "x-ms-read-only": true
+        },
+        "documentpreviewmetadata": {
+          "type": "string",
+          "title": "document preview metadata",
+          "x-ms-dataverse-attribute": "documentpreviewmetadata",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DocumentPreviewMetadata",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "exchangerate": {
+          "type": "string",
+          "title": "ExchangeRate",
+          "x-ms-dataverse-attribute": "exchangerate",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "ExchangeRate",
+          "x-ms-read-only": true
+        },
+        "fileextension": {
+          "type": "string",
+          "title": "File Extension",
+          "x-ms-dataverse-attribute": "fileextension",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FileExtension",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        },
+        "filetype": {
+          "type": "string",
+          "title": "File Type",
+          "x-ms-dataverse-attribute": "filetype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FileType",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedtime": {
+          "type": "string",
+          "title": "Modified Time",
+          "x-ms-dataverse-attribute": "modifiedtime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedTime",
+          "x-ms-read-only": true
+        },
+        "officegraphdocumentid": {
+          "type": "string",
+          "title": "OfficeGraphDocument",
+          "x-ms-dataverse-attribute": "officegraphdocumentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OfficeGraphDocumentId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "previewimageurl": {
+          "type": "string",
+          "title": "Preview Image Url",
+          "x-ms-dataverse-attribute": "previewimageurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PreviewImageUrl",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        },
+        "querytype": {
+          "type": "string",
+          "title": "Query Type",
+          "x-ms-dataverse-attribute": "querytype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "QueryType",
+          "x-ms-read-only": true
+        },
+        "rank": {
+          "type": "string",
+          "title": "Relevancy Rank of the Document",
+          "x-ms-dataverse-attribute": "rank",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Rank",
+          "x-ms-read-only": true
+        },
+        "readurl": {
+          "type": "string",
+          "title": "Read Url",
+          "x-ms-dataverse-attribute": "readurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ReadUrl",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "secondaryfileextension": {
+          "type": "string",
+          "title": "Secondary File Extension",
+          "x-ms-dataverse-attribute": "secondaryfileextension",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SecondaryFileExtension",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        },
+        "sitetitle": {
+          "type": "string",
+          "title": "Parent Site Title",
+          "x-ms-dataverse-attribute": "sitetitle",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SiteTitle",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "siteurl": {
+          "type": "string",
+          "title": "Site Url",
+          "x-ms-dataverse-attribute": "siteurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SiteUrl",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title",
+          "x-ms-dataverse-attribute": "title",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Title",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "transactioncurrencyid": {
+          "type": "string",
+          "title": "Currency",
+          "x-ms-dataverse-attribute": "transactioncurrencyid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "TransactionCurrencyId"
+        },
+        "transactioncurrencyidname": {
+          "type": "string",
+          "title": "transactioncurrencyidname",
+          "x-ms-dataverse-attribute": "transactioncurrencyidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "TransactionCurrencyIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        },
+        "viewcount": {
+          "type": "string",
+          "title": "View Count",
+          "x-ms-dataverse-attribute": "viewcount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ViewCount",
+          "x-ms-read-only": true
+        },
+        "weblocationurl": {
+          "type": "string",
+          "title": "Web Location Url",
+          "x-ms-dataverse-attribute": "weblocationurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "WebLocationUrl",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        }
+      },
+      "required": [
+        "createdonbehalfbyyominame",
+        "documentid",
+        "modifiedonbehalfbyyominame",
+        "officegraphdocumentid",
+        "organizationidname",
+        "title"
+      ]
+    }
+  }
+}

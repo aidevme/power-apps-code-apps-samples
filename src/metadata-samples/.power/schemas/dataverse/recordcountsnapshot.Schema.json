@@ -1,0 +1,66 @@
+{
+  "name": "recordcountsnapshot",
+  "title": "recordcountsnapshot",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "recordcountsnapshots",
+      "x-ms-dataverse-primary-id": "recordcountsnapshotid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "count": {
+          "type": "string",
+          "title": "count",
+          "x-ms-dataverse-attribute": "count",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "Count",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "lastupdated": {
+          "type": "string",
+          "title": "lastupdated",
+          "x-ms-dataverse-attribute": "lastupdated",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "LastUpdated",
+          "x-ms-read-only": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "recordcountsnapshotid": {
+          "type": "string",
+          "title": "recordcountsnapshotid",
+          "x-ms-dataverse-attribute": "recordcountsnapshotid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RecordCountSnapshotId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumberconverted": {
+          "type": "string",
+          "title": "versionnumberconverted",
+          "x-ms-dataverse-attribute": "versionnumberconverted",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumberConverted",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "count",
+        "objecttypecode",
+        "recordcountsnapshotid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "mspp_websiteaccess_webrole",
+  "title": "mspp_websiteaccess_webrole",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mspp_websiteaccess_webroleset",
+      "x-ms-dataverse-primary-id": "mspp_websiteaccess_webroleid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "mspp_webroleid": {
+          "type": "string",
+          "title": "mspp_webroleid",
+          "x-ms-dataverse-attribute": "mspp_webroleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_webroleid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "mspp_websiteaccess_webroleid": {
+          "type": "string",
+          "title": "mspp_websiteaccess_webroleid",
+          "x-ms-dataverse-attribute": "mspp_websiteaccess_webroleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_websiteaccess_webroleId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mspp_websiteaccessid": {
+          "type": "string",
+          "title": "mspp_websiteaccessid",
+          "x-ms-dataverse-attribute": "mspp_websiteaccessid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_websiteaccessid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "mspp_webroleid",
+        "mspp_websiteaccess_webroleid",
+        "mspp_websiteaccessid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "name": "subscriptionmanuallytrackedobject",
+  "title": "Subscription Manually Tracked Objects",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "subscriptionmanuallytrackedobjects",
+      "x-ms-dataverse-primary-id": "subscriptionmanuallytrackedobjectid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "objectid": {
+          "type": "string",
+          "title": "Object Id",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ObjectId",
+          "required": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "enum": [
+            "Contact",
+            "Task"
+          ],
+          "x-ms-enum-values": [
+            2,
+            4212
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "693514da-1020-4fc0-b7df-366b1876d9f5",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Type code",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "subscriptionid": {
+          "type": "string",
+          "title": "Subscription Id",
+          "x-ms-dataverse-attribute": "subscriptionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SubscriptionId",
+          "required": true
+        },
+        "subscriptionmanuallytrackedobjectid": {
+          "type": "string",
+          "title": "subscriptionmanuallytrackedobjectid",
+          "x-ms-dataverse-attribute": "subscriptionmanuallytrackedobjectid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SubscriptionManuallyTrackedObjectId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "track": {
+          "type": "string",
+          "title": "track",
+          "x-ms-dataverse-attribute": "track",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "Track",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "50516ed3-652c-4421-96c6-a49eb5655413",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Track",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "objectid",
+        "subscriptionid",
+        "subscriptionmanuallytrackedobjectid",
+        "track"
+      ]
+    }
+  }
+}

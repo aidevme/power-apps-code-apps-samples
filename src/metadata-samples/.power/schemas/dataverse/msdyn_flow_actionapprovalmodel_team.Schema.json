@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_flow_actionapprovalmodel_team",
+  "title": "msdyn_flow_actionapprovalmodel_team",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_flow_actionapprovalmodel_teamset",
+      "x-ms-dataverse-primary-id": "msdyn_flow_actionapprovalmodel_teamid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_flow_actionapprovalmodel_teamid": {
+          "type": "string",
+          "title": "msdyn_flow_actionapprovalmodel_teamid",
+          "x-ms-dataverse-attribute": "msdyn_flow_actionapprovalmodel_teamid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_flow_actionapprovalmodel_teamId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_flow_actionapprovalmodelid": {
+          "type": "string",
+          "title": "msdyn_flow_actionapprovalmodelid",
+          "x-ms-dataverse-attribute": "msdyn_flow_actionapprovalmodelid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_flow_actionapprovalmodelid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "teamid": {
+          "type": "string",
+          "title": "teamid",
+          "x-ms-dataverse-attribute": "teamid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "teamid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_flow_actionapprovalmodel_teamid",
+        "msdyn_flow_actionapprovalmodelid",
+        "teamid"
+      ]
+    }
+  }
+}

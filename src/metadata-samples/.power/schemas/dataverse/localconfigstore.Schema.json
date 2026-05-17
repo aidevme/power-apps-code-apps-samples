@@ -1,0 +1,95 @@
+{
+  "name": "localconfigstore",
+  "title": "LocalConfigStore",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "localconfigstores",
+      "x-ms-dataverse-primary-id": "id",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "assemblyname": {
+          "type": "string",
+          "title": "Assembly Name",
+          "x-ms-dataverse-attribute": "assemblyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AssemblyName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 255
+        },
+        "id": {
+          "type": "string",
+          "title": "Id",
+          "x-ms-dataverse-attribute": "id",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "Id",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "isvalueset": {
+          "type": "string",
+          "title": "isvalueset",
+          "x-ms-dataverse-attribute": "isvalueset",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsValueSet",
+          "x-ms-read-only": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "308a9725-d926-4620-8af4-0a8839cb12c3",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Encrypted Attribute Value Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "keyname": {
+          "type": "string",
+          "title": "Key Name",
+          "x-ms-dataverse-attribute": "keyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "KeyName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 255
+        },
+        "publictoken": {
+          "type": "string",
+          "title": "Assembly Public Token",
+          "x-ms-dataverse-attribute": "publictoken",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PublicToken",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 255
+        },
+        "value": {
+          "type": "string",
+          "title": "Value",
+          "x-ms-dataverse-attribute": "value",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Value",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "assemblyname",
+        "id",
+        "keyname",
+        "publictoken"
+      ]
+    }
+  }
+}

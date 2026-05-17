@@ -1,0 +1,132 @@
+{
+  "name": "attributepicklistvalue",
+  "title": "Option Set Values",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "AttributePicklistValues",
+      "x-ms-dataverse-primary-id": "attributepicklistvalueid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "attributepicklistvalueid": {
+          "type": "string",
+          "title": "AttributePicklistValue Id",
+          "x-ms-dataverse-attribute": "attributepicklistvalueid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AttributePicklistValueId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "componentstatename": {
+          "type": "string",
+          "title": "componentstatename",
+          "x-ms-dataverse-attribute": "componentstatename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "componentstateName",
+          "x-ms-read-only": true
+        },
+        "ishidden": {
+          "type": "string",
+          "title": "IsHidden",
+          "x-ms-dataverse-attribute": "ishidden",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsHidden",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9da0120a-2f19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "IsHidden",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ishiddenname": {
+          "type": "string",
+          "title": "ishiddenname",
+          "x-ms-dataverse-attribute": "ishiddenname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ishiddenName",
+          "x-ms-read-only": true
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true,
+          "required": true
+        }
+      },
+      "required": [
+        "attributepicklistvalueid",
+        "componentstate",
+        "ishidden",
+        "overwritetime",
+        "solutionid",
+        "versionnumber"
+      ]
+    }
+  }
+}

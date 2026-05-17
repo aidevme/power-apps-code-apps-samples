@@ -1,0 +1,167 @@
+{
+  "name": "principalattributeaccessmap",
+  "title": "principalattributeaccessmap",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "principalattributeaccessmaps",
+      "x-ms-dataverse-primary-id": "principalattributeaccessmapid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "attributeid": {
+          "type": "string",
+          "title": "attributeid",
+          "x-ms-dataverse-attribute": "attributeid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AttributeId",
+          "required": true
+        },
+        "createaccess": {
+          "type": "string",
+          "title": "createaccess",
+          "x-ms-dataverse-attribute": "createaccess",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "CreateAccess",
+          "required": true,
+          "enum": [
+            "Not Allowed",
+            "Allowed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            4
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "d6287bb2-8a4e-45e3-b90a-d995ccfa7d84",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "A Yes or No boolean",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "principalattributeaccessmapid": {
+          "type": "string",
+          "title": "principalattributeaccessmapid",
+          "x-ms-dataverse-attribute": "principalattributeaccessmapid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PrincipalAttributeAccessMapId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "principalid": {
+          "type": "string",
+          "title": "principalid",
+          "x-ms-dataverse-attribute": "principalid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PrincipalId",
+          "required": true
+        },
+        "readaccess": {
+          "type": "string",
+          "title": "readaccess",
+          "x-ms-dataverse-attribute": "readaccess",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ReadAccess",
+          "required": true,
+          "enum": [
+            "Not Allowed",
+            "Allowed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            4
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "d6287bb2-8a4e-45e3-b90a-d995ccfa7d84",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "A Yes or No boolean",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "readunmaskedaccess": {
+          "type": "string",
+          "title": "readunmaskedaccess",
+          "x-ms-dataverse-attribute": "readunmaskedaccess",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ReadUnMaskedAccess",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Not Allowed",
+            "One Record",
+            "All Records"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "6e04d772-cfbc-4397-b12a-95bcd2a5e6d6",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Read Unmasked",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "readunmaskedaccessname": {
+          "type": "string",
+          "title": "readunmaskedaccessname",
+          "x-ms-dataverse-attribute": "readunmaskedaccessname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "readunmaskedaccessName",
+          "x-ms-read-only": true
+        },
+        "updateaccess": {
+          "type": "string",
+          "title": "updateaccess",
+          "x-ms-dataverse-attribute": "updateaccess",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "UpdateAccess",
+          "required": true,
+          "enum": [
+            "Not Allowed",
+            "Allowed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            4
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "d6287bb2-8a4e-45e3-b90a-d995ccfa7d84",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "A Yes or No boolean",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "attributeid",
+        "createaccess",
+        "principalattributeaccessmapid",
+        "principalid",
+        "readaccess",
+        "readunmaskedaccess",
+        "updateaccess"
+      ]
+    }
+  }
+}

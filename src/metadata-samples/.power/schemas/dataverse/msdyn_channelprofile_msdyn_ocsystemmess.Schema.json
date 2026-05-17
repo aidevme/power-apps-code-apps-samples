@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_channelprofile_msdyn_ocsystemmess",
+  "title": "msdyn_channelprofile_msdyn_ocsystemmess",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_channelprofile_msdyn_ocsystemmessset",
+      "x-ms-dataverse-primary-id": "msdyn_channelprofile_msdyn_ocsystemmessid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_channelprofile_msdyn_ocsystemmessid": {
+          "type": "string",
+          "title": "msdyn_channelprofile_msdyn_ocsystemmessid",
+          "x-ms-dataverse-attribute": "msdyn_channelprofile_msdyn_ocsystemmessid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_channelprofile_msdyn_ocsystemmessId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_channelprofileid": {
+          "type": "string",
+          "title": "msdyn_channelprofileid",
+          "x-ms-dataverse-attribute": "msdyn_channelprofileid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_channelprofileid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_ocsystemmessageid": {
+          "type": "string",
+          "title": "msdyn_ocsystemmessageid",
+          "x-ms-dataverse-attribute": "msdyn_ocsystemmessageid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_ocsystemmessageid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_channelprofile_msdyn_ocsystemmessid",
+        "msdyn_channelprofileid",
+        "msdyn_ocsystemmessageid"
+      ]
+    }
+  }
+}

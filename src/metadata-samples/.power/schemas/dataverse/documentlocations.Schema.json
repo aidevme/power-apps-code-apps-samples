@@ -1,0 +1,519 @@
+{
+  "name": "sharepointdocumentlocation",
+  "title": "Document Locations",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "sharepointdocumentlocations",
+      "x-ms-dataverse-primary-id": "sharepointdocumentlocationid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "absoluteurl": {
+          "type": "string",
+          "title": "Absolute URL",
+          "x-ms-dataverse-attribute": "absoluteurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AbsoluteURL",
+          "maxLength": 2000
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 2000
+        },
+        "exchangerate": {
+          "type": "string",
+          "title": "Exchange Rate",
+          "x-ms-dataverse-attribute": "exchangerate",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "ExchangeRate",
+          "x-ms-read-only": true
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "locationtype": {
+          "type": "string",
+          "title": "Location Type ",
+          "x-ms-dataverse-attribute": "locationtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "LocationType",
+          "enum": [
+            "General",
+            "Dedicated for OneNote Integration"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "f48898fc-9148-445b-8f00-3cd3987c1471",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Location Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "locationtypename": {
+          "type": "string",
+          "title": "locationtypename",
+          "x-ms-dataverse-attribute": "locationtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "LocationTypeName",
+          "x-ms-read-only": true
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 160
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "parentsiteorlocation": {
+          "type": "string",
+          "title": "Parent Site or Location",
+          "x-ms-dataverse-attribute": "parentsiteorlocation",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ParentSiteOrLocation"
+        },
+        "parentsiteorlocationname": {
+          "type": "string",
+          "title": "parentsiteorlocationname",
+          "x-ms-dataverse-attribute": "parentsiteorlocationname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ParentSiteOrLocationName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "parentsiteorlocationtypecode": {
+          "type": "string",
+          "title": "parentsiteorlocationtypecode",
+          "x-ms-dataverse-attribute": "parentsiteorlocationtypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ParentSiteOrLocationTypeCode"
+        },
+        "regardingobjectid": {
+          "type": "string",
+          "title": "Regarding",
+          "x-ms-dataverse-attribute": "regardingobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "RegardingObjectId"
+        },
+        "regardingobjectidname": {
+          "type": "string",
+          "title": "regardingobjectidname",
+          "x-ms-dataverse-attribute": "regardingobjectidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdName",
+          "maxLength": 256
+        },
+        "regardingobjectidyominame": {
+          "type": "string",
+          "title": "regardingobjectidyominame",
+          "x-ms-dataverse-attribute": "regardingobjectidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdYomiName",
+          "maxLength": 160
+        },
+        "regardingobjecttypecode": {
+          "type": "string",
+          "title": "regardingobjecttypecode",
+          "x-ms-dataverse-attribute": "regardingobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectTypeCode"
+        },
+        "relativeurl": {
+          "type": "string",
+          "title": "Relative URL",
+          "x-ms-dataverse-attribute": "relativeurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RelativeUrl",
+          "maxLength": 255
+        },
+        "servicetype": {
+          "type": "string",
+          "title": "Service Type",
+          "x-ms-dataverse-attribute": "servicetype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ServiceType",
+          "required": true,
+          "enum": [
+            "SharePoint",
+            "OneDrive",
+            "Shared with me",
+            "MS Teams"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "81679a56-a61a-4786-a29c-8fe3526d316b",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "ServiceType",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "servicetypename": {
+          "type": "string",
+          "title": "servicetypename",
+          "x-ms-dataverse-attribute": "servicetypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ServiceTypeName"
+        },
+        "sharepointdocumentlocationid": {
+          "type": "string",
+          "title": "SharePoint Document Location ID",
+          "x-ms-dataverse-attribute": "sharepointdocumentlocationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SharePointDocumentLocationId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "sitecollectionid": {
+          "type": "string",
+          "title": "sitecollectionid",
+          "x-ms-dataverse-attribute": "sitecollectionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SiteCollectionId",
+          "x-ms-read-only": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "StateCode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "947dfe07-565d-406f-8c8f-22f580d571ee",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "StateCodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "StatusCode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "84d5ec2d-093b-4b27-b03e-c5a6c12e6f81",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "StatusCodeName",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "timezoneruleversionnumber",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "transactioncurrencyid": {
+          "type": "string",
+          "title": "Currency",
+          "x-ms-dataverse-attribute": "transactioncurrencyid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "TransactionCurrencyId",
+          "x-ms-read-only": true
+        },
+        "transactioncurrencyidname": {
+          "type": "string",
+          "title": "transactioncurrencyidname",
+          "x-ms-dataverse-attribute": "transactioncurrencyidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "TransactionCurrencyIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "userid": {
+          "type": "string",
+          "title": "SharePoint Document Location Owner",
+          "x-ms-dataverse-attribute": "userid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UserId"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "utcconversiontimezonecode",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "name",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "servicetype",
+        "sharepointdocumentlocationid",
+        "statecode"
+      ]
+    }
+  }
+}

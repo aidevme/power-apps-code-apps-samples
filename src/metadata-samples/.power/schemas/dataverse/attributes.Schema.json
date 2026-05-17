@@ -1,0 +1,196 @@
+{
+  "name": "attribute",
+  "title": "Attributes",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "attributes",
+      "x-ms-dataverse-primary-id": "attributeid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "attributeid": {
+          "type": "string",
+          "title": "Attribute",
+          "x-ms-dataverse-attribute": "attributeid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AttributeId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "attributeof": {
+          "type": "string",
+          "title": "Attribute Of",
+          "x-ms-dataverse-attribute": "attributeof",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AttributeOf",
+          "x-ms-read-only": true
+        },
+        "attributetypeid": {
+          "type": "string",
+          "title": "Attribute Type Id",
+          "x-ms-dataverse-attribute": "attributetypeid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AttributeTypeId",
+          "x-ms-read-only": true
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "externalname": {
+          "type": "string",
+          "title": "External Name",
+          "x-ms-dataverse-attribute": "externalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ExternalName",
+          "maxLength": 128
+        },
+        "logicalname": {
+          "type": "string",
+          "title": "Logical Name",
+          "x-ms-dataverse-attribute": "logicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "LogicalName",
+          "required": true,
+          "maxLength": 128
+        },
+        "managedpropertylogicalname": {
+          "type": "string",
+          "title": "Managed Property Logical Name",
+          "x-ms-dataverse-attribute": "managedpropertylogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ManagedPropertyLogicalName",
+          "maxLength": 128
+        },
+        "managedpropertyparentattributename": {
+          "type": "string",
+          "title": "Managed Property Parent Attribute Name",
+          "x-ms-dataverse-attribute": "managedpropertyparentattributename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ManagedPropertyParentAttributeName",
+          "maxLength": 128
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 128
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "physicalname": {
+          "type": "string",
+          "title": "Physical Name",
+          "x-ms-dataverse-attribute": "physicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PhysicalName",
+          "maxLength": 128
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "tablecolumnname": {
+          "type": "string",
+          "title": "Table Column Name",
+          "x-ms-dataverse-attribute": "tablecolumnname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "TableColumnName",
+          "maxLength": 128
+        },
+        "validforreadapi": {
+          "type": "string",
+          "title": "Valid For Read API",
+          "x-ms-dataverse-attribute": "validforreadapi",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ValidForReadAPI",
+          "x-ms-read-only": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "6fa0120a-2f19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Valid For Read API",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "validforreadapiname": {
+          "type": "string",
+          "title": "validforreadapiname",
+          "x-ms-dataverse-attribute": "validforreadapiname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "validforreadapiName",
+          "x-ms-read-only": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "attributeid",
+        "componentstate",
+        "logicalname",
+        "overwritetime",
+        "solutionid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "name": "msdyn_connectordatasource",
+  "title": "Virtual Connector Data Sources",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_connectordatasources",
+      "x-ms-dataverse-primary-id": "msdyn_connectordatasourceid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "msdyn_appsenvironment": {
+          "type": "string",
+          "title": "appsenvironment",
+          "x-ms-dataverse-attribute": "msdyn_appsenvironment",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appsenvironment",
+          "maxLength": 100
+        },
+        "msdyn_clientid": {
+          "type": "string",
+          "title": "clientid",
+          "x-ms-dataverse-attribute": "msdyn_clientid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_clientid",
+          "maxLength": 100
+        },
+        "msdyn_clientsecret": {
+          "type": "string",
+          "title": "clientsecret",
+          "x-ms-dataverse-attribute": "msdyn_clientsecret",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_clientsecret",
+          "maxLength": 100
+        },
+        "msdyn_connectionreference": {
+          "type": "string",
+          "title": "connectionreference",
+          "x-ms-dataverse-attribute": "msdyn_connectionreference",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_connectionreference",
+          "maxLength": 100
+        },
+        "msdyn_connectionreferenceid": {
+          "type": "string",
+          "title": "Connection Reference",
+          "x-ms-dataverse-attribute": "msdyn_connectionreferenceid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_ConnectionReferenceId"
+        },
+        "msdyn_connectionreferenceidname": {
+          "type": "string",
+          "title": "msdyn_connectionreferenceidname",
+          "x-ms-dataverse-attribute": "msdyn_connectionreferenceidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_ConnectionReferenceIdName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_connectordatasourceid": {
+          "type": "string",
+          "title": "ConnectorDataSource",
+          "x-ms-dataverse-attribute": "msdyn_connectordatasourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_connectordatasourceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_connectortype": {
+          "type": "string",
+          "title": "Connector Type",
+          "x-ms-dataverse-attribute": "msdyn_connectortype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_connectortype",
+          "maxLength": 100
+        },
+        "msdyn_dataset_unresolvedvalue": {
+          "type": "string",
+          "title": "Dataset Unresolved Value",
+          "x-ms-dataverse-attribute": "msdyn_dataset_unresolvedvalue",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_dataset_unresolvedvalue",
+          "maxLength": 4000
+        },
+        "msdyn_dataset_value": {
+          "type": "string",
+          "title": "Dataset Value",
+          "x-ms-dataverse-attribute": "msdyn_dataset_value",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_dataset_value",
+          "maxLength": 4000
+        },
+        "msdyn_hasacling": {
+          "type": "string",
+          "title": "Has Acling",
+          "x-ms-dataverse-attribute": "msdyn_hasacling",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_hasacling",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "d2647ab0-6f19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Has Acling",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_hasaclingname": {
+          "type": "string",
+          "title": "msdyn_hasaclingname",
+          "x-ms-dataverse-attribute": "msdyn_hasaclingname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_hasaclingName",
+          "x-ms-read-only": true
+        },
+        "msdyn_host": {
+          "type": "string",
+          "title": "host",
+          "x-ms-dataverse-attribute": "msdyn_host",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_host",
+          "maxLength": 100
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "msdyn_resource": {
+          "type": "string",
+          "title": "resource",
+          "x-ms-dataverse-attribute": "msdyn_resource",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_resource",
+          "maxLength": 100
+        },
+        "msdyn_tenant": {
+          "type": "string",
+          "title": "tenant",
+          "x-ms-dataverse-attribute": "msdyn_tenant",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_tenant",
+          "maxLength": 100
+        },
+        "msdyn_userauth": {
+          "type": "string",
+          "title": "User authentication",
+          "x-ms-dataverse-attribute": "msdyn_userauth",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_userauth",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "cf647ab0-6f19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "User authentication",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_userauthname": {
+          "type": "string",
+          "title": "msdyn_userauthname",
+          "x-ms-dataverse-attribute": "msdyn_userauthname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_userauthName",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_connectordatasourceid"
+      ]
+    }
+  }
+}

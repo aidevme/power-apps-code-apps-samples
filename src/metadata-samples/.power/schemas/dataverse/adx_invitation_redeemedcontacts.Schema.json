@@ -1,0 +1,58 @@
+{
+  "name": "adx_invitation_redeemedcontacts",
+  "title": "adx_invitation_redeemedcontacts",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "adx_invitation_redeemedcontactsset",
+      "x-ms-dataverse-primary-id": "adx_invitation_redeemedcontactsid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "adx_invitation_redeemedcontactsid": {
+          "type": "string",
+          "title": "adx_invitation_redeemedcontactsid",
+          "x-ms-dataverse-attribute": "adx_invitation_redeemedcontactsid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "adx_invitation_redeemedcontactsId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "adx_invitationid": {
+          "type": "string",
+          "title": "adx_invitationid",
+          "x-ms-dataverse-attribute": "adx_invitationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "adx_invitationid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "contactid": {
+          "type": "string",
+          "title": "contactid",
+          "x-ms-dataverse-attribute": "contactid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "contactid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "adx_invitation_redeemedcontactsid",
+        "adx_invitationid",
+        "contactid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "name": "appmodulemetadata",
+  "title": "AppModule Metadata Collection",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "appmodulemetadatacollection",
+      "x-ms-dataverse-primary-id": "appmodulemetadataid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "appmoduleid": {
+          "type": "string",
+          "title": "AppModule Id",
+          "x-ms-dataverse-attribute": "appmoduleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AppModuleId",
+          "required": true
+        },
+        "appmodulemetadataid": {
+          "type": "string",
+          "title": "AppModule Metadata Id",
+          "x-ms-dataverse-attribute": "appmodulemetadataid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AppModuleMetadataId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "componentid": {
+          "type": "string",
+          "title": "Component Id",
+          "x-ms-dataverse-attribute": "componentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ComponentId",
+          "required": true
+        },
+        "componentisdefault": {
+          "type": "string",
+          "title": "Default for Component",
+          "x-ms-dataverse-attribute": "componentisdefault",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ComponentIsDefault",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "59d19024-72e4-45b9-8f90-56a5fc2a09ef",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Boolean Option Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "componentisquickfindquery": {
+          "type": "string",
+          "title": "Saved Query Is Quick Find Query",
+          "x-ms-dataverse-attribute": "componentisquickfindquery",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ComponentIsQuickFindQuery",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "59d19024-72e4-45b9-8f90-56a5fc2a09ef",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Boolean Option Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "componentistabletenabled": {
+          "type": "string",
+          "title": "System Form Is Tablet Enabled",
+          "x-ms-dataverse-attribute": "componentistabletenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ComponentIsTabletEnabled",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "59d19024-72e4-45b9-8f90-56a5fc2a09ef",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Boolean Option Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "componentisuserchart": {
+          "type": "string",
+          "title": "Saved Query Visualization Or User Query Visualization",
+          "x-ms-dataverse-attribute": "componentisuserchart",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ComponentIsUserChart",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "59d19024-72e4-45b9-8f90-56a5fc2a09ef",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Boolean Option Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "componentisuserform": {
+          "type": "string",
+          "title": "System Form Or User Form",
+          "x-ms-dataverse-attribute": "componentisuserform",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ComponentIsUserForm",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "59d19024-72e4-45b9-8f90-56a5fc2a09ef",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Boolean Option Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "componentisuserview": {
+          "type": "string",
+          "title": "Saved Query Or User Query",
+          "x-ms-dataverse-attribute": "componentisuserview",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ComponentIsUserView",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "59d19024-72e4-45b9-8f90-56a5fc2a09ef",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Boolean Option Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "componentstatecode": {
+          "type": "string",
+          "title": "Workflow State Code",
+          "x-ms-dataverse-attribute": "componentstatecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ComponentStateCode",
+          "required": true
+        },
+        "componentsubtype": {
+          "type": "string",
+          "title": "Component Sub-Type",
+          "x-ms-dataverse-attribute": "componentsubtype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ComponentSubType",
+          "required": true
+        },
+        "componenttype": {
+          "type": "string",
+          "title": "Component Type",
+          "x-ms-dataverse-attribute": "componenttype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ComponentType",
+          "required": true
+        },
+        "componentversion": {
+          "type": "string",
+          "title": "Version",
+          "x-ms-dataverse-attribute": "componentversion",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "ComponentVersion",
+          "required": true
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "parentcomponentid": {
+          "type": "string",
+          "title": "Parent Component Id",
+          "x-ms-dataverse-attribute": "parentcomponentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ParentComponentId"
+        },
+        "state": {
+          "type": "string",
+          "title": "State of the record",
+          "x-ms-dataverse-attribute": "state",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "State",
+          "required": true
+        }
+      },
+      "required": [
+        "appmoduleid",
+        "appmodulemetadataid",
+        "componentid",
+        "componentisdefault",
+        "componentisquickfindquery",
+        "componentistabletenabled",
+        "componentisuserchart",
+        "componentisuserform",
+        "componentisuserview",
+        "componentstatecode",
+        "componentsubtype",
+        "componenttype",
+        "componentversion",
+        "createdon",
+        "modifiedon",
+        "state"
+      ]
+    }
+  }
+}

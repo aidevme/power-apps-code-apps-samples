@@ -1,0 +1,68 @@
+{
+  "name": "owner",
+  "title": "Owners",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "owners",
+      "x-ms-dataverse-primary-id": "ownerid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Owner Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 160
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwnerId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        },
+        "yominame": {
+          "type": "string",
+          "title": "Yomi Name",
+          "x-ms-dataverse-attribute": "yominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "YomiName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        }
+      },
+      "required": [
+        "name",
+        "ownerid",
+        "owneridtype"
+      ]
+    }
+  }
+}

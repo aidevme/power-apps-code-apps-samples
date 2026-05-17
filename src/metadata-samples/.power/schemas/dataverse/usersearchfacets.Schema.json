@@ -1,0 +1,67 @@
+{
+  "name": "usersearchfacet",
+  "title": "User Search Facets",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "usersearchfacets",
+      "x-ms-dataverse-primary-id": "usersearchfacetid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "attributename": {
+          "type": "string",
+          "title": "attributename",
+          "x-ms-dataverse-attribute": "attributename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AttributeName",
+          "required": true,
+          "maxLength": 128
+        },
+        "entityname": {
+          "type": "string",
+          "title": "entityname",
+          "x-ms-dataverse-attribute": "entityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EntityName",
+          "required": true,
+          "maxLength": 128
+        },
+        "facetorder": {
+          "type": "string",
+          "title": "facetorder",
+          "x-ms-dataverse-attribute": "facetorder",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FacetOrder",
+          "required": true
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "systemuserid",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SystemUserId",
+          "required": true
+        },
+        "usersearchfacetid": {
+          "type": "string",
+          "title": "usersearchfacetid",
+          "x-ms-dataverse-attribute": "usersearchfacetid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UserSearchFacetId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "attributename",
+        "entityname",
+        "facetorder",
+        "systemuserid",
+        "usersearchfacetid"
+      ]
+    }
+  }
+}

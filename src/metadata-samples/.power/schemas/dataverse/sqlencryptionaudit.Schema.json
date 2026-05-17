@@ -1,0 +1,37 @@
+{
+  "name": "sqlencryptionaudit",
+  "title": "sqlencryptionaudit",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "sqlencryptionaudits",
+      "x-ms-dataverse-primary-id": "createdon",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdon": {
+          "type": "string",
+          "title": "createdon",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "createdon"
+      ]
+    }
+  }
+}

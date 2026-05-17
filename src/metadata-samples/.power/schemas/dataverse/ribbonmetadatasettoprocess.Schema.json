@@ -1,0 +1,113 @@
+{
+  "name": "ribbonmetadatatoprocess",
+  "title": "Ribbon Metadata Set To Process",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "RibbonMetadataSetToProcess",
+      "x-ms-dataverse-primary-id": "ribbonmetadatarowid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "completedon": {
+          "type": "string",
+          "title": "Completed On",
+          "x-ms-dataverse-attribute": "completedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CompletedOn",
+          "x-ms-read-only": true
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "entityname": {
+          "type": "string",
+          "title": "Entity Logical Name",
+          "x-ms-dataverse-attribute": "entityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EntityName",
+          "required": true,
+          "maxLength": 256
+        },
+        "exceptionmessage": {
+          "type": "string",
+          "title": "Exception message which occurred during ribbon entity processing.",
+          "x-ms-dataverse-attribute": "exceptionmessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ExceptionMessage",
+          "maxLength": 1024
+        },
+        "isdbupdate": {
+          "type": "string",
+          "title": "Is entity created via Db Update",
+          "x-ms-dataverse-attribute": "isdbupdate",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "IsDbUpdate"
+        },
+        "processedon": {
+          "type": "string",
+          "title": "Processed On",
+          "x-ms-dataverse-attribute": "processedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ProcessedOn",
+          "x-ms-read-only": true
+        },
+        "retrycount": {
+          "type": "string",
+          "title": "Retry Count",
+          "x-ms-dataverse-attribute": "retrycount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "RetryCount",
+          "required": true
+        },
+        "ribbonmetadatarowid": {
+          "type": "string",
+          "title": "Ribbon Metadata To Process",
+          "x-ms-dataverse-attribute": "ribbonmetadatarowid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RibbonMetadataRowId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution Id",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "required": true
+        },
+        "solutionname": {
+          "type": "string",
+          "title": "Solution Name of the ribbon entity.",
+          "x-ms-dataverse-attribute": "solutionname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SolutionName",
+          "maxLength": 256
+        },
+        "status": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "status",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Status",
+          "required": true
+        }
+      },
+      "required": [
+        "entityname",
+        "retrycount",
+        "ribbonmetadatarowid",
+        "solutionid",
+        "status"
+      ]
+    }
+  }
+}

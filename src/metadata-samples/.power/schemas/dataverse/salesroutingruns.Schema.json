@@ -1,0 +1,827 @@
+{
+  "name": "msdyn_salesroutingrun",
+  "title": "Sales routing runs",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_salesroutingruns",
+      "x-ms-dataverse-primary-id": "msdyn_salesroutingrunid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Assignment attempt",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_assignmentruleid": {
+          "type": "string",
+          "title": "Assignment Rule",
+          "x-ms-dataverse-attribute": "msdyn_assignmentruleid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_assignmentruleid",
+          "required": true
+        },
+        "msdyn_assignmentruleidname": {
+          "type": "string",
+          "title": "msdyn_assignmentruleidname",
+          "x-ms-dataverse-attribute": "msdyn_assignmentruleidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_assignmentruleidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_connectedsequenceids": {
+          "type": "string",
+          "title": "Connected sequences",
+          "x-ms-dataverse-attribute": "msdyn_connectedsequenceids",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_connectedsequenceids",
+          "maxLength": 4000
+        },
+        "msdyn_connectsequencestatus": {
+          "type": "string",
+          "title": "Connect sequence status",
+          "x-ms-dataverse-attribute": "msdyn_connectsequencestatus",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_connectsequencestatus",
+          "enum": [
+            "In progress",
+            "Connected to a sequence",
+            "Something went wrong",
+            "Skipped as segmentation failed",
+            "No sequence connected to this segment",
+            "Sequence unchanged",
+            "Seller doesn't have necessary permissions",
+            "Sequence is either deleted or inactive",
+            "D365WorkAssignment app user doesn't have necessary permissions."
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "f8e0a56f-c919-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Connect sequence status",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_connectsequencestatusname": {
+          "type": "string",
+          "title": "msdyn_connectsequencestatusname",
+          "x-ms-dataverse-attribute": "msdyn_connectsequencestatusname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_connectsequencestatusName",
+          "x-ms-read-only": true
+        },
+        "msdyn_errormessage": {
+          "type": "string",
+          "title": "Error message",
+          "x-ms-dataverse-attribute": "msdyn_errormessage",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_errormessage",
+          "maxLength": 50000
+        },
+        "msdyn_isrecordassigned": {
+          "type": "string",
+          "title": "Is record assigned",
+          "x-ms-dataverse-attribute": "msdyn_isrecordassigned",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isrecordassigned",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "f2e0a56f-c919-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "is record assigned",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isrecordassignedname": {
+          "type": "string",
+          "title": "msdyn_isrecordassignedname",
+          "x-ms-dataverse-attribute": "msdyn_isrecordassignedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isrecordassignedName",
+          "x-ms-read-only": true
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_ownerassigned": {
+          "type": "string",
+          "title": "Assigned owner",
+          "x-ms-dataverse-attribute": "msdyn_ownerassigned",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_ownerassigned",
+          "required": true
+        },
+        "msdyn_ownerassignedidtype": {
+          "type": "string",
+          "title": "msdyn_ownerassignedidtype",
+          "x-ms-dataverse-attribute": "msdyn_ownerassignedidtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "msdyn_ownerassignedIdType"
+        },
+        "msdyn_ownerassignedname": {
+          "type": "string",
+          "title": "msdyn_ownerassignedname",
+          "x-ms-dataverse-attribute": "msdyn_ownerassignedname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_ownerassignedName",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "msdyn_ownerassignedyominame": {
+          "type": "string",
+          "title": "msdyn_ownerassignedyominame",
+          "x-ms-dataverse-attribute": "msdyn_ownerassignedyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_ownerassignedYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "msdyn_previousowner": {
+          "type": "string",
+          "title": "Previous owner",
+          "x-ms-dataverse-attribute": "msdyn_previousowner",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_previousowner"
+        },
+        "msdyn_previousowneridtype": {
+          "type": "string",
+          "title": "msdyn_previousowneridtype",
+          "x-ms-dataverse-attribute": "msdyn_previousowneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "msdyn_previousownerIdType"
+        },
+        "msdyn_previousownername": {
+          "type": "string",
+          "title": "msdyn_previousownername",
+          "x-ms-dataverse-attribute": "msdyn_previousownername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_previousownerName",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "msdyn_previousowneryominame": {
+          "type": "string",
+          "title": "msdyn_previousowneryominame",
+          "x-ms-dataverse-attribute": "msdyn_previousowneryominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_previousownerYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "msdyn_previoussegmentid": {
+          "type": "string",
+          "title": "Previous segment",
+          "x-ms-dataverse-attribute": "msdyn_previoussegmentid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_previoussegmentid"
+        },
+        "msdyn_previoussegmentidname": {
+          "type": "string",
+          "title": "msdyn_previoussegmentidname",
+          "x-ms-dataverse-attribute": "msdyn_previoussegmentidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_previoussegmentidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_routingrequestsource": {
+          "type": "string",
+          "title": "Routing request source",
+          "x-ms-dataverse-attribute": "msdyn_routingrequestsource",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_routingrequestsource",
+          "enum": [
+            "New record",
+            "Record updated",
+            "Manually reassigned",
+            "Reassignment scheduled",
+            "Manually resegmented",
+            "Force routed manually"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "fbe0a56f-c919-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Routing request source",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_routingrequestsourcename": {
+          "type": "string",
+          "title": "msdyn_routingrequestsourcename",
+          "x-ms-dataverse-attribute": "msdyn_routingrequestsourcename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_routingrequestsourceName",
+          "x-ms-read-only": true
+        },
+        "msdyn_routingstatus": {
+          "type": "string",
+          "title": "Routing status",
+          "x-ms-dataverse-attribute": "msdyn_routingstatus",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_routingstatus",
+          "enum": [
+            "Run in progress",
+            "Owner assigned",
+            "There was an issue with the server",
+            "Record doesn't meet any conditions",
+            "No sellers meet the conditions",
+            "Eligible sellers don't have availability",
+            "Eligible sellers don't have capacity",
+            "No assignment rule for this record's segment",
+            "Owner assigned manually",
+            "Record unassigned as seller doesn't have the necessary permissions",
+            "Seller not assigned as record is older than the set timeframe",
+            "Multiple eligible teams found",
+            "Couldn't find eligible team",
+            "Multiple eligible queues found",
+            "Couldn't find eligible queue",
+            "Skipped as segmentation failed",
+            "Rules won't run for this segment",
+            "D365WorkAssignment app user doesn't have necessary permissions."
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "fee0a56f-c919-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Routing status",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_routingstatusname": {
+          "type": "string",
+          "title": "msdyn_routingstatusname",
+          "x-ms-dataverse-attribute": "msdyn_routingstatusname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_routingstatusName",
+          "x-ms-read-only": true
+        },
+        "msdyn_salesroutingrunid": {
+          "type": "string",
+          "title": "Sales routing run",
+          "x-ms-dataverse-attribute": "msdyn_salesroutingrunid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_salesroutingrunId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_saruninstanceid": {
+          "type": "string",
+          "title": "SARunInstance",
+          "x-ms-dataverse-attribute": "msdyn_saruninstanceid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_saruninstanceid"
+        },
+        "msdyn_saruninstanceidname": {
+          "type": "string",
+          "title": "msdyn_saruninstanceidname",
+          "x-ms-dataverse-attribute": "msdyn_saruninstanceidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_saruninstanceidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_segmentationstatus": {
+          "type": "string",
+          "title": "Segmentation status",
+          "x-ms-dataverse-attribute": "msdyn_segmentationstatus",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_segmentationstatus",
+          "enum": [
+            "In Progress",
+            "Segmentation successful",
+            "Something went wrong",
+            "No matching segments",
+            "Matched with previous segment",
+            "No segmentation required",
+            "D365WorkAssignment app user doesn't have necessary permissions."
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "f5e0a56f-c919-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Segmentation status",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_segmentationstatusname": {
+          "type": "string",
+          "title": "msdyn_segmentationstatusname",
+          "x-ms-dataverse-attribute": "msdyn_segmentationstatusname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_segmentationstatusName",
+          "x-ms-read-only": true
+        },
+        "msdyn_segmentid": {
+          "type": "string",
+          "title": "Segment",
+          "x-ms-dataverse-attribute": "msdyn_segmentid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_segmentid",
+          "required": true
+        },
+        "msdyn_segmentidname": {
+          "type": "string",
+          "title": "msdyn_segmentidname",
+          "x-ms-dataverse-attribute": "msdyn_segmentidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_segmentidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_targetobject": {
+          "type": "string",
+          "title": "Target Object",
+          "x-ms-dataverse-attribute": "msdyn_targetobject",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_targetobject"
+        },
+        "msdyn_targetobjectidtype": {
+          "type": "string",
+          "title": "msdyn_targetobjectidtype",
+          "x-ms-dataverse-attribute": "msdyn_targetobjectidtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "msdyn_targetobjectIdType"
+        },
+        "msdyn_targetobjectname": {
+          "type": "string",
+          "title": "msdyn_targetobjectname",
+          "x-ms-dataverse-attribute": "msdyn_targetobjectname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_targetobjectName",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "msdyn_targetobjectyominame": {
+          "type": "string",
+          "title": "msdyn_targetobjectyominame",
+          "x-ms-dataverse-attribute": "msdyn_targetobjectyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_targetobjectYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Inprogress",
+            "Succeeded",
+            "Failed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b7e0a56f-c919-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Run in progress",
+            "Owner assigned",
+            "Owner assigned manually",
+            "There was an issue with the server",
+            "Record doesn't meet any conditions",
+            "No sellers meet the conditions",
+            "Eligible sellers don't have availability",
+            "Eligible sellers don't have capacity",
+            "No assignment rule for this record's segment",
+            "Record unassigned as seller doesn't have the necessary permissions",
+            "Seller not assigned as record is older than the set timeframe",
+            "Multiple eligible teams found",
+            "Couldn't find eligible team",
+            "Multiple eligible queues found",
+            "Couldn't find eligible queue",
+            "Skipped as segmentation failed",
+            "Rules won't run for this segment",
+            "D365WorkAssignment app user doesn't have necessary permissions."
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            9,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c1e0a56f-c919-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "msdyn_assignmentruleid",
+        "msdyn_name",
+        "msdyn_ownerassigned",
+        "msdyn_salesroutingrunid",
+        "msdyn_segmentid",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "owningbusinessunitname",
+        "statecode"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_ciprovider_systemuser",
+  "title": "msdyn_ciprovider_systemuser",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_ciprovider_systemuserset",
+      "x-ms-dataverse-primary-id": "msdyn_ciprovider_systemuserid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_ciprovider_systemuserid": {
+          "type": "string",
+          "title": "msdyn_ciprovider_systemuserid",
+          "x-ms-dataverse-attribute": "msdyn_ciprovider_systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_ciprovider_systemuserId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_ciproviderid": {
+          "type": "string",
+          "title": "msdyn_ciproviderid",
+          "x-ms-dataverse-attribute": "msdyn_ciproviderid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_ciproviderid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "systemuserid",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "systemuserid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_ciprovider_systemuserid",
+        "msdyn_ciproviderid",
+        "systemuserid"
+      ]
+    }
+  }
+}

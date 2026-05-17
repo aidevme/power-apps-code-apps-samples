@@ -1,0 +1,859 @@
+{
+  "name": "report",
+  "title": "Reports",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "reports",
+      "x-ms-dataverse-primary-id": "reportid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "applicationid": {
+          "type": "string",
+          "title": "ApplicationId",
+          "x-ms-dataverse-attribute": "applicationid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ApplicationId",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "bodybinary": {
+          "type": "string",
+          "title": "Body Binary",
+          "x-ms-dataverse-attribute": "bodybinary",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BodyBinary",
+          "maxLength": 1073741823
+        },
+        "bodytext": {
+          "type": "string",
+          "title": "Body Text",
+          "x-ms-dataverse-attribute": "bodytext",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BodyText",
+          "maxLength": 1073741823
+        },
+        "bodyurl": {
+          "type": "string",
+          "title": "Linked Report URL",
+          "x-ms-dataverse-attribute": "bodyurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BodyUrl",
+          "maxLength": 200
+        },
+        "cdsdatasetid": {
+          "type": "string",
+          "title": "cdsdatasetid",
+          "x-ms-dataverse-attribute": "cdsdatasetid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CdsDatasetId",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdinmajorversion": {
+          "type": "string",
+          "title": "Crm Version in which the Report is created",
+          "x-ms-dataverse-attribute": "createdinmajorversion",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "CreatedInMajorVersion"
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "customreportxml": {
+          "type": "string",
+          "title": "Custom Report XML",
+          "x-ms-dataverse-attribute": "customreportxml",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CustomReportXml",
+          "x-ms-read-only": true,
+          "maxLength": 1073741823
+        },
+        "defaultfilter": {
+          "type": "string",
+          "title": "Default filter",
+          "x-ms-dataverse-attribute": "defaultfilter",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DefaultFilter",
+          "maxLength": 1073741823
+        },
+        "dependentmodelreportid": {
+          "type": "string",
+          "title": "Dependent Model Report Id",
+          "x-ms-dataverse-attribute": "dependentmodelreportid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "DependentModelReportId"
+        },
+        "dependentmodelreportidname": {
+          "type": "string",
+          "title": "dependentmodelreportidname",
+          "x-ms-dataverse-attribute": "dependentmodelreportidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DependentModelReportIdName",
+          "x-ms-read-only": true,
+          "maxLength": 425
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 256
+        },
+        "filecontent": {
+          "type": "string",
+          "title": "File Content",
+          "x-ms-dataverse-attribute": "filecontent",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "FileContent",
+          "x-ms-read-only": true
+        },
+        "filecontent_name": {
+          "type": "string",
+          "title": "filecontent_name",
+          "x-ms-dataverse-attribute": "filecontent_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FileContent_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "filename": {
+          "type": "string",
+          "title": "File Name",
+          "x-ms-dataverse-attribute": "filename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FileName",
+          "maxLength": 255
+        },
+        "filesize": {
+          "type": "string",
+          "title": "File Size (Bytes)",
+          "x-ms-dataverse-attribute": "filesize",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FileSize",
+          "x-ms-read-only": true
+        },
+        "introducedversion": {
+          "type": "string",
+          "title": "Introduced Version",
+          "x-ms-dataverse-attribute": "introducedversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "IntroducedVersion",
+          "maxLength": 48
+        },
+        "iscustomizable": {
+          "type": "string",
+          "title": "Customizable",
+          "x-ms-dataverse-attribute": "iscustomizable",
+          "x-ms-dataverse-type": "ManagedPropertyType",
+          "x-ms-schema-name": "IsCustomizable",
+          "required": true
+        },
+        "iscustomreport": {
+          "type": "string",
+          "title": "Is Custom Report",
+          "x-ms-dataverse-attribute": "iscustomreport",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsCustomReport",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "7621b36f-e0f3-4b68-a926-17874a25911e",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Custom Report",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "iscustomreportname": {
+          "type": "string",
+          "title": "iscustomreportname",
+          "x-ms-dataverse-attribute": "iscustomreportname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsCustomReportName",
+          "x-ms-read-only": true
+        },
+        "ismanaged": {
+          "type": "string",
+          "title": "Is Managed",
+          "x-ms-dataverse-attribute": "ismanaged",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsManaged",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Unmanaged",
+            "Managed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9d04e035-5408-4c1d-a5aa-20445a02f691",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Component Managed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismanagedname": {
+          "type": "string",
+          "title": "ismanagedname",
+          "x-ms-dataverse-attribute": "ismanagedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsManagedName",
+          "x-ms-read-only": true
+        },
+        "ispersonal": {
+          "type": "string",
+          "title": "Viewable By",
+          "x-ms-dataverse-attribute": "ispersonal",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsPersonal",
+          "required": true,
+          "enum": [
+            "Organization",
+            "Individual"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "57d30eac-6949-4fa8-9917-fde09b3eec40",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Viewable By",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ispersonalname": {
+          "type": "string",
+          "title": "ispersonalname",
+          "x-ms-dataverse-attribute": "ispersonalname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsPersonalName",
+          "x-ms-read-only": true
+        },
+        "isscheduledreport": {
+          "type": "string",
+          "title": "Is Scheduled Report",
+          "x-ms-dataverse-attribute": "isscheduledreport",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsScheduledReport",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "675d0d36-5b6a-4d6c-928b-938e12d7a6e9",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Scheduled Report",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isscheduledreportname": {
+          "type": "string",
+          "title": "isscheduledreportname",
+          "x-ms-dataverse-attribute": "isscheduledreportname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsScheduledReportName",
+          "x-ms-read-only": true
+        },
+        "languagecode": {
+          "type": "string",
+          "title": "Language",
+          "x-ms-dataverse-attribute": "languagecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "LanguageCode",
+          "required": true
+        },
+        "managedtype": {
+          "type": "string",
+          "title": "ManagedType",
+          "x-ms-dataverse-attribute": "managedtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ManagedType",
+          "enum": [
+            "Dataverse",
+            "Customer"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "d35bbeec-5219-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "ManagedType",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "managedtypename": {
+          "type": "string",
+          "title": "managedtypename",
+          "x-ms-dataverse-attribute": "managedtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "managedtypeName",
+          "x-ms-read-only": true
+        },
+        "mimetype": {
+          "type": "string",
+          "title": "Mime Type",
+          "x-ms-dataverse-attribute": "mimetype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "MimeType",
+          "maxLength": 256
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 425
+        },
+        "originalbodytext": {
+          "type": "string",
+          "title": "Body Text",
+          "x-ms-dataverse-attribute": "originalbodytext",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OriginalBodyText",
+          "x-ms-read-only": true,
+          "maxLength": 1073741823
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "parentreportid": {
+          "type": "string",
+          "title": "Parent Report",
+          "x-ms-dataverse-attribute": "parentreportid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ParentReportId"
+        },
+        "parentreportidname": {
+          "type": "string",
+          "title": "parentreportidname",
+          "x-ms-dataverse-attribute": "parentreportidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ParentReportIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "powerbidatasetid": {
+          "type": "string",
+          "title": "PowerBI Dataset Id",
+          "x-ms-dataverse-attribute": "powerbidatasetid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PowerBiDatasetId",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "powerbifeaturetag": {
+          "type": "string",
+          "title": "powerbifeaturetag",
+          "x-ms-dataverse-attribute": "powerbifeaturetag",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PowerBiFeatureTag",
+          "maxLength": 1024
+        },
+        "powerbireportid": {
+          "type": "string",
+          "title": "PowerBiReportId",
+          "x-ms-dataverse-attribute": "powerbireportid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PowerBiReportId",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "powerbireportinternalstate": {
+          "type": "string",
+          "title": "powerbireportinternalstate",
+          "x-ms-dataverse-attribute": "powerbireportinternalstate",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PowerBiReportInternalState",
+          "x-ms-read-only": true,
+          "maxLength": 1024
+        },
+        "powerbireportname": {
+          "type": "string",
+          "title": "Power Bi Report Name",
+          "x-ms-dataverse-attribute": "powerbireportname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PowerBiReportName",
+          "x-ms-read-only": true,
+          "maxLength": 500
+        },
+        "powerbiworkspaceinfo": {
+          "type": "string",
+          "title": "Power Bi Workspace Information",
+          "x-ms-dataverse-attribute": "powerbiworkspaceinfo",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PowerBiWorkspaceInfo",
+          "x-ms-read-only": true,
+          "maxLength": 1024
+        },
+        "queryinfo": {
+          "type": "string",
+          "title": "Query Info Structure",
+          "x-ms-dataverse-attribute": "queryinfo",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "QueryInfo",
+          "x-ms-read-only": true,
+          "maxLength": 1073741823
+        },
+        "rdlhash": {
+          "type": "string",
+          "title": "Body Text Hash",
+          "x-ms-dataverse-attribute": "rdlhash",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "RdlHash",
+          "x-ms-read-only": true
+        },
+        "reportid": {
+          "type": "string",
+          "title": "Report",
+          "x-ms-dataverse-attribute": "reportid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ReportId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "reportidunique": {
+          "type": "string",
+          "title": "Report",
+          "x-ms-dataverse-attribute": "reportidunique",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ReportIdUnique",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "reportnameonsrs": {
+          "type": "string",
+          "title": "Name on SRS",
+          "x-ms-dataverse-attribute": "reportnameonsrs",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ReportNameOnSRS",
+          "x-ms-read-only": true,
+          "maxLength": 425
+        },
+        "reportstatus": {
+          "type": "string",
+          "title": "Report Status",
+          "x-ms-dataverse-attribute": "reportstatus",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ReportStatus",
+          "maxLength": 100
+        },
+        "reporttypecode": {
+          "type": "string",
+          "title": "Report Type",
+          "x-ms-dataverse-attribute": "reporttypecode",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ReportTypeCode",
+          "required": true,
+          "enum": [
+            "Reporting Services Report",
+            "Other Report",
+            "Linked Report",
+            "Power BI Paginated Report",
+            "Power BI Analytic Report",
+            "Excel Embedded Report",
+            "Excel Embedded Report Template"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "be6bc9f0-4605-4b78-8da8-e9d5639761be",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Report Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "reporttypecodename": {
+          "type": "string",
+          "title": "reporttypecodename",
+          "x-ms-dataverse-attribute": "reporttypecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ReportTypeCodeName",
+          "x-ms-read-only": true
+        },
+        "reportversion": {
+          "type": "string",
+          "title": "Report Version",
+          "x-ms-dataverse-attribute": "reportversion",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ReportVersion"
+        },
+        "schedulexml": {
+          "type": "string",
+          "title": "Schedule Definition XML",
+          "x-ms-dataverse-attribute": "schedulexml",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ScheduleXml",
+          "x-ms-read-only": true,
+          "maxLength": 1073741823
+        },
+        "signaturedate": {
+          "type": "string",
+          "title": "Report Signature Date",
+          "x-ms-dataverse-attribute": "signaturedate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "SignatureDate"
+        },
+        "signatureid": {
+          "type": "string",
+          "title": "Signature",
+          "x-ms-dataverse-attribute": "signatureid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SignatureId"
+        },
+        "signaturelcid": {
+          "type": "string",
+          "title": "Signature Language Code",
+          "x-ms-dataverse-attribute": "signaturelcid",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "SignatureLcid"
+        },
+        "signaturemajorversion": {
+          "type": "string",
+          "title": "Report Signature Major Version",
+          "x-ms-dataverse-attribute": "signaturemajorversion",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "SignatureMajorVersion"
+        },
+        "signatureminorversion": {
+          "type": "string",
+          "title": "Report Signature Minor Version",
+          "x-ms-dataverse-attribute": "signatureminorversion",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "SignatureMinorVersion"
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "supportingsolutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "supportingsolutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SupportingSolutionId",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "componentstate",
+        "iscustomizable",
+        "iscustomreport",
+        "ismanaged",
+        "ispersonal",
+        "isscheduledreport",
+        "languagecode",
+        "name",
+        "overwritetime",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "reportid",
+        "reportidunique",
+        "reporttypecode",
+        "solutionid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "name": "mspp_weblink",
+  "title": "Web Links",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mspp_weblinks",
+      "x-ms-dataverse-primary-id": "mspp_weblinkid",
+      "x-ms-dataverse-primary-name": "mspp_name",
+      "properties": {
+        "mspp_createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "mspp_createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_createdby"
+        },
+        "mspp_createdbyipaddress": {
+          "type": "string",
+          "title": "Created By IP Address",
+          "x-ms-dataverse-attribute": "mspp_createdbyipaddress",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyipaddress",
+          "maxLength": 100
+        },
+        "mspp_createdbyname": {
+          "type": "string",
+          "title": "mspp_createdbyname",
+          "x-ms-dataverse-attribute": "mspp_createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_createdbyusername": {
+          "type": "string",
+          "title": "Created By Username",
+          "x-ms-dataverse-attribute": "mspp_createdbyusername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyusername",
+          "maxLength": 100
+        },
+        "mspp_createdbyyominame": {
+          "type": "string",
+          "title": "mspp_createdbyyominame",
+          "x-ms-dataverse-attribute": "mspp_createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "mspp_createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_createdon"
+        },
+        "mspp_description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "mspp_description",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_description",
+          "maxLength": 2000
+        },
+        "mspp_disablepagevalidation": {
+          "type": "string",
+          "title": "Disable Page Validation",
+          "x-ms-dataverse-attribute": "mspp_disablepagevalidation",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_disablepagevalidation",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "11e691bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Disable Page Validation",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_disablepagevalidationname": {
+          "type": "string",
+          "title": "mspp_disablepagevalidationname",
+          "x-ms-dataverse-attribute": "mspp_disablepagevalidationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_disablepagevalidationName",
+          "x-ms-read-only": true
+        },
+        "mspp_displayimageonly": {
+          "type": "string",
+          "title": "Display Image Only",
+          "x-ms-dataverse-attribute": "mspp_displayimageonly",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_displayimageonly",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "14e691bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Display Image Only",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_displayimageonlyname": {
+          "type": "string",
+          "title": "mspp_displayimageonlyname",
+          "x-ms-dataverse-attribute": "mspp_displayimageonlyname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_displayimageonlyName",
+          "x-ms-read-only": true
+        },
+        "mspp_displayorder": {
+          "type": "string",
+          "title": "Display Order",
+          "x-ms-dataverse-attribute": "mspp_displayorder",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_displayorder"
+        },
+        "mspp_displaypagechildlinks": {
+          "type": "string",
+          "title": "Display Page Child Links",
+          "x-ms-dataverse-attribute": "mspp_displaypagechildlinks",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_displaypagechildlinks",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "17e691bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Display Page Child Links",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_displaypagechildlinksname": {
+          "type": "string",
+          "title": "mspp_displaypagechildlinksname",
+          "x-ms-dataverse-attribute": "mspp_displaypagechildlinksname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_displaypagechildlinksName",
+          "x-ms-read-only": true
+        },
+        "mspp_externalurl": {
+          "type": "string",
+          "title": "External Url",
+          "x-ms-dataverse-attribute": "mspp_externalurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_externalurl",
+          "maxLength": 2048
+        },
+        "mspp_imagealttext": {
+          "type": "string",
+          "title": "Image Alt Text",
+          "x-ms-dataverse-attribute": "mspp_imagealttext",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_imagealttext",
+          "maxLength": 500
+        },
+        "mspp_imageheight": {
+          "type": "string",
+          "title": "Image Height",
+          "x-ms-dataverse-attribute": "mspp_imageheight",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_imageheight"
+        },
+        "mspp_imageurl": {
+          "type": "string",
+          "title": "Image Url",
+          "x-ms-dataverse-attribute": "mspp_imageurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_imageurl",
+          "maxLength": 1024
+        },
+        "mspp_imagewidth": {
+          "type": "string",
+          "title": "Image Width",
+          "x-ms-dataverse-attribute": "mspp_imagewidth",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_imagewidth"
+        },
+        "mspp_modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "mspp_modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_modifiedby"
+        },
+        "mspp_modifiedbyipaddress": {
+          "type": "string",
+          "title": "Modified By IP Address",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyipaddress",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyipaddress",
+          "maxLength": 100
+        },
+        "mspp_modifiedbyname": {
+          "type": "string",
+          "title": "mspp_modifiedbyname",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_modifiedbyusername": {
+          "type": "string",
+          "title": "Modified By Username",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyusername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyusername",
+          "maxLength": 100
+        },
+        "mspp_modifiedbyyominame": {
+          "type": "string",
+          "title": "mspp_modifiedbyyominame",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "mspp_modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_modifiedon"
+        },
+        "mspp_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "mspp_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "mspp_openinnewwindow": {
+          "type": "string",
+          "title": "Open In New Window",
+          "x-ms-dataverse-attribute": "mspp_openinnewwindow",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_openinnewwindow",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "1ae691bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Open In New Window",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_openinnewwindowname": {
+          "type": "string",
+          "title": "mspp_openinnewwindowname",
+          "x-ms-dataverse-attribute": "mspp_openinnewwindowname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_openinnewwindowName",
+          "x-ms-read-only": true
+        },
+        "mspp_pageid": {
+          "type": "string",
+          "title": "Page",
+          "x-ms-dataverse-attribute": "mspp_pageid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_pageid"
+        },
+        "mspp_pageidname": {
+          "type": "string",
+          "title": "mspp_pageidname",
+          "x-ms-dataverse-attribute": "mspp_pageidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_pageidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_parentweblinkid": {
+          "type": "string",
+          "title": "Parent Web Link",
+          "x-ms-dataverse-attribute": "mspp_parentweblinkid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_parentweblinkid"
+        },
+        "mspp_parentweblinkidname": {
+          "type": "string",
+          "title": "mspp_parentweblinkidname",
+          "x-ms-dataverse-attribute": "mspp_parentweblinkidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_parentweblinkidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_publishingstateid": {
+          "type": "string",
+          "title": "Publishing State",
+          "x-ms-dataverse-attribute": "mspp_publishingstateid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_publishingstateid",
+          "required": true
+        },
+        "mspp_publishingstateidname": {
+          "type": "string",
+          "title": "mspp_publishingstateidname",
+          "x-ms-dataverse-attribute": "mspp_publishingstateidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_publishingstateidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_robotsfollowlink": {
+          "type": "string",
+          "title": "Robots Follow Link",
+          "x-ms-dataverse-attribute": "mspp_robotsfollowlink",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_robotsfollowlink",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "1de691bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Robots Follow Link",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_robotsfollowlinkname": {
+          "type": "string",
+          "title": "mspp_robotsfollowlinkname",
+          "x-ms-dataverse-attribute": "mspp_robotsfollowlinkname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_robotsfollowlinkName",
+          "x-ms-read-only": true
+        },
+        "mspp_weblinkid": {
+          "type": "string",
+          "title": "Web Link",
+          "x-ms-dataverse-attribute": "mspp_weblinkid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_weblinkId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mspp_weblinksetid": {
+          "type": "string",
+          "title": "Web Link Set",
+          "x-ms-dataverse-attribute": "mspp_weblinksetid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_weblinksetid",
+          "required": true
+        },
+        "mspp_weblinksetidname": {
+          "type": "string",
+          "title": "mspp_weblinksetidname",
+          "x-ms-dataverse-attribute": "mspp_weblinksetidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_weblinksetidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "04e691bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "0ee691bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "mspp_name",
+        "mspp_openinnewwindow",
+        "mspp_publishingstateid",
+        "mspp_robotsfollowlink",
+        "mspp_weblinkid",
+        "mspp_weblinksetid",
+        "statecode"
+      ]
+    }
+  }
+}

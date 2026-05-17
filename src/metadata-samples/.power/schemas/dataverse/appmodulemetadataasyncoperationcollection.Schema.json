@@ -1,0 +1,79 @@
+{
+  "name": "appmodulemetadataoperationlog",
+  "title": "AppModule Metadata Async Operation Collection",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "appmodulemetadataoperationlogcollection",
+      "x-ms-dataverse-primary-id": "appmodulemetadataoperationlogid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "appmoduleid": {
+          "type": "string",
+          "title": "App Module Id",
+          "x-ms-dataverse-attribute": "appmoduleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AppModuleId",
+          "required": true
+        },
+        "appmodulemetadataoperationlogid": {
+          "type": "string",
+          "title": "AppModule Metadata Async Id",
+          "x-ms-dataverse-attribute": "appmodulemetadataoperationlogid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AppModuleMetadataOperationLogId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "retrycount": {
+          "type": "string",
+          "title": "Retry Count",
+          "x-ms-dataverse-attribute": "retrycount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "RetryCount"
+        },
+        "startedon": {
+          "type": "string",
+          "title": "Started On",
+          "x-ms-dataverse-attribute": "startedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "StartedOn"
+        },
+        "state": {
+          "type": "string",
+          "title": "Async Job State",
+          "x-ms-dataverse-attribute": "state",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "State"
+        }
+      },
+      "required": [
+        "appmoduleid",
+        "appmodulemetadataoperationlogid",
+        "createdon",
+        "modifiedon"
+      ]
+    }
+  }
+}

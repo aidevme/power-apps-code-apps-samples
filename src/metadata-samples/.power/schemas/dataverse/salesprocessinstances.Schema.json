@@ -1,0 +1,137 @@
+{
+  "name": "salesprocessinstance",
+  "title": "Sales Process Instances",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "salesprocessinstances",
+      "x-ms-dataverse-primary-id": "salesprocessinstanceid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "businessunitid": {
+          "type": "string",
+          "title": "Business Unit Id",
+          "x-ms-dataverse-attribute": "businessunitid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "BusinessUnitId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "businessunitidname": {
+          "type": "string",
+          "title": "businessunitidname",
+          "x-ms-dataverse-attribute": "businessunitidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BusinessUnitIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "name": {
+          "type": "string",
+          "title": "name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "opportunityid": {
+          "type": "string",
+          "title": "opportunityid",
+          "x-ms-dataverse-attribute": "opportunityid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OpportunityId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "opportunityidname": {
+          "type": "string",
+          "title": "opportunityidname",
+          "x-ms-dataverse-attribute": "opportunityidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OpportunityIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "salesprocessinstanceid": {
+          "type": "string",
+          "title": "salesprocessinstanceid",
+          "x-ms-dataverse-attribute": "salesprocessinstanceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SalesProcessInstanceId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "salesprocessname": {
+          "type": "string",
+          "title": "salesprocessname",
+          "x-ms-dataverse-attribute": "salesprocessname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SalesProcessName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "salesstagename": {
+          "type": "string",
+          "title": "salesstagename",
+          "x-ms-dataverse-attribute": "salesstagename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SalesStageName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "businessunitid",
+        "businessunitidname",
+        "name",
+        "opportunityid",
+        "opportunityidname",
+        "salesprocessinstanceid"
+      ]
+    }
+  }
+}

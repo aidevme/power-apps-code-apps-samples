@@ -1,0 +1,80 @@
+{
+  "name": "subscriptionclients",
+  "title": "Subscription Clients",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "subscriptionclientsset",
+      "x-ms-dataverse-primary-id": "subscriptionclientid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "clientid": {
+          "type": "string",
+          "title": "clientid",
+          "x-ms-dataverse-attribute": "clientid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ClientId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "isprimaryclient": {
+          "type": "string",
+          "title": "isprimaryclient",
+          "x-ms-dataverse-attribute": "isprimaryclient",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsPrimaryClient",
+          "x-ms-read-only": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "54a14388-8f88-41ba-8e48-6e4dc788b54a",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "machinename": {
+          "type": "string",
+          "title": "machinename",
+          "x-ms-dataverse-attribute": "machinename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "MachineName",
+          "maxLength": 200
+        },
+        "subscriptionclientid": {
+          "type": "string",
+          "title": "subscriptionclientid",
+          "x-ms-dataverse-attribute": "subscriptionclientid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SubscriptionClientId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "subscriptionid": {
+          "type": "string",
+          "title": "subscriptionid",
+          "x-ms-dataverse-attribute": "subscriptionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SubscriptionId",
+          "required": true
+        }
+      },
+      "required": [
+        "clientid",
+        "subscriptionclientid",
+        "subscriptionid"
+      ]
+    }
+  }
+}

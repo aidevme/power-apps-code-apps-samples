@@ -1,0 +1,271 @@
+{
+  "name": "plugintypestatistic",
+  "title": "Plug-in Type Statistics",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "plugintypestatistics",
+      "x-ms-dataverse-primary-id": "plugintypestatisticid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "averageexecutetimeinmilliseconds": {
+          "type": "string",
+          "title": "The average execution time",
+          "x-ms-dataverse-attribute": "averageexecutetimeinmilliseconds",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "AverageExecuteTimeInMilliseconds",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "crashcontributionpercent": {
+          "type": "string",
+          "title": "Percentage contribution to crashes",
+          "x-ms-dataverse-attribute": "crashcontributionpercent",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "CrashContributionPercent",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "crashcount": {
+          "type": "string",
+          "title": "Number of times crashed",
+          "x-ms-dataverse-attribute": "crashcount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "CrashCount",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "crashpercent": {
+          "type": "string",
+          "title": "Percentage of crashes",
+          "x-ms-dataverse-attribute": "crashpercent",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "CrashPercent",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "executecount": {
+          "type": "string",
+          "title": "Execution Count",
+          "x-ms-dataverse-attribute": "executecount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ExecuteCount",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "failurecount": {
+          "type": "string",
+          "title": "Failure Count",
+          "x-ms-dataverse-attribute": "failurecount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FailureCount",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "failurepercent": {
+          "type": "string",
+          "title": "Failure Percent",
+          "x-ms-dataverse-attribute": "failurepercent",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FailurePercent",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "organizationid",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "plugintypeid": {
+          "type": "string",
+          "title": "Plugin Type",
+          "x-ms-dataverse-attribute": "plugintypeid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "PluginTypeId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "plugintypeidname": {
+          "type": "string",
+          "title": "plugintypeidname",
+          "x-ms-dataverse-attribute": "plugintypeidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PluginTypeIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "plugintypestatisticid": {
+          "type": "string",
+          "title": "plugintypestatisticid",
+          "x-ms-dataverse-attribute": "plugintypestatisticid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PluginTypeStatisticId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "terminatecpucontributionpercent": {
+          "type": "string",
+          "title": "Terminate CPU Contribution Percent",
+          "x-ms-dataverse-attribute": "terminatecpucontributionpercent",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TerminateCpuContributionPercent",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "terminatehandlescontributionpercent": {
+          "type": "string",
+          "title": "Terminate Handles Contribution Percent",
+          "x-ms-dataverse-attribute": "terminatehandlescontributionpercent",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TerminateHandlesContributionPercent",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "terminatememorycontributionpercent": {
+          "type": "string",
+          "title": "Terminate Memory Contribution Percent",
+          "x-ms-dataverse-attribute": "terminatememorycontributionpercent",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TerminateMemoryContributionPercent",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "terminateothercontributionpercent": {
+          "type": "string",
+          "title": "Terminate Other Contribution Percent",
+          "x-ms-dataverse-attribute": "terminateothercontributionpercent",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TerminateOtherContributionPercent",
+          "x-ms-read-only": true,
+          "required": true
+        }
+      },
+      "required": [
+        "averageexecutetimeinmilliseconds",
+        "crashcontributionpercent",
+        "crashcount",
+        "crashpercent",
+        "executecount",
+        "failurecount",
+        "failurepercent",
+        "organizationid",
+        "plugintypeid",
+        "plugintypestatisticid",
+        "terminatecpucontributionpercent",
+        "terminatehandlescontributionpercent",
+        "terminatememorycontributionpercent",
+        "terminateothercontributionpercent"
+      ]
+    }
+  }
+}

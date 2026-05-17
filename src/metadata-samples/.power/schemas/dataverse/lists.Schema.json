@@ -1,0 +1,1001 @@
+{
+  "name": "mspp_entitylist",
+  "title": "Lists",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mspp_entitylists",
+      "x-ms-dataverse-primary-id": "mspp_entitylistid",
+      "x-ms-dataverse-primary-name": "mspp_name",
+      "properties": {
+        "mspp_calendar_alldayfieldname": {
+          "type": "string",
+          "title": "Is All Day Field Name",
+          "x-ms-dataverse-attribute": "mspp_calendar_alldayfieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_calendar_alldayfieldname",
+          "maxLength": 100
+        },
+        "mspp_calendar_descriptionfieldname": {
+          "type": "string",
+          "title": "Description Field Name",
+          "x-ms-dataverse-attribute": "mspp_calendar_descriptionfieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_calendar_descriptionfieldname",
+          "maxLength": 100
+        },
+        "mspp_calendar_enabled": {
+          "type": "string",
+          "title": "Calendar View Enabled",
+          "x-ms-dataverse-attribute": "mspp_calendar_enabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_calendar_enabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "43e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Calendar View Enabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_calendar_enabledname": {
+          "type": "string",
+          "title": "mspp_calendar_enabledname",
+          "x-ms-dataverse-attribute": "mspp_calendar_enabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_calendar_enabledName",
+          "x-ms-read-only": true
+        },
+        "mspp_calendar_enddatefieldname": {
+          "type": "string",
+          "title": "End Date Field Name",
+          "x-ms-dataverse-attribute": "mspp_calendar_enddatefieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_calendar_enddatefieldname",
+          "maxLength": 100
+        },
+        "mspp_calendar_initialdate": {
+          "type": "string",
+          "title": "Calendar Initial Date",
+          "x-ms-dataverse-attribute": "mspp_calendar_initialdate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_calendar_initialdate"
+        },
+        "mspp_calendar_initialview": {
+          "type": "string",
+          "title": "Calendar Initial View",
+          "x-ms-dataverse-attribute": "mspp_calendar_initialview",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_calendar_initialview",
+          "enum": [
+            "Year",
+            "Month",
+            "Week",
+            "Day"
+          ],
+          "x-ms-enum-values": [
+            756150000,
+            756150001,
+            756150002,
+            756150003
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "46e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Calendar Initial View",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_calendar_initialviewname": {
+          "type": "string",
+          "title": "mspp_calendar_initialviewname",
+          "x-ms-dataverse-attribute": "mspp_calendar_initialviewname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_calendar_initialviewName",
+          "x-ms-read-only": true
+        },
+        "mspp_calendar_locationfieldname": {
+          "type": "string",
+          "title": "Location Field Name",
+          "x-ms-dataverse-attribute": "mspp_calendar_locationfieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_calendar_locationfieldname",
+          "maxLength": 100
+        },
+        "mspp_calendar_organizerfieldname": {
+          "type": "string",
+          "title": "Organizer Field Name",
+          "x-ms-dataverse-attribute": "mspp_calendar_organizerfieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_calendar_organizerfieldname",
+          "maxLength": 100
+        },
+        "mspp_calendar_startdatefieldname": {
+          "type": "string",
+          "title": "Start Date Field Name",
+          "x-ms-dataverse-attribute": "mspp_calendar_startdatefieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_calendar_startdatefieldname",
+          "maxLength": 100
+        },
+        "mspp_calendar_style": {
+          "type": "string",
+          "title": "Calendar Style",
+          "x-ms-dataverse-attribute": "mspp_calendar_style",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_calendar_style",
+          "enum": [
+            "Full calendar",
+            "Event list"
+          ],
+          "x-ms-enum-values": [
+            756150000,
+            756150001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "49e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Calendar Style",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_calendar_stylename": {
+          "type": "string",
+          "title": "mspp_calendar_stylename",
+          "x-ms-dataverse-attribute": "mspp_calendar_stylename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_calendar_styleName",
+          "x-ms-read-only": true
+        },
+        "mspp_calendar_summaryfieldname": {
+          "type": "string",
+          "title": "Summary Field Name",
+          "x-ms-dataverse-attribute": "mspp_calendar_summaryfieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_calendar_summaryfieldname",
+          "maxLength": 100
+        },
+        "mspp_calendar_timezone": {
+          "type": "string",
+          "title": "Display Time Zone",
+          "x-ms-dataverse-attribute": "mspp_calendar_timezone",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_calendar_timezone"
+        },
+        "mspp_calendar_timezonemode": {
+          "type": "string",
+          "title": "Time Zone Display Mode",
+          "x-ms-dataverse-attribute": "mspp_calendar_timezonemode",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_calendar_timezonemode",
+          "enum": [
+            "User Local Time Zone",
+            "Specific Time Zone"
+          ],
+          "x-ms-enum-values": [
+            756150000,
+            756150001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "4ce711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Time Zone Display Mode",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_calendar_timezonemodename": {
+          "type": "string",
+          "title": "mspp_calendar_timezonemodename",
+          "x-ms-dataverse-attribute": "mspp_calendar_timezonemodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_calendar_timezonemodeName",
+          "x-ms-read-only": true
+        },
+        "mspp_createbuttonlabel": {
+          "type": "string",
+          "title": "Create Button Label",
+          "x-ms-dataverse-attribute": "mspp_createbuttonlabel",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createbuttonlabel",
+          "maxLength": 4000
+        },
+        "mspp_createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "mspp_createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_createdby"
+        },
+        "mspp_createdbyname": {
+          "type": "string",
+          "title": "mspp_createdbyname",
+          "x-ms-dataverse-attribute": "mspp_createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_createdbyyominame": {
+          "type": "string",
+          "title": "mspp_createdbyyominame",
+          "x-ms-dataverse-attribute": "mspp_createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "mspp_createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_createdon"
+        },
+        "mspp_detailsbuttonlabel": {
+          "type": "string",
+          "title": "Details Button Label",
+          "x-ms-dataverse-attribute": "mspp_detailsbuttonlabel",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_detailsbuttonlabel",
+          "maxLength": 4000
+        },
+        "mspp_emptylisttext": {
+          "type": "string",
+          "title": "Empty List Text",
+          "x-ms-dataverse-attribute": "mspp_emptylisttext",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_emptylisttext",
+          "maxLength": 10000
+        },
+        "mspp_entitylistid": {
+          "type": "string",
+          "title": "List",
+          "x-ms-dataverse-attribute": "mspp_entitylistid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_entitylistId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mspp_entityname": {
+          "type": "string",
+          "title": "Table Name",
+          "x-ms-dataverse-attribute": "mspp_entityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_entityname",
+          "required": true,
+          "maxLength": 100
+        },
+        "mspp_entitypermissionsenabled": {
+          "type": "string",
+          "title": "Enable Table Permissions",
+          "x-ms-dataverse-attribute": "mspp_entitypermissionsenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_entitypermissionsenabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "4fe711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Table Permissions",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_entitypermissionsenabledname": {
+          "type": "string",
+          "title": "mspp_entitypermissionsenabledname",
+          "x-ms-dataverse-attribute": "mspp_entitypermissionsenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_entitypermissionsenabledName",
+          "x-ms-read-only": true
+        },
+        "mspp_filter_applybuttonlabel": {
+          "type": "string",
+          "title": "Apply Button Label",
+          "x-ms-dataverse-attribute": "mspp_filter_applybuttonlabel",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_filter_applybuttonlabel",
+          "maxLength": 4000
+        },
+        "mspp_filter_definition": {
+          "type": "string",
+          "title": "Filter Definition",
+          "x-ms-dataverse-attribute": "mspp_filter_definition",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_filter_definition",
+          "maxLength": 65536
+        },
+        "mspp_filter_enabled": {
+          "type": "string",
+          "title": "Filter Enabled",
+          "x-ms-dataverse-attribute": "mspp_filter_enabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_filter_enabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "52e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Filter Enabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_filter_enabledname": {
+          "type": "string",
+          "title": "mspp_filter_enabledname",
+          "x-ms-dataverse-attribute": "mspp_filter_enabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_filter_enabledName",
+          "x-ms-read-only": true
+        },
+        "mspp_filter_orientation": {
+          "type": "string",
+          "title": "Filter Orientation",
+          "x-ms-dataverse-attribute": "mspp_filter_orientation",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_filter_orientation",
+          "enum": [
+            "Horizontal",
+            "Vertical"
+          ],
+          "x-ms-enum-values": [
+            756150000,
+            756150001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "55e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Orientation",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_filter_orientationname": {
+          "type": "string",
+          "title": "mspp_filter_orientationname",
+          "x-ms-dataverse-attribute": "mspp_filter_orientationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_filter_orientationName",
+          "x-ms-read-only": true
+        },
+        "mspp_filteraccount": {
+          "type": "string",
+          "title": "Filter Account Attribute",
+          "x-ms-dataverse-attribute": "mspp_filteraccount",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_filteraccount",
+          "maxLength": 2000
+        },
+        "mspp_filterportaluser": {
+          "type": "string",
+          "title": "Filter Portal User Attribute",
+          "x-ms-dataverse-attribute": "mspp_filterportaluser",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_filterportaluser",
+          "maxLength": 2000
+        },
+        "mspp_filterwebsite": {
+          "type": "string",
+          "title": "Filter Website Attribute",
+          "x-ms-dataverse-attribute": "mspp_filterwebsite",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_filterwebsite",
+          "maxLength": 2000
+        },
+        "mspp_idquerystringparametername": {
+          "type": "string",
+          "title": "ID Query String Parameter Name",
+          "x-ms-dataverse-attribute": "mspp_idquerystringparametername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_idquerystringparametername",
+          "maxLength": 100
+        },
+        "mspp_iscodecomponent": {
+          "type": "string",
+          "title": "Use a configured code component",
+          "x-ms-dataverse-attribute": "mspp_iscodecomponent",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_iscodecomponent",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "58e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Configured code component",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_iscodecomponentname": {
+          "type": "string",
+          "title": "mspp_iscodecomponentname",
+          "x-ms-dataverse-attribute": "mspp_iscodecomponentname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_iscodecomponentName",
+          "x-ms-read-only": true
+        },
+        "mspp_key": {
+          "type": "string",
+          "title": "Key",
+          "x-ms-dataverse-attribute": "mspp_key",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_key",
+          "maxLength": 100
+        },
+        "mspp_map_credentials": {
+          "type": "string",
+          "title": "Credentials",
+          "x-ms-dataverse-attribute": "mspp_map_credentials",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_map_credentials",
+          "maxLength": 100
+        },
+        "mspp_map_distanceunits": {
+          "type": "string",
+          "title": "Distance Units",
+          "x-ms-dataverse-attribute": "mspp_map_distanceunits",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_map_distanceunits",
+          "enum": [
+            "Km",
+            "miles"
+          ],
+          "x-ms-enum-values": [
+            756150000,
+            756150001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "5be711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Distance Units",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_map_distanceunitsname": {
+          "type": "string",
+          "title": "mspp_map_distanceunitsname",
+          "x-ms-dataverse-attribute": "mspp_map_distanceunitsname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_map_distanceunitsName",
+          "x-ms-read-only": true
+        },
+        "mspp_map_distancevalues": {
+          "type": "string",
+          "title": "Distance Values",
+          "x-ms-dataverse-attribute": "mspp_map_distancevalues",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_map_distancevalues",
+          "maxLength": 100
+        },
+        "mspp_map_enabled": {
+          "type": "string",
+          "title": "Map Enabled",
+          "x-ms-dataverse-attribute": "mspp_map_enabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_map_enabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "5ee711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Map Enabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_map_enabledname": {
+          "type": "string",
+          "title": "mspp_map_enabledname",
+          "x-ms-dataverse-attribute": "mspp_map_enabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_map_enabledName",
+          "x-ms-read-only": true
+        },
+        "mspp_map_infoboxdescriptionfieldname": {
+          "type": "string",
+          "title": "Infobox Description Field Name",
+          "x-ms-dataverse-attribute": "mspp_map_infoboxdescriptionfieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_map_infoboxdescriptionfieldname",
+          "maxLength": 100
+        },
+        "mspp_map_infoboxoffsetx": {
+          "type": "string",
+          "title": "Infobox Offset x",
+          "x-ms-dataverse-attribute": "mspp_map_infoboxoffsetx",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_map_infoboxoffsetx"
+        },
+        "mspp_map_infoboxoffsety": {
+          "type": "string",
+          "title": "Infobox Offset y",
+          "x-ms-dataverse-attribute": "mspp_map_infoboxoffsety",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_map_infoboxoffsety"
+        },
+        "mspp_map_infoboxtitlefieldname": {
+          "type": "string",
+          "title": "Infobox Title Field Name",
+          "x-ms-dataverse-attribute": "mspp_map_infoboxtitlefieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_map_infoboxtitlefieldname",
+          "maxLength": 100
+        },
+        "mspp_map_latitude": {
+          "type": "string",
+          "title": "Latitude",
+          "x-ms-dataverse-attribute": "mspp_map_latitude",
+          "x-ms-dataverse-type": "DoubleType",
+          "x-ms-schema-name": "mspp_map_latitude"
+        },
+        "mspp_map_latitudefieldname": {
+          "type": "string",
+          "title": "Latitude Field Name",
+          "x-ms-dataverse-attribute": "mspp_map_latitudefieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_map_latitudefieldname",
+          "maxLength": 100
+        },
+        "mspp_map_longitude": {
+          "type": "string",
+          "title": "Longitude",
+          "x-ms-dataverse-attribute": "mspp_map_longitude",
+          "x-ms-dataverse-type": "DoubleType",
+          "x-ms-schema-name": "mspp_map_longitude"
+        },
+        "mspp_map_longitudefieldname": {
+          "type": "string",
+          "title": "Longitude Field Name",
+          "x-ms-dataverse-attribute": "mspp_map_longitudefieldname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_map_longitudefieldname",
+          "maxLength": 100
+        },
+        "mspp_map_pushpinheight": {
+          "type": "string",
+          "title": "Pin Image Height",
+          "x-ms-dataverse-attribute": "mspp_map_pushpinheight",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_map_pushpinheight"
+        },
+        "mspp_map_pushpinurl": {
+          "type": "string",
+          "title": "Pin Image URL",
+          "x-ms-dataverse-attribute": "mspp_map_pushpinurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_map_pushpinurl",
+          "maxLength": 300
+        },
+        "mspp_map_pushpinwidth": {
+          "type": "string",
+          "title": "Pin Image Width",
+          "x-ms-dataverse-attribute": "mspp_map_pushpinwidth",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_map_pushpinwidth"
+        },
+        "mspp_map_resturl": {
+          "type": "string",
+          "title": "REST URL",
+          "x-ms-dataverse-attribute": "mspp_map_resturl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_map_resturl",
+          "maxLength": 300
+        },
+        "mspp_map_type": {
+          "type": "string",
+          "title": "Map Type",
+          "x-ms-dataverse-attribute": "mspp_map_type",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_map_type",
+          "enum": [
+            "Bing",
+            "Esri",
+            "Google"
+          ],
+          "x-ms-enum-values": [
+            756150000,
+            756150002,
+            756150001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "61e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Map Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_map_typename": {
+          "type": "string",
+          "title": "mspp_map_typename",
+          "x-ms-dataverse-attribute": "mspp_map_typename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_map_typeName",
+          "x-ms-read-only": true
+        },
+        "mspp_map_zoom": {
+          "type": "string",
+          "title": "Zoom",
+          "x-ms-dataverse-attribute": "mspp_map_zoom",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_map_zoom"
+        },
+        "mspp_modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "mspp_modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_modifiedby"
+        },
+        "mspp_modifiedbyname": {
+          "type": "string",
+          "title": "mspp_modifiedbyname",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_modifiedbyyominame": {
+          "type": "string",
+          "title": "mspp_modifiedbyyominame",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "mspp_modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_modifiedon"
+        },
+        "mspp_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "mspp_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "mspp_odata_enabled": {
+          "type": "string",
+          "title": "OData Enabled",
+          "x-ms-dataverse-attribute": "mspp_odata_enabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_odata_enabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "64e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "OData Enabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_odata_enabledname": {
+          "type": "string",
+          "title": "mspp_odata_enabledname",
+          "x-ms-dataverse-attribute": "mspp_odata_enabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_odata_enabledName",
+          "x-ms-read-only": true
+        },
+        "mspp_odata_entitysetname": {
+          "type": "string",
+          "title": "OData Entity Set Name",
+          "x-ms-dataverse-attribute": "mspp_odata_entitysetname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_odata_entitysetname",
+          "maxLength": 100
+        },
+        "mspp_odata_entitytypename": {
+          "type": "string",
+          "title": "OData Entity Type Name",
+          "x-ms-dataverse-attribute": "mspp_odata_entitytypename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_odata_entitytypename",
+          "maxLength": 100
+        },
+        "mspp_odata_view": {
+          "type": "string",
+          "title": "OData View",
+          "x-ms-dataverse-attribute": "mspp_odata_view",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_odata_view",
+          "maxLength": 4000
+        },
+        "mspp_pagesize": {
+          "type": "string",
+          "title": "Page Size",
+          "x-ms-dataverse-attribute": "mspp_pagesize",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_pagesize",
+          "required": true
+        },
+        "mspp_primarykeyname": {
+          "type": "string",
+          "title": "Primary Key Name",
+          "x-ms-dataverse-attribute": "mspp_primarykeyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_primarykeyname",
+          "maxLength": 100
+        },
+        "mspp_provisionedlanguages": {
+          "type": "string",
+          "title": "Provisioned Languages",
+          "x-ms-dataverse-attribute": "mspp_provisionedlanguages",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_provisionedlanguages"
+        },
+        "mspp_registerstartupscript": {
+          "type": "string",
+          "title": "Custom JavaScript",
+          "x-ms-dataverse-attribute": "mspp_registerstartupscript",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_registerstartupscript",
+          "maxLength": 100000
+        },
+        "mspp_searchenabled": {
+          "type": "string",
+          "title": "Search Enabled",
+          "x-ms-dataverse-attribute": "mspp_searchenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_searchenabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "67e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Search Enabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_searchenabledname": {
+          "type": "string",
+          "title": "mspp_searchenabledname",
+          "x-ms-dataverse-attribute": "mspp_searchenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_searchenabledName",
+          "x-ms-read-only": true
+        },
+        "mspp_searchplaceholdertext": {
+          "type": "string",
+          "title": "Search Placeholder Text",
+          "x-ms-dataverse-attribute": "mspp_searchplaceholdertext",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_searchplaceholdertext",
+          "maxLength": 4000
+        },
+        "mspp_searchtooltiptext": {
+          "type": "string",
+          "title": "Search Tooltip Text",
+          "x-ms-dataverse-attribute": "mspp_searchtooltiptext",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_searchtooltiptext",
+          "maxLength": 4000
+        },
+        "mspp_settings": {
+          "type": "string",
+          "title": "Settings",
+          "x-ms-dataverse-attribute": "mspp_settings",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_settings",
+          "maxLength": 100000
+        },
+        "mspp_view": {
+          "type": "string",
+          "title": "View",
+          "x-ms-dataverse-attribute": "mspp_view",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_view",
+          "maxLength": 4000
+        },
+        "mspp_views": {
+          "type": "string",
+          "title": "Views",
+          "x-ms-dataverse-attribute": "mspp_views",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_views",
+          "required": true,
+          "maxLength": 100000
+        },
+        "mspp_webpageforcreate": {
+          "type": "string",
+          "title": "Web Page for Create",
+          "x-ms-dataverse-attribute": "mspp_webpageforcreate",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_webpageforcreate"
+        },
+        "mspp_webpageforcreatename": {
+          "type": "string",
+          "title": "mspp_webpageforcreatename",
+          "x-ms-dataverse-attribute": "mspp_webpageforcreatename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_webpageforcreateName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_webpagefordetailsview": {
+          "type": "string",
+          "title": "Web Page for Details View",
+          "x-ms-dataverse-attribute": "mspp_webpagefordetailsview",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_webpagefordetailsview"
+        },
+        "mspp_webpagefordetailsviewname": {
+          "type": "string",
+          "title": "mspp_webpagefordetailsviewname",
+          "x-ms-dataverse-attribute": "mspp_webpagefordetailsviewname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_webpagefordetailsviewName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_websiteid": {
+          "type": "string",
+          "title": "Website",
+          "x-ms-dataverse-attribute": "mspp_websiteid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_websiteid",
+          "required": true
+        },
+        "mspp_websiteidname": {
+          "type": "string",
+          "title": "mspp_websiteidname",
+          "x-ms-dataverse-attribute": "mspp_websiteidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_websiteidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "36e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "40e711ad-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "mspp_entitylistid",
+        "mspp_entityname",
+        "mspp_name",
+        "mspp_pagesize",
+        "mspp_views",
+        "mspp_websiteid",
+        "statecode"
+      ]
+    }
+  }
+}

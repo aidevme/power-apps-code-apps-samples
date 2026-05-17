@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_msdyn_warranty_msdyn_functionallocation",
+  "title": "msdyn_msdyn_warranty_msdyn_functionallocation",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_msdyn_warranty_msdyn_functionallocationset",
+      "x-ms-dataverse-primary-id": "msdyn_msdyn_warranty_msdyn_functionallocationid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_functionallocationid": {
+          "type": "string",
+          "title": "msdyn_functionallocationid",
+          "x-ms-dataverse-attribute": "msdyn_functionallocationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_functionallocationid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_msdyn_warranty_msdyn_functionallocationid": {
+          "type": "string",
+          "title": "msdyn_msdyn_warranty_msdyn_functionallocationid",
+          "x-ms-dataverse-attribute": "msdyn_msdyn_warranty_msdyn_functionallocationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_msdyn_warranty_msdyn_functionallocationId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_warrantyid": {
+          "type": "string",
+          "title": "msdyn_warrantyid",
+          "x-ms-dataverse-attribute": "msdyn_warrantyid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_warrantyid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_functionallocationid",
+        "msdyn_msdyn_warranty_msdyn_functionallocationid",
+        "msdyn_warrantyid"
+      ]
+    }
+  }
+}

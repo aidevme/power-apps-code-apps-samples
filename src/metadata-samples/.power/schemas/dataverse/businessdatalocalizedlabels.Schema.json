@@ -1,0 +1,94 @@
+{
+  "name": "businessdatalocalizedlabel",
+  "title": "Business Data Localized Labels",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "businessdatalocalizedlabels",
+      "x-ms-dataverse-primary-id": "businessdatalocalizedlabelid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "businessdatalocalizedlabelid": {
+          "type": "string",
+          "title": "businessdatalocalizedlabelid",
+          "x-ms-dataverse-attribute": "businessdatalocalizedlabelid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "BusinessDataLocalizedLabelId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "label": {
+          "type": "string",
+          "title": "label",
+          "x-ms-dataverse-attribute": "label",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Label",
+          "required": true,
+          "maxLength": 4000
+        },
+        "languageid": {
+          "type": "string",
+          "title": "languageid",
+          "x-ms-dataverse-attribute": "languageid",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "LanguageId",
+          "required": true
+        },
+        "objectcolumnname": {
+          "type": "string",
+          "title": "objectcolumnname",
+          "x-ms-dataverse-attribute": "objectcolumnname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ObjectColumnName",
+          "required": true,
+          "maxLength": 128
+        },
+        "objectcolumnnumber": {
+          "type": "string",
+          "title": "objectcolumnnumber",
+          "x-ms-dataverse-attribute": "objectcolumnnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectColumnNumber",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "objectid": {
+          "type": "string",
+          "title": "objectid",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ObjectId",
+          "required": true
+        },
+        "objectidtypecode": {
+          "type": "string",
+          "title": "objectidtypecode",
+          "x-ms-dataverse-attribute": "objectidtypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectIdTypeCode",
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "businessdatalocalizedlabelid",
+        "label",
+        "languageid",
+        "objectcolumnname",
+        "objectcolumnnumber",
+        "objectid",
+        "objectidtypecode"
+      ]
+    }
+  }
+}

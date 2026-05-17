@@ -1,1 +1,5 @@
 # Metadata Samples
+
+## DEVELOPEMENT
+
+## SKILLS

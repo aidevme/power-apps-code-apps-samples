@@ -1,0 +1,46 @@
+{
+  "name": "msdyn_solutioncomponentcountdatasource",
+  "title": "Solution Component Count Data Sources",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_solutioncomponentcountdatasources",
+      "x-ms-dataverse-primary-id": "msdyn_solutioncomponentcountdatasourceid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "msdyn_name": {
+          "type": "string",
+          "title": "msdyn_name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "msdyn_solutioncomponentcountdatasourceid": {
+          "type": "string",
+          "title": "Solution Component Data Source",
+          "x-ms-dataverse-attribute": "msdyn_solutioncomponentcountdatasourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_solutioncomponentcountdatasourceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_solutioncomponentcountdatasourceid"
+      ]
+    }
+  }
+}

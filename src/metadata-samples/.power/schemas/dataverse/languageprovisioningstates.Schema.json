@@ -1,0 +1,102 @@
+{
+  "name": "languageprovisioningstate",
+  "title": "Language Provisioning States",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "languageprovisioningstates",
+      "x-ms-dataverse-primary-id": "languageprovisioningstateid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "applicationversion": {
+          "type": "string",
+          "title": "Application Version",
+          "x-ms-dataverse-attribute": "applicationversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ApplicationVersion",
+          "required": true,
+          "maxLength": 256
+        },
+        "languageid": {
+          "type": "string",
+          "title": "Language Id",
+          "x-ms-dataverse-attribute": "languageid",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "LanguageId",
+          "required": true
+        },
+        "languageprovisioningstateid": {
+          "type": "string",
+          "title": "Language Provisioning State",
+          "x-ms-dataverse-attribute": "languageprovisioningstateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "LanguageProvisioningStateId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "provisioningstage": {
+          "type": "string",
+          "title": "Provisioning Stage",
+          "x-ms-dataverse-attribute": "provisioningstage",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ProvisioningStage",
+          "required": true,
+          "enum": [
+            "FileBased",
+            "MetadataHelperDependent",
+            "SystemOnly",
+            "Other",
+            "Ribbon"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "dd68c8fd-e91b-4553-94a5-d6c9d697d4fc",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Provisioning Stage",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "solutionfileversion": {
+          "type": "string",
+          "title": "Solution File Version",
+          "x-ms-dataverse-attribute": "solutionfileversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SolutionFileVersion",
+          "required": true,
+          "maxLength": 256
+        },
+        "solutionuniquename": {
+          "type": "string",
+          "title": "Solution Unique Name",
+          "x-ms-dataverse-attribute": "solutionuniquename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SolutionUniqueName",
+          "required": true,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "applicationversion",
+        "languageid",
+        "languageprovisioningstateid",
+        "provisioningstage",
+        "solutionfileversion",
+        "solutionuniquename"
+      ]
+    }
+  }
+}

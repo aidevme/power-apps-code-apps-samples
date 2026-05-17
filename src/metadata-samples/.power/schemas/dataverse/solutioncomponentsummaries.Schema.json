@@ -1,0 +1,501 @@
+{
+  "name": "msdyn_solutioncomponentsummary",
+  "title": "Solution Component Summaries",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_solutioncomponentsummaries",
+      "x-ms-dataverse-primary-id": "msdyn_solutioncomponentsummaryid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "msdyn_canvasappuniqueid": {
+          "type": "string",
+          "title": "Canvas App Unique Id",
+          "x-ms-dataverse-attribute": "msdyn_canvasappuniqueid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_canvasappuniqueid",
+          "maxLength": 100
+        },
+        "msdyn_componentlogicalname": {
+          "type": "string",
+          "title": "Component Logical Name",
+          "x-ms-dataverse-attribute": "msdyn_componentlogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_componentlogicalname",
+          "maxLength": 100
+        },
+        "msdyn_componenttype": {
+          "type": "string",
+          "title": "msdyn_componenttype",
+          "x-ms-dataverse-attribute": "msdyn_componenttype",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "msdyn_componenttype"
+        },
+        "msdyn_componenttypename": {
+          "type": "string",
+          "title": "Component Type Name",
+          "x-ms-dataverse-attribute": "msdyn_componenttypename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_componenttypename",
+          "maxLength": 100
+        },
+        "msdyn_connectorinternalid": {
+          "type": "string",
+          "title": "Connector Internal Id",
+          "x-ms-dataverse-attribute": "msdyn_connectorinternalid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_connectorinternalid",
+          "maxLength": 100
+        },
+        "msdyn_createdon": {
+          "type": "string",
+          "title": "msdyn_createdon",
+          "x-ms-dataverse-attribute": "msdyn_createdon",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_createdon",
+          "maxLength": 100
+        },
+        "msdyn_culture": {
+          "type": "string",
+          "title": "msdyn_culture",
+          "x-ms-dataverse-attribute": "msdyn_culture",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_culture",
+          "maxLength": 100
+        },
+        "msdyn_deployment": {
+          "type": "string",
+          "title": "msdyn_deployment",
+          "x-ms-dataverse-attribute": "msdyn_deployment",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_deployment",
+          "maxLength": 100
+        },
+        "msdyn_description": {
+          "type": "string",
+          "title": "msdyn_description",
+          "x-ms-dataverse-attribute": "msdyn_description",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_description",
+          "maxLength": 100
+        },
+        "msdyn_displayname": {
+          "type": "string",
+          "title": "msdyn_displayname",
+          "x-ms-dataverse-attribute": "msdyn_displayname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_displayname",
+          "maxLength": 100
+        },
+        "msdyn_eventhandler": {
+          "type": "string",
+          "title": "msdyn_eventhandler",
+          "x-ms-dataverse-attribute": "msdyn_eventhandler",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_eventhandler",
+          "maxLength": 100
+        },
+        "msdyn_executionorder": {
+          "type": "string",
+          "title": "msdyn_executionorder",
+          "x-ms-dataverse-attribute": "msdyn_executionorder",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_executionorder",
+          "maxLength": 100
+        },
+        "msdyn_executionstage": {
+          "type": "string",
+          "title": "msdyn_executionstage",
+          "x-ms-dataverse-attribute": "msdyn_executionstage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_executionstage",
+          "maxLength": 100
+        },
+        "msdyn_fieldsecurity": {
+          "type": "string",
+          "title": "Field Security",
+          "x-ms-dataverse-attribute": "msdyn_fieldsecurity",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_fieldsecurity",
+          "maxLength": 100
+        },
+        "msdyn_fieldtype": {
+          "type": "string",
+          "title": "Field Type",
+          "x-ms-dataverse-attribute": "msdyn_fieldtype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_fieldtype",
+          "maxLength": 100
+        },
+        "msdyn_hasactivecustomization": {
+          "type": "string",
+          "title": "msdyn_hasactivecustomization",
+          "x-ms-dataverse-attribute": "msdyn_hasactivecustomization",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_hasactivecustomization",
+          "maxLength": 100
+        },
+        "msdyn_isappaware": {
+          "type": "string",
+          "title": "msdyn_isappaware",
+          "x-ms-dataverse-attribute": "msdyn_isappaware",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_isappaware",
+          "maxLength": 100
+        },
+        "msdyn_isappawarename": {
+          "type": "string",
+          "title": "App Aware Name",
+          "x-ms-dataverse-attribute": "msdyn_isappawarename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_isappawarename",
+          "maxLength": 100
+        },
+        "msdyn_isauditenabled": {
+          "type": "string",
+          "title": "msdyn_isauditenabled",
+          "x-ms-dataverse-attribute": "msdyn_isauditenabled",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_isauditenabled",
+          "maxLength": 100
+        },
+        "msdyn_isauditenabledname": {
+          "type": "string",
+          "title": "Audit Name",
+          "x-ms-dataverse-attribute": "msdyn_isauditenabledname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_isauditenabledname",
+          "maxLength": 100
+        },
+        "msdyn_iscustom": {
+          "type": "string",
+          "title": "msdyn_iscustom",
+          "x-ms-dataverse-attribute": "msdyn_iscustom",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_iscustom",
+          "maxLength": 100
+        },
+        "msdyn_iscustomizable": {
+          "type": "string",
+          "title": "msdyn_iscustomizable",
+          "x-ms-dataverse-attribute": "msdyn_iscustomizable",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_iscustomizable",
+          "maxLength": 100
+        },
+        "msdyn_iscustomizablename": {
+          "type": "string",
+          "title": "Customizable Name",
+          "x-ms-dataverse-attribute": "msdyn_iscustomizablename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_iscustomizablename",
+          "maxLength": 100
+        },
+        "msdyn_iscustomname": {
+          "type": "string",
+          "title": "Is Custom Name",
+          "x-ms-dataverse-attribute": "msdyn_iscustomname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_iscustomname",
+          "maxLength": 100
+        },
+        "msdyn_isdefault": {
+          "type": "string",
+          "title": "Default",
+          "x-ms-dataverse-attribute": "msdyn_isdefault",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_isdefault",
+          "maxLength": 100
+        },
+        "msdyn_isdefaultname": {
+          "type": "string",
+          "title": "Default Name",
+          "x-ms-dataverse-attribute": "msdyn_isdefaultname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_isdefaultname",
+          "maxLength": 100
+        },
+        "msdyn_ismanaged": {
+          "type": "string",
+          "title": "msdyn_ismanaged",
+          "x-ms-dataverse-attribute": "msdyn_ismanaged",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_ismanaged",
+          "maxLength": 100
+        },
+        "msdyn_ismanagedname": {
+          "type": "string",
+          "title": "Managed Name",
+          "x-ms-dataverse-attribute": "msdyn_ismanagedname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_ismanagedname",
+          "maxLength": 100
+        },
+        "msdyn_isolationmode": {
+          "type": "string",
+          "title": "msdyn_isolationmode",
+          "x-ms-dataverse-attribute": "msdyn_isolationmode",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_isolationmode",
+          "maxLength": 100
+        },
+        "msdyn_istableenabled": {
+          "type": "string",
+          "title": "msdyn_istableenabled",
+          "x-ms-dataverse-attribute": "msdyn_istableenabled",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_istableenabled",
+          "maxLength": 100
+        },
+        "msdyn_lcid": {
+          "type": "string",
+          "title": "msdyn_lcid",
+          "x-ms-dataverse-attribute": "msdyn_lcid",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "msdyn_lcid"
+        },
+        "msdyn_logicalcollectionname": {
+          "type": "string",
+          "title": "Logical Collection Name",
+          "x-ms-dataverse-attribute": "msdyn_logicalcollectionname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_logicalcollectionname",
+          "maxLength": 100
+        },
+        "msdyn_modifiedon": {
+          "type": "string",
+          "title": "msdyn_modifiedon",
+          "x-ms-dataverse-attribute": "msdyn_modifiedon",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_modifiedon",
+          "maxLength": 100
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "msdyn_name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_objectid": {
+          "type": "string",
+          "title": "msdyn_objectid",
+          "x-ms-dataverse-attribute": "msdyn_objectid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_objectid",
+          "maxLength": 100
+        },
+        "msdyn_objecttypecode": {
+          "type": "string",
+          "title": "msdyn_objecttypecode",
+          "x-ms-dataverse-attribute": "msdyn_objecttypecode",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_objecttypecode",
+          "maxLength": 100
+        },
+        "msdyn_owner": {
+          "type": "string",
+          "title": "msdyn_owner",
+          "x-ms-dataverse-attribute": "msdyn_owner",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_owner",
+          "maxLength": 100
+        },
+        "msdyn_owningbusinessunit": {
+          "type": "string",
+          "title": "owning business unit",
+          "x-ms-dataverse-attribute": "msdyn_owningbusinessunit",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_owningbusinessunit",
+          "maxLength": 100
+        },
+        "msdyn_primaryentityname": {
+          "type": "string",
+          "title": "Primary Entity Name",
+          "x-ms-dataverse-attribute": "msdyn_primaryentityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_primaryentityname",
+          "maxLength": 100
+        },
+        "msdyn_primaryidattribute": {
+          "type": "string",
+          "title": "Name of the primary id attribute",
+          "x-ms-dataverse-attribute": "msdyn_primaryidattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_primaryidattribute",
+          "maxLength": 100
+        },
+        "msdyn_publickeytoken": {
+          "type": "string",
+          "title": "msdyn_publickeytoken",
+          "x-ms-dataverse-attribute": "msdyn_publickeytoken",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_publickeytoken",
+          "maxLength": 100
+        },
+        "msdyn_relatedentity": {
+          "type": "string",
+          "title": "Related Entity",
+          "x-ms-dataverse-attribute": "msdyn_relatedentity",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_relatedentity",
+          "maxLength": 100
+        },
+        "msdyn_relatedentityattribute": {
+          "type": "string",
+          "title": "Related Entity Attribute Name",
+          "x-ms-dataverse-attribute": "msdyn_relatedentityattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_relatedentityattribute",
+          "maxLength": 100
+        },
+        "msdyn_schemaname": {
+          "type": "string",
+          "title": "msdyn_schemaname",
+          "x-ms-dataverse-attribute": "msdyn_schemaname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_schemaname",
+          "maxLength": 100
+        },
+        "msdyn_sdkmessagename": {
+          "type": "string",
+          "title": "msdyn_sdkmessagename",
+          "x-ms-dataverse-attribute": "msdyn_sdkmessagename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_sdkmessagename",
+          "maxLength": 100
+        },
+        "msdyn_solutioncomponentsummaryid": {
+          "type": "string",
+          "title": "SolutionComponentSummary",
+          "x-ms-dataverse-attribute": "msdyn_solutioncomponentsummaryid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_solutioncomponentsummaryId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_solutionid": {
+          "type": "string",
+          "title": "msdyn_solutionid",
+          "x-ms-dataverse-attribute": "msdyn_solutionid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_solutionid",
+          "maxLength": 100
+        },
+        "msdyn_standardstatus": {
+          "type": "string",
+          "title": "msdyn_standardstatus",
+          "x-ms-dataverse-attribute": "msdyn_standardstatus",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_standardstatus",
+          "maxLength": 100
+        },
+        "msdyn_status": {
+          "type": "string",
+          "title": "msdyn_status",
+          "x-ms-dataverse-attribute": "msdyn_status",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_status",
+          "maxLength": 100
+        },
+        "msdyn_statusname": {
+          "type": "string",
+          "title": "Status Name",
+          "x-ms-dataverse-attribute": "msdyn_statusname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_statusname",
+          "maxLength": 100
+        },
+        "msdyn_subtype": {
+          "type": "string",
+          "title": "msdyn_subtype",
+          "x-ms-dataverse-attribute": "msdyn_subtype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_subtype",
+          "maxLength": 100
+        },
+        "msdyn_synctoexternalsearchindex": {
+          "type": "string",
+          "title": "msdyn_synctoexternalsearchindex",
+          "x-ms-dataverse-attribute": "msdyn_synctoexternalsearchindex",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_synctoexternalsearchindex",
+          "maxLength": 100
+        },
+        "msdyn_total": {
+          "type": "string",
+          "title": "msdyn_total",
+          "x-ms-dataverse-attribute": "msdyn_total",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "msdyn_total"
+        },
+        "msdyn_typename": {
+          "type": "string",
+          "title": "msdyn_typename",
+          "x-ms-dataverse-attribute": "msdyn_typename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_typename",
+          "maxLength": 100
+        },
+        "msdyn_uniquename": {
+          "type": "string",
+          "title": "msdyn_uniquename",
+          "x-ms-dataverse-attribute": "msdyn_uniquename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_uniquename",
+          "maxLength": 100
+        },
+        "msdyn_version": {
+          "type": "string",
+          "title": "msdyn_version",
+          "x-ms-dataverse-attribute": "msdyn_version",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_version",
+          "maxLength": 100
+        },
+        "msdyn_workflowcategory": {
+          "type": "string",
+          "title": "msdyn_workflowcategory",
+          "x-ms-dataverse-attribute": "msdyn_workflowcategory",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_workflowcategory",
+          "maxLength": 100
+        },
+        "msdyn_workflowcategoryname": {
+          "type": "string",
+          "title": "Workflow Category Name",
+          "x-ms-dataverse-attribute": "msdyn_workflowcategoryname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_workflowcategoryname",
+          "maxLength": 100
+        },
+        "msdyn_workflowidunique": {
+          "type": "string",
+          "title": "Workflow Id Unique",
+          "x-ms-dataverse-attribute": "msdyn_workflowidunique",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_workflowidunique",
+          "maxLength": 100
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_name",
+        "msdyn_solutioncomponentsummaryid"
+      ]
+    }
+  }
+}

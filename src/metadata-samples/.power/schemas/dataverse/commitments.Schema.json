@@ -1,0 +1,228 @@
+{
+  "name": "commitment",
+  "title": "Commitments",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "commitments",
+      "x-ms-dataverse-primary-id": "commitmentid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "activityid": {
+          "type": "string",
+          "title": "activityid",
+          "x-ms-dataverse-attribute": "activityid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ActivityId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "activitytypecode": {
+          "type": "string",
+          "title": "activitytypecode",
+          "x-ms-dataverse-attribute": "activitytypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ActivityTypeCode",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "commitmentid": {
+          "type": "string",
+          "title": "commitmentid",
+          "x-ms-dataverse-attribute": "commitmentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "CommitmentId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "effort": {
+          "type": "string",
+          "title": "effort",
+          "x-ms-dataverse-attribute": "effort",
+          "x-ms-dataverse-type": "DoubleType",
+          "x-ms-schema-name": "Effort",
+          "x-ms-read-only": true
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "name": {
+          "type": "string",
+          "title": "name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "participationtypemask": {
+          "type": "string",
+          "title": "participationtypemask",
+          "x-ms-dataverse-attribute": "participationtypemask",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ParticipationTypeMask",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "partyid": {
+          "type": "string",
+          "title": "partyid",
+          "x-ms-dataverse-attribute": "partyid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PartyId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "partyobjecttypecode": {
+          "type": "string",
+          "title": "partyobjecttypecode",
+          "x-ms-dataverse-attribute": "partyobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "PartyObjectTypeCode",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "resourcespecid": {
+          "type": "string",
+          "title": "resourcespecid",
+          "x-ms-dataverse-attribute": "resourcespecid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ResourceSpecId",
+          "x-ms-read-only": true
+        },
+        "scheduledend": {
+          "type": "string",
+          "title": "scheduledend",
+          "x-ms-dataverse-attribute": "scheduledend",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ScheduledEnd",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "scheduledstart": {
+          "type": "string",
+          "title": "scheduledstart",
+          "x-ms-dataverse-attribute": "scheduledstart",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ScheduledStart",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "serviceid": {
+          "type": "string",
+          "title": "serviceid",
+          "x-ms-dataverse-attribute": "serviceid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ServiceId",
+          "x-ms-read-only": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "StateCode",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "ab346ac6-7e19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "StateCodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "statuscode",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "StatusCode",
+          "x-ms-read-only": true,
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "ad346ac6-7e19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "commitment_statuscode",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "StatusCodeName",
+          "x-ms-read-only": true
+        },
+        "subject": {
+          "type": "string",
+          "title": "subject",
+          "x-ms-dataverse-attribute": "subject",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Subject",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "activityid",
+        "activitytypecode",
+        "commitmentid",
+        "name",
+        "participationtypemask",
+        "partyid",
+        "partyobjecttypecode",
+        "scheduledend",
+        "scheduledstart",
+        "statecode"
+      ]
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "name": "campaignitem",
+  "title": "Campaign Items",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "campaignitems",
+      "x-ms-dataverse-primary-id": "campaignitemid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "campaignid": {
+          "type": "string",
+          "title": "campaignid",
+          "x-ms-dataverse-attribute": "campaignid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CampaignId",
+          "required": true
+        },
+        "campaignitemid": {
+          "type": "string",
+          "title": "campaignitemid",
+          "x-ms-dataverse-attribute": "campaignitemid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "CampaignItemId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "entityid": {
+          "type": "string",
+          "title": "entityid",
+          "x-ms-dataverse-attribute": "entityid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "EntityId",
+          "required": true
+        },
+        "entitytype": {
+          "type": "string",
+          "title": "entitytype",
+          "x-ms-dataverse-attribute": "entitytype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "EntityType",
+          "required": true
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "name": {
+          "type": "string",
+          "title": "name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "owningbusinessunit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "owninguser",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "campaignid",
+        "campaignitemid",
+        "entityid",
+        "entitytype",
+        "name",
+        "ownerid",
+        "owneridtype"
+      ]
+    }
+  }
+}

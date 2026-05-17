@@ -1,0 +1,308 @@
+{
+  "name": "bulkoperationlog",
+  "title": "Bulk Operation Logs",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "bulkoperationlogs",
+      "x-ms-dataverse-primary-id": "bulkoperationlogid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "additionalinfo": {
+          "type": "string",
+          "title": "Failed on Line",
+          "x-ms-dataverse-attribute": "additionalinfo",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "AdditionalInfo",
+          "maxLength": 100000
+        },
+        "bulkoperationid": {
+          "type": "string",
+          "title": "Bulk Operation Number",
+          "x-ms-dataverse-attribute": "bulkoperationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "BulkOperationId",
+          "required": true
+        },
+        "bulkoperationidname": {
+          "type": "string",
+          "title": "bulkoperationidname",
+          "x-ms-dataverse-attribute": "bulkoperationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BulkOperationIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "bulkoperationidtype": {
+          "type": "string",
+          "title": "bulkoperationidtype",
+          "x-ms-dataverse-attribute": "bulkoperationidtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "BulkOperationIdType"
+        },
+        "bulkoperationidyominame": {
+          "type": "string",
+          "title": "bulkoperationidyominame",
+          "x-ms-dataverse-attribute": "bulkoperationidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BulkOperationIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "bulkoperationlogid": {
+          "type": "string",
+          "title": "Bulk Operation Log Number",
+          "x-ms-dataverse-attribute": "bulkoperationlogid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "BulkOperationLogId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "campaignactivityid": {
+          "type": "string",
+          "title": "Campaign Activity Number",
+          "x-ms-dataverse-attribute": "campaignactivityid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CampaignActivityId"
+        },
+        "campaignactivityidname": {
+          "type": "string",
+          "title": "campaignactivityidname",
+          "x-ms-dataverse-attribute": "campaignactivityidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CampaignActivityIdName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "campaignactivityidtype": {
+          "type": "string",
+          "title": "campaignactivityidtype",
+          "x-ms-dataverse-attribute": "campaignactivityidtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "CampaignActivityIdType"
+        },
+        "campaignactivityidyominame": {
+          "type": "string",
+          "title": "campaignactivityidyominame",
+          "x-ms-dataverse-attribute": "campaignactivityidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CampaignActivityIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "createdobjectid": {
+          "type": "string",
+          "title": "Created Object",
+          "x-ms-dataverse-attribute": "createdobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedObjectId"
+        },
+        "createdobjectidname": {
+          "type": "string",
+          "title": "createdobjectidname",
+          "x-ms-dataverse-attribute": "createdobjectidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedObjectIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdobjectidtypecode": {
+          "type": "string",
+          "title": "createdobjectidtypecode",
+          "x-ms-dataverse-attribute": "createdobjectidtypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "CreatedObjectIdTypeCode"
+        },
+        "createdobjectidyominame": {
+          "type": "string",
+          "title": "createdobjectidyominame",
+          "x-ms-dataverse-attribute": "createdobjectidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedObjectIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "errordescriptionformatted": {
+          "type": "string",
+          "title": "Error description",
+          "x-ms-dataverse-attribute": "errordescriptionformatted",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "ErrorDescriptionFormatted",
+          "maxLength": 2000
+        },
+        "errornumber": {
+          "type": "string",
+          "title": "Reason Id",
+          "x-ms-dataverse-attribute": "errornumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ErrorNumber",
+          "x-ms-read-only": true
+        },
+        "errornumberformatted": {
+          "type": "string",
+          "title": "Error number",
+          "x-ms-dataverse-attribute": "errornumberformatted",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "ErrorNumberFormatted",
+          "maxLength": 2000
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "name": {
+          "type": "string",
+          "title": "name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "regardingobjectid": {
+          "type": "string",
+          "title": "Customers",
+          "x-ms-dataverse-attribute": "regardingobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "RegardingObjectId",
+          "required": true
+        },
+        "regardingobjectidname": {
+          "type": "string",
+          "title": "regardingobjectidname",
+          "x-ms-dataverse-attribute": "regardingobjectidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "regardingobjectidtypecode": {
+          "type": "string",
+          "title": "regardingobjectidtypecode",
+          "x-ms-dataverse-attribute": "regardingobjectidtypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectIdTypeCode"
+        },
+        "regardingobjectidyominame": {
+          "type": "string",
+          "title": "regardingobjectidyominame",
+          "x-ms-dataverse-attribute": "regardingobjectidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "bulkoperationid",
+        "bulkoperationlogid",
+        "name",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "owninguser",
+        "regardingobjectid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "name": "imagedescriptor",
+  "title": "Image Descriptors",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "imagedescriptors",
+      "x-ms-dataverse-primary-id": "imagedescriptorid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "colordepthbits": {
+          "type": "string",
+          "title": "colordepthbits",
+          "x-ms-dataverse-attribute": "colordepthbits",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ColorDepthBits"
+        },
+        "fileid": {
+          "type": "string",
+          "title": "FileId",
+          "x-ms-dataverse-attribute": "fileid",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "FileId",
+          "x-ms-read-only": true
+        },
+        "filelocation": {
+          "type": "string",
+          "title": "filelocation",
+          "x-ms-dataverse-attribute": "filelocation",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FileLocation",
+          "maxLength": 256
+        },
+        "filename": {
+          "type": "string",
+          "title": "filename",
+          "x-ms-dataverse-attribute": "filename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FileName",
+          "maxLength": 256
+        },
+        "filesizebytes": {
+          "type": "string",
+          "title": "filesizebytes",
+          "x-ms-dataverse-attribute": "filesizebytes",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FileSizeBytes"
+        },
+        "filetype": {
+          "type": "string",
+          "title": "filetype",
+          "x-ms-dataverse-attribute": "filetype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FileType",
+          "maxLength": 256
+        },
+        "fullimagedata": {
+          "type": "string",
+          "title": "fullimagedata",
+          "x-ms-dataverse-attribute": "fullimagedata",
+          "x-ms-dataverse-type": "ImageType",
+          "x-ms-schema-name": "FullImageData"
+        },
+        "fullimageurl": {
+          "type": "string",
+          "title": "fullimageurl",
+          "x-ms-dataverse-attribute": "fullimageurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FullImageURL",
+          "maxLength": 256
+        },
+        "imagedata": {
+          "type": "string",
+          "title": "imagedata",
+          "x-ms-dataverse-attribute": "imagedata",
+          "x-ms-dataverse-type": "ImageType",
+          "x-ms-schema-name": "ImageData"
+        },
+        "imagedescription": {
+          "type": "string",
+          "title": "imagedescription",
+          "x-ms-dataverse-attribute": "imagedescription",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ImageDescription",
+          "maxLength": 512
+        },
+        "imagedescriptorid": {
+          "type": "string",
+          "title": "imagedescriptorid",
+          "x-ms-dataverse-attribute": "imagedescriptorid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ImageDescriptorId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "imagepixelheight": {
+          "type": "string",
+          "title": "imagepixelheight",
+          "x-ms-dataverse-attribute": "imagepixelheight",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImagePixelHeight"
+        },
+        "imagepixelwidth": {
+          "type": "string",
+          "title": "imagepixelwidth",
+          "x-ms-dataverse-attribute": "imagepixelwidth",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImagePixelWidth"
+        },
+        "imagetags": {
+          "type": "string",
+          "title": "imagetags",
+          "x-ms-dataverse-attribute": "imagetags",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ImageTags",
+          "maxLength": 512
+        },
+        "imagetimestamp": {
+          "type": "string",
+          "title": "imagetimestamp",
+          "x-ms-dataverse-attribute": "imagetimestamp",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "ImageTimestamp",
+          "x-ms-read-only": true
+        },
+        "imageurl": {
+          "type": "string",
+          "title": "imageurl",
+          "x-ms-dataverse-attribute": "imageurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ImageURL",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mimetype": {
+          "type": "string",
+          "title": "mimetype",
+          "x-ms-dataverse-attribute": "mimetype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "MimeType",
+          "maxLength": 256
+        },
+        "objectid": {
+          "type": "string",
+          "title": "objectid",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ObjectId",
+          "x-ms-read-only": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "x-ms-read-only": true
+        },
+        "size": {
+          "type": "string",
+          "title": "size",
+          "x-ms-dataverse-attribute": "size",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Size",
+          "x-ms-read-only": true
+        },
+        "title": {
+          "type": "string",
+          "title": "title",
+          "x-ms-dataverse-attribute": "title",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Title",
+          "maxLength": 200
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "versionnumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "imagedescriptorid"
+      ]
+    }
+  }
+}

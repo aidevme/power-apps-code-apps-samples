@@ -1,0 +1,38 @@
+{
+  "name": "availabletimesdatasource",
+  "title": "Available Times Data Sources",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "availabletimesdatasources",
+      "x-ms-dataverse-primary-id": "availabletimesdatasourceid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "availabletimesdatasourceid": {
+          "type": "string",
+          "title": "Available Times Data Source",
+          "x-ms-dataverse-attribute": "availabletimesdatasourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "availabletimesdatasourceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "availabletimesdatasourceid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "name": "sensitivitylabel",
+  "title": "Sensitivity Labels",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "sensitivitylabels",
+      "x-ms-dataverse-primary-id": "sensitivitylabelid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "applicableto": {
+          "type": "string",
+          "title": "Applicable To",
+          "x-ms-dataverse-attribute": "applicableto",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ApplicableTo",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "color": {
+          "type": "string",
+          "title": "Color",
+          "x-ms-dataverse-attribute": "color",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Color",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Description",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "displayname": {
+          "type": "string",
+          "title": "DisplayName",
+          "x-ms-dataverse-attribute": "displayname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DisplayName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "isdefault": {
+          "type": "string",
+          "title": "Is Default",
+          "x-ms-dataverse-attribute": "isdefault",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsDefault",
+          "x-ms-read-only": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "8317e0d2-3119-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Default",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isdefaultname": {
+          "type": "string",
+          "title": "isdefaultname",
+          "x-ms-dataverse-attribute": "isdefaultname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "isdefaultName",
+          "x-ms-read-only": true
+        },
+        "isenabled": {
+          "type": "string",
+          "title": "Is Enabled",
+          "x-ms-dataverse-attribute": "isenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsEnabled",
+          "x-ms-read-only": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "8617e0d2-3119-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Enabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isenabledname": {
+          "type": "string",
+          "title": "isenabledname",
+          "x-ms-dataverse-attribute": "isenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "isenabledName",
+          "x-ms-read-only": true
+        },
+        "labelactions": {
+          "type": "string",
+          "title": "Label Actions",
+          "x-ms-dataverse-attribute": "labelactions",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "LabelActions",
+          "x-ms-read-only": true,
+          "maxLength": 1073741823
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "parentsensitivitylabelid": {
+          "type": "string",
+          "title": "Parent Sensitivity Label Id",
+          "x-ms-dataverse-attribute": "parentsensitivitylabelid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ParentSensitivityLabelId",
+          "x-ms-read-only": true
+        },
+        "priority": {
+          "type": "string",
+          "title": "Priority",
+          "x-ms-dataverse-attribute": "priority",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Priority",
+          "x-ms-read-only": true
+        },
+        "sensitivitylabelid": {
+          "type": "string",
+          "title": "Sensitivity Label Id",
+          "x-ms-dataverse-attribute": "sensitivitylabelid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "sensitivitylabelId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "tooltip": {
+          "type": "string",
+          "title": "Tooltip",
+          "x-ms-dataverse-attribute": "tooltip",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Tooltip",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "sensitivitylabelid"
+      ]
+    }
+  }
+}

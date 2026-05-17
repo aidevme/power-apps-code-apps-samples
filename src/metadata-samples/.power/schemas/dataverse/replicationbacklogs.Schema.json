@@ -1,0 +1,107 @@
+{
+  "name": "replicationbacklog",
+  "title": "Replication Backlogs",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "replicationbacklogs",
+      "x-ms-dataverse-primary-id": "replicationbacklogid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "data": {
+          "type": "string",
+          "title": "Data",
+          "x-ms-dataverse-attribute": "data",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Data",
+          "x-ms-read-only": true,
+          "maxLength": 1073741823
+        },
+        "replicationbacklogid": {
+          "type": "string",
+          "title": "replicationbacklogid",
+          "x-ms-dataverse-attribute": "replicationbacklogid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ReplicationBacklogId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "replicationbacklogtype": {
+          "type": "string",
+          "title": "Replication Backlog Type",
+          "x-ms-dataverse-attribute": "replicationbacklogtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ReplicationBacklogType",
+          "x-ms-read-only": true,
+          "enum": [
+            "Create",
+            "Update",
+            "Delete"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "e8d4fd38-0750-4698-ba0f-1b63979cb19d",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Replication Backlog Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "replicationbacklogtypename": {
+          "type": "string",
+          "title": "replicationbacklogtypename",
+          "x-ms-dataverse-attribute": "replicationbacklogtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ReplicationBacklogTypeName",
+          "x-ms-read-only": true
+        },
+        "targetdatacenterid": {
+          "type": "string",
+          "title": "Target Data Center Id",
+          "x-ms-dataverse-attribute": "targetdatacenterid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "TargetDatacenterId",
+          "x-ms-read-only": true
+        },
+        "targetobjectid": {
+          "type": "string",
+          "title": "Target Object Id",
+          "x-ms-dataverse-attribute": "targetobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "TargetObjectId",
+          "x-ms-read-only": true
+        },
+        "targetobjectidname": {
+          "type": "string",
+          "title": "Target Object Name",
+          "x-ms-dataverse-attribute": "targetobjectidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "TargetObjectIdName",
+          "x-ms-read-only": true,
+          "maxLength": 425
+        },
+        "targetobjecttypecode": {
+          "type": "string",
+          "title": "Target Object Type Code",
+          "x-ms-dataverse-attribute": "targetobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "TargetObjectTypeCode",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "replicationbacklogid"
+      ]
+    }
+  }
+}

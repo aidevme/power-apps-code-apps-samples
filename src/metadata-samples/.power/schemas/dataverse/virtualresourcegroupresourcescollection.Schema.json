@@ -1,0 +1,88 @@
+{
+  "name": "virtualresourcegroupresource",
+  "title": "Virtual Resource Group Resources Collection",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "virtualresourcegroupresources",
+      "x-ms-dataverse-primary-id": "virtualresourcegroupresourceid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "businessunit": {
+          "type": "string",
+          "title": "Business Unit",
+          "x-ms-dataverse-attribute": "businessunit",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "businessunit",
+          "maxLength": 100
+        },
+        "constraintbasedgroupid": {
+          "type": "string",
+          "title": "constraintbasedgroupid",
+          "x-ms-dataverse-attribute": "constraintbasedgroupid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "constraintbasedgroupid",
+          "maxLength": 100
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "resourceentitylogicalname": {
+          "type": "string",
+          "title": "Entity type logical name",
+          "x-ms-dataverse-attribute": "resourceentitylogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "resourceentitylogicalname",
+          "maxLength": 100
+        },
+        "resourceentityname": {
+          "type": "string",
+          "title": "Entity Type",
+          "x-ms-dataverse-attribute": "resourceentityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "resourceentityname",
+          "maxLength": 100
+        },
+        "resourcegroupid": {
+          "type": "string",
+          "title": "resourcegroup",
+          "x-ms-dataverse-attribute": "resourcegroupid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "resourcegroupId"
+        },
+        "resourcegroupidname": {
+          "type": "string",
+          "title": "resourcegroupidname",
+          "x-ms-dataverse-attribute": "resourcegroupidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "resourcegroupIdName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "virtualresourcegroupresourceid": {
+          "type": "string",
+          "title": "virtualresourcegroupresource",
+          "x-ms-dataverse-attribute": "virtualresourcegroupresourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "virtualresourcegroupresourceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "name",
+        "virtualresourcegroupresourceid"
+      ]
+    }
+  }
+}

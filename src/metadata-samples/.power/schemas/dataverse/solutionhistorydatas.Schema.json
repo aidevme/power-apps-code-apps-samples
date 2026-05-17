@@ -1,0 +1,325 @@
+{
+  "name": "solutionhistorydata",
+  "title": "SolutionHistoryDatas",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "solutionhistories",
+      "x-ms-dataverse-primary-id": "solutionhistorydataid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "activityid": {
+          "type": "string",
+          "title": "The Activity Id",
+          "x-ms-dataverse-attribute": "activityid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ActivityId"
+        },
+        "correlationid": {
+          "type": "string",
+          "title": "The Correlation Id",
+          "x-ms-dataverse-attribute": "correlationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "CorrelationId"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 1073741823
+        },
+        "endtime": {
+          "type": "string",
+          "title": "End Time",
+          "x-ms-dataverse-attribute": "endtime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "EndTime"
+        },
+        "errorcode": {
+          "type": "string",
+          "title": "ErrorCode",
+          "x-ms-dataverse-attribute": "errorcode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ErrorCode"
+        },
+        "exceptionmessage": {
+          "type": "string",
+          "title": "ExceptionMessage",
+          "x-ms-dataverse-attribute": "exceptionmessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ExceptionMessage",
+          "maxLength": 1073741823
+        },
+        "exceptionstack": {
+          "type": "string",
+          "title": "ExceptionStack",
+          "x-ms-dataverse-attribute": "exceptionstack",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ExceptionStack",
+          "maxLength": 1073741823
+        },
+        "ismanaged": {
+          "type": "string",
+          "title": "Is Solution Managed",
+          "x-ms-dataverse-attribute": "ismanaged",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsManaged",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "5c9b7002-013c-42f7-b14c-543625cf2576",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Managed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismicrosoftpublisher": {
+          "type": "string",
+          "title": "Is Published by Microsoft",
+          "x-ms-dataverse-attribute": "ismicrosoftpublisher",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsMicrosoftPublisher",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "0ba7312d-c680-49c4-8f46-9d2f4a59753a",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Published by Microsoft",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isoverwritecustomizations": {
+          "type": "string",
+          "title": "Is Overwrite Customizations",
+          "x-ms-dataverse-attribute": "isoverwritecustomizations",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsOverwriteCustomizations",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "65bf73c7-3bc1-4c58-b0dc-b14656e7b60c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Overwrite Customizations",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ispatch": {
+          "type": "string",
+          "title": "Is Solution Patch",
+          "x-ms-dataverse-attribute": "ispatch",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsPatch",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "3c7bfd6c-a101-4649-b400-7d2b2038daf6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Patch",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "operation": {
+          "type": "string",
+          "title": "Operation",
+          "x-ms-dataverse-attribute": "operation",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "Operation",
+          "enum": [
+            "Import",
+            "Uninstall",
+            "Export"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "f7854625-7555-46fd-8ec0-331b5747c23a",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Operation",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "packagename": {
+          "type": "string",
+          "title": "PackageName",
+          "x-ms-dataverse-attribute": "packagename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PackageName",
+          "maxLength": 200
+        },
+        "packageversion": {
+          "type": "string",
+          "title": "PackageVersion",
+          "x-ms-dataverse-attribute": "packageversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PackageVersion",
+          "maxLength": 256
+        },
+        "publishername": {
+          "type": "string",
+          "title": "PublisherName",
+          "x-ms-dataverse-attribute": "publishername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PublisherName",
+          "maxLength": 512
+        },
+        "result": {
+          "type": "string",
+          "title": "Result",
+          "x-ms-dataverse-attribute": "result",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Result"
+        },
+        "solutionhistorydataid": {
+          "type": "string",
+          "title": "SolutionHistoryDataId",
+          "x-ms-dataverse-attribute": "solutionhistorydataid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionHistoryDataId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "The Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId"
+        },
+        "solutionname": {
+          "type": "string",
+          "title": "SolutionName",
+          "x-ms-dataverse-attribute": "solutionname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SolutionName",
+          "maxLength": 65
+        },
+        "solutionversion": {
+          "type": "string",
+          "title": "SolutionVersion",
+          "x-ms-dataverse-attribute": "solutionversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SolutionVersion",
+          "maxLength": 256
+        },
+        "starttime": {
+          "type": "string",
+          "title": "Start Time",
+          "x-ms-dataverse-attribute": "starttime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "StartTime",
+          "required": true
+        },
+        "status": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "status",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "Status",
+          "required": true,
+          "enum": [
+            "Start",
+            "End"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "118b2a15-6dc9-45c1-be17-c6d863e11bf6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "suboperation": {
+          "type": "string",
+          "title": "SubOperation",
+          "x-ms-dataverse-attribute": "suboperation",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "SubOperation",
+          "enum": [
+            "None",
+            "New",
+            "Upgrade",
+            "Update",
+            "Delete"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "16e4c18f-2077-4f48-a868-fbe4273925ea",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "SubOperation",
+          "x-ms-optionSetType": "Picklist"
+        }
+      },
+      "required": [
+        "ismanaged",
+        "isoverwritecustomizations",
+        "ispatch",
+        "solutionhistorydataid",
+        "starttime",
+        "status"
+      ]
+    }
+  }
+}

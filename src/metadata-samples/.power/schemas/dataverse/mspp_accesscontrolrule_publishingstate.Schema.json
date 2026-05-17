@@ -1,0 +1,58 @@
+{
+  "name": "mspp_accesscontrolrule_publishingstate",
+  "title": "mspp_accesscontrolrule_publishingstate",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mspp_accesscontrolrule_publishingstateset",
+      "x-ms-dataverse-primary-id": "mspp_accesscontrolrule_publishingstateid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "mspp_accesscontrolrule_publishingstateid": {
+          "type": "string",
+          "title": "mspp_accesscontrolrule_publishingstateid",
+          "x-ms-dataverse-attribute": "mspp_accesscontrolrule_publishingstateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_accesscontrolrule_publishingstateId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mspp_publishingstateid": {
+          "type": "string",
+          "title": "mspp_publishingstateid",
+          "x-ms-dataverse-attribute": "mspp_publishingstateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_publishingstateid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "mspp_webpageaccesscontrolruleid": {
+          "type": "string",
+          "title": "mspp_webpageaccesscontrolruleid",
+          "x-ms-dataverse-attribute": "mspp_webpageaccesscontrolruleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_webpageaccesscontrolruleid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "mspp_accesscontrolrule_publishingstateid",
+        "mspp_publishingstateid",
+        "mspp_webpageaccesscontrolruleid"
+      ]
+    }
+  }
+}

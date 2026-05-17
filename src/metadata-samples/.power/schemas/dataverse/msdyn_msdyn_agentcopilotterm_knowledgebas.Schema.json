@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_msdyn_agentcopilotterm_knowledgebas",
+  "title": "msdyn_msdyn_agentcopilotterm_knowledgebas",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_msdyn_agentcopilotterm_knowledgebasset",
+      "x-ms-dataverse-primary-id": "msdyn_msdyn_agentcopilotterm_knowledgebasid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "knowledgebaserecordid": {
+          "type": "string",
+          "title": "knowledgebaserecordid",
+          "x-ms-dataverse-attribute": "knowledgebaserecordid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "knowledgebaserecordid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_agentcopilottermid": {
+          "type": "string",
+          "title": "msdyn_agentcopilottermid",
+          "x-ms-dataverse-attribute": "msdyn_agentcopilottermid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_agentcopilottermid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_msdyn_agentcopilotterm_knowledgebasid": {
+          "type": "string",
+          "title": "msdyn_msdyn_agentcopilotterm_knowledgebasid",
+          "x-ms-dataverse-attribute": "msdyn_msdyn_agentcopilotterm_knowledgebasid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_msdyn_agentcopilotterm_knowledgebasId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "knowledgebaserecordid",
+        "msdyn_agentcopilottermid",
+        "msdyn_msdyn_agentcopilotterm_knowledgebasid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "name": "actioncardusersettings",
+  "title": "Action Card User Settings",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "actioncardusersettingsset",
+      "x-ms-dataverse-primary-id": "actioncardusersettingsid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "actioncardusersettingsid": {
+          "type": "string",
+          "title": "actioncardusersettingsid",
+          "x-ms-dataverse-attribute": "actioncardusersettingsid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ActionCardUserSettingsId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "boolcardoption": {
+          "type": "string",
+          "title": "Bolean option for a cardtype.",
+          "x-ms-dataverse-attribute": "boolcardoption",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "BoolCardOption",
+          "enum": [
+            "Uncheck",
+            "Check"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c95151ee-0b29-45f7-8dde-5788094edc4b",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Check this option",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "boolcardoptionname": {
+          "type": "string",
+          "title": "boolcardoptionname",
+          "x-ms-dataverse-attribute": "boolcardoptionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "BoolCardOptionName",
+          "x-ms-read-only": true
+        },
+        "cardtype": {
+          "type": "string",
+          "title": "CardType ENUM",
+          "x-ms-dataverse-attribute": "cardtype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "CardType",
+          "required": true
+        },
+        "cardtypeid": {
+          "type": "string",
+          "title": "card type",
+          "x-ms-dataverse-attribute": "cardtypeid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CardTypeId",
+          "required": true
+        },
+        "cardtypeidname": {
+          "type": "string",
+          "title": "cardtypeidname",
+          "x-ms-dataverse-attribute": "cardtypeidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CardTypeIdName",
+          "x-ms-read-only": true,
+          "maxLength": 256
+        },
+        "intcardoption": {
+          "type": "string",
+          "title": "Any int option for a cardtype.",
+          "x-ms-dataverse-attribute": "intcardoption",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "IntCardOption"
+        },
+        "isenabled": {
+          "type": "string",
+          "title": "Visibiliy Status of ActionCard",
+          "x-ms-dataverse-attribute": "isenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsEnabled",
+          "enum": [
+            "Disable",
+            "Enable"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "ab9c2e74-32d3-4e6c-bb87-aa6d98d4e0fc",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "card type user enabled Switch",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isenabledname": {
+          "type": "string",
+          "title": "isenabledname",
+          "x-ms-dataverse-attribute": "isenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsEnabledName",
+          "x-ms-read-only": true
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "stringcardoption": {
+          "type": "string",
+          "title": "Any string option for a cardtype.",
+          "x-ms-dataverse-attribute": "stringcardoption",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "StringCardOption",
+          "maxLength": 8192
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "actioncardusersettingsid",
+        "cardtype",
+        "cardtypeid",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame"
+      ]
+    }
+  }
+}

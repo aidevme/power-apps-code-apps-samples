@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_msdyn_functionallocation_account",
+  "title": "msdyn_msdyn_functionallocation_account",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_msdyn_functionallocation_accountset",
+      "x-ms-dataverse-primary-id": "msdyn_msdyn_functionallocation_accountid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "accountid": {
+          "type": "string",
+          "title": "accountid",
+          "x-ms-dataverse-attribute": "accountid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "accountid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_functionallocationid": {
+          "type": "string",
+          "title": "msdyn_functionallocationid",
+          "x-ms-dataverse-attribute": "msdyn_functionallocationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_functionallocationid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_msdyn_functionallocation_accountid": {
+          "type": "string",
+          "title": "msdyn_msdyn_functionallocation_accountid",
+          "x-ms-dataverse-attribute": "msdyn_msdyn_functionallocation_accountid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_msdyn_functionallocation_accountId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "accountid",
+        "msdyn_functionallocationid",
+        "msdyn_msdyn_functionallocation_accountid"
+      ]
+    }
+  }
+}

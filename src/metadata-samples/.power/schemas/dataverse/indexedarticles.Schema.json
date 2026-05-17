@@ -1,0 +1,246 @@
+{
+  "name": "documentindex",
+  "title": "Indexed Articles",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "documentindexes",
+      "x-ms-dataverse-primary-id": "documentindexid",
+      "x-ms-dataverse-primary-name": "title",
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "documentid": {
+          "type": "string",
+          "title": "Document",
+          "x-ms-dataverse-attribute": "documentid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "DocumentId",
+          "required": true
+        },
+        "documentindexid": {
+          "type": "string",
+          "title": "Document Index",
+          "x-ms-dataverse-attribute": "documentindexid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "DocumentIndexId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "documenttypecode": {
+          "type": "string",
+          "title": "Document Type ",
+          "x-ms-dataverse-attribute": "documenttypecode",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "DocumentTypeCode",
+          "required": true,
+          "enum": [
+            "Default Value"
+          ],
+          "x-ms-enum-values": [
+            1
+          ],
+          "Color": [
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b51ff9b7-20af-404e-b448-14a6d7d7542c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Document Type ",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "documenttypecodename": {
+          "type": "string",
+          "title": "documenttypecodename",
+          "x-ms-dataverse-attribute": "documenttypecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "DocumentTypeCodeName",
+          "x-ms-read-only": true
+        },
+        "islatestversion": {
+          "type": "string",
+          "title": "Is Latest Version",
+          "x-ms-dataverse-attribute": "islatestversion",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsLatestVersion",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "db3b6797-687d-4897-8c4b-e379ce92ff60",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Latest Version",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "islatestversionname": {
+          "type": "string",
+          "title": "islatestversionname",
+          "x-ms-dataverse-attribute": "islatestversionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsLatestVersionName",
+          "x-ms-read-only": true
+        },
+        "ispublished": {
+          "type": "string",
+          "title": "Is Published",
+          "x-ms-dataverse-attribute": "ispublished",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsPublished",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "ba592c84-32e4-4f7f-a054-29c4becda311",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Published",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ispublishedname": {
+          "type": "string",
+          "title": "ispublishedname",
+          "x-ms-dataverse-attribute": "ispublishedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsPublishedName",
+          "x-ms-read-only": true
+        },
+        "keywords": {
+          "type": "string",
+          "title": "Key Words",
+          "x-ms-dataverse-attribute": "keywords",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "KeyWords",
+          "maxLength": 100000
+        },
+        "location": {
+          "type": "string",
+          "title": "Location",
+          "x-ms-dataverse-attribute": "location",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Location",
+          "maxLength": 500
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "number": {
+          "type": "string",
+          "title": "Number",
+          "x-ms-dataverse-attribute": "number",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Number",
+          "maxLength": 100
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "searchtext": {
+          "type": "string",
+          "title": "Search Text",
+          "x-ms-dataverse-attribute": "searchtext",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "SearchText",
+          "maxLength": 5242880
+        },
+        "subjectid": {
+          "type": "string",
+          "title": "Subject",
+          "x-ms-dataverse-attribute": "subjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "SubjectId"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title",
+          "x-ms-dataverse-attribute": "title",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Title",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 500
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "documentid",
+        "documentindexid",
+        "documenttypecode",
+        "organizationid",
+        "title"
+      ]
+    }
+  }
+}

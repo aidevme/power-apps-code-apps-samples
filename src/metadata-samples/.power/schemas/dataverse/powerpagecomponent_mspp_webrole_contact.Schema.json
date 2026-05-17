@@ -1,0 +1,58 @@
+{
+  "name": "powerpagecomponent_mspp_webrole_contact",
+  "title": "powerpagecomponent_mspp_webrole_contact",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "powerpagecomponent_mspp_webrole_contactset",
+      "x-ms-dataverse-primary-id": "powerpagecomponent_mspp_webrole_contactid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "contactid": {
+          "type": "string",
+          "title": "contactid",
+          "x-ms-dataverse-attribute": "contactid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "contactid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "powerpagecomponent_mspp_webrole_contactid": {
+          "type": "string",
+          "title": "powerpagecomponent_mspp_webrole_contactid",
+          "x-ms-dataverse-attribute": "powerpagecomponent_mspp_webrole_contactid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "powerpagecomponent_mspp_webrole_contactId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "powerpagecomponentid": {
+          "type": "string",
+          "title": "powerpagecomponentid",
+          "x-ms-dataverse-attribute": "powerpagecomponentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "powerpagecomponentid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "contactid",
+        "powerpagecomponent_mspp_webrole_contactid",
+        "powerpagecomponentid"
+      ]
+    }
+  }
+}

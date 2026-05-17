@@ -1,0 +1,298 @@
+{
+  "name": "mobileofflineprofileitemfilter",
+  "title": "MobileOfflineProfileItemFilters",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mobileofflineprofileitemfilters",
+      "x-ms-dataverse-primary-id": "mobileofflineprofileitemfilterid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "fetchxml": {
+          "type": "string",
+          "title": "FetchXML",
+          "x-ms-dataverse-attribute": "fetchxml",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "fetchxml",
+          "required": true,
+          "maxLength": 1048576
+        },
+        "isactivity": {
+          "type": "string",
+          "title": "IsActivity",
+          "x-ms-dataverse-attribute": "isactivity",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsActivity",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "2ce84375-5419-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "IsActivity",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isactivityname": {
+          "type": "string",
+          "title": "isactivityname",
+          "x-ms-dataverse-attribute": "isactivityname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "isactivityName",
+          "x-ms-read-only": true
+        },
+        "isintersect": {
+          "type": "string",
+          "title": "IsIntersect",
+          "x-ms-dataverse-attribute": "isintersect",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsIntersect",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "2fe84375-5419-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "IsIntersect",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isintersectname": {
+          "type": "string",
+          "title": "isintersectname",
+          "x-ms-dataverse-attribute": "isintersectname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "isintersectName",
+          "x-ms-read-only": true
+        },
+        "mobileofflineprofileid": {
+          "type": "string",
+          "title": "MobileOfflineProfile",
+          "x-ms-dataverse-attribute": "mobileofflineprofileid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mobileofflineprofileid",
+          "required": true
+        },
+        "mobileofflineprofileidname": {
+          "type": "string",
+          "title": "mobileofflineprofileidname",
+          "x-ms-dataverse-attribute": "mobileofflineprofileidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mobileofflineprofileidName",
+          "x-ms-read-only": true,
+          "maxLength": 255
+        },
+        "mobileofflineprofileitemfilterid": {
+          "type": "string",
+          "title": "MobileOfflineProfileItemFilter",
+          "x-ms-dataverse-attribute": "mobileofflineprofileitemfilterid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mobileofflineprofileitemfilterId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mobileofflineprofileitemid": {
+          "type": "string",
+          "title": "MobileOfflineProfileItemId",
+          "x-ms-dataverse-attribute": "mobileofflineprofileitemid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mobileofflineprofileitemid"
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 64
+        },
+        "offlinesql": {
+          "type": "string",
+          "title": "OfflineSQL",
+          "x-ms-dataverse-attribute": "offlinesql",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "offlinesql",
+          "maxLength": 1048576
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "outerfetchXml": {
+          "type": "string",
+          "title": "OuterFetchXML",
+          "x-ms-dataverse-attribute": "outerfetchXml",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "outerFetchXml",
+          "maxLength": 1048576
+        },
+        "returnedtypecode": {
+          "type": "string",
+          "title": "ReturnedTypecode",
+          "x-ms-dataverse-attribute": "returnedtypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "returnedtypecode",
+          "required": true
+        },
+        "subtype": {
+          "type": "string",
+          "title": "Subtype",
+          "x-ms-dataverse-attribute": "subtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "subtype",
+          "enum": [
+            "CUD_IN",
+            "RELATED_CUD_IN",
+            "SHARED_IN",
+            "RELATED_SHARED_IN",
+            "CUD_OUT",
+            "FULL_SYNC",
+            "RELATED_ENTITIES",
+            "RELATED_INTERSECT_ENTITIES",
+            "RELATIONSHIP_CUD_IN",
+            "RELATIONSHIP_SHARED_IN",
+            "RELATIONSHIP_DELTA_IN",
+            "RELATIONSHIP_FULL_SYNC",
+            "RELATEDROWS_SELECTED_ENTITIES"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "Color": [
+            "#0000ff",
+            "#0010ff",
+            "#0020ff",
+            "#0030ff",
+            "#0040ff",
+            "#0050ff",
+            "#0060ff",
+            "#0070ff",
+            "#0080ff",
+            "#0090ff",
+            "#00a0ff",
+            "#00b0ff",
+            "#00c0ff"
+          ],
+          "x-ms-optionsetmetadataid": "26e84375-5419-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Subtype",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "subtypename": {
+          "type": "string",
+          "title": "subtypename",
+          "x-ms-dataverse-attribute": "subtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "subtypeName",
+          "x-ms-read-only": true
+        },
+        "type": {
+          "type": "string",
+          "title": "Type",
+          "x-ms-dataverse-attribute": "type",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "type",
+          "required": true,
+          "enum": [
+            "DELTA_IN",
+            "DELTA_OUT",
+            "FULL_SYNC",
+            "TOP_1",
+            "RELATED_ENTITIES"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "Color": [
+            "#0000ff",
+            "#0010ff",
+            "#0020ff",
+            "#0030ff",
+            "#0040ff"
+          ],
+          "x-ms-optionsetmetadataid": "29e84375-5419-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "typename": {
+          "type": "string",
+          "title": "typename",
+          "x-ms-dataverse-attribute": "typename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "typeName",
+          "x-ms-read-only": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "versionnumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "fetchxml",
+        "mobileofflineprofileid",
+        "mobileofflineprofileitemfilterid",
+        "returnedtypecode",
+        "type"
+      ]
+    }
+  }
+}

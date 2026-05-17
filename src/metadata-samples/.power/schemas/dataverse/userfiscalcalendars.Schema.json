@@ -1,0 +1,450 @@
+{
+  "name": "userfiscalcalendar",
+  "title": "User Fiscal Calendars",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "userfiscalcalendars",
+      "x-ms-dataverse-primary-id": "userfiscalcalendarid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "businessunitid": {
+          "type": "string",
+          "title": "businessunitid",
+          "x-ms-dataverse-attribute": "businessunitid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "BusinessUnitId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "businessunitidname": {
+          "type": "string",
+          "title": "businessunitidname",
+          "x-ms-dataverse-attribute": "businessunitidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BusinessUnitIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdby": {
+          "type": "string",
+          "title": "createdby",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "createdon",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "effectiveon": {
+          "type": "string",
+          "title": "effectiveon",
+          "x-ms-dataverse-attribute": "effectiveon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "EffectiveOn"
+        },
+        "exchangerate": {
+          "type": "string",
+          "title": "Exchange Rate",
+          "x-ms-dataverse-attribute": "exchangerate",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "ExchangeRate",
+          "x-ms-read-only": true
+        },
+        "fiscalperiodtype": {
+          "type": "string",
+          "title": "fiscalperiodtype",
+          "x-ms-dataverse-attribute": "fiscalperiodtype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FiscalPeriodType",
+          "x-ms-read-only": true
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "modifiedby",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "modifiedon",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "period1": {
+          "type": "string",
+          "title": "period1",
+          "x-ms-dataverse-attribute": "period1",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period1"
+        },
+        "period1_base": {
+          "type": "string",
+          "title": "period1_base",
+          "x-ms-dataverse-attribute": "period1_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period1_Base",
+          "x-ms-read-only": true
+        },
+        "period10": {
+          "type": "string",
+          "title": "period10",
+          "x-ms-dataverse-attribute": "period10",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period10"
+        },
+        "period10_base": {
+          "type": "string",
+          "title": "period10_base",
+          "x-ms-dataverse-attribute": "period10_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period10_Base",
+          "x-ms-read-only": true
+        },
+        "period11": {
+          "type": "string",
+          "title": "period11",
+          "x-ms-dataverse-attribute": "period11",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period11"
+        },
+        "period11_base": {
+          "type": "string",
+          "title": "period11_base",
+          "x-ms-dataverse-attribute": "period11_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period11_Base",
+          "x-ms-read-only": true
+        },
+        "period12": {
+          "type": "string",
+          "title": "period12",
+          "x-ms-dataverse-attribute": "period12",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period12"
+        },
+        "period12_base": {
+          "type": "string",
+          "title": "period12_base",
+          "x-ms-dataverse-attribute": "period12_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period12_Base",
+          "x-ms-read-only": true
+        },
+        "period13": {
+          "type": "string",
+          "title": "period13",
+          "x-ms-dataverse-attribute": "period13",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period13"
+        },
+        "period13_base": {
+          "type": "string",
+          "title": "period13_base",
+          "x-ms-dataverse-attribute": "period13_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period13_Base",
+          "x-ms-read-only": true
+        },
+        "period2": {
+          "type": "string",
+          "title": "period2",
+          "x-ms-dataverse-attribute": "period2",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period2"
+        },
+        "period2_base": {
+          "type": "string",
+          "title": "period2_base",
+          "x-ms-dataverse-attribute": "period2_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period2_Base",
+          "x-ms-read-only": true
+        },
+        "period3": {
+          "type": "string",
+          "title": "period3",
+          "x-ms-dataverse-attribute": "period3",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period3"
+        },
+        "period3_base": {
+          "type": "string",
+          "title": "period3_base",
+          "x-ms-dataverse-attribute": "period3_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period3_Base",
+          "x-ms-read-only": true
+        },
+        "period4": {
+          "type": "string",
+          "title": "period4",
+          "x-ms-dataverse-attribute": "period4",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period4"
+        },
+        "period4_base": {
+          "type": "string",
+          "title": "period4_base",
+          "x-ms-dataverse-attribute": "period4_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period4_Base",
+          "x-ms-read-only": true
+        },
+        "period5": {
+          "type": "string",
+          "title": "period5",
+          "x-ms-dataverse-attribute": "period5",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period5"
+        },
+        "period5_base": {
+          "type": "string",
+          "title": "period5_base",
+          "x-ms-dataverse-attribute": "period5_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period5_Base",
+          "x-ms-read-only": true
+        },
+        "period6": {
+          "type": "string",
+          "title": "period6",
+          "x-ms-dataverse-attribute": "period6",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period6"
+        },
+        "period6_base": {
+          "type": "string",
+          "title": "period6_base",
+          "x-ms-dataverse-attribute": "period6_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period6_Base",
+          "x-ms-read-only": true
+        },
+        "period7": {
+          "type": "string",
+          "title": "period7",
+          "x-ms-dataverse-attribute": "period7",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period7"
+        },
+        "period7_base": {
+          "type": "string",
+          "title": "period7_base",
+          "x-ms-dataverse-attribute": "period7_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period7_Base",
+          "x-ms-read-only": true
+        },
+        "period8": {
+          "type": "string",
+          "title": "period8",
+          "x-ms-dataverse-attribute": "period8",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period8"
+        },
+        "period8_base": {
+          "type": "string",
+          "title": "period8_base",
+          "x-ms-dataverse-attribute": "period8_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period8_Base",
+          "x-ms-read-only": true
+        },
+        "period9": {
+          "type": "string",
+          "title": "period9",
+          "x-ms-dataverse-attribute": "period9",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period9"
+        },
+        "period9_base": {
+          "type": "string",
+          "title": "period9_base",
+          "x-ms-dataverse-attribute": "period9_base",
+          "x-ms-dataverse-type": "MoneyType",
+          "x-ms-schema-name": "Period9_Base",
+          "x-ms-read-only": true
+        },
+        "salespersonid": {
+          "type": "string",
+          "title": "salespersonid",
+          "x-ms-dataverse-attribute": "salespersonid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "SalesPersonId"
+        },
+        "salespersonidname": {
+          "type": "string",
+          "title": "salespersonidname",
+          "x-ms-dataverse-attribute": "salespersonidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SalesPersonIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "salespersonidyominame": {
+          "type": "string",
+          "title": "salespersonidyominame",
+          "x-ms-dataverse-attribute": "salespersonidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SalesPersonIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "timezoneruleversionnumber",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "transactioncurrencyid": {
+          "type": "string",
+          "title": "Currency",
+          "x-ms-dataverse-attribute": "transactioncurrencyid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "TransactionCurrencyId"
+        },
+        "transactioncurrencyidname": {
+          "type": "string",
+          "title": "transactioncurrencyidname",
+          "x-ms-dataverse-attribute": "transactioncurrencyidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "TransactionCurrencyIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "userfiscalcalendarid": {
+          "type": "string",
+          "title": "userfiscalcalendarid",
+          "x-ms-dataverse-attribute": "userfiscalcalendarid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UserFiscalCalendarId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "utcconversiontimezonecode",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        }
+      },
+      "required": [
+        "businessunitid",
+        "businessunitidname",
+        "userfiscalcalendarid"
+      ]
+    }
+  }
+}

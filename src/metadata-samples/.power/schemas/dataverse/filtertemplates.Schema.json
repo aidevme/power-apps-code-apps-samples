@@ -1,0 +1,75 @@
+{
+  "name": "filtertemplate",
+  "title": "Filter Templates",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "filtertemplates",
+      "x-ms-dataverse-primary-id": "filtertemplateid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "description": {
+          "type": "string",
+          "title": "description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 2000
+        },
+        "fetchxml": {
+          "type": "string",
+          "title": "fetchxml",
+          "x-ms-dataverse-attribute": "fetchxml",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "FetchXml",
+          "required": true,
+          "maxLength": 1073741823
+        },
+        "filtertemplateid": {
+          "type": "string",
+          "title": "filtertemplateid",
+          "x-ms-dataverse-attribute": "filtertemplateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "FilterTemplateId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "name": {
+          "type": "string",
+          "title": "name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "required": true,
+          "maxLength": 100
+        },
+        "querytype": {
+          "type": "string",
+          "title": "querytype",
+          "x-ms-dataverse-attribute": "querytype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "QueryType",
+          "required": true
+        },
+        "returnedtypecode": {
+          "type": "string",
+          "title": "returnedtypecode",
+          "x-ms-dataverse-attribute": "returnedtypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ReturnedTypeCode",
+          "required": true
+        }
+      },
+      "required": [
+        "fetchxml",
+        "filtertemplateid",
+        "name",
+        "querytype",
+        "returnedtypecode"
+      ]
+    }
+  }
+}

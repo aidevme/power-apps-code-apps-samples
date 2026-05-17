@@ -1,0 +1,123 @@
+{
+  "name": "postrole",
+  "title": "Post Roles",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "postroles",
+      "x-ms-dataverse-primary-id": "postroleid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "organizationid": {
+          "type": "string",
+          "title": "Organization",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "postid": {
+          "type": "string",
+          "title": "Post",
+          "x-ms-dataverse-attribute": "postid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "PostId",
+          "required": true
+        },
+        "postidname": {
+          "type": "string",
+          "title": "postidname",
+          "x-ms-dataverse-attribute": "postidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PostIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "postroleid": {
+          "type": "string",
+          "title": "PostRoleId",
+          "x-ms-dataverse-attribute": "postroleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PostRoleId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "regardingobjectid": {
+          "type": "string",
+          "title": "RegardingObjectId",
+          "x-ms-dataverse-attribute": "regardingobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "RegardingObjectId",
+          "required": true
+        },
+        "regardingobjecttypecode": {
+          "type": "string",
+          "title": "RegardingObjectTypeCode",
+          "x-ms-dataverse-attribute": "regardingobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectTypeCode"
+        },
+        "type": {
+          "type": "string",
+          "title": "Post Role, Regarding, Mention, Topic, etc",
+          "x-ms-dataverse-attribute": "type",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "Type",
+          "required": true,
+          "enum": [
+            "Regarding",
+            "Mentioning",
+            "Mentioning And Regarding",
+            "Topic"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "08d9da0e-60a7-11e0-834f-1cc1de634cfe",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Post Role Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "typename": {
+          "type": "string",
+          "title": "typename",
+          "x-ms-dataverse-attribute": "typename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "TypeName",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "organizationid",
+        "organizationidname",
+        "postid",
+        "postroleid",
+        "regardingobjectid",
+        "type"
+      ]
+    }
+  }
+}

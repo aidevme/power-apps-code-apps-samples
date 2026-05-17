@@ -1,0 +1,890 @@
+{
+  "name": "msdyn_forecastconfiguration",
+  "title": "Forecast configurations",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_forecastconfigurations",
+      "x-ms-dataverse-primary-id": "msdyn_forecastconfigurationid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_addedweekindex": {
+          "type": "string",
+          "title": "addedWeekIndex",
+          "x-ms-dataverse-attribute": "msdyn_addedweekindex",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_addedWeekIndex"
+        },
+        "msdyn_additionalfilter": {
+          "type": "string",
+          "title": "Additional filters",
+          "x-ms-dataverse-attribute": "msdyn_additionalfilter",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_additionalfilter",
+          "maxLength": 1073741823
+        },
+        "msdyn_advancedsettings": {
+          "type": "string",
+          "title": "Settings",
+          "x-ms-dataverse-attribute": "msdyn_advancedsettings",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_advancedsettings",
+          "maxLength": 1073741823
+        },
+        "msdyn_calendartemplate": {
+          "type": "string",
+          "title": "Calendar Template",
+          "x-ms-dataverse-attribute": "msdyn_calendartemplate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_CalendarTemplate",
+          "enum": [
+            "4-4-5",
+            "4-5-4",
+            "5-4-4",
+            "Gregorian",
+            "Broadcast Calendar",
+            "3-3-3-4",
+            "3-3-4-3",
+            "3-4-3-3",
+            "4-3-3-3"
+          ],
+          "x-ms-enum-values": [
+            100000000,
+            100000001,
+            100000002,
+            100000003,
+            100000004,
+            100000005,
+            100000006,
+            100000007,
+            100000008
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "54a7556a-9d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Calendar Template",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_calendartemplatename": {
+          "type": "string",
+          "title": "msdyn_calendartemplatename",
+          "x-ms-dataverse-attribute": "msdyn_calendartemplatename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_calendartemplateName",
+          "x-ms-read-only": true
+        },
+        "msdyn_columns": {
+          "type": "string",
+          "title": "Columns",
+          "x-ms-dataverse-attribute": "msdyn_columns",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_columns",
+          "maxLength": 1073741823
+        },
+        "msdyn_enddate": {
+          "type": "string",
+          "title": "End Date",
+          "x-ms-dataverse-attribute": "msdyn_enddate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "msdyn_enddate",
+          "required": true
+        },
+        "msdyn_entitymetadata": {
+          "type": "string",
+          "title": "Entities metadata",
+          "x-ms-dataverse-attribute": "msdyn_entitymetadata",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_entitymetadata",
+          "maxLength": 1073741823
+        },
+        "msdyn_errormessage": {
+          "type": "string",
+          "title": "Error message",
+          "x-ms-dataverse-attribute": "msdyn_errormessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_errormessage",
+          "maxLength": 4000
+        },
+        "msdyn_fiscalyearstartdate": {
+          "type": "string",
+          "title": "Fiscal Year Start Date",
+          "x-ms-dataverse-attribute": "msdyn_fiscalyearstartdate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "msdyn_FiscalYearStartDate"
+        },
+        "msdyn_forecastcategoryattribute": {
+          "type": "string",
+          "title": "Forecast category attribute",
+          "x-ms-dataverse-attribute": "msdyn_forecastcategoryattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_forecastcategoryattribute",
+          "required": true,
+          "maxLength": 4000
+        },
+        "msdyn_forecastconfigurationid": {
+          "type": "string",
+          "title": "Forecast configuration id",
+          "x-ms-dataverse-attribute": "msdyn_forecastconfigurationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_forecastconfigurationId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_forecasttimezone": {
+          "type": "string",
+          "title": "Prefered timezone governing the scheduler of forecast snapshot",
+          "x-ms-dataverse-attribute": "msdyn_forecasttimezone",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_snapshottimezone",
+          "maxLength": 1000
+        },
+        "msdyn_hierarchyentity": {
+          "type": "string",
+          "title": "Hierarchy entity",
+          "x-ms-dataverse-attribute": "msdyn_hierarchyentity",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_hierarchyentity",
+          "required": true,
+          "maxLength": 4000
+        },
+        "msdyn_hierarchyfilter": {
+          "type": "string",
+          "title": "Hierarchy filters",
+          "x-ms-dataverse-attribute": "msdyn_hierarchyfilter",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_hierarchyfilter",
+          "maxLength": 1073741823
+        },
+        "msdyn_hierarchyrelationship": {
+          "type": "string",
+          "title": "Relationship",
+          "x-ms-dataverse-attribute": "msdyn_hierarchyrelationship",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_hierarchyrelationship",
+          "required": true,
+          "maxLength": 4000
+        },
+        "msdyn_isdefault": {
+          "type": "string",
+          "title": "Is Default",
+          "x-ms-dataverse-attribute": "msdyn_isdefault",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isdefault",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "57a7556a-9d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Default",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isdefaultname": {
+          "type": "string",
+          "title": "msdyn_isdefaultname",
+          "x-ms-dataverse-attribute": "msdyn_isdefaultname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isdefaultName",
+          "x-ms-read-only": true
+        },
+        "msdyn_issnapshotscheduled": {
+          "type": "string",
+          "title": "Enable Snapshot Scheduling",
+          "x-ms-dataverse-attribute": "msdyn_issnapshotscheduled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_issnapshotscheduled",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "51a7556a-9d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Snapshot Scheduling",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_issnapshotscheduledname": {
+          "type": "string",
+          "title": "msdyn_issnapshotscheduledname",
+          "x-ms-dataverse-attribute": "msdyn_issnapshotscheduledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_issnapshotscheduledName",
+          "x-ms-read-only": true
+        },
+        "msdyn_moneyattrcache": {
+          "type": "string",
+          "title": "Nested dictionary containing base column name for given money column name for every entity",
+          "x-ms-dataverse-attribute": "msdyn_moneyattrcache",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_moneyattrcache",
+          "maxLength": 1073741823
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "Forecast configuration name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_numberofrecurrences": {
+          "type": "string",
+          "title": "Number of recurrences",
+          "x-ms-dataverse-attribute": "msdyn_numberofrecurrences",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_numberofrecurrences",
+          "required": true
+        },
+        "msdyn_periodtype": {
+          "type": "string",
+          "title": "Forecast period",
+          "x-ms-dataverse-attribute": "msdyn_periodtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_periodtype",
+          "required": true,
+          "enum": [
+            "Monthly",
+            "Quarterly",
+            "Weekly",
+            "Annually"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            "#0000af",
+            "#0000bf",
+            "#0000cf",
+            "#0000df"
+          ],
+          "x-ms-optionsetmetadataid": "4ea7556a-9d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Forecast period",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_periodtypename": {
+          "type": "string",
+          "title": "msdyn_periodtypename",
+          "x-ms-dataverse-attribute": "msdyn_periodtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_periodtypeName",
+          "x-ms-read-only": true
+        },
+        "msdyn_permissionsdata": {
+          "type": "string",
+          "title": "Permissions",
+          "x-ms-dataverse-attribute": "msdyn_permissionsdata",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_permissionsdata",
+          "maxLength": 1073741823
+        },
+        "msdyn_pivots": {
+          "type": "string",
+          "title": "Pivots",
+          "x-ms-dataverse-attribute": "msdyn_pivots",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_pivots",
+          "maxLength": 1073741823
+        },
+        "msdyn_previewflags": {
+          "type": "string",
+          "title": "previewFlags",
+          "x-ms-dataverse-attribute": "msdyn_previewflags",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_previewFlags",
+          "maxLength": 1073741823
+        },
+        "msdyn_publisheddatetime": {
+          "type": "string",
+          "title": "Published date time",
+          "x-ms-dataverse-attribute": "msdyn_publisheddatetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "msdyn_publisheddatetime"
+        },
+        "msdyn_relatedentities": {
+          "type": "string",
+          "title": "Related entities",
+          "x-ms-dataverse-attribute": "msdyn_relatedentities",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_relatedentities",
+          "maxLength": 1073741823
+        },
+        "msdyn_rollupdefaultviewid": {
+          "type": "string",
+          "title": "Rollup entity default view",
+          "x-ms-dataverse-attribute": "msdyn_rollupdefaultviewid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_rollupdefaultviewid",
+          "maxLength": 4000
+        },
+        "msdyn_rollupentity": {
+          "type": "string",
+          "title": "Rollup entity",
+          "x-ms-dataverse-attribute": "msdyn_rollupentity",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_rollupentity",
+          "required": true,
+          "maxLength": 4000
+        },
+        "msdyn_rootentityrecordid": {
+          "type": "string",
+          "title": "Root record Id",
+          "x-ms-dataverse-attribute": "msdyn_rootentityrecordid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_rootentityrecordid",
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_snapshotschedule": {
+          "type": "string",
+          "title": "Schedule governing the forecast snapshot",
+          "x-ms-dataverse-attribute": "msdyn_snapshotschedule",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_snapshotschedule",
+          "maxLength": 100
+        },
+        "msdyn_startdate": {
+          "type": "string",
+          "title": "Start Date",
+          "x-ms-dataverse-attribute": "msdyn_startdate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "msdyn_startdate",
+          "required": true
+        },
+        "msdyn_startingfiscalmonth": {
+          "type": "string",
+          "title": "Starting Fiscal month",
+          "x-ms-dataverse-attribute": "msdyn_startingfiscalmonth",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_startingfiscalmonth",
+          "enum": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "45a7556a-9d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Starting Fiscal month",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_startingfiscalmonthname": {
+          "type": "string",
+          "title": "msdyn_startingfiscalmonthname",
+          "x-ms-dataverse-attribute": "msdyn_startingfiscalmonthname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_startingfiscalmonthName",
+          "x-ms-read-only": true
+        },
+        "msdyn_startingfiscalquarter": {
+          "type": "string",
+          "title": "Starting Fiscal quarter",
+          "x-ms-dataverse-attribute": "msdyn_startingfiscalquarter",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_startingfiscalquarter",
+          "enum": [
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "48a7556a-9d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Starting Fiscal quarter",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_startingfiscalquartername": {
+          "type": "string",
+          "title": "msdyn_startingfiscalquartername",
+          "x-ms-dataverse-attribute": "msdyn_startingfiscalquartername",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_startingfiscalquarterName",
+          "x-ms-read-only": true
+        },
+        "msdyn_startingfiscalyear": {
+          "type": "string",
+          "title": "Starting Fiscal year",
+          "x-ms-dataverse-attribute": "msdyn_startingfiscalyear",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_startingfiscalyear",
+          "enum": [
+            "FY2028",
+            "FY2027",
+            "FY2026",
+            "FY2025",
+            "FY2024",
+            "FY2023",
+            "FY2022",
+            "FY2021",
+            "FY2020",
+            "FY2019",
+            "FY2018"
+          ],
+          "x-ms-enum-values": [
+            10,
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "4ba7556a-9d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Starting Fiscal year",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_startingfiscalyearname": {
+          "type": "string",
+          "title": "msdyn_startingfiscalyearname",
+          "x-ms-dataverse-attribute": "msdyn_startingfiscalyearname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_startingfiscalyearName",
+          "x-ms-read-only": true
+        },
+        "msdyn_templatetype": {
+          "type": "string",
+          "title": "Template type",
+          "x-ms-dataverse-attribute": "msdyn_templatetype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_templatetype",
+          "maxLength": 4000
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "0aa7556a-9d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Draft",
+            "In progress",
+            "Active",
+            "Failed",
+            "Inactive",
+            "Archived",
+            "Invalidated",
+            "Reactivation in progress"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "14a7556a-9d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "msdyn_enddate",
+        "msdyn_forecastcategoryattribute",
+        "msdyn_forecastconfigurationid",
+        "msdyn_hierarchyentity",
+        "msdyn_hierarchyrelationship",
+        "msdyn_issnapshotscheduled",
+        "msdyn_name",
+        "msdyn_numberofrecurrences",
+        "msdyn_periodtype",
+        "msdyn_rollupentity",
+        "msdyn_rootentityrecordid",
+        "msdyn_startdate",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "owningbusinessunitname",
+        "statecode"
+      ]
+    }
+  }
+}

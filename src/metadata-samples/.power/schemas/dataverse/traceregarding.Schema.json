@@ -1,0 +1,97 @@
+{
+  "name": "traceregarding",
+  "title": "Trace Regarding",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "traceregardings",
+      "x-ms-dataverse-primary-id": "traceregardingid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "regardingobjectid": {
+          "type": "string",
+          "title": "Regarding",
+          "x-ms-dataverse-attribute": "regardingobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "RegardingObjectId"
+        },
+        "regardingobjectidname": {
+          "type": "string",
+          "title": "regardingobjectidname",
+          "x-ms-dataverse-attribute": "regardingobjectidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "regardingobjectidyominame": {
+          "type": "string",
+          "title": "regardingobjectidyominame",
+          "x-ms-dataverse-attribute": "regardingobjectidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "regardingobjectownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "regardingobjectownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "RegardingObjectOwnerId",
+          "required": true
+        },
+        "regardingobjectowneridtype": {
+          "type": "string",
+          "title": "Owner Type",
+          "x-ms-dataverse-attribute": "regardingobjectowneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectOwnerIdType"
+        },
+        "regardingobjectowningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "regardingobjectowningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "RegardingObjectOwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "regardingobjecttypecode": {
+          "type": "string",
+          "title": "Regarding Object Type",
+          "x-ms-dataverse-attribute": "regardingobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectTypeCode",
+          "required": true
+        },
+        "regardingobjecttypecodeforsharing": {
+          "type": "string",
+          "title": "Regarding Object Type For Sharing",
+          "x-ms-dataverse-attribute": "regardingobjecttypecodeforsharing",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectTypeCodeForSharing",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "traceregardingid": {
+          "type": "string",
+          "title": "Trace Regarding",
+          "x-ms-dataverse-attribute": "traceregardingid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "TraceRegardingId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "regardingobjectownerid",
+        "regardingobjecttypecode",
+        "regardingobjecttypecodeforsharing",
+        "traceregardingid"
+      ]
+    }
+  }
+}

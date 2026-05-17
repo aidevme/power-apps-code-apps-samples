@@ -1,0 +1,641 @@
+{
+  "name": "recurrencerule",
+  "title": "Recurrence Rules",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "recurrencerules",
+      "x-ms-dataverse-primary-id": "ruleid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "dayofmonth": {
+          "type": "string",
+          "title": "Day Of Month",
+          "x-ms-dataverse-attribute": "dayofmonth",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DayOfMonth"
+        },
+        "daysofweekmask": {
+          "type": "string",
+          "title": "Days Of Week Mask",
+          "x-ms-dataverse-attribute": "daysofweekmask",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DaysOfWeekMask"
+        },
+        "duration": {
+          "type": "string",
+          "title": "Duration",
+          "x-ms-dataverse-attribute": "duration",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Duration"
+        },
+        "effectiveenddate": {
+          "type": "string",
+          "title": "Effective End Date",
+          "x-ms-dataverse-attribute": "effectiveenddate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "EffectiveEndDate"
+        },
+        "effectivestartdate": {
+          "type": "string",
+          "title": "Effective Start Date",
+          "x-ms-dataverse-attribute": "effectivestartdate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "EffectiveStartDate"
+        },
+        "endtime": {
+          "type": "string",
+          "title": "End Time",
+          "x-ms-dataverse-attribute": "endtime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "EndTime"
+        },
+        "firstdayofweek": {
+          "type": "string",
+          "title": "First Day Of Week",
+          "x-ms-dataverse-attribute": "firstdayofweek",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FirstDayOfWeek"
+        },
+        "instance": {
+          "type": "string",
+          "title": "Instance",
+          "x-ms-dataverse-attribute": "instance",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "Instance",
+          "enum": [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Last"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "be78c7aa-5115-40af-b196-b215b9d905ed",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Instance",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "instancename": {
+          "type": "string",
+          "title": "instancename",
+          "x-ms-dataverse-attribute": "instancename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "InstanceName",
+          "x-ms-read-only": true
+        },
+        "interval": {
+          "type": "string",
+          "title": "Interval",
+          "x-ms-dataverse-attribute": "interval",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Interval"
+        },
+        "isnthmonthly": {
+          "type": "string",
+          "title": "Nth Monthly",
+          "x-ms-dataverse-attribute": "isnthmonthly",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsNthMonthly",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "8a79ebbb-1a40-4df8-9e36-8e763af7c054",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Nth Monthly",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isnthmonthlyname": {
+          "type": "string",
+          "title": "isnthmonthlyname",
+          "x-ms-dataverse-attribute": "isnthmonthlyname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsNthMonthlyName",
+          "x-ms-read-only": true
+        },
+        "isnthyearly": {
+          "type": "string",
+          "title": "Nth Yearly",
+          "x-ms-dataverse-attribute": "isnthyearly",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsNthYearly",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "78b24e15-2de7-40b5-ae3e-5b50c3fef3da",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Nth Yearly",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isnthyearlyname": {
+          "type": "string",
+          "title": "isnthyearlyname",
+          "x-ms-dataverse-attribute": "isnthyearlyname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsNthYearlyName",
+          "x-ms-read-only": true
+        },
+        "isregenerate": {
+          "type": "string",
+          "title": "Regenerate",
+          "x-ms-dataverse-attribute": "isregenerate",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsRegenerate",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9ba90782-eb4a-4649-af3a-2aed0eee20de",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Regenerate",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isregeneratename": {
+          "type": "string",
+          "title": "isregeneratename",
+          "x-ms-dataverse-attribute": "isregeneratename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsRegenerateName",
+          "x-ms-read-only": true
+        },
+        "isweekdaypattern": {
+          "type": "string",
+          "title": "Every Weekday",
+          "x-ms-dataverse-attribute": "isweekdaypattern",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsWeekDayPattern",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "f56fd014-5020-4a26-91e1-64887cb73b7c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Every Weekday",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isweekdaypatternname": {
+          "type": "string",
+          "title": "isweekdaypatternname",
+          "x-ms-dataverse-attribute": "isweekdaypatternname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsWeekDayPatternName",
+          "x-ms-read-only": true
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "monthofyear": {
+          "type": "string",
+          "title": "Month Of Year",
+          "x-ms-dataverse-attribute": "monthofyear",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "MonthOfYear",
+          "enum": [
+            "Invalid Month Of Year",
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "f6cb721a-cafb-4948-9c6e-ee8a3ad10a66",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "MonthOfYear",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "monthofyearname": {
+          "type": "string",
+          "title": "monthofyearname",
+          "x-ms-dataverse-attribute": "monthofyearname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "MonthOfYearName",
+          "x-ms-read-only": true
+        },
+        "objectid": {
+          "type": "string",
+          "title": "Regarding",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ObjectId"
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "Object Type ",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode"
+        },
+        "occurrences": {
+          "type": "string",
+          "title": "Occurrences",
+          "x-ms-dataverse-attribute": "occurrences",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Occurrences"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "patternenddate": {
+          "type": "string",
+          "title": "Recurrence Range End",
+          "x-ms-dataverse-attribute": "patternenddate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "PatternEndDate"
+        },
+        "patternendtype": {
+          "type": "string",
+          "title": "Pattern End Type",
+          "x-ms-dataverse-attribute": "patternendtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "PatternEndType",
+          "required": true,
+          "enum": [
+            "No End Date",
+            "Occurrences",
+            "Pattern End Date"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "647a3d12-fc42-41f6-9755-51db84fbaacc",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Pattern End Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "patternendtypename": {
+          "type": "string",
+          "title": "patternendtypename",
+          "x-ms-dataverse-attribute": "patternendtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "PatternEndTypeName",
+          "x-ms-read-only": true
+        },
+        "patternstartdate": {
+          "type": "string",
+          "title": "Recurrence Range Start",
+          "x-ms-dataverse-attribute": "patternstartdate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "PatternStartDate",
+          "required": true
+        },
+        "recurrencepatterntype": {
+          "type": "string",
+          "title": "Recurrence Pattern",
+          "x-ms-dataverse-attribute": "recurrencepatterntype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "RecurrencePatternType",
+          "required": true,
+          "enum": [
+            "Daily",
+            "Weekly",
+            "Monthly",
+            "Yearly"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "acc48838-bcdc-4e7b-b452-4650cf69426f",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Recurrence Pattern",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "recurrencepatterntypename": {
+          "type": "string",
+          "title": "recurrencepatterntypename",
+          "x-ms-dataverse-attribute": "recurrencepatterntypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "RecurrencePatternTypeName",
+          "x-ms-read-only": true
+        },
+        "ruleid": {
+          "type": "string",
+          "title": "Recurrence Rule",
+          "x-ms-dataverse-attribute": "ruleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RuleId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "starttime": {
+          "type": "string",
+          "title": "Start Time",
+          "x-ms-dataverse-attribute": "starttime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "StartTime"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "isnthmonthly",
+        "isnthyearly",
+        "isregenerate",
+        "isweekdaypattern",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "patternendtype",
+        "patternstartdate",
+        "recurrencepatterntype",
+        "ruleid"
+      ]
+    }
+  }
+}

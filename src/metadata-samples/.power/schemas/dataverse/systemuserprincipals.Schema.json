@@ -1,0 +1,55 @@
+{
+  "name": "systemuserprincipals",
+  "title": "System User Principals",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "systemuserprincipalsset",
+      "x-ms-dataverse-primary-id": "systemuserprincipalid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "principalid": {
+          "type": "string",
+          "title": "principalid",
+          "x-ms-dataverse-attribute": "principalid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PrincipalId",
+          "required": true
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "systemuserid",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SystemUserId",
+          "required": true
+        },
+        "systemuserprincipalid": {
+          "type": "string",
+          "title": "systemuserprincipalid",
+          "x-ms-dataverse-attribute": "systemuserprincipalid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SystemUserPrincipalId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "principalid",
+        "systemuserid",
+        "systemuserprincipalid"
+      ]
+    }
+  }
+}

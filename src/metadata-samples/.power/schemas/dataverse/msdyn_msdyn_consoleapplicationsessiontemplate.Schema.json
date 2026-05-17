@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_msdyn_consoleapplicationsessiontemplate",
+  "title": "msdyn_msdyn_consoleapplicationsessiontemplate",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_msdyn_consoleapplicationsessiontemplateset",
+      "x-ms-dataverse-primary-id": "msdyn_msdyn_consoleapplicationsessiontemplateid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_consoleapplicationsessiontemplateid": {
+          "type": "string",
+          "title": "msdyn_consoleapplicationsessiontemplateid",
+          "x-ms-dataverse-attribute": "msdyn_consoleapplicationsessiontemplateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_consoleapplicationsessiontemplateid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_consoleapplicationtemplateid": {
+          "type": "string",
+          "title": "msdyn_consoleapplicationtemplateid",
+          "x-ms-dataverse-attribute": "msdyn_consoleapplicationtemplateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_consoleapplicationtemplateid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_msdyn_consoleapplicationsessiontemplateid": {
+          "type": "string",
+          "title": "msdyn_msdyn_consoleapplicationsessiontemplateid",
+          "x-ms-dataverse-attribute": "msdyn_msdyn_consoleapplicationsessiontemplateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_msdyn_consoleapplicationsessiontemplateId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_consoleapplicationsessiontemplateid",
+        "msdyn_consoleapplicationtemplateid",
+        "msdyn_msdyn_consoleapplicationsessiontemplateid"
+      ]
+    }
+  }
+}

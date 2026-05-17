@@ -1,0 +1,165 @@
+{
+  "name": "workflowwaitsubscription",
+  "title": "Workflow Wait Subscriptions",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "workflowwaitsubscriptions",
+      "x-ms-dataverse-primary-id": "workflowwaitsubscriptionid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "asyncoperationid": {
+          "type": "string",
+          "title": "asyncoperationid",
+          "x-ms-dataverse-attribute": "asyncoperationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "AsyncOperationId",
+          "required": true
+        },
+        "data": {
+          "type": "string",
+          "title": "data",
+          "x-ms-dataverse-attribute": "data",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "Data",
+          "maxLength": 1073741823
+        },
+        "entityid": {
+          "type": "string",
+          "title": "entityid",
+          "x-ms-dataverse-attribute": "entityid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "EntityId",
+          "required": true
+        },
+        "entityname": {
+          "type": "string",
+          "title": "entityname",
+          "x-ms-dataverse-attribute": "entityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EntityName",
+          "required": true,
+          "maxLength": 128
+        },
+        "isdeleted": {
+          "type": "string",
+          "title": "isdeleted",
+          "x-ms-dataverse-attribute": "isdeleted",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsDeleted",
+          "x-ms-read-only": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "bb3e153a-5ea3-4f2f-bcba-e0a368da142b",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismodified": {
+          "type": "string",
+          "title": "ismodified",
+          "x-ms-dataverse-attribute": "ismodified",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsModified",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "3f9b50fb-c45b-4923-a830-1e3eab22411c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "modifiedon",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "owningbusinessunit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "owninguser",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "waitonattributelist": {
+          "type": "string",
+          "title": "Wait On Attribute List",
+          "x-ms-dataverse-attribute": "waitonattributelist",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "WaitOnAttributeList",
+          "maxLength": 100000
+        },
+        "workflowwaitsubscriptionid": {
+          "type": "string",
+          "title": "workflowwaitsubscriptionid",
+          "x-ms-dataverse-attribute": "workflowwaitsubscriptionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "WorkflowWaitSubscriptionId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "asyncoperationid",
+        "entityid",
+        "entityname",
+        "ismodified",
+        "ownerid",
+        "owneridtype",
+        "workflowwaitsubscriptionid"
+      ]
+    }
+  }
+}

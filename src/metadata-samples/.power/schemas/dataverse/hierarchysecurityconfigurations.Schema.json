@@ -1,0 +1,55 @@
+{
+  "name": "hierarchysecurityconfiguration",
+  "title": "Hierarchy Security Configurations",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "hierarchysecurityconfigurations",
+      "x-ms-dataverse-primary-id": "hierarchysecuritymodelingsettingid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "entityname": {
+          "type": "string",
+          "title": "Entity Name",
+          "x-ms-dataverse-attribute": "entityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EntityName",
+          "required": true,
+          "maxLength": 128
+        },
+        "hierarchysecuritymodelingsettingid": {
+          "type": "string",
+          "title": "hierarchysecuritymodelingsettingid",
+          "x-ms-dataverse-attribute": "hierarchysecuritymodelingsettingid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "HierarchySecurityModelingSettingId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber"
+        }
+      },
+      "required": [
+        "entityname",
+        "hierarchysecuritymodelingsettingid",
+        "objecttypecode"
+      ]
+    }
+  }
+}

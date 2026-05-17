@@ -1,0 +1,50 @@
+{
+  "name": "queuemembercount",
+  "title": "QueueMemberCounts",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "queuemembercounts",
+      "x-ms-dataverse-primary-id": "queuemembercountid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "queueid": {
+          "type": "string",
+          "title": "queueid",
+          "x-ms-dataverse-attribute": "queueid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "QueueId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "queuemembercount": {
+          "type": "string",
+          "title": "queuemembercount",
+          "x-ms-dataverse-attribute": "queuemembercount",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "QueueMemberCount",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "queuemembercountid": {
+          "type": "string",
+          "title": "queuemembercountid",
+          "x-ms-dataverse-attribute": "queuemembercountid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "QueueMemberCountId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "queueid",
+        "queuemembercount",
+        "queuemembercountid"
+      ]
+    }
+  }
+}

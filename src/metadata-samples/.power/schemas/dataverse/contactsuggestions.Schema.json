@@ -1,0 +1,174 @@
+{
+  "name": "msdyn_suggestedcontact",
+  "title": "Contact Suggestions",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_suggestedcontacts",
+      "x-ms-dataverse-primary-id": "msdyn_suggestedcontactid",
+      "x-ms-dataverse-primary-name": "msdyn_fullname",
+      "properties": {
+        "msdyn_accountid": {
+          "type": "string",
+          "title": "Account Name",
+          "x-ms-dataverse-attribute": "msdyn_accountid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_accountid"
+        },
+        "msdyn_accountidname": {
+          "type": "string",
+          "title": "Account Name",
+          "x-ms-dataverse-attribute": "msdyn_accountidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_accountidname",
+          "maxLength": 100
+        },
+        "msdyn_accountname": {
+          "type": "string",
+          "title": "Account Name",
+          "x-ms-dataverse-attribute": "msdyn_accountname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_accountname",
+          "maxLength": 100
+        },
+        "msdyn_addresscity": {
+          "type": "string",
+          "title": "Address City",
+          "x-ms-dataverse-attribute": "msdyn_addresscity",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_addresscity",
+          "maxLength": 100
+        },
+        "msdyn_addressline1": {
+          "type": "string",
+          "title": "AddressLine1",
+          "x-ms-dataverse-attribute": "msdyn_addressline1",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_addressline1",
+          "maxLength": 100
+        },
+        "msdyn_addressline2": {
+          "type": "string",
+          "title": "AddressLine2",
+          "x-ms-dataverse-attribute": "msdyn_addressline2",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_addressline2",
+          "maxLength": 100
+        },
+        "msdyn_addresspostalcode": {
+          "type": "string",
+          "title": "Address Postal Code",
+          "x-ms-dataverse-attribute": "msdyn_addresspostalcode",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_addresspostalcode",
+          "maxLength": 100
+        },
+        "msdyn_companyname": {
+          "type": "string",
+          "title": "Company Name",
+          "x-ms-dataverse-attribute": "msdyn_companyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_companyname",
+          "maxLength": 100
+        },
+        "msdyn_createdon": {
+          "type": "string",
+          "title": "Date",
+          "x-ms-dataverse-attribute": "msdyn_createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "msdyn_createdon"
+        },
+        "msdyn_description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "msdyn_description",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_description",
+          "maxLength": 100
+        },
+        "msdyn_email": {
+          "type": "string",
+          "title": "Email",
+          "x-ms-dataverse-attribute": "msdyn_email",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_email",
+          "maxLength": 100
+        },
+        "msdyn_firstname": {
+          "type": "string",
+          "title": "First Name",
+          "x-ms-dataverse-attribute": "msdyn_firstname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_firstname",
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_fullname": {
+          "type": "string",
+          "title": "Full Name",
+          "x-ms-dataverse-attribute": "msdyn_fullname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_fullname",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 250
+        },
+        "msdyn_jobtitle": {
+          "type": "string",
+          "title": "Job Title",
+          "x-ms-dataverse-attribute": "msdyn_jobtitle",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_jobtitle",
+          "maxLength": 100
+        },
+        "msdyn_lastname": {
+          "type": "string",
+          "title": "Last Name",
+          "x-ms-dataverse-attribute": "msdyn_lastname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_lastname",
+          "maxLength": 100
+        },
+        "msdyn_mobilephone": {
+          "type": "string",
+          "title": "Mobile Phone",
+          "x-ms-dataverse-attribute": "msdyn_mobilephone",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_mobilephone",
+          "maxLength": 100
+        },
+        "msdyn_preferredcontactmethodcode": {
+          "type": "string",
+          "title": "Preferred Contact Method Code",
+          "x-ms-dataverse-attribute": "msdyn_preferredcontactmethodcode",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_preferredcontactmethodcode",
+          "maxLength": 100
+        },
+        "msdyn_suggestedcontactid": {
+          "type": "string",
+          "title": "Suggested Contact",
+          "x-ms-dataverse-attribute": "msdyn_suggestedcontactid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_suggestedcontactId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_telephone": {
+          "type": "string",
+          "title": "Telephone",
+          "x-ms-dataverse-attribute": "msdyn_telephone",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_telephone",
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "msdyn_firstname",
+        "msdyn_suggestedcontactid"
+      ]
+    }
+  }
+}

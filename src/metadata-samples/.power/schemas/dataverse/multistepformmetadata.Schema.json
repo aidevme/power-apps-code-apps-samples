@@ -1,0 +1,1034 @@
+{
+  "name": "mspp_webformmetadata",
+  "title": "Multistep Form Metadata",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mspp_webformmetadatas",
+      "x-ms-dataverse-primary-id": "mspp_webformmetadataid",
+      "x-ms-dataverse-primary-name": "mspp_attributelogicalname",
+      "properties": {
+        "mspp_adddescription": {
+          "type": "string",
+          "title": "Add Description",
+          "x-ms-dataverse-attribute": "mspp_adddescription",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_adddescription",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "c6263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Add Description",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_adddescriptionname": {
+          "type": "string",
+          "title": "mspp_adddescriptionname",
+          "x-ms-dataverse-attribute": "mspp_adddescriptionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_adddescriptionName",
+          "x-ms-read-only": true
+        },
+        "mspp_attributelogicalname": {
+          "type": "string",
+          "title": "Attribute Logical Name",
+          "x-ms-dataverse-attribute": "mspp_attributelogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_attributelogicalname",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "mspp_constantsummaximumtotal": {
+          "type": "string",
+          "title": "Constant Sum Maximum Total",
+          "x-ms-dataverse-attribute": "mspp_constantsummaximumtotal",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_constantsummaximumtotal"
+        },
+        "mspp_constantsumminimumtotal": {
+          "type": "string",
+          "title": "Constant Sum Minimum Total",
+          "x-ms-dataverse-attribute": "mspp_constantsumminimumtotal",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_constantsumminimumtotal"
+        },
+        "mspp_constantsumvalidationerrormessage": {
+          "type": "string",
+          "title": "Constant Sum Validation Error Message",
+          "x-ms-dataverse-attribute": "mspp_constantsumvalidationerrormessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_constantsumvalidationerrormessage",
+          "maxLength": 4000
+        },
+        "mspp_controlstyle": {
+          "type": "string",
+          "title": "Control Style",
+          "x-ms-dataverse-attribute": "mspp_controlstyle",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_controlstyle",
+          "enum": [
+            "Group Whole Number as Constant Sum",
+            "Group Whole Number as Rank Order Scale Allow Ties",
+            "Group Whole Number as Rank Order Scale No Ties",
+            "Group Whole Number as Stack Rank",
+            "Multiple Choice",
+            "Multiple Choice Matrix",
+            "Option Set as Horizontal Radio Button List",
+            "Option Set as Vertical Radio Button List",
+            "Render Lookup as Dropdown",
+            "Code component",
+            "Single Line of Text as Geolocation Lookup Validator"
+          ],
+          "x-ms-enum-values": [
+            100000003,
+            100000005,
+            100000004,
+            100000008,
+            100000007,
+            100000006,
+            100000001,
+            100000000,
+            756150000,
+            756150001,
+            100000002
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "c9263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Control Style",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_controlstylename": {
+          "type": "string",
+          "title": "mspp_controlstylename",
+          "x-ms-dataverse-attribute": "mspp_controlstylename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_controlstyleName",
+          "x-ms-read-only": true
+        },
+        "mspp_createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "mspp_createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_createdby"
+        },
+        "mspp_createdbyname": {
+          "type": "string",
+          "title": "mspp_createdbyname",
+          "x-ms-dataverse-attribute": "mspp_createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_createdbyyominame": {
+          "type": "string",
+          "title": "mspp_createdbyyominame",
+          "x-ms-dataverse-attribute": "mspp_createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "mspp_createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_createdon"
+        },
+        "mspp_cssclass": {
+          "type": "string",
+          "title": "CSS Class",
+          "x-ms-dataverse-attribute": "mspp_cssclass",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_cssclass",
+          "maxLength": 100
+        },
+        "mspp_description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "mspp_description",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_description",
+          "maxLength": 10000
+        },
+        "mspp_descriptionposition": {
+          "type": "string",
+          "title": "Position",
+          "x-ms-dataverse-attribute": "mspp_descriptionposition",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_descriptionposition",
+          "enum": [
+            "Above the field",
+            "Below the field",
+            "Above the label"
+          ],
+          "x-ms-enum-values": [
+            100000000,
+            100000001,
+            100000002
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "cc263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Position",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_descriptionpositionname": {
+          "type": "string",
+          "title": "mspp_descriptionpositionname",
+          "x-ms-dataverse-attribute": "mspp_descriptionpositionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_descriptionpositionName",
+          "x-ms-read-only": true
+        },
+        "mspp_entityformforcreate": {
+          "type": "string",
+          "title": "Basic Form for Create",
+          "x-ms-dataverse-attribute": "mspp_entityformforcreate",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_entityformforcreate"
+        },
+        "mspp_entityformforcreateinwebformmetadata": {
+          "type": "string",
+          "title": "Basic Form for Create",
+          "x-ms-dataverse-attribute": "mspp_entityformforcreateinwebformmetadata",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_entityformforcreateinwebformmetadata"
+        },
+        "mspp_entityformforcreateinwebformmetadataname": {
+          "type": "string",
+          "title": "mspp_entityformforcreateinwebformmetadataname",
+          "x-ms-dataverse-attribute": "mspp_entityformforcreateinwebformmetadataname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_entityformforcreateinwebformmetadataName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_entityformforcreatename": {
+          "type": "string",
+          "title": "mspp_entityformforcreatename",
+          "x-ms-dataverse-attribute": "mspp_entityformforcreatename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_entityformforcreateName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_fieldisrequired": {
+          "type": "string",
+          "title": "Field is Required",
+          "x-ms-dataverse-attribute": "mspp_fieldisrequired",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_fieldisrequired",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "cf263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Field is Required",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_fieldisrequiredname": {
+          "type": "string",
+          "title": "mspp_fieldisrequiredname",
+          "x-ms-dataverse-attribute": "mspp_fieldisrequiredname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_fieldisrequiredName",
+          "x-ms-read-only": true
+        },
+        "mspp_geolocationvalidatorerrormessage": {
+          "type": "string",
+          "title": "Geolocation Validator Error Message",
+          "x-ms-dataverse-attribute": "mspp_geolocationvalidatorerrormessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_geolocationvalidatorerrormessage",
+          "maxLength": 4000
+        },
+        "mspp_groupname": {
+          "type": "string",
+          "title": "Group Name",
+          "x-ms-dataverse-attribute": "mspp_groupname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_groupname",
+          "maxLength": 100
+        },
+        "mspp_ignoredefaultvalue": {
+          "type": "string",
+          "title": "Ignore Default Value",
+          "x-ms-dataverse-attribute": "mspp_ignoredefaultvalue",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_ignoredefaultvalue",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "d2263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Ignore Default Value",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_ignoredefaultvaluename": {
+          "type": "string",
+          "title": "mspp_ignoredefaultvaluename",
+          "x-ms-dataverse-attribute": "mspp_ignoredefaultvaluename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_ignoredefaultvalueName",
+          "x-ms-read-only": true
+        },
+        "mspp_label": {
+          "type": "string",
+          "title": "Label",
+          "x-ms-dataverse-attribute": "mspp_label",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_label",
+          "maxLength": 10000
+        },
+        "mspp_maxmultiplechoiceselectedcount": {
+          "type": "string",
+          "title": "Multiple Choice Max Selected Count",
+          "x-ms-dataverse-attribute": "mspp_maxmultiplechoiceselectedcount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_maxmultiplechoiceselectedcount"
+        },
+        "mspp_minmultiplechoiceselectedcount": {
+          "type": "string",
+          "title": "Multiple Choice Minimum Required Selected Count",
+          "x-ms-dataverse-attribute": "mspp_minmultiplechoiceselectedcount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_minmultiplechoiceselectedcount"
+        },
+        "mspp_modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "mspp_modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_modifiedby"
+        },
+        "mspp_modifiedbyname": {
+          "type": "string",
+          "title": "mspp_modifiedbyname",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_modifiedbyyominame": {
+          "type": "string",
+          "title": "mspp_modifiedbyyominame",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "mspp_modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_modifiedon"
+        },
+        "mspp_multiplechoicevalidationerrormessage": {
+          "type": "string",
+          "title": "Multiple Choice Validation Error Message",
+          "x-ms-dataverse-attribute": "mspp_multiplechoicevalidationerrormessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_multiplechoicevalidationerrormessage",
+          "maxLength": 4000
+        },
+        "mspp_notes_settings": {
+          "type": "string",
+          "title": "Notes Settings",
+          "x-ms-dataverse-attribute": "mspp_notes_settings",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_notes_settings",
+          "maxLength": 100000
+        },
+        "mspp_onsavefromattribute": {
+          "type": "string",
+          "title": "On Save From Attribute",
+          "x-ms-dataverse-attribute": "mspp_onsavefromattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_onsavefromattribute",
+          "maxLength": 100
+        },
+        "mspp_onsavetype": {
+          "type": "string",
+          "title": "On Save Type",
+          "x-ms-dataverse-attribute": "mspp_onsavetype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_onsavetype",
+          "enum": [
+            "Value",
+            "Today's Date",
+            "Current Portal User"
+          ],
+          "x-ms-enum-values": [
+            100000000,
+            100000001,
+            100000002
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "d5263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "On Save Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_onsavetypename": {
+          "type": "string",
+          "title": "mspp_onsavetypename",
+          "x-ms-dataverse-attribute": "mspp_onsavetypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_onsavetypeName",
+          "x-ms-read-only": true
+        },
+        "mspp_onsavevalue": {
+          "type": "string",
+          "title": "Value",
+          "x-ms-dataverse-attribute": "mspp_onsavevalue",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_onsavevalue",
+          "maxLength": 4000
+        },
+        "mspp_prepopulatefromattribute": {
+          "type": "string",
+          "title": "Prepopulate From Attribute",
+          "x-ms-dataverse-attribute": "mspp_prepopulatefromattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_prepopulatefromattribute",
+          "maxLength": 100
+        },
+        "mspp_prepopulatetype": {
+          "type": "string",
+          "title": "Prepopulate Type",
+          "x-ms-dataverse-attribute": "mspp_prepopulatetype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_prepopulatetype",
+          "enum": [
+            "Value",
+            "Today's Date",
+            "Current Portal User"
+          ],
+          "x-ms-enum-values": [
+            100000000,
+            100000001,
+            100000002
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "d8263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Prepopulate Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_prepopulatetypename": {
+          "type": "string",
+          "title": "mspp_prepopulatetypename",
+          "x-ms-dataverse-attribute": "mspp_prepopulatetypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_prepopulatetypeName",
+          "x-ms-read-only": true
+        },
+        "mspp_prepopulatevalue": {
+          "type": "string",
+          "title": "Prepopulate Value",
+          "x-ms-dataverse-attribute": "mspp_prepopulatevalue",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_prepopulatevalue",
+          "maxLength": 4000
+        },
+        "mspp_provisionedlanguages": {
+          "type": "string",
+          "title": "Provisioned Languages",
+          "x-ms-dataverse-attribute": "mspp_provisionedlanguages",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_provisionedlanguages"
+        },
+        "mspp_purchasecreateinvoiceonpayment": {
+          "type": "string",
+          "title": "Create Invoice on Payment",
+          "x-ms-dataverse-attribute": "mspp_purchasecreateinvoiceonpayment",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_purchasecreateinvoiceonpayment",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "db263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Create Invoice on Payment",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_purchasecreateinvoiceonpaymentname": {
+          "type": "string",
+          "title": "mspp_purchasecreateinvoiceonpaymentname",
+          "x-ms-dataverse-attribute": "mspp_purchasecreateinvoiceonpaymentname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_purchasecreateinvoiceonpaymentName",
+          "x-ms-read-only": true
+        },
+        "mspp_purchasefulfillorderonpayment": {
+          "type": "string",
+          "title": "Fulfill Order on Payment",
+          "x-ms-dataverse-attribute": "mspp_purchasefulfillorderonpayment",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_purchasefulfillorderonpayment",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "de263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Fulfill Order on Payment",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_purchasefulfillorderonpaymentname": {
+          "type": "string",
+          "title": "mspp_purchasefulfillorderonpaymentname",
+          "x-ms-dataverse-attribute": "mspp_purchasefulfillorderonpaymentname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_purchasefulfillorderonpaymentName",
+          "x-ms-read-only": true
+        },
+        "mspp_purchaselineitemdescriptionattribute": {
+          "type": "string",
+          "title": "Line Item Description Attribute Name",
+          "x-ms-dataverse-attribute": "mspp_purchaselineitemdescriptionattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaselineitemdescriptionattribute",
+          "maxLength": 100
+        },
+        "mspp_purchaselineiteminstructionsattribute": {
+          "type": "string",
+          "title": "Line Item Instructions Attribute Name",
+          "x-ms-dataverse-attribute": "mspp_purchaselineiteminstructionsattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaselineiteminstructionsattribute",
+          "maxLength": 100
+        },
+        "mspp_purchaselineitemorderattribute": {
+          "type": "string",
+          "title": "Line Item Order Attribute Name",
+          "x-ms-dataverse-attribute": "mspp_purchaselineitemorderattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaselineitemorderattribute",
+          "maxLength": 100
+        },
+        "mspp_purchaselineitemproductattribute": {
+          "type": "string",
+          "title": "Line Item Product Attribute Name",
+          "x-ms-dataverse-attribute": "mspp_purchaselineitemproductattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaselineitemproductattribute",
+          "maxLength": 100
+        },
+        "mspp_purchaselineitemquantityattribute": {
+          "type": "string",
+          "title": "Line Item Quantity Attribute Name",
+          "x-ms-dataverse-attribute": "mspp_purchaselineitemquantityattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaselineitemquantityattribute",
+          "maxLength": 100
+        },
+        "mspp_purchaselineitemrelationship": {
+          "type": "string",
+          "title": "Line Item Relationship Name",
+          "x-ms-dataverse-attribute": "mspp_purchaselineitemrelationship",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaselineitemrelationship",
+          "maxLength": 200
+        },
+        "mspp_purchaselineitemrequiredattribute": {
+          "type": "string",
+          "title": "Line Item Required Attribute Name",
+          "x-ms-dataverse-attribute": "mspp_purchaselineitemrequiredattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaselineitemrequiredattribute",
+          "maxLength": 100
+        },
+        "mspp_purchaselineitemuomattribute": {
+          "type": "string",
+          "title": "Line Item UoM Attribute Name",
+          "x-ms-dataverse-attribute": "mspp_purchaselineitemuomattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaselineitemuomattribute",
+          "maxLength": 100
+        },
+        "mspp_purchaseoptionalproductsrelationship": {
+          "type": "string",
+          "title": "Optional Products Relationship Name",
+          "x-ms-dataverse-attribute": "mspp_purchaseoptionalproductsrelationship",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaseoptionalproductsrelationship",
+          "maxLength": 200
+        },
+        "mspp_purchasequotename": {
+          "type": "string",
+          "title": "Quote Name",
+          "x-ms-dataverse-attribute": "mspp_purchasequotename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchasequotename",
+          "maxLength": 200
+        },
+        "mspp_purchaserequiredproductsrelationship": {
+          "type": "string",
+          "title": "Required Products Relationship Name",
+          "x-ms-dataverse-attribute": "mspp_purchaserequiredproductsrelationship",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchaserequiredproductsrelationship",
+          "maxLength": 200
+        },
+        "mspp_purchaserequiresshipping": {
+          "type": "string",
+          "title": "Requires Shipping",
+          "x-ms-dataverse-attribute": "mspp_purchaserequiresshipping",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_purchaserequiresshipping",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "e1263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Requires Shipping",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_purchaserequiresshippingname": {
+          "type": "string",
+          "title": "mspp_purchaserequiresshippingname",
+          "x-ms-dataverse-attribute": "mspp_purchaserequiresshippingname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_purchaserequiresshippingName",
+          "x-ms-read-only": true
+        },
+        "mspp_purchasetargetentityinvoicerelationship": {
+          "type": "string",
+          "title": "Target Entity Invoice Relationship Name",
+          "x-ms-dataverse-attribute": "mspp_purchasetargetentityinvoicerelationship",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchasetargetentityinvoicerelationship",
+          "maxLength": 100
+        },
+        "mspp_purchasetargetentityorderrelationship": {
+          "type": "string",
+          "title": "Target Entity Order Relationship Name",
+          "x-ms-dataverse-attribute": "mspp_purchasetargetentityorderrelationship",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchasetargetentityorderrelationship",
+          "maxLength": 100
+        },
+        "mspp_purchasetargetentityrelationship": {
+          "type": "string",
+          "title": "Target Entity Relationship Name",
+          "x-ms-dataverse-attribute": "mspp_purchasetargetentityrelationship",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_purchasetargetentityrelationship",
+          "maxLength": 200
+        },
+        "mspp_randomizeoptionsetvalues": {
+          "type": "string",
+          "title": "Randomize Option Set Values",
+          "x-ms-dataverse-attribute": "mspp_randomizeoptionsetvalues",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_randomizeoptionsetvalues",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "e4263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Randomize Option Set Values",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_randomizeoptionsetvaluesname": {
+          "type": "string",
+          "title": "mspp_randomizeoptionsetvaluesname",
+          "x-ms-dataverse-attribute": "mspp_randomizeoptionsetvaluesname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_randomizeoptionsetvaluesName",
+          "x-ms-read-only": true
+        },
+        "mspp_rangevalidationerrormessage": {
+          "type": "string",
+          "title": "Range Validation Error Message",
+          "x-ms-dataverse-attribute": "mspp_rangevalidationerrormessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_rangevalidationerrormessage",
+          "maxLength": 4000
+        },
+        "mspp_rankordernotiesvalidationerrormessage": {
+          "type": "string",
+          "title": "Rank Order No Ties Validation Error Message",
+          "x-ms-dataverse-attribute": "mspp_rankordernotiesvalidationerrormessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_rankordernotiesvalidationerrormessage",
+          "maxLength": 4000
+        },
+        "mspp_requiredfieldvalidationerrormessage": {
+          "type": "string",
+          "title": "Required Field Validation Error Message",
+          "x-ms-dataverse-attribute": "mspp_requiredfieldvalidationerrormessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_requiredfieldvalidationerrormessage",
+          "maxLength": 4000
+        },
+        "mspp_sectionname": {
+          "type": "string",
+          "title": "Section Name",
+          "x-ms-dataverse-attribute": "mspp_sectionname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_sectionname",
+          "maxLength": 200
+        },
+        "mspp_setvalueonsave": {
+          "type": "string",
+          "title": "Set Value On Save",
+          "x-ms-dataverse-attribute": "mspp_setvalueonsave",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_setvalueonsave",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "e7263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Set Value On Save",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_setvalueonsavename": {
+          "type": "string",
+          "title": "mspp_setvalueonsavename",
+          "x-ms-dataverse-attribute": "mspp_setvalueonsavename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_setvalueonsaveName",
+          "x-ms-read-only": true
+        },
+        "mspp_subgrid_name": {
+          "type": "string",
+          "title": "Subgrid Name",
+          "x-ms-dataverse-attribute": "mspp_subgrid_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_subgrid_name",
+          "maxLength": 150
+        },
+        "mspp_subgrid_settings": {
+          "type": "string",
+          "title": "Subgrid Settings",
+          "x-ms-dataverse-attribute": "mspp_subgrid_settings",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_subgrid_settings",
+          "maxLength": 1048576
+        },
+        "mspp_tabname": {
+          "type": "string",
+          "title": "Tab Name",
+          "x-ms-dataverse-attribute": "mspp_tabname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_tabname",
+          "maxLength": 200
+        },
+        "mspp_timeline_settings": {
+          "type": "string",
+          "title": "Timeline Settings",
+          "x-ms-dataverse-attribute": "mspp_timeline_settings",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_timeline_settings",
+          "maxLength": 100000
+        },
+        "mspp_type": {
+          "type": "string",
+          "title": "Type",
+          "x-ms-dataverse-attribute": "mspp_type",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_type",
+          "required": true,
+          "enum": [
+            "Timeline",
+            "Attribute",
+            "Notes",
+            "Purchase",
+            "Section",
+            "Subgrid",
+            "Tab"
+          ],
+          "x-ms-enum-values": [
+            756150000,
+            100000000,
+            100000005,
+            100000003,
+            100000001,
+            100000004,
+            100000002
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "ea263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_typename": {
+          "type": "string",
+          "title": "mspp_typename",
+          "x-ms-dataverse-attribute": "mspp_typename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_typeName",
+          "x-ms-read-only": true
+        },
+        "mspp_useattributedescriptionproperty": {
+          "type": "string",
+          "title": "Use Attribute's Description Property",
+          "x-ms-dataverse-attribute": "mspp_useattributedescriptionproperty",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_useattributedescriptionproperty",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "ed263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Use Attribute's Description Property",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_useattributedescriptionpropertyname": {
+          "type": "string",
+          "title": "mspp_useattributedescriptionpropertyname",
+          "x-ms-dataverse-attribute": "mspp_useattributedescriptionpropertyname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_useattributedescriptionpropertyName",
+          "x-ms-read-only": true
+        },
+        "mspp_validationerrormessage": {
+          "type": "string",
+          "title": "Validation Error Message",
+          "x-ms-dataverse-attribute": "mspp_validationerrormessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_validationerrormessage",
+          "maxLength": 4000
+        },
+        "mspp_validationregularexpression": {
+          "type": "string",
+          "title": "Validation Regular Expression",
+          "x-ms-dataverse-attribute": "mspp_validationregularexpression",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_validationregularexpression",
+          "maxLength": 4000
+        },
+        "mspp_validationregularexpressionerrormessage": {
+          "type": "string",
+          "title": "Regular Expression Validation Error Message",
+          "x-ms-dataverse-attribute": "mspp_validationregularexpressionerrormessage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_validationregularexpressionerrormessage",
+          "maxLength": 4000
+        },
+        "mspp_webformmetadataid": {
+          "type": "string",
+          "title": "Multistep Form Metadata",
+          "x-ms-dataverse-attribute": "mspp_webformmetadataid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_webformmetadataId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mspp_webformstep": {
+          "type": "string",
+          "title": "Form Step",
+          "x-ms-dataverse-attribute": "mspp_webformstep",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_webformstep",
+          "required": true
+        },
+        "mspp_webformstepname": {
+          "type": "string",
+          "title": "mspp_webformstepname",
+          "x-ms-dataverse-attribute": "mspp_webformstepname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_webformstepName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b9263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c3263ab9-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "mspp_type",
+        "mspp_webformmetadataid",
+        "mspp_webformstep",
+        "statecode"
+      ]
+    }
+  }
+}

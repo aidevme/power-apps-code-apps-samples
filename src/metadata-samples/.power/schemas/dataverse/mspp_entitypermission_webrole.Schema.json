@@ -1,0 +1,58 @@
+{
+  "name": "mspp_entitypermission_webrole",
+  "title": "mspp_entitypermission_webrole",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mspp_entitypermission_webroleset",
+      "x-ms-dataverse-primary-id": "mspp_entitypermission_webroleid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "mspp_entitypermission_webroleid": {
+          "type": "string",
+          "title": "mspp_entitypermission_webroleid",
+          "x-ms-dataverse-attribute": "mspp_entitypermission_webroleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_entitypermission_webroleId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mspp_entitypermissionid": {
+          "type": "string",
+          "title": "mspp_entitypermissionid",
+          "x-ms-dataverse-attribute": "mspp_entitypermissionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_entitypermissionid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "mspp_webroleid": {
+          "type": "string",
+          "title": "mspp_webroleid",
+          "x-ms-dataverse-attribute": "mspp_webroleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_webroleid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "mspp_entitypermission_webroleid",
+        "mspp_entitypermissionid",
+        "mspp_webroleid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_msdyn_ocliveworkitem_knowledgebaser",
+  "title": "msdyn_msdyn_ocliveworkitem_knowledgebaser",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_msdyn_ocliveworkitem_knowledgebaserset",
+      "x-ms-dataverse-primary-id": "msdyn_msdyn_ocliveworkitem_knowledgebaserid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "activityid": {
+          "type": "string",
+          "title": "activityid",
+          "x-ms-dataverse-attribute": "activityid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "activityid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "knowledgebaserecordid": {
+          "type": "string",
+          "title": "knowledgebaserecordid",
+          "x-ms-dataverse-attribute": "knowledgebaserecordid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "knowledgebaserecordid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_msdyn_ocliveworkitem_knowledgebaserid": {
+          "type": "string",
+          "title": "msdyn_msdyn_ocliveworkitem_knowledgebaserid",
+          "x-ms-dataverse-attribute": "msdyn_msdyn_ocliveworkitem_knowledgebaserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_msdyn_ocliveworkitem_knowledgebaserId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "activityid",
+        "knowledgebaserecordid",
+        "msdyn_msdyn_ocliveworkitem_knowledgebaserid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "name": "clientupdate",
+  "title": "Client Updates",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "clientupdates",
+      "x-ms-dataverse-primary-id": "clientupdateid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "clientupdateid": {
+          "type": "string",
+          "title": "Client update Id",
+          "x-ms-dataverse-attribute": "clientupdateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ClientUpdateId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "createdon": {
+          "type": "string",
+          "title": "createdon",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 512
+        },
+        "sqlscript": {
+          "type": "string",
+          "title": "SQL Script",
+          "x-ms-dataverse-attribute": "sqlscript",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SqlScript",
+          "maxLength": 100
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        },
+        "wasexecuted": {
+          "type": "string",
+          "title": "wasexecuted",
+          "x-ms-dataverse-attribute": "wasexecuted",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "WasExecuted",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b11cb0c7-a22f-4d15-a4a1-635e697c8093",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "WasExecuted",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "whenexecute": {
+          "type": "string",
+          "title": "whenexecute",
+          "x-ms-dataverse-attribute": "whenexecute",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "WhenExecute",
+          "required": true,
+          "enum": [
+            "Before SchemaChanges",
+            "After SchemaChanges but before Download data",
+            "After download data"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "cb384e02-47cb-42a5-a229-5ddea21e7a9c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "When action should be executed.",
+          "x-ms-optionSetType": "Picklist"
+        }
+      },
+      "required": [
+        "clientupdateid",
+        "createdon",
+        "wasexecuted",
+        "whenexecute"
+      ]
+    }
+  }
+}

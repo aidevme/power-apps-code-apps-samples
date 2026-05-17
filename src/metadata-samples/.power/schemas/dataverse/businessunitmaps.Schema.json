@@ -1,0 +1,80 @@
+{
+  "name": "businessunitmap",
+  "title": "Business Unit Maps",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "businessunitmaps",
+      "x-ms-dataverse-primary-id": "businessunitmapid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "businessid": {
+          "type": "string",
+          "title": "businessid",
+          "x-ms-dataverse-attribute": "businessid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "BusinessId",
+          "required": true
+        },
+        "businessunitmapid": {
+          "type": "string",
+          "title": "businessunitmapid",
+          "x-ms-dataverse-attribute": "businessunitmapid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "BusinessUnitMapId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "subbusinessid": {
+          "type": "string",
+          "title": "subbusinessid",
+          "x-ms-dataverse-attribute": "subbusinessid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SubBusinessId",
+          "required": true
+        },
+        "subbusinessidname": {
+          "type": "string",
+          "title": "subbusinessidname",
+          "x-ms-dataverse-attribute": "subbusinessidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SubBusinessIdName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "subbusinessidtype": {
+          "type": "string",
+          "title": "subbusinessidtype",
+          "x-ms-dataverse-attribute": "subbusinessidtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "SubBusinessIdType"
+        },
+        "subbusinessidyominame": {
+          "type": "string",
+          "title": "subbusinessidyominame",
+          "x-ms-dataverse-attribute": "subbusinessidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SubBusinessIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "businessid",
+        "businessunitmapid",
+        "subbusinessid"
+      ]
+    }
+  }
+}

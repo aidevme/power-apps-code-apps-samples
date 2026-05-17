@@ -1,0 +1,114 @@
+{
+  "name": "ribbonclientmetadata",
+  "title": "Ribbon Client Metadata.",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "ribbonclientmetadata",
+      "x-ms-dataverse-primary-id": "ribbonid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "componentstate": {
+          "type": "string",
+          "title": "componentstate",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "entitylogicalname": {
+          "type": "string",
+          "title": "entitylogicalname",
+          "x-ms-dataverse-attribute": "entitylogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EntityLogicalName",
+          "required": true,
+          "maxLength": 128
+        },
+        "ribboncontext": {
+          "type": "string",
+          "title": "ribboncontext",
+          "x-ms-dataverse-attribute": "ribboncontext",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RibbonContext",
+          "required": true,
+          "maxLength": 32
+        },
+        "ribbonid": {
+          "type": "string",
+          "title": "Ribbon Client Metadata Identifier.",
+          "x-ms-dataverse-attribute": "ribbonid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RibbonId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "ribbonidunique": {
+          "type": "string",
+          "title": "ribbonidunique",
+          "x-ms-dataverse-attribute": "ribbonidunique",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RibbonIdUnique",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "ribbonjson": {
+          "type": "string",
+          "title": "ribbonjson",
+          "x-ms-dataverse-attribute": "ribbonjson",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "RibbonJson",
+          "required": true,
+          "maxLength": 1073741823
+        },
+        "ribbonjsonfileref": {
+          "type": "string",
+          "title": "RibbonJsonFileRef",
+          "x-ms-dataverse-attribute": "ribbonjsonfileref",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "RibbonJsonFileRef",
+          "x-ms-read-only": true
+        },
+        "ribbonjsonfileref_name": {
+          "type": "string",
+          "title": "ribbonjsonfileref_name",
+          "x-ms-dataverse-attribute": "ribbonjsonfileref_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RibbonJsonFileRef_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "componentstate",
+        "entitylogicalname",
+        "ribboncontext",
+        "ribbonid",
+        "ribbonidunique",
+        "ribbonjson",
+        "solutionid"
+      ]
+    }
+  }
+}

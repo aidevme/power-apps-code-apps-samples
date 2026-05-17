@@ -1,0 +1,250 @@
+{
+  "name": "userentityinstancedata",
+  "title": "User Entity Instance Data",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "userentityinstancedataset",
+      "x-ms-dataverse-primary-id": "userentityinstancedataid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "commonend": {
+          "type": "string",
+          "title": "Common end date",
+          "x-ms-dataverse-attribute": "commonend",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CommonEnd"
+        },
+        "commonstart": {
+          "type": "string",
+          "title": "Common start date",
+          "x-ms-dataverse-attribute": "commonstart",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CommonStart"
+        },
+        "duedate": {
+          "type": "string",
+          "title": "Due Date",
+          "x-ms-dataverse-attribute": "duedate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "DueDate"
+        },
+        "flagdueby": {
+          "type": "string",
+          "title": "Flag due by",
+          "x-ms-dataverse-attribute": "flagdueby",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "FlagDueBy"
+        },
+        "flagrequest": {
+          "type": "string",
+          "title": "Flag Request",
+          "x-ms-dataverse-attribute": "flagrequest",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FlagRequest",
+          "maxLength": 20
+        },
+        "flagstatus": {
+          "type": "string",
+          "title": "flagstatus",
+          "x-ms-dataverse-attribute": "flagstatus",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FlagStatus"
+        },
+        "objectid": {
+          "type": "string",
+          "title": "Object Id",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ObjectId",
+          "required": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "required": true
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "personalcategories": {
+          "type": "string",
+          "title": "personal categories",
+          "x-ms-dataverse-attribute": "personalcategories",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PersonalCategories",
+          "maxLength": 2000
+        },
+        "reminderset": {
+          "type": "string",
+          "title": "Is Reminder set",
+          "x-ms-dataverse-attribute": "reminderset",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ReminderSet",
+          "enum": [
+            "Reminder Not Set",
+            "Remind Set"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "17e1c00f-40d9-496d-8505-36b2b0c745bb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Reminder Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "remindertime": {
+          "type": "string",
+          "title": "Reminder time",
+          "x-ms-dataverse-attribute": "remindertime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ReminderTime"
+        },
+        "starttime": {
+          "type": "string",
+          "title": "Start Time",
+          "x-ms-dataverse-attribute": "starttime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "StartTime"
+        },
+        "todoitemflags": {
+          "type": "string",
+          "title": "todoitemflags",
+          "x-ms-dataverse-attribute": "todoitemflags",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ToDoItemFlags"
+        },
+        "todoordinaldate": {
+          "type": "string",
+          "title": "To Do Primary Sort Date",
+          "x-ms-dataverse-attribute": "todoordinaldate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ToDoOrdinalDate"
+        },
+        "todosubordinal": {
+          "type": "string",
+          "title": "To Do Sort Tie Breaker",
+          "x-ms-dataverse-attribute": "todosubordinal",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ToDoSubOrdinal",
+          "maxLength": 20
+        },
+        "todotitle": {
+          "type": "string",
+          "title": "To Do Title",
+          "x-ms-dataverse-attribute": "todotitle",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ToDoTitle",
+          "maxLength": 4000
+        },
+        "userentityinstancedataid": {
+          "type": "string",
+          "title": "userentityinstancedataid",
+          "x-ms-dataverse-attribute": "userentityinstancedataid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UserEntityInstanceDataId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "objectid",
+        "objecttypecode",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "owningteam",
+        "owninguser",
+        "userentityinstancedataid"
+      ]
+    }
+  }
+}

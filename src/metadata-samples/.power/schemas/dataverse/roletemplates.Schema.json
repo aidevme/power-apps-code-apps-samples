@@ -1,0 +1,65 @@
+{
+  "name": "roletemplate",
+  "title": "Role Templates",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "roletemplates",
+      "x-ms-dataverse-primary-id": "roletemplateid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "roletemplateid": {
+          "type": "string",
+          "title": "roletemplateid",
+          "x-ms-dataverse-attribute": "roletemplateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RoleTemplateId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "upgrading": {
+          "type": "string",
+          "title": "upgrading",
+          "x-ms-dataverse-attribute": "upgrading",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "Upgrading",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "2dfd3e35-2c38-401b-b523-5cb5b4c7fdd7",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        }
+      },
+      "required": [
+        "name",
+        "roletemplateid",
+        "upgrading"
+      ]
+    }
+  }
+}

@@ -1,0 +1,773 @@
+{
+  "name": "mspp_webpage",
+  "title": "Web Pages",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mspp_webpages",
+      "x-ms-dataverse-primary-id": "mspp_webpageid",
+      "x-ms-dataverse-primary-name": "mspp_name",
+      "properties": {
+        "mspp_alloworigin": {
+          "type": "string",
+          "title": "Allow Origin",
+          "x-ms-dataverse-attribute": "mspp_alloworigin",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_alloworigin",
+          "maxLength": 250
+        },
+        "mspp_category": {
+          "type": "string",
+          "title": "Category",
+          "x-ms-dataverse-attribute": "mspp_category",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_category",
+          "enum": [
+            "News"
+          ],
+          "x-ms-enum-values": [
+            1
+          ],
+          "Color": [
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "07e791bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Category",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_categoryname": {
+          "type": "string",
+          "title": "mspp_categoryname",
+          "x-ms-dataverse-attribute": "mspp_categoryname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_categoryName",
+          "x-ms-read-only": true
+        },
+        "mspp_copy": {
+          "type": "string",
+          "title": "Copy",
+          "x-ms-dataverse-attribute": "mspp_copy",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_copy",
+          "maxLength": 1048576
+        },
+        "mspp_createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "mspp_createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_createdby"
+        },
+        "mspp_createdbyipaddress": {
+          "type": "string",
+          "title": "Created By IP Address",
+          "x-ms-dataverse-attribute": "mspp_createdbyipaddress",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyipaddress",
+          "maxLength": 100
+        },
+        "mspp_createdbyname": {
+          "type": "string",
+          "title": "mspp_createdbyname",
+          "x-ms-dataverse-attribute": "mspp_createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_createdbyusername": {
+          "type": "string",
+          "title": "Created By Username",
+          "x-ms-dataverse-attribute": "mspp_createdbyusername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyusername",
+          "maxLength": 100
+        },
+        "mspp_createdbyyominame": {
+          "type": "string",
+          "title": "mspp_createdbyyominame",
+          "x-ms-dataverse-attribute": "mspp_createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_createdbyYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "mspp_createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_createdon"
+        },
+        "mspp_customcss": {
+          "type": "string",
+          "title": "Custom CSS",
+          "x-ms-dataverse-attribute": "mspp_customcss",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_customcss",
+          "maxLength": 1048576
+        },
+        "mspp_customjavascript": {
+          "type": "string",
+          "title": "Custom JavaScript",
+          "x-ms-dataverse-attribute": "mspp_customjavascript",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_customjavascript",
+          "maxLength": 1048576
+        },
+        "mspp_displaydate": {
+          "type": "string",
+          "title": "Display Date",
+          "x-ms-dataverse-attribute": "mspp_displaydate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_displaydate"
+        },
+        "mspp_displayorder": {
+          "type": "string",
+          "title": "Display Order",
+          "x-ms-dataverse-attribute": "mspp_displayorder",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "mspp_displayorder"
+        },
+        "mspp_editorialcomments": {
+          "type": "string",
+          "title": "Editorial Comments",
+          "x-ms-dataverse-attribute": "mspp_editorialcomments",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_editorialcomments",
+          "maxLength": 2000
+        },
+        "mspp_enablerating": {
+          "type": "string",
+          "title": "Enable Ratings",
+          "x-ms-dataverse-attribute": "mspp_enablerating",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_enablerating",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "0ae791bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Enable Ratings",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_enableratingname": {
+          "type": "string",
+          "title": "mspp_enableratingname",
+          "x-ms-dataverse-attribute": "mspp_enableratingname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_enableratingName",
+          "x-ms-read-only": true
+        },
+        "mspp_entityform": {
+          "type": "string",
+          "title": "Basic Form",
+          "x-ms-dataverse-attribute": "mspp_entityform",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_entityform"
+        },
+        "mspp_entityformname": {
+          "type": "string",
+          "title": "mspp_entityformname",
+          "x-ms-dataverse-attribute": "mspp_entityformname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_entityformName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_entitylist": {
+          "type": "string",
+          "title": "List",
+          "x-ms-dataverse-attribute": "mspp_entitylist",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_entitylist"
+        },
+        "mspp_entitylistname": {
+          "type": "string",
+          "title": "mspp_entitylistname",
+          "x-ms-dataverse-attribute": "mspp_entitylistname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_entitylistName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_excludefromsearch": {
+          "type": "string",
+          "title": "Exclude From Search",
+          "x-ms-dataverse-attribute": "mspp_excludefromsearch",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_excludefromsearch",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "0de791bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Exclude From Search",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_excludefromsearchname": {
+          "type": "string",
+          "title": "mspp_excludefromsearchname",
+          "x-ms-dataverse-attribute": "mspp_excludefromsearchname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_excludefromsearchName",
+          "x-ms-read-only": true
+        },
+        "mspp_expirationdate": {
+          "type": "string",
+          "title": "Expiration Date",
+          "x-ms-dataverse-attribute": "mspp_expirationdate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_expirationdate"
+        },
+        "mspp_feedbackpolicy": {
+          "type": "string",
+          "title": "Comment Policy",
+          "x-ms-dataverse-attribute": "mspp_feedbackpolicy",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "mspp_feedbackpolicy",
+          "enum": [
+            "Inherit",
+            "None",
+            "Open",
+            "Item",
+            "Moderated",
+            "Closed"
+          ],
+          "x-ms-enum-values": [
+            756150000,
+            756150001,
+            756150002,
+            756150003,
+            756150004,
+            756150005
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "10e791bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Comment Policy",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "mspp_feedbackpolicyname": {
+          "type": "string",
+          "title": "mspp_feedbackpolicyname",
+          "x-ms-dataverse-attribute": "mspp_feedbackpolicyname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_feedbackpolicyName",
+          "x-ms-read-only": true
+        },
+        "mspp_hiddenfromsitemap": {
+          "type": "string",
+          "title": "Hidden From Sitemap",
+          "x-ms-dataverse-attribute": "mspp_hiddenfromsitemap",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_hiddenfromsitemap",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "13e791bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Hidden From Sitemap",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_hiddenfromsitemapname": {
+          "type": "string",
+          "title": "mspp_hiddenfromsitemapname",
+          "x-ms-dataverse-attribute": "mspp_hiddenfromsitemapname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_hiddenfromsitemapName",
+          "x-ms-read-only": true
+        },
+        "mspp_image": {
+          "type": "string",
+          "title": "Image",
+          "x-ms-dataverse-attribute": "mspp_image",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_image"
+        },
+        "mspp_imagename": {
+          "type": "string",
+          "title": "mspp_imagename",
+          "x-ms-dataverse-attribute": "mspp_imagename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_imageName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_imageurl": {
+          "type": "string",
+          "title": "Image URL",
+          "x-ms-dataverse-attribute": "mspp_imageurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_imageurl",
+          "maxLength": 500
+        },
+        "mspp_isofflinecached": {
+          "type": "string",
+          "title": "isOfflineCached",
+          "x-ms-dataverse-attribute": "mspp_isofflinecached",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_isofflinecached",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "16e791bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Define whether to cache this page for PWA.",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_isofflinecachedname": {
+          "type": "string",
+          "title": "mspp_isofflinecachedname",
+          "x-ms-dataverse-attribute": "mspp_isofflinecachedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_isofflinecachedName",
+          "x-ms-read-only": true
+        },
+        "mspp_isroot": {
+          "type": "string",
+          "title": "Is Root",
+          "x-ms-dataverse-attribute": "mspp_isroot",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_isroot",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "19e791bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Root",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_isrootname": {
+          "type": "string",
+          "title": "mspp_isrootname",
+          "x-ms-dataverse-attribute": "mspp_isrootname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_isrootName",
+          "x-ms-read-only": true
+        },
+        "mspp_masterwebpageid": {
+          "type": "string",
+          "title": "Master Web Page",
+          "x-ms-dataverse-attribute": "mspp_masterwebpageid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_masterwebpageid"
+        },
+        "mspp_masterwebpageidname": {
+          "type": "string",
+          "title": "mspp_masterwebpageidname",
+          "x-ms-dataverse-attribute": "mspp_masterwebpageidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_masterwebpageidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_meta_description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "mspp_meta_description",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_meta_description",
+          "maxLength": 255
+        },
+        "mspp_modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "mspp_modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_modifiedby"
+        },
+        "mspp_modifiedbyipaddress": {
+          "type": "string",
+          "title": "Modified By IP Address",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyipaddress",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyipaddress",
+          "maxLength": 100
+        },
+        "mspp_modifiedbyname": {
+          "type": "string",
+          "title": "mspp_modifiedbyname",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_modifiedbyusername": {
+          "type": "string",
+          "title": "Modified By Username",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyusername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyusername",
+          "maxLength": 100
+        },
+        "mspp_modifiedbyyominame": {
+          "type": "string",
+          "title": "mspp_modifiedbyyominame",
+          "x-ms-dataverse-attribute": "mspp_modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_modifiedbyYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "mspp_modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "mspp_modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_modifiedon"
+        },
+        "mspp_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "mspp_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "mspp_navigation": {
+          "type": "string",
+          "title": "Navigation",
+          "x-ms-dataverse-attribute": "mspp_navigation",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_navigation"
+        },
+        "mspp_navigationname": {
+          "type": "string",
+          "title": "mspp_navigationname",
+          "x-ms-dataverse-attribute": "mspp_navigationname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_navigationName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_pagetemplateid": {
+          "type": "string",
+          "title": "Page Template",
+          "x-ms-dataverse-attribute": "mspp_pagetemplateid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_pagetemplateid",
+          "required": true
+        },
+        "mspp_pagetemplateidname": {
+          "type": "string",
+          "title": "mspp_pagetemplateidname",
+          "x-ms-dataverse-attribute": "mspp_pagetemplateidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_pagetemplateidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_parentpageid": {
+          "type": "string",
+          "title": "Parent Page",
+          "x-ms-dataverse-attribute": "mspp_parentpageid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_parentpageid"
+        },
+        "mspp_parentpageidname": {
+          "type": "string",
+          "title": "mspp_parentpageidname",
+          "x-ms-dataverse-attribute": "mspp_parentpageidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_parentpageidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_partialurl": {
+          "type": "string",
+          "title": "Partial URL",
+          "x-ms-dataverse-attribute": "mspp_partialurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_partialurl",
+          "required": true,
+          "maxLength": 100
+        },
+        "mspp_publishingstateid": {
+          "type": "string",
+          "title": "Publishing State",
+          "x-ms-dataverse-attribute": "mspp_publishingstateid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_publishingstateid",
+          "required": true
+        },
+        "mspp_publishingstateidname": {
+          "type": "string",
+          "title": "mspp_publishingstateidname",
+          "x-ms-dataverse-attribute": "mspp_publishingstateidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_publishingstateidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_releasedate": {
+          "type": "string",
+          "title": "Release Date",
+          "x-ms-dataverse-attribute": "mspp_releasedate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "mspp_releasedate"
+        },
+        "mspp_rootwebpageid": {
+          "type": "string",
+          "title": "Root Webpage",
+          "x-ms-dataverse-attribute": "mspp_rootwebpageid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_rootwebpageid"
+        },
+        "mspp_rootwebpageidname": {
+          "type": "string",
+          "title": "mspp_rootwebpageidname",
+          "x-ms-dataverse-attribute": "mspp_rootwebpageidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_rootwebpageidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_sharedpageconfiguration": {
+          "type": "string",
+          "title": "Shared Page Configuration",
+          "x-ms-dataverse-attribute": "mspp_sharedpageconfiguration",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "mspp_sharedpageconfiguration",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "1ce791bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Shared Page Configuration",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "mspp_sharedpageconfigurationname": {
+          "type": "string",
+          "title": "mspp_sharedpageconfigurationname",
+          "x-ms-dataverse-attribute": "mspp_sharedpageconfigurationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "mspp_sharedpageconfigurationName",
+          "x-ms-read-only": true
+        },
+        "mspp_summary": {
+          "type": "string",
+          "title": "Summary",
+          "x-ms-dataverse-attribute": "mspp_summary",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "mspp_summary",
+          "maxLength": 25000
+        },
+        "mspp_title": {
+          "type": "string",
+          "title": "Title",
+          "x-ms-dataverse-attribute": "mspp_title",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_title",
+          "maxLength": 512
+        },
+        "mspp_webform": {
+          "type": "string",
+          "title": "Multistep Form",
+          "x-ms-dataverse-attribute": "mspp_webform",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_webform"
+        },
+        "mspp_webformname": {
+          "type": "string",
+          "title": "mspp_webformname",
+          "x-ms-dataverse-attribute": "mspp_webformname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_webformName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_webpageid": {
+          "type": "string",
+          "title": "Web Page",
+          "x-ms-dataverse-attribute": "mspp_webpageid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_webpageId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mspp_webpagelanguageid": {
+          "type": "string",
+          "title": "Webpage Language",
+          "x-ms-dataverse-attribute": "mspp_webpagelanguageid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_webpagelanguageid",
+          "required": true
+        },
+        "mspp_webpagelanguageidname": {
+          "type": "string",
+          "title": "mspp_webpagelanguageidname",
+          "x-ms-dataverse-attribute": "mspp_webpagelanguageidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_webpagelanguageidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "mspp_websiteid": {
+          "type": "string",
+          "title": "Website",
+          "x-ms-dataverse-attribute": "mspp_websiteid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "mspp_websiteid",
+          "required": true
+        },
+        "mspp_websiteidname": {
+          "type": "string",
+          "title": "mspp_websiteidname",
+          "x-ms-dataverse-attribute": "mspp_websiteidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_websiteidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "fae691bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "04e791bf-7519-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "mspp_hiddenfromsitemap",
+        "mspp_isroot",
+        "mspp_name",
+        "mspp_pagetemplateid",
+        "mspp_partialurl",
+        "mspp_publishingstateid",
+        "mspp_sharedpageconfiguration",
+        "mspp_webpageid",
+        "mspp_webpagelanguageid",
+        "mspp_websiteid",
+        "statecode"
+      ]
+    }
+  }
+}

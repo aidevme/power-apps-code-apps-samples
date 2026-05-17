@@ -1,0 +1,57 @@
+{
+  "name": "systemuserlicenses",
+  "title": "systemuserlicenses",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "systemuserlicensescollection",
+      "x-ms-dataverse-primary-id": "systemuserlicenseid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "licenseid": {
+          "type": "string",
+          "title": "licenseid",
+          "x-ms-dataverse-attribute": "licenseid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "LicenseId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "systemuserid",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SystemUserId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "systemuserlicenseid": {
+          "type": "string",
+          "title": "systemuserlicenseid",
+          "x-ms-dataverse-attribute": "systemuserlicenseid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SystemUserLicenseId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "licenseid",
+        "systemuserid",
+        "systemuserlicenseid"
+      ]
+    }
+  }
+}

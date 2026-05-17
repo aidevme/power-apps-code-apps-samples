@@ -1,0 +1,87 @@
+{
+  "name": "systemuserauthorizationchangetracker",
+  "title": "SystemUserAuthorizationChangeTrackers",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "systemuserauthorizationchangetrackers",
+      "x-ms-dataverse-primary-id": "systemuserid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "changedon": {
+          "type": "string",
+          "title": "Changed On",
+          "x-ms-dataverse-attribute": "changedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ChangedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "changedversionnumber": {
+          "type": "string",
+          "title": "ChangedVersionNumber",
+          "x-ms-dataverse-attribute": "changedversionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "ChangedVersionNumber",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "computedon": {
+          "type": "string",
+          "title": "Computed On",
+          "x-ms-dataverse-attribute": "computedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ComputedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "computedversionnumber": {
+          "type": "string",
+          "title": "ComputedVersionNumber",
+          "x-ms-dataverse-attribute": "computedversionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "ComputedVersionNumber",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "User",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SystemUserId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "systemuseridname": {
+          "type": "string",
+          "title": "systemuseridname",
+          "x-ms-dataverse-attribute": "systemuseridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SystemUserIdName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "systemuseridyominame": {
+          "type": "string",
+          "title": "systemuseridyominame",
+          "x-ms-dataverse-attribute": "systemuseridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SystemUserIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "changedon",
+        "changedversionnumber",
+        "computedon",
+        "computedversionnumber",
+        "systemuserid"
+      ]
+    }
+  }
+}

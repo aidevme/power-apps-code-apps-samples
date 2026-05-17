@@ -1,0 +1,203 @@
+{
+  "name": "attributeimageconfig",
+  "title": "Image Attribute Configurations",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "attributeimageconfigs",
+      "x-ms-dataverse-primary-id": "attributeimageconfigid",
+      "x-ms-dataverse-primary-name": "attributelogicalname",
+      "properties": {
+        "attributeimageconfigid": {
+          "type": "string",
+          "title": "Image Attribute Configuration",
+          "x-ms-dataverse-attribute": "attributeimageconfigid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AttributeImageConfigId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "attributelogicalname": {
+          "type": "string",
+          "title": "Logical Name of Image Attribute",
+          "x-ms-dataverse-attribute": "attributelogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AttributeLogicalName",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 128
+        },
+        "canstorefullimage": {
+          "type": "string",
+          "title": "Can Store Full Image",
+          "x-ms-dataverse-attribute": "canstorefullimage",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "CanStoreFullImage",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "a2aa9ee9-2e19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Optionset of attribute CanStoreFullImage",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "canstorefullimagename": {
+          "type": "string",
+          "title": "canstorefullimagename",
+          "x-ms-dataverse-attribute": "canstorefullimagename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "canstorefullimageName",
+          "x-ms-read-only": true
+        },
+        "componentidunique": {
+          "type": "string",
+          "title": "Row id unique",
+          "x-ms-dataverse-attribute": "componentidunique",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ComponentIdUnique",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "componentstatename": {
+          "type": "string",
+          "title": "componentstatename",
+          "x-ms-dataverse-attribute": "componentstatename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "componentstateName",
+          "x-ms-read-only": true
+        },
+        "ismanaged": {
+          "type": "string",
+          "title": "Is Managed",
+          "x-ms-dataverse-attribute": "ismanaged",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsManaged",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Unmanaged",
+            "Managed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9d04e035-5408-4c1d-a5aa-20445a02f691",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Component Managed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismanagedname": {
+          "type": "string",
+          "title": "ismanagedname",
+          "x-ms-dataverse-attribute": "ismanagedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ismanagedName",
+          "x-ms-read-only": true
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "parententitylogicalname": {
+          "type": "string",
+          "title": "Parent Entity Logical Name",
+          "x-ms-dataverse-attribute": "parententitylogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ParentEntityLogicalName",
+          "required": true,
+          "maxLength": 128
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "supportingsolutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "supportingsolutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SupportingSolutionId",
+          "x-ms-read-only": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "attributeimageconfigid",
+        "attributelogicalname",
+        "canstorefullimage",
+        "componentidunique",
+        "componentstate",
+        "ismanaged",
+        "overwritetime",
+        "parententitylogicalname",
+        "solutionid"
+      ]
+    }
+  }
+}

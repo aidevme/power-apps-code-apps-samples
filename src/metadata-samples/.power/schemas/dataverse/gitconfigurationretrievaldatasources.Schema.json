@@ -1,0 +1,38 @@
+{
+  "name": "gitconfigurationretrievaldatasource",
+  "title": "Git Configuration Retrieval Data Sources",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "gitconfigurationretrievaldatasources",
+      "x-ms-dataverse-primary-id": "gitconfigurationretrievaldatasourceid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "gitconfigurationretrievaldatasourceid": {
+          "type": "string",
+          "title": "Git Configuration Retrieval Data Source",
+          "x-ms-dataverse-attribute": "gitconfigurationretrievaldatasourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "GitConfigurationRetrievalDataSourceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "gitconfigurationretrievaldatasourceid"
+      ]
+    }
+  }
+}

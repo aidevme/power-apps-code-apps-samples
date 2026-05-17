@@ -1,0 +1,65 @@
+{
+  "name": "systemusermanagermap",
+  "title": "System User Manager Maps",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "systemusermanagermaps",
+      "x-ms-dataverse-primary-id": "systemusermanagermapid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "hierarchylevel": {
+          "type": "string",
+          "title": "hierarchylevel",
+          "x-ms-dataverse-attribute": "hierarchylevel",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "HierarchyLevel",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "parentsystemuserid": {
+          "type": "string",
+          "title": "parentsystemuserid",
+          "x-ms-dataverse-attribute": "parentsystemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ParentSystemUserId",
+          "required": true
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "systemuserid",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SystemUserId",
+          "required": true
+        },
+        "systemusermanagermapid": {
+          "type": "string",
+          "title": "systemusermanagermapid",
+          "x-ms-dataverse-attribute": "systemusermanagermapid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SystemUserManagerMapId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "hierarchylevel",
+        "parentsystemuserid",
+        "systemuserid",
+        "systemusermanagermapid"
+      ]
+    }
+  }
+}

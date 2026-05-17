@@ -1,0 +1,140 @@
+{
+  "name": "searchtelemetry",
+  "title": "Search Telemetry",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "searchtelemetries",
+      "x-ms-dataverse-primary-id": "searchtelemetryid",
+      "x-ms-dataverse-primary-name": "userquery",
+      "properties": {
+        "correlationid": {
+          "type": "string",
+          "title": "CorrelationId",
+          "x-ms-dataverse-attribute": "correlationid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CorrelationId",
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "eyesonanalyticsallowed": {
+          "type": "string",
+          "title": "EyesOnAnalyticsAllowed",
+          "x-ms-dataverse-attribute": "eyesonanalyticsallowed",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "EyesOnAnalyticsAllowed",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "09af4f5d-7319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "EyesOnAnalyticsAllowed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "eyesonanalyticsallowedname": {
+          "type": "string",
+          "title": "eyesonanalyticsallowedname",
+          "x-ms-dataverse-attribute": "eyesonanalyticsallowedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "eyesonanalyticsallowedName",
+          "x-ms-read-only": true
+        },
+        "feedbackdata": {
+          "type": "string",
+          "title": "FeedbackData",
+          "x-ms-dataverse-attribute": "feedbackdata",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FeedbackData",
+          "maxLength": 1048577
+        },
+        "partitionid": {
+          "type": "string",
+          "title": "Partition Id",
+          "x-ms-dataverse-attribute": "partitionid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PartitionId",
+          "maxLength": 100
+        },
+        "requestid": {
+          "type": "string",
+          "title": "RequestId",
+          "x-ms-dataverse-attribute": "requestid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RequestId",
+          "maxLength": 100
+        },
+        "scenarioname": {
+          "type": "string",
+          "title": "ScenarioName",
+          "x-ms-dataverse-attribute": "scenarioname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ScenarioName",
+          "maxLength": 100
+        },
+        "searchtelemetryid": {
+          "type": "string",
+          "title": "SearchTelemetry Id",
+          "x-ms-dataverse-attribute": "searchtelemetryid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "searchtelemetryId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "sessionid": {
+          "type": "string",
+          "title": "SessionId",
+          "x-ms-dataverse-attribute": "sessionid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SessionId",
+          "maxLength": 100
+        },
+        "ttlinseconds": {
+          "type": "string",
+          "title": "Time to live",
+          "x-ms-dataverse-attribute": "ttlinseconds",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TTLInSeconds"
+        },
+        "userquery": {
+          "type": "string",
+          "title": "UserQuery",
+          "x-ms-dataverse-attribute": "userquery",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "UserQuery",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 1000
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "versionnumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "searchtelemetryid"
+      ]
+    }
+  }
+}

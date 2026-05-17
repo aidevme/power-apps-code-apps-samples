@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_connectordatasource_environmentva",
+  "title": "msdyn_connectordatasource_environmentva",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_connectordatasource_environmentvaset",
+      "x-ms-dataverse-primary-id": "msdyn_connectordatasource_environmentvaid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "environmentvariabledefinitionid": {
+          "type": "string",
+          "title": "environmentvariabledefinitionid",
+          "x-ms-dataverse-attribute": "environmentvariabledefinitionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "environmentvariabledefinitionid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_connectordatasource_environmentvaid": {
+          "type": "string",
+          "title": "msdyn_connectordatasource_environmentvaid",
+          "x-ms-dataverse-attribute": "msdyn_connectordatasource_environmentvaid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_connectordatasource_environmentvaId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_connectordatasourceid": {
+          "type": "string",
+          "title": "msdyn_connectordatasourceid",
+          "x-ms-dataverse-attribute": "msdyn_connectordatasourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_connectordatasourceid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "environmentvariabledefinitionid",
+        "msdyn_connectordatasource_environmentvaid",
+        "msdyn_connectordatasourceid"
+      ]
+    }
+  }
+}

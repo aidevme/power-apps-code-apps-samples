@@ -1,0 +1,38 @@
+{
+  "name": "msdyn_casesuggestionsdatasource",
+  "title": "Case Suggestions Data Souces",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_casesuggestionsdatasources",
+      "x-ms-dataverse-primary-id": "msdyn_casesuggestionsdatasourceid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "msdyn_casesuggestionsdatasourceid": {
+          "type": "string",
+          "title": "Case Suggestions Data Source",
+          "x-ms-dataverse-attribute": "msdyn_casesuggestionsdatasourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_casesuggestionsdatasourceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "msdyn_casesuggestionsdatasourceid"
+      ]
+    }
+  }
+}

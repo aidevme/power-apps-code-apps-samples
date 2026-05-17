@@ -1,0 +1,62 @@
+{
+  "name": "unresolvedaddress",
+  "title": "Unresolved Addresses",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "unresolvedaddresses",
+      "x-ms-dataverse-primary-id": "unresolvedaddressid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "emailaddress": {
+          "type": "string",
+          "title": "emailaddress",
+          "x-ms-dataverse-attribute": "emailaddress",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EMailAddress",
+          "maxLength": 100
+        },
+        "fullname": {
+          "type": "string",
+          "title": "fullname",
+          "x-ms-dataverse-attribute": "fullname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FullName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "telephone": {
+          "type": "string",
+          "title": "telephone",
+          "x-ms-dataverse-attribute": "telephone",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Telephone",
+          "maxLength": 50
+        },
+        "unresolvedaddressid": {
+          "type": "string",
+          "title": "unresolvedaddressid",
+          "x-ms-dataverse-attribute": "unresolvedaddressid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UnresolvedAddressId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "unresolvedaddressid"
+      ]
+    }
+  }
+}

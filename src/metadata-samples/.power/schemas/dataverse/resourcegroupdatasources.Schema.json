@@ -1,0 +1,38 @@
+{
+  "name": "resourcegroupdatasource",
+  "title": "resource group data sources",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "resourcegroupdatasources",
+      "x-ms-dataverse-primary-id": "resourcegroupdatasourceid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "resourcegroupdatasourceid": {
+          "type": "string",
+          "title": "resource group data source",
+          "x-ms-dataverse-attribute": "resourcegroupdatasourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "resourcegroupdatasourceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "resourcegroupdatasourceid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "name": "workflowdependency",
+  "title": "Process Dependencies",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "workflowdependencies",
+      "x-ms-dataverse-primary-id": "workflowdependencyid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "customentityname": {
+          "type": "string",
+          "title": "Custom Entity",
+          "x-ms-dataverse-attribute": "customentityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CustomEntityName",
+          "maxLength": 128
+        },
+        "dependentattributename": {
+          "type": "string",
+          "title": "Dependent Attribute Name",
+          "x-ms-dataverse-attribute": "dependentattributename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DependentAttributeName",
+          "maxLength": 128
+        },
+        "dependententityname": {
+          "type": "string",
+          "title": "Dependent Entity Name",
+          "x-ms-dataverse-attribute": "dependententityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DependentEntityName",
+          "maxLength": 128
+        },
+        "entityattributes": {
+          "type": "string",
+          "title": "entityattributes",
+          "x-ms-dataverse-attribute": "entityattributes",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EntityAttributes",
+          "maxLength": 100000
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "owningbusinessunit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "owninguser",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "parametername": {
+          "type": "string",
+          "title": "parametername",
+          "x-ms-dataverse-attribute": "parametername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ParameterName",
+          "maxLength": 256
+        },
+        "parametertype": {
+          "type": "string",
+          "title": "parametertype",
+          "x-ms-dataverse-attribute": "parametertype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ParameterType",
+          "maxLength": 256
+        },
+        "relatedattributename": {
+          "type": "string",
+          "title": "relatedattributename",
+          "x-ms-dataverse-attribute": "relatedattributename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RelatedAttributeName",
+          "maxLength": 256
+        },
+        "relatedentityname": {
+          "type": "string",
+          "title": "Related Entity",
+          "x-ms-dataverse-attribute": "relatedentityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RelatedEntityName",
+          "maxLength": 128
+        },
+        "sdkmessageid": {
+          "type": "string",
+          "title": "sdkmessageid",
+          "x-ms-dataverse-attribute": "sdkmessageid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "SdkMessageId"
+        },
+        "type": {
+          "type": "string",
+          "title": "Type",
+          "x-ms-dataverse-attribute": "type",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "Type",
+          "required": true,
+          "enum": [
+            "Sdk association",
+            "Local parameter",
+            "Primary entity",
+            "Primary entity - before SDK operation",
+            "Primary entity - after SDK operation",
+            "Related entity",
+            "Custom entity definition that workflow depends on",
+            "Attribute definition that workflow depends on",
+            "Argument Entity that workflow depends on"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "69a6eacc-cd1d-45b9-8145-1e7371e7243c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "typename": {
+          "type": "string",
+          "title": "typename",
+          "x-ms-dataverse-attribute": "typename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "TypeName",
+          "x-ms-read-only": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        },
+        "workflowdependencyid": {
+          "type": "string",
+          "title": "Process Dependency",
+          "x-ms-dataverse-attribute": "workflowdependencyid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "WorkflowDependencyId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "workflowid": {
+          "type": "string",
+          "title": "Process",
+          "x-ms-dataverse-attribute": "workflowid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "WorkflowId",
+          "required": true
+        }
+      },
+      "required": [
+        "ownerid",
+        "owneridtype",
+        "type",
+        "workflowdependencyid",
+        "workflowid"
+      ]
+    }
+  }
+}

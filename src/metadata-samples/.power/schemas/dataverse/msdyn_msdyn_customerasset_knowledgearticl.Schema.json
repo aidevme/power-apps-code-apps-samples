@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_msdyn_customerasset_knowledgearticl",
+  "title": "msdyn_msdyn_customerasset_knowledgearticl",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_msdyn_customerasset_knowledgearticlset",
+      "x-ms-dataverse-primary-id": "msdyn_msdyn_customerasset_knowledgearticlid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "knowledgearticleid": {
+          "type": "string",
+          "title": "knowledgearticleid",
+          "x-ms-dataverse-attribute": "knowledgearticleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "knowledgearticleid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_customerassetid": {
+          "type": "string",
+          "title": "msdyn_customerassetid",
+          "x-ms-dataverse-attribute": "msdyn_customerassetid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_customerassetid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_msdyn_customerasset_knowledgearticlid": {
+          "type": "string",
+          "title": "msdyn_msdyn_customerasset_knowledgearticlid",
+          "x-ms-dataverse-attribute": "msdyn_msdyn_customerasset_knowledgearticlid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_msdyn_customerasset_knowledgearticlId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "knowledgearticleid",
+        "msdyn_customerassetid",
+        "msdyn_msdyn_customerasset_knowledgearticlid"
+      ]
+    }
+  }
+}

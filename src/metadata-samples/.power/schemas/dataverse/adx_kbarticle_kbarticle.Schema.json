@@ -1,0 +1,58 @@
+{
+  "name": "adx_kbarticle_kbarticle",
+  "title": "adx_kbarticle_kbarticle",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "adx_kbarticle_kbarticleset",
+      "x-ms-dataverse-primary-id": "adx_kbarticle_kbarticleid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "adx_kbarticle_kbarticleid": {
+          "type": "string",
+          "title": "adx_kbarticle_kbarticleid",
+          "x-ms-dataverse-attribute": "adx_kbarticle_kbarticleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "adx_kbarticle_kbarticleId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "kbarticleidone": {
+          "type": "string",
+          "title": "kbarticleidone",
+          "x-ms-dataverse-attribute": "kbarticleidone",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "kbarticleidOne",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "kbarticleidtwo": {
+          "type": "string",
+          "title": "kbarticleidtwo",
+          "x-ms-dataverse-attribute": "kbarticleidtwo",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "kbarticleidTwo",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "adx_kbarticle_kbarticleid",
+        "kbarticleidone",
+        "kbarticleidtwo"
+      ]
+    }
+  }
+}

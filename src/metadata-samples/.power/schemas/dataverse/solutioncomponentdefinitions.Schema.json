@@ -1,0 +1,678 @@
+{
+  "name": "solutioncomponentdefinition",
+  "title": "Solution Component Definitions",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "solutioncomponentdefinitions",
+      "x-ms-dataverse-primary-id": "solutioncomponentdefinitionid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "allowdeletebasesolutionrowandfakedelete": {
+          "type": "string",
+          "title": "AllowDeleteBaseSolutionRowAndFakeDeleteInSolutionUpgrade",
+          "x-ms-dataverse-attribute": "allowdeletebasesolutionrowandfakedelete",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "AllowDeleteBaseSolutionRowAndFakeDelete",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "1fc374ac-081d-48a0-bb1a-fe6af4958e19",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "AllowDeleteBaseSolutionRowAndFakeDeleteInSolutionUpgrade",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "allowoverwritecustomizations": {
+          "type": "string",
+          "title": "AllowOverwriteCustomizations",
+          "x-ms-dataverse-attribute": "allowoverwritecustomizations",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "AllowOverwriteCustomizations",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "67602681-9902-4619-b060-a837881285ce",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "AllowOverwriteCustomizations",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "allowrecreateforlogicallydeletedrow": {
+          "type": "string",
+          "title": "AllowRecreateForLogicallyDeletedRowInActiveSolution",
+          "x-ms-dataverse-attribute": "allowrecreateforlogicallydeletedrow",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "AllowRecreateForLogicallyDeletedRow",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "5261905a-be4b-47f3-b2d7-451b37e235e1",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "AllowRecreateForLogicallyDeletedRowInActiveSolution",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "alwaysremoveactivecustomizationsonuninstall": {
+          "type": "string",
+          "title": "AlwaysRemoveActiveCustomizationsOnUninstall",
+          "x-ms-dataverse-attribute": "alwaysremoveactivecustomizationsonuninstall",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "AlwaysRemoveActiveCustomizationsOnUninstall",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "bd43489d-09ff-450c-bde0-76532adcf8a7",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "AlwaysRemoveActiveCustomizationsOnUninstall",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "canbeaddedtosolutioncomponents": {
+          "type": "string",
+          "title": "Can Be Added To SolutionComponents",
+          "x-ms-dataverse-attribute": "canbeaddedtosolutioncomponents",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "CanBeAddedToSolutionComponents",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "60dc53ab-3dcc-45b8-a186-425d11741987",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "CanBeAddedToSolutionComponents",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "canbehidden": {
+          "type": "string",
+          "title": "CanBeHidden",
+          "x-ms-dataverse-attribute": "canbehidden",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "CanBeHidden",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "edb2cbe0-fcfe-433e-a928-1d85cb2bd518",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "CanBeHidden",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "componentxpath": {
+          "type": "string",
+          "title": "Component XPath",
+          "x-ms-dataverse-attribute": "componentxpath",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ComponentXPath",
+          "maxLength": 100
+        },
+        "descendentisviewablecomponent": {
+          "type": "string",
+          "title": "Descendent Is Viewable Component",
+          "x-ms-dataverse-attribute": "descendentisviewablecomponent",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "DescendentIsViewableComponent",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "7243e9a8-b85a-4e14-b129-27be9749af52",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Descendent Is Viewable Component",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "groupparentcomponentattributename": {
+          "type": "string",
+          "title": "Group Parent Component Attribute Name",
+          "x-ms-dataverse-attribute": "groupparentcomponentattributename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "GroupParentComponentAttributeName",
+          "maxLength": 128
+        },
+        "groupparentcomponenttype": {
+          "type": "string",
+          "title": "Group Parent Component Type",
+          "x-ms-dataverse-attribute": "groupparentcomponenttype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "GroupParentComponentType"
+        },
+        "hasisrenameableattribute": {
+          "type": "string",
+          "title": "HasIsRenameableAttribute",
+          "x-ms-dataverse-attribute": "hasisrenameableattribute",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "HasIsRenameableAttribute",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "590faf76-d676-49e9-a618-913e2a297b7b",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "HasIsRenameableAttribute",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "introducedversion": {
+          "type": "string",
+          "title": "Introduced Version",
+          "x-ms-dataverse-attribute": "introducedversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "IntroducedVersion",
+          "maxLength": 48
+        },
+        "isdependencydisabled": {
+          "type": "string",
+          "title": "Is Dependency Disabled",
+          "x-ms-dataverse-attribute": "isdependencydisabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsDependencyDisabled",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "221b04e3-030f-47e8-98ff-ac6a6bb25152",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "IsDependencyDisabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isdisplayable": {
+          "type": "string",
+          "title": "Displayable",
+          "x-ms-dataverse-attribute": "isdisplayable",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsDisplayable",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c45667a2-9c61-4ab6-a106-231cad29fc9f",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Displayable",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismanaged": {
+          "type": "string",
+          "title": "Managed",
+          "x-ms-dataverse-attribute": "ismanaged",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsManaged",
+          "required": true,
+          "enum": [
+            "Unmanaged",
+            "Managed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9d04e035-5408-4c1d-a5aa-20445a02f691",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Component Managed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismergeable": {
+          "type": "string",
+          "title": "Mergeable",
+          "x-ms-dataverse-attribute": "ismergeable",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsMergeable",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "35fc44d7-0cd3-4c83-9a50-1ebd3e80a532",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "IsMergeable",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismetadata": {
+          "type": "string",
+          "title": "Metadata",
+          "x-ms-dataverse-attribute": "ismetadata",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsMetadata",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "798f14a9-92af-489c-a603-8eb8eddf2431",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Metadata",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isviewable": {
+          "type": "string",
+          "title": "Viewable",
+          "x-ms-dataverse-attribute": "isviewable",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsViewable",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9b6d0e01-33d3-432a-b686-76bd53e8481e",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "IsViewable",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "labeltypecode": {
+          "type": "string",
+          "title": "Label Type Code",
+          "x-ms-dataverse-attribute": "labeltypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "LabelTypeCode"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "Object Type Code",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "required": true
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "parentattributename": {
+          "type": "string",
+          "title": "Parent Attribute Name",
+          "x-ms-dataverse-attribute": "parentattributename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ParentAttributeName",
+          "maxLength": 128
+        },
+        "primaryentityname": {
+          "type": "string",
+          "title": "Entity Logical Name",
+          "x-ms-dataverse-attribute": "primaryentityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PrimaryEntityName",
+          "maxLength": 128
+        },
+        "removeactivecustomizationsbehavior": {
+          "type": "string",
+          "title": "Remove Active Customizations Behavior",
+          "x-ms-dataverse-attribute": "removeactivecustomizationsbehavior",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "RemoveActiveCustomizationsBehavior",
+          "enum": [
+            "None",
+            "No Cascade",
+            "Cascade"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "4ee70fe4-d626-4754-bb44-955e9b574bd8",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Remove Active Customizations Behavior",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "rootattributename": {
+          "type": "string",
+          "title": "Root Solution Component Type Name",
+          "x-ms-dataverse-attribute": "rootattributename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RootAttributeName",
+          "maxLength": 128
+        },
+        "rootcomponent": {
+          "type": "string",
+          "title": "Root Solution Component Type",
+          "x-ms-dataverse-attribute": "rootcomponent",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "RootComponent"
+        },
+        "solutioncomponentdefinitionid": {
+          "type": "string",
+          "title": "Solution Component Definition",
+          "x-ms-dataverse-attribute": "solutioncomponentdefinitionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionComponentDefinitionId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "solutioncomponentdefinitionidunique": {
+          "type": "string",
+          "title": "Unique Id",
+          "x-ms-dataverse-attribute": "solutioncomponentdefinitionidunique",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionComponentDefinitionIdUnique",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true
+        },
+        "solutioncomponenttype": {
+          "type": "string",
+          "title": "Solution Component Type",
+          "x-ms-dataverse-attribute": "solutioncomponenttype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "SolutionComponentType",
+          "required": true
+        },
+        "solutioncomponenttypename": {
+          "type": "string",
+          "title": "solutioncomponenttypename",
+          "x-ms-dataverse-attribute": "solutioncomponenttypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "SolutionComponentTypeName",
+          "x-ms-read-only": true
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "supportingsolutionid": {
+          "type": "string",
+          "title": "Supporting Solution",
+          "x-ms-dataverse-attribute": "supportingsolutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SupportingSolutionId",
+          "x-ms-read-only": true
+        },
+        "useforcedeleteforsolutionupdate": {
+          "type": "string",
+          "title": "UseForceDeleteForSolutionUpdate",
+          "x-ms-dataverse-attribute": "useforcedeleteforsolutionupdate",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "UseForceDeleteForSolutionUpdate",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "7c323682-2c64-4995-98c9-e6e2ef6a32d8",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "UseForceDeleteForSolutionUpdate",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "useforceupdatealways": {
+          "type": "string",
+          "title": "UseForceUpdateAlways",
+          "x-ms-dataverse-attribute": "useforceupdatealways",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "UseForceUpdateAlways",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "67ef0dd3-7b8c-491b-bd93-cac3973c8c19",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "UseForceUpdateAlways",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "usesentinelrowinbasesolution": {
+          "type": "string",
+          "title": "UseSentinelRowInBaseSolution",
+          "x-ms-dataverse-attribute": "usesentinelrowinbasesolution",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "UseSentinelRowInBaseSolution",
+          "required": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b7d3f6ed-52ed-4050-b4b5-6ce9b01fa6a0",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "UseSentinelRowInBaseSolution",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "viewabledescendentcomponenttype": {
+          "type": "string",
+          "title": "Viewable Descendent ComponentType",
+          "x-ms-dataverse-attribute": "viewabledescendentcomponenttype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ViewableDescendentComponentType"
+        }
+      },
+      "required": [
+        "allowdeletebasesolutionrowandfakedelete",
+        "allowoverwritecustomizations",
+        "allowrecreateforlogicallydeletedrow",
+        "alwaysremoveactivecustomizationsonuninstall",
+        "canbeaddedtosolutioncomponents",
+        "canbehidden",
+        "componentstate",
+        "descendentisviewablecomponent",
+        "hasisrenameableattribute",
+        "isdependencydisabled",
+        "isdisplayable",
+        "ismanaged",
+        "ismergeable",
+        "ismetadata",
+        "isviewable",
+        "name",
+        "objecttypecode",
+        "overwritetime",
+        "solutioncomponentdefinitionid",
+        "solutioncomponentdefinitionidunique",
+        "solutioncomponenttype",
+        "solutionid",
+        "useforcedeleteforsolutionupdate",
+        "useforceupdatealways",
+        "usesentinelrowinbasesolution"
+      ]
+    }
+  }
+}

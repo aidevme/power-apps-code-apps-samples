@@ -1,0 +1,146 @@
+{
+  "name": "bulkdeletefailure",
+  "title": "Bulk Delete Failures",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "bulkdeletefailures",
+      "x-ms-dataverse-primary-id": "bulkdeletefailureid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "asyncoperationid": {
+          "type": "string",
+          "title": "System Job",
+          "x-ms-dataverse-attribute": "asyncoperationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "AsyncOperationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "bulkdeletefailureid": {
+          "type": "string",
+          "title": "Bulk Deletion Failure",
+          "x-ms-dataverse-attribute": "bulkdeletefailureid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "BulkDeleteFailureId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "bulkdeleteoperationid": {
+          "type": "string",
+          "title": "bulkdeleteoperationid",
+          "x-ms-dataverse-attribute": "bulkdeleteoperationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "BulkDeleteOperationId",
+          "x-ms-read-only": true
+        },
+        "errordescription": {
+          "type": "string",
+          "title": "Error Description",
+          "x-ms-dataverse-attribute": "errordescription",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ErrorDescription",
+          "x-ms-read-only": true,
+          "maxLength": 512
+        },
+        "errornumber": {
+          "type": "string",
+          "title": "Error Code",
+          "x-ms-dataverse-attribute": "errornumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ErrorNumber",
+          "x-ms-read-only": true
+        },
+        "orderedqueryindex": {
+          "type": "string",
+          "title": "Index",
+          "x-ms-dataverse-attribute": "orderedqueryindex",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "OrderedQueryIndex",
+          "x-ms-read-only": true
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "regardingobjectid": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "regardingobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "RegardingObjectId",
+          "x-ms-read-only": true
+        },
+        "regardingobjectidname": {
+          "type": "string",
+          "title": "regardingobjectidname",
+          "x-ms-dataverse-attribute": "regardingobjectidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdName",
+          "x-ms-read-only": true,
+          "maxLength": 850
+        },
+        "regardingobjectidyominame": {
+          "type": "string",
+          "title": "regardingobjectidyominame",
+          "x-ms-dataverse-attribute": "regardingobjectidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdYomiName",
+          "maxLength": 850
+        },
+        "regardingobjecttypecode": {
+          "type": "string",
+          "title": "regardingobjecttypecode",
+          "x-ms-dataverse-attribute": "regardingobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectTypeCode",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "asyncoperationid",
+        "bulkdeletefailureid",
+        "ownerid",
+        "owneridtype",
+        "owningbusinessunit",
+        "owninguser"
+      ]
+    }
+  }
+}

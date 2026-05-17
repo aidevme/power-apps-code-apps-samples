@@ -1,0 +1,163 @@
+{
+  "name": "duplicaterecord",
+  "title": "Duplicate Records",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "duplicaterecords",
+      "x-ms-dataverse-primary-id": "duplicateid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "asyncoperationid": {
+          "type": "string",
+          "title": "System Job",
+          "x-ms-dataverse-attribute": "asyncoperationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "AsyncOperationId",
+          "x-ms-read-only": true
+        },
+        "baserecordid": {
+          "type": "string",
+          "title": "Base Record ID",
+          "x-ms-dataverse-attribute": "baserecordid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "BaseRecordId",
+          "x-ms-read-only": true
+        },
+        "baserecordidname": {
+          "type": "string",
+          "title": "baserecordidname",
+          "x-ms-dataverse-attribute": "baserecordidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BaseRecordIdName",
+          "x-ms-read-only": true,
+          "maxLength": 800
+        },
+        "baserecordidtypecode": {
+          "type": "string",
+          "title": "baserecordidtypecode",
+          "x-ms-dataverse-attribute": "baserecordidtypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "BaseRecordIdTypeCode",
+          "x-ms-read-only": true
+        },
+        "baserecordidyominame": {
+          "type": "string",
+          "title": "baserecordidyominame",
+          "x-ms-dataverse-attribute": "baserecordidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BaseRecordIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 800
+        },
+        "createdon": {
+          "type": "string",
+          "title": "createdon",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "duplicateid": {
+          "type": "string",
+          "title": "duplicateid",
+          "x-ms-dataverse-attribute": "duplicateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "DuplicateId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "duplicaterecordid": {
+          "type": "string",
+          "title": "Duplicate Record ID",
+          "x-ms-dataverse-attribute": "duplicaterecordid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "DuplicateRecordId",
+          "x-ms-read-only": true
+        },
+        "duplicaterecordidname": {
+          "type": "string",
+          "title": "duplicaterecordidname",
+          "x-ms-dataverse-attribute": "duplicaterecordidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DuplicateRecordIdName",
+          "x-ms-read-only": true,
+          "maxLength": 800
+        },
+        "duplicaterecordidtypecode": {
+          "type": "string",
+          "title": "duplicaterecordidtypecode",
+          "x-ms-dataverse-attribute": "duplicaterecordidtypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "DuplicateRecordIdTypeCode",
+          "x-ms-read-only": true
+        },
+        "duplicaterecordidyominame": {
+          "type": "string",
+          "title": "duplicaterecordidyominame",
+          "x-ms-dataverse-attribute": "duplicaterecordidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DuplicateRecordIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 800
+        },
+        "duplicateruleid": {
+          "type": "string",
+          "title": "duplicateruleid",
+          "x-ms-dataverse-attribute": "duplicateruleid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "DuplicateRuleId",
+          "x-ms-read-only": true
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true,
+          "required": true
+        }
+      },
+      "required": [
+        "createdon",
+        "duplicateid",
+        "ownerid",
+        "owneridtype",
+        "owningbusinessunit",
+        "owninguser"
+      ]
+    }
+  }
+}

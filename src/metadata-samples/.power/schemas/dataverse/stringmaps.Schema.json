@@ -1,0 +1,117 @@
+{
+  "name": "stringmap",
+  "title": "String Maps",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "stringmaps",
+      "x-ms-dataverse-primary-id": "stringmapid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "attributename": {
+          "type": "string",
+          "title": "attributename",
+          "x-ms-dataverse-attribute": "attributename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AttributeName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 128
+        },
+        "attributevalue": {
+          "type": "string",
+          "title": "attributevalue",
+          "x-ms-dataverse-attribute": "attributevalue",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "AttributeValue",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "displayorder": {
+          "type": "string",
+          "title": "displayorder",
+          "x-ms-dataverse-attribute": "displayorder",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DisplayOrder"
+        },
+        "langid": {
+          "type": "string",
+          "title": "langid",
+          "x-ms-dataverse-attribute": "langid",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "LangId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "66bb77b2-c454-4112-9c80-9a67a01aa47a",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Picklist"
+        },
+        "objecttypecodename": {
+          "type": "string",
+          "title": "objecttypecodename",
+          "x-ms-dataverse-attribute": "objecttypecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ObjectTypeCodeName",
+          "x-ms-read-only": true
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "organizationid",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "stringmapid": {
+          "type": "string",
+          "title": "stringmapid",
+          "x-ms-dataverse-attribute": "stringmapid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "StringMapId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "value": {
+          "type": "string",
+          "title": "value",
+          "x-ms-dataverse-attribute": "value",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Value",
+          "maxLength": 4000
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "attributename",
+        "attributevalue",
+        "langid",
+        "objecttypecode",
+        "organizationid",
+        "stringmapid"
+      ]
+    }
+  }
+}

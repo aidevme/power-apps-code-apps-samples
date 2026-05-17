@@ -1,0 +1,134 @@
+{
+  "name": "entitykey",
+  "title": "Entity Keys",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "entitykeys",
+      "x-ms-dataverse-primary-id": "entitykeyid",
+      "x-ms-dataverse-primary-name": "logicalname",
+      "properties": {
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "entitykeyid": {
+          "type": "string",
+          "title": "Entity Key",
+          "x-ms-dataverse-attribute": "entitykeyid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "EntityKeyId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "issecondarykey": {
+          "type": "string",
+          "title": "IsSecondaryKey",
+          "x-ms-dataverse-attribute": "issecondarykey",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsSecondaryKey",
+          "x-ms-read-only": true,
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "e9a0120a-2f19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "IsSecondaryKey",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "issecondarykeyname": {
+          "type": "string",
+          "title": "issecondarykeyname",
+          "x-ms-dataverse-attribute": "issecondarykeyname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "issecondarykeyName",
+          "x-ms-read-only": true
+        },
+        "logicalname": {
+          "type": "string",
+          "title": "Logical Name",
+          "x-ms-dataverse-attribute": "logicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "LogicalName",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 128
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "required": true,
+          "maxLength": 128
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        }
+      },
+      "required": [
+        "componentstate",
+        "entitykeyid",
+        "logicalname",
+        "name",
+        "overwritetime",
+        "solutionid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "name": "gitsolution",
+  "title": "Git Solutions",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "GitSolutions",
+      "x-ms-dataverse-primary-id": "gitsolutionid",
+      "x-ms-dataverse-primary-name": "solutionname",
+      "properties": {
+        "branchname": {
+          "type": "string",
+          "title": "Git Branch Name",
+          "x-ms-dataverse-attribute": "branchname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BranchName",
+          "required": true,
+          "maxLength": 4000
+        },
+        "gitsolutionid": {
+          "type": "string",
+          "title": "Git Solution",
+          "x-ms-dataverse-attribute": "gitsolutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "GitSolutionId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "organizationname": {
+          "type": "string",
+          "title": "Git Organization Name",
+          "x-ms-dataverse-attribute": "organizationname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationName",
+          "maxLength": 1000
+        },
+        "projectname": {
+          "type": "string",
+          "title": "Git Project Name",
+          "x-ms-dataverse-attribute": "projectname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ProjectName",
+          "maxLength": 1000
+        },
+        "repositoryname": {
+          "type": "string",
+          "title": "Git Repository Name",
+          "x-ms-dataverse-attribute": "repositoryname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RepositoryName",
+          "maxLength": 1000
+        },
+        "rootfolderpath": {
+          "type": "string",
+          "title": "Root Folder Path",
+          "x-ms-dataverse-attribute": "rootfolderpath",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RootFolderPath",
+          "required": true,
+          "maxLength": 4000
+        },
+        "solutionname": {
+          "type": "string",
+          "title": "Solution Name",
+          "x-ms-dataverse-attribute": "solutionname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SolutionName",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 4000
+        },
+        "solutionversion": {
+          "type": "string",
+          "title": "Solution Version",
+          "x-ms-dataverse-attribute": "solutionversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SolutionVersion",
+          "required": true,
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "branchname",
+        "gitsolutionid",
+        "rootfolderpath",
+        "solutionname",
+        "solutionversion"
+      ]
+    }
+  }
+}

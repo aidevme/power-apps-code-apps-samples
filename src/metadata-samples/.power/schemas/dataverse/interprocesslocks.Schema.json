@@ -1,0 +1,47 @@
+{
+  "name": "interprocesslock",
+  "title": "Inter Process Locks",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "interprocesslocks",
+      "x-ms-dataverse-primary-id": "interprocesslockid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "interprocesslockid": {
+          "type": "string",
+          "title": "interprocesslockid",
+          "x-ms-dataverse-attribute": "interprocesslockid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "InterProcessLockId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "modifiedon",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "required": true
+        },
+        "token": {
+          "type": "string",
+          "title": "token",
+          "x-ms-dataverse-attribute": "token",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "Token",
+          "required": true
+        }
+      },
+      "required": [
+        "interprocesslockid",
+        "modifiedon",
+        "token"
+      ]
+    }
+  }
+}

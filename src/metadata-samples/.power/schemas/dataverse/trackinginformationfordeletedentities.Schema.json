@@ -1,0 +1,117 @@
+{
+  "name": "subscriptiontrackingdeletedobject",
+  "title": "Tracking information for deleted entities",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "subscriptiontrackingdeletedobjects",
+      "x-ms-dataverse-primary-id": "timestamp",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "crmcreatedon": {
+          "type": "string",
+          "title": "Crm Created On",
+          "x-ms-dataverse-attribute": "crmcreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CrmCreatedOn"
+        },
+        "deletetime": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "deletetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "DeleteTime"
+        },
+        "isarchivaldelete": {
+          "type": "string",
+          "title": "Is Archival Delete",
+          "x-ms-dataverse-attribute": "isarchivaldelete",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsArchivalDelete",
+          "enum": [
+            "False",
+            "True"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "3e4d8b18-5419-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Archival Delete",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isarchivaldeletename": {
+          "type": "string",
+          "title": "isarchivaldeletename",
+          "x-ms-dataverse-attribute": "isarchivaldeletename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "isarchivaldeleteName",
+          "x-ms-read-only": true
+        },
+        "islogicaldelete": {
+          "type": "string",
+          "title": "Is Logical Delete",
+          "x-ms-dataverse-attribute": "islogicaldelete",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsLogicalDelete",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "44d2856f-a185-4fe9-89e6-a9e3c58f34ca",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Logical Delete",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "objectid": {
+          "type": "string",
+          "title": "objectid",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ObjectId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "timestamp": {
+          "type": "string",
+          "title": "timestamp",
+          "x-ms-dataverse-attribute": "timestamp",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "TimeStamp",
+          "x-ms-read-only": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "objectid",
+        "objecttypecode",
+        "timestamp"
+      ]
+    }
+  }
+}

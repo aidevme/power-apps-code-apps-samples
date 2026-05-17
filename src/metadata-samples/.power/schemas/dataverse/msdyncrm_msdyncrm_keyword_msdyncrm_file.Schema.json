@@ -1,0 +1,58 @@
+{
+  "name": "msdyncrm_msdyncrm_keyword_msdyncrm_file",
+  "title": "msdyncrm_msdyncrm_keyword_msdyncrm_file",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyncrm_msdyncrm_keyword_msdyncrm_fileset",
+      "x-ms-dataverse-primary-id": "msdyncrm_msdyncrm_keyword_msdyncrm_fileid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyncrm_fileid": {
+          "type": "string",
+          "title": "msdyncrm_fileid",
+          "x-ms-dataverse-attribute": "msdyncrm_fileid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyncrm_fileid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyncrm_keywordid": {
+          "type": "string",
+          "title": "msdyncrm_keywordid",
+          "x-ms-dataverse-attribute": "msdyncrm_keywordid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyncrm_keywordid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyncrm_msdyncrm_keyword_msdyncrm_fileid": {
+          "type": "string",
+          "title": "msdyncrm_msdyncrm_keyword_msdyncrm_fileid",
+          "x-ms-dataverse-attribute": "msdyncrm_msdyncrm_keyword_msdyncrm_fileid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyncrm_msdyncrm_keyword_msdyncrm_fileId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyncrm_fileid",
+        "msdyncrm_keywordid",
+        "msdyncrm_msdyncrm_keyword_msdyncrm_fileid"
+      ]
+    }
+  }
+}

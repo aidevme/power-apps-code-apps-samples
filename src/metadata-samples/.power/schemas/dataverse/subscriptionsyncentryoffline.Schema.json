@@ -1,0 +1,64 @@
+{
+  "name": "subscriptionsyncentryoffline",
+  "title": "Subscription Sync Entry Offline",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "subscriptionsyncentriesoffline",
+      "x-ms-dataverse-primary-id": "subscriptionid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "objectid": {
+          "type": "string",
+          "title": "ObjectId",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ObjectId",
+          "required": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "ObjectTypeCode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "required": true
+        },
+        "subscriptionid": {
+          "type": "string",
+          "title": "SubscriptionId",
+          "x-ms-dataverse-attribute": "subscriptionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SubscriptionId",
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "syncstate": {
+          "type": "string",
+          "title": "SyncState",
+          "x-ms-dataverse-attribute": "syncstate",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "SyncState",
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "VersionNumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "required": true
+        }
+      },
+      "required": [
+        "objectid",
+        "objecttypecode",
+        "subscriptionid",
+        "syncstate",
+        "versionnumber"
+      ]
+    }
+  }
+}

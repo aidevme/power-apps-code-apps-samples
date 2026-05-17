@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_callablecontext_msdyn_playbooktemplate",
+  "title": "msdyn_callablecontext_msdyn_playbooktemplate",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_callablecontext_msdyn_playbooktemplateset",
+      "x-ms-dataverse-primary-id": "msdyn_callablecontext_msdyn_playbooktemplateid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_callablecontext_msdyn_playbooktemplateid": {
+          "type": "string",
+          "title": "msdyn_callablecontext_msdyn_playbooktemplateid",
+          "x-ms-dataverse-attribute": "msdyn_callablecontext_msdyn_playbooktemplateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_callablecontext_msdyn_playbooktemplateId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_callablecontextid": {
+          "type": "string",
+          "title": "msdyn_callablecontextid",
+          "x-ms-dataverse-attribute": "msdyn_callablecontextid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_callablecontextid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_playbooktemplateid": {
+          "type": "string",
+          "title": "msdyn_playbooktemplateid",
+          "x-ms-dataverse-attribute": "msdyn_playbooktemplateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_playbooktemplateid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_callablecontext_msdyn_playbooktemplateid",
+        "msdyn_callablecontextid",
+        "msdyn_playbooktemplateid"
+      ]
+    }
+  }
+}

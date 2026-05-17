@@ -1,0 +1,356 @@
+{
+  "name": "entitydataprovider",
+  "title": "Virtual Entity Data Providers",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "entitydataproviders",
+      "x-ms-dataverse-primary-id": "entitydataproviderid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "archiveplugin": {
+          "type": "string",
+          "title": "Contains the archiveplugin id that should be run when Archive is invoked",
+          "x-ms-dataverse-attribute": "archiveplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ArchivePlugin"
+        },
+        "bulkarchiveplugin": {
+          "type": "string",
+          "title": "Contains the bulkarchiveplugin id that should be run when BulkArchive is invoked",
+          "x-ms-dataverse-attribute": "bulkarchiveplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "BulkArchivePlugin"
+        },
+        "bulkretainplugin": {
+          "type": "string",
+          "title": "Contains the bulkretainplugin id that should be run when BulkRetain is invoked",
+          "x-ms-dataverse-attribute": "bulkretainplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "BulkRetainPlugin"
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "createmultipleplugin": {
+          "type": "string",
+          "title": "Contains the createmultipleplugin id that should be run when CreateMultiple is invoked",
+          "x-ms-dataverse-attribute": "createmultipleplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "CreateMultiplePlugin"
+        },
+        "createplugin": {
+          "type": "string",
+          "title": "Create Plugin",
+          "x-ms-dataverse-attribute": "createplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "CreatePlugin"
+        },
+        "datasourcelogicalname": {
+          "type": "string",
+          "title": "Data Source Entity Logical Name",
+          "x-ms-dataverse-attribute": "datasourcelogicalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DataSourceLogicalName",
+          "maxLength": 128
+        },
+        "deletemultipleplugin": {
+          "type": "string",
+          "title": "Contains the deletemultipleplugin id that should be run when DeleteMultiple is invoked",
+          "x-ms-dataverse-attribute": "deletemultipleplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "DeleteMultiplePlugin"
+        },
+        "deleteplugin": {
+          "type": "string",
+          "title": "Delete Plugin",
+          "x-ms-dataverse-attribute": "deleteplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "DeletePlugin"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 1000
+        },
+        "entitydataproviderid": {
+          "type": "string",
+          "title": "Data Provider",
+          "x-ms-dataverse-attribute": "entitydataproviderid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "EntityDataProviderId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "entitydataprovideridunique": {
+          "type": "string",
+          "title": "Unique Id",
+          "x-ms-dataverse-attribute": "entitydataprovideridunique",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "EntityDataProviderIdUnique",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "introducedversion": {
+          "type": "string",
+          "title": "Introduced Version",
+          "x-ms-dataverse-attribute": "introducedversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "IntroducedVersion",
+          "maxLength": 48
+        },
+        "iscustomizable": {
+          "type": "string",
+          "title": "Customizable",
+          "x-ms-dataverse-attribute": "iscustomizable",
+          "x-ms-dataverse-type": "ManagedPropertyType",
+          "x-ms-schema-name": "IsCustomizable",
+          "required": true
+        },
+        "ismanaged": {
+          "type": "string",
+          "title": "State",
+          "x-ms-dataverse-attribute": "ismanaged",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsManaged",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Unmanaged",
+            "Managed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9d04e035-5408-4c1d-a5aa-20445a02f691",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Component Managed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismanagedname": {
+          "type": "string",
+          "title": "ismanagedname",
+          "x-ms-dataverse-attribute": "ismanagedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsManagedName",
+          "x-ms-read-only": true
+        },
+        "lookupexpansionenabled": {
+          "type": "string",
+          "title": "LookupExpansionEnabled",
+          "x-ms-dataverse-attribute": "lookupexpansionenabled",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "LookupExpansionEnabled",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "d9ef3c41-3019-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "LookupExpansionEnabled",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "lookupexpansionenabledname": {
+          "type": "string",
+          "title": "lookupexpansionenabledname",
+          "x-ms-dataverse-attribute": "lookupexpansionenabledname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "lookupexpansionenabledName",
+          "x-ms-read-only": true
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "purgearchivedcontentplugin": {
+          "type": "string",
+          "title": "Contains the purgearchivedcontentplugin id that should be run when PurgeArchivedContent is invoked",
+          "x-ms-dataverse-attribute": "purgearchivedcontentplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PurgeArchivedContentPlugin"
+        },
+        "purgeretainedcontentplugin": {
+          "type": "string",
+          "title": "Contains the purgeretainedcontentplugin id that should be run when PurgeRetainedContent is invoked",
+          "x-ms-dataverse-attribute": "purgeretainedcontentplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PurgeRetainedContentPlugin"
+        },
+        "retainplugin": {
+          "type": "string",
+          "title": "Contains the retainplugin id that should be run when Retain is invoked",
+          "x-ms-dataverse-attribute": "retainplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RetainPlugin"
+        },
+        "retrieveentitychangesplugin": {
+          "type": "string",
+          "title": "Contains the retrieveentitychangesplugin id that should be run when RetrieveEntityChanges is invoked",
+          "x-ms-dataverse-attribute": "retrieveentitychangesplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RetrieveEntityChangesPlugin"
+        },
+        "retrievemultipleplugin": {
+          "type": "string",
+          "title": "MultipleRetrieve Plugin",
+          "x-ms-dataverse-attribute": "retrievemultipleplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RetrieveMultiplePlugin"
+        },
+        "retrieveplugin": {
+          "type": "string",
+          "title": "Retrieve Plugin",
+          "x-ms-dataverse-attribute": "retrieveplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RetrievePlugin"
+        },
+        "rollbackretainplugin": {
+          "type": "string",
+          "title": "Contains the rollbackretainplugin id that should be run when Rollback Retain is invoked",
+          "x-ms-dataverse-attribute": "rollbackretainplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RollbackRetainPlugin"
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "supportingsolutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "supportingsolutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SupportingSolutionId",
+          "x-ms-read-only": true
+        },
+        "updatemultipleplugin": {
+          "type": "string",
+          "title": "Contains the updatemultipleplugin id that should be run when UpdateMultiple is invoked",
+          "x-ms-dataverse-attribute": "updatemultipleplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UpdateMultiplePlugin"
+        },
+        "updateplugin": {
+          "type": "string",
+          "title": "Update Plugin",
+          "x-ms-dataverse-attribute": "updateplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UpdatePlugin"
+        },
+        "upsertmultipleplugin": {
+          "type": "string",
+          "title": "Contains the upsertmultipleplugin id that should be run when UpsertMultiple is invoked",
+          "x-ms-dataverse-attribute": "upsertmultipleplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UpsertMultiplePlugin"
+        },
+        "upsertplugin": {
+          "type": "string",
+          "title": "Contains the upsertplugin id that should be run when Upsert is invoked",
+          "x-ms-dataverse-attribute": "upsertplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "UpsertPlugin"
+        },
+        "validatearchiveconfigplugin": {
+          "type": "string",
+          "title": "Contains the validatearchiveconfigplugin id that should be run when ValidateArchiveConfig is invoked",
+          "x-ms-dataverse-attribute": "validatearchiveconfigplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ValidateArchiveConfigPlugin"
+        },
+        "validateretentionconfigplugin": {
+          "type": "string",
+          "title": "Contains the validateretentionconfigplugin id that should be run when ValidateRetentionConfig is invoked",
+          "x-ms-dataverse-attribute": "validateretentionconfigplugin",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ValidateRetentionConfigPlugin"
+        }
+      },
+      "required": [
+        "componentstate",
+        "entitydataproviderid",
+        "entitydataprovideridunique",
+        "iscustomizable",
+        "ismanaged",
+        "organizationid",
+        "overwritetime",
+        "solutionid"
+      ]
+    }
+  }
+}

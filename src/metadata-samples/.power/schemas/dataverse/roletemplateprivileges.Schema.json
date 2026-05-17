@@ -1,0 +1,202 @@
+{
+  "name": "roletemplateprivileges",
+  "title": "roletemplateprivileges",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "roletemplateprivilegescollection",
+      "x-ms-dataverse-primary-id": "roletemplateprivilegeid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "isbasic": {
+          "type": "string",
+          "title": "isbasic",
+          "x-ms-dataverse-attribute": "isbasic",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsBasic",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "315a7246-4d44-4e1a-984b-922b5fff1037",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isbasicname": {
+          "type": "string",
+          "title": "isbasicname",
+          "x-ms-dataverse-attribute": "isbasicname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsBasicName",
+          "x-ms-read-only": true
+        },
+        "isdeep": {
+          "type": "string",
+          "title": "isdeep",
+          "x-ms-dataverse-attribute": "isdeep",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsDeep",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "117ced35-a102-4e31-9003-0bca810799e9",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isdeepname": {
+          "type": "string",
+          "title": "isdeepname",
+          "x-ms-dataverse-attribute": "isdeepname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsDeepName",
+          "x-ms-read-only": true
+        },
+        "isglobal": {
+          "type": "string",
+          "title": "isglobal",
+          "x-ms-dataverse-attribute": "isglobal",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsGlobal",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "3427c55e-2cb1-4948-9c18-df1bb5eb27ff",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isglobalname": {
+          "type": "string",
+          "title": "isglobalname",
+          "x-ms-dataverse-attribute": "isglobalname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsGlobalName",
+          "x-ms-read-only": true
+        },
+        "islocal": {
+          "type": "string",
+          "title": "islocal",
+          "x-ms-dataverse-attribute": "islocal",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsLocal",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "ccda26a8-083d-4ad7-a471-eae6041bfb7b",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "islocalname": {
+          "type": "string",
+          "title": "islocalname",
+          "x-ms-dataverse-attribute": "islocalname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsLocalName",
+          "x-ms-read-only": true
+        },
+        "privilegeid": {
+          "type": "string",
+          "title": "privilegeid",
+          "x-ms-dataverse-attribute": "privilegeid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PrivilegeId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "roletemplateid": {
+          "type": "string",
+          "title": "roletemplateid",
+          "x-ms-dataverse-attribute": "roletemplateid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RoleTemplateId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "roletemplateprivilegeid": {
+          "type": "string",
+          "title": "roletemplateprivilegeid",
+          "x-ms-dataverse-attribute": "roletemplateprivilegeid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RoleTemplatePrivilegeId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "upgrading": {
+          "type": "string",
+          "title": "upgrading",
+          "x-ms-dataverse-attribute": "upgrading",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "Upgrading",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "e7a2273e-b378-41e5-8d3f-e7d0d98597ba",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        }
+      },
+      "required": [
+        "isbasic",
+        "isdeep",
+        "isglobal",
+        "islocal",
+        "privilegeid",
+        "roletemplateid",
+        "roletemplateprivilegeid",
+        "upgrading"
+      ]
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "name": "attachment",
+  "title": "Attachments",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "attachments",
+      "x-ms-dataverse-primary-id": "attachmentid",
+      "x-ms-dataverse-primary-name": "filename",
+      "properties": {
+        "attachmentid": {
+          "type": "string",
+          "title": "Attachment",
+          "x-ms-dataverse-attribute": "attachmentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AttachmentId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "body": {
+          "type": "string",
+          "title": "Body",
+          "x-ms-dataverse-attribute": "body",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Body",
+          "maxLength": 1073741823
+        },
+        "filename": {
+          "type": "string",
+          "title": "File Name",
+          "x-ms-dataverse-attribute": "filename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FileName",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 255
+        },
+        "filepointer": {
+          "type": "string",
+          "title": "File Pointer",
+          "x-ms-dataverse-attribute": "filepointer",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FilePointer",
+          "x-ms-read-only": true,
+          "maxLength": 255
+        },
+        "filesize": {
+          "type": "string",
+          "title": "File Size (Bytes)",
+          "x-ms-dataverse-attribute": "filesize",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FileSize",
+          "x-ms-read-only": true
+        },
+        "iscompressed": {
+          "type": "string",
+          "title": "Is Compressed",
+          "x-ms-dataverse-attribute": "iscompressed",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsCompressed",
+          "x-ms-read-only": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "6c5a30a1-2e19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "attachment_iscompressed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "iscompressedname": {
+          "type": "string",
+          "title": "iscompressedname",
+          "x-ms-dataverse-attribute": "iscompressedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "iscompressedName",
+          "x-ms-read-only": true
+        },
+        "mimetype": {
+          "type": "string",
+          "title": "MIME Type",
+          "x-ms-dataverse-attribute": "mimetype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "MimeType",
+          "maxLength": 256
+        },
+        "prefix": {
+          "type": "string",
+          "title": "Prefix",
+          "x-ms-dataverse-attribute": "prefix",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Prefix",
+          "x-ms-read-only": true,
+          "maxLength": 10
+        },
+        "storagepointer": {
+          "type": "string",
+          "title": "Storage Pointer",
+          "x-ms-dataverse-attribute": "storagepointer",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "StoragePointer",
+          "x-ms-read-only": true,
+          "maxLength": 10
+        },
+        "subject": {
+          "type": "string",
+          "title": "Subject",
+          "x-ms-dataverse-attribute": "subject",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Subject",
+          "maxLength": 2000
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "attachmentid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_flow_awaitallactionapprovalmodel_user",
+  "title": "msdyn_flow_awaitallactionapprovalmodel_user",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_flow_awaitallactionapprovalmodel_userset",
+      "x-ms-dataverse-primary-id": "msdyn_flow_awaitallactionapprovalmodel_userid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_flow_awaitallactionapprovalmodel_userid": {
+          "type": "string",
+          "title": "msdyn_flow_awaitallactionapprovalmodel_userid",
+          "x-ms-dataverse-attribute": "msdyn_flow_awaitallactionapprovalmodel_userid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_flow_awaitallactionapprovalmodel_userId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_flow_awaitallactionapprovalmodelid": {
+          "type": "string",
+          "title": "msdyn_flow_awaitallactionapprovalmodelid",
+          "x-ms-dataverse-attribute": "msdyn_flow_awaitallactionapprovalmodelid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_flow_awaitallactionapprovalmodelid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "systemuserid",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "systemuserid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_flow_awaitallactionapprovalmodel_userid",
+        "msdyn_flow_awaitallactionapprovalmodelid",
+        "systemuserid"
+      ]
+    }
+  }
+}

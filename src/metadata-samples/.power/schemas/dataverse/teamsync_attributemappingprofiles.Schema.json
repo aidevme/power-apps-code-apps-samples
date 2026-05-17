@@ -1,0 +1,57 @@
+{
+  "name": "teamsyncattributemappingprofiles",
+  "title": "Team Sync-Attribute Mapping Profiles",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "teamsyncattributemappingprofilescollection",
+      "x-ms-dataverse-primary-id": "teamsyncattributemappingprofileid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "syncattributemappingprofileid": {
+          "type": "string",
+          "title": "syncattributemappingprofileid",
+          "x-ms-dataverse-attribute": "syncattributemappingprofileid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SyncAttributeMappingProfileId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "teamid": {
+          "type": "string",
+          "title": "teamid",
+          "x-ms-dataverse-attribute": "teamid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "TeamId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "teamsyncattributemappingprofileid": {
+          "type": "string",
+          "title": "teamsyncattributemappingprofileid",
+          "x-ms-dataverse-attribute": "teamsyncattributemappingprofileid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "TeamSyncAttributeMappingProfileId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "syncattributemappingprofileid",
+        "teamid",
+        "teamsyncattributemappingprofileid"
+      ]
+    }
+  }
+}

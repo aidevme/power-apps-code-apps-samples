@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_iotdevicecommandparameters",
+  "title": "msdyn_iotdevicecommandparameters",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_iotdevicecommandparametersset",
+      "x-ms-dataverse-primary-id": "msdyn_iotdevicecommandparametersid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_iotdevicecommanddefinitionid": {
+          "type": "string",
+          "title": "msdyn_iotdevicecommanddefinitionid",
+          "x-ms-dataverse-attribute": "msdyn_iotdevicecommanddefinitionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_iotdevicecommanddefinitionid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_iotdevicecommandparametersid": {
+          "type": "string",
+          "title": "msdyn_iotdevicecommandparametersid",
+          "x-ms-dataverse-attribute": "msdyn_iotdevicecommandparametersid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_iotdevicecommandparametersId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_iotpropertydefinitionid": {
+          "type": "string",
+          "title": "msdyn_iotpropertydefinitionid",
+          "x-ms-dataverse-attribute": "msdyn_iotpropertydefinitionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_iotpropertydefinitionid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_iotdevicecommanddefinitionid",
+        "msdyn_iotdevicecommandparametersid",
+        "msdyn_iotpropertydefinitionid"
+      ]
+    }
+  }
+}

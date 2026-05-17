@@ -1,0 +1,301 @@
+{
+  "name": "rollupfield",
+  "title": "Rollup Fields",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "rollupfields",
+      "x-ms-dataverse-primary-id": "rollupfieldid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "dateattribute": {
+          "type": "string",
+          "title": "Date Field",
+          "x-ms-dataverse-attribute": "dateattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DateAttribute",
+          "required": true,
+          "maxLength": 100
+        },
+        "entityfordateattribute": {
+          "type": "string",
+          "title": "Record Type",
+          "x-ms-dataverse-attribute": "entityfordateattribute",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "EntityForDateAttribute",
+          "required": true,
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "1c7f8717-d86e-4394-8a47-c116784ec6d6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Entity For Date Attribute",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "entityfordateattributename": {
+          "type": "string",
+          "title": "entityfordateattributename",
+          "x-ms-dataverse-attribute": "entityfordateattributename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "EntityForDateAttributeName",
+          "x-ms-read-only": true
+        },
+        "goalattribute": {
+          "type": "string",
+          "title": "Rollup Field",
+          "x-ms-dataverse-attribute": "goalattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "GoalAttribute",
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "isstateparententityattribute": {
+          "type": "string",
+          "title": "Is State/Status From Parent Entity",
+          "x-ms-dataverse-attribute": "isstateparententityattribute",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsStateParentEntityAttribute",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faea426d-1043-4be7-be21-57ac33a94b5b",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Indicates whether state is an attribute of Parent entity",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "metricid": {
+          "type": "string",
+          "title": "Goal Metric",
+          "x-ms-dataverse-attribute": "metricid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "MetricId",
+          "required": true
+        },
+        "metricidname": {
+          "type": "string",
+          "title": "metricidname",
+          "x-ms-dataverse-attribute": "metricidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "MetricIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "rollupfieldid": {
+          "type": "string",
+          "title": "Rollup Field",
+          "x-ms-dataverse-attribute": "rollupfieldid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RollupFieldId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "sourceattribute": {
+          "type": "string",
+          "title": "Source Field",
+          "x-ms-dataverse-attribute": "sourceattribute",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SourceAttribute",
+          "required": true,
+          "maxLength": 100
+        },
+        "sourceentity": {
+          "type": "string",
+          "title": "Source Record Type",
+          "x-ms-dataverse-attribute": "sourceentity",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "SourceEntity",
+          "required": true,
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "e8c1691e-3c90-4752-b73d-4d1fabbb014d",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Source Record Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "sourceentityname": {
+          "type": "string",
+          "title": "sourceentityname",
+          "x-ms-dataverse-attribute": "sourceentityname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "SourceEntityName",
+          "x-ms-read-only": true
+        },
+        "sourcestate": {
+          "type": "string",
+          "title": "Source Record Type State",
+          "x-ms-dataverse-attribute": "sourcestate",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "SourceState"
+        },
+        "sourcestatus": {
+          "type": "string",
+          "title": "Source Record Type Status",
+          "x-ms-dataverse-attribute": "sourcestatus",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "SourceStatus"
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "dateattribute",
+        "entityfordateattribute",
+        "goalattribute",
+        "metricid",
+        "rollupfieldid",
+        "sourceattribute",
+        "sourceentity"
+      ]
+    }
+  }
+}

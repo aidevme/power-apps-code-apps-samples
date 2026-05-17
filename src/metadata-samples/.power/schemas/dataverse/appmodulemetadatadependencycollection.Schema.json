@@ -1,0 +1,111 @@
+{
+  "name": "appmodulemetadatadependency",
+  "title": "AppModule Metadata Dependency Collection",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "appmodulemetadatadependencycollection",
+      "x-ms-dataverse-primary-id": "appmodulemetadatadependencyid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "appmodulemetadatadependencyid": {
+          "type": "string",
+          "title": "AppModule Metadata Dependency Id",
+          "x-ms-dataverse-attribute": "appmodulemetadatadependencyid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AppModuleMetadataDependencyId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "dependentcomponentid": {
+          "type": "string",
+          "title": "Dependent Component Id",
+          "x-ms-dataverse-attribute": "dependentcomponentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "DependentComponentId",
+          "required": true
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "requiredcomponentid": {
+          "type": "string",
+          "title": "Required Component Id",
+          "x-ms-dataverse-attribute": "requiredcomponentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "RequiredComponentId",
+          "required": true
+        },
+        "requiredcomponentinternalid": {
+          "type": "string",
+          "title": "Required Component Internal Id",
+          "x-ms-dataverse-attribute": "requiredcomponentinternalid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RequiredComponentInternalId",
+          "maxLength": 300
+        },
+        "requiredcomponentsubtype": {
+          "type": "string",
+          "title": "Required Component Sub-Type",
+          "x-ms-dataverse-attribute": "requiredcomponentsubtype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "RequiredComponentSubType",
+          "required": true
+        },
+        "requiredcomponenttype": {
+          "type": "string",
+          "title": "Required Component Type",
+          "x-ms-dataverse-attribute": "requiredcomponenttype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "RequiredComponentType",
+          "required": true
+        },
+        "requiredcomponentversion": {
+          "type": "string",
+          "title": "Required Component Version",
+          "x-ms-dataverse-attribute": "requiredcomponentversion",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "RequiredComponentVersion",
+          "required": true
+        },
+        "state": {
+          "type": "string",
+          "title": "State of the record",
+          "x-ms-dataverse-attribute": "state",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "State",
+          "required": true
+        }
+      },
+      "required": [
+        "appmodulemetadatadependencyid",
+        "createdon",
+        "dependentcomponentid",
+        "modifiedon",
+        "requiredcomponentid",
+        "requiredcomponentsubtype",
+        "requiredcomponenttype",
+        "requiredcomponentversion",
+        "state"
+      ]
+    }
+  }
+}

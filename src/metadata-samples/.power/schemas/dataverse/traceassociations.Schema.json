@@ -1,0 +1,84 @@
+{
+  "name": "traceassociation",
+  "title": "Trace Associations",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "traceassociations",
+      "x-ms-dataverse-primary-id": "traceassociationid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "organizationid": {
+          "type": "string",
+          "title": "Organization",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "regardingobjectid": {
+          "type": "string",
+          "title": "Regarding",
+          "x-ms-dataverse-attribute": "regardingobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "RegardingObjectId",
+          "required": true
+        },
+        "regardingobjecttypecode": {
+          "type": "string",
+          "title": "Regarding Object Type",
+          "x-ms-dataverse-attribute": "regardingobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectTypeCode"
+        },
+        "traceassociationid": {
+          "type": "string",
+          "title": "Trace Association",
+          "x-ms-dataverse-attribute": "traceassociationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "TraceAssociationId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "tracelogid": {
+          "type": "string",
+          "title": "Trace",
+          "x-ms-dataverse-attribute": "tracelogid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "TraceLogId",
+          "required": true
+        },
+        "tracelogidname": {
+          "type": "string",
+          "title": "tracelogidname",
+          "x-ms-dataverse-attribute": "tracelogidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "TraceLogIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "organizationid",
+        "organizationidname",
+        "regardingobjectid",
+        "traceassociationid",
+        "tracelogid"
+      ]
+    }
+  }
+}

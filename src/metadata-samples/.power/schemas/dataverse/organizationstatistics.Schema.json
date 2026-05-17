@@ -1,0 +1,69 @@
+{
+  "name": "organizationstatistic",
+  "title": "Organization Statistics",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "organizationstatistics",
+      "x-ms-dataverse-primary-id": "organizationstatisticid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "hour": {
+          "type": "string",
+          "title": "Hour",
+          "x-ms-dataverse-attribute": "hour",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Hour",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "organizationstatisticid": {
+          "type": "string",
+          "title": "Org Statistic",
+          "x-ms-dataverse-attribute": "organizationstatisticid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OrganizationStatisticId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "servername": {
+          "type": "string",
+          "title": "Server Name",
+          "x-ms-dataverse-attribute": "servername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ServerName",
+          "x-ms-read-only": true,
+          "maxLength": 256
+        },
+        "statistictype": {
+          "type": "string",
+          "title": "Statistic Type",
+          "x-ms-dataverse-attribute": "statistictype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StatisticType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "statisticvalue": {
+          "type": "string",
+          "title": "Statistic Value",
+          "x-ms-dataverse-attribute": "statisticvalue",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "StatisticValue",
+          "x-ms-read-only": true,
+          "required": true
+        }
+      },
+      "required": [
+        "hour",
+        "organizationstatisticid",
+        "statistictype",
+        "statisticvalue"
+      ]
+    }
+  }
+}

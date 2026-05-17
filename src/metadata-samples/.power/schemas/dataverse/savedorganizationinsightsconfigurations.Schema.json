@@ -1,0 +1,411 @@
+{
+  "name": "savedorginsightsconfiguration",
+  "title": "Saved Organization Insights Configurations",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "savedorginsightsconfigurations",
+      "x-ms-dataverse-primary-id": "savedorginsightsconfigurationid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "title": "Description of the saved organization insights configuration",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 1000
+        },
+        "isdefault": {
+          "type": "string",
+          "title": "Default Configuration",
+          "x-ms-dataverse-attribute": "isdefault",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsDefault",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "2adc7ba9-86be-4916-bbd2-b7549d00e6b6",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Default",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isdefaultname": {
+          "type": "string",
+          "title": "isdefaultname",
+          "x-ms-dataverse-attribute": "isdefaultname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsDefaultName",
+          "x-ms-read-only": true
+        },
+        "isdrilldown": {
+          "type": "string",
+          "title": "Is Drilldown",
+          "x-ms-dataverse-attribute": "isdrilldown",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsDrilldown",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "6de00b99-e773-484a-bf29-ce1999db88e6",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Drilldown",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isdrilldownname": {
+          "type": "string",
+          "title": "isdrilldownname",
+          "x-ms-dataverse-attribute": "isdrilldownname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsDrilldownName",
+          "x-ms-read-only": true
+        },
+        "jsondata": {
+          "type": "string",
+          "title": "Metrics Data in Json format for the metrics defined in parameters",
+          "x-ms-dataverse-attribute": "jsondata",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "JsonData",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        },
+        "jsondataendtime": {
+          "type": "string",
+          "title": "End Time",
+          "x-ms-dataverse-attribute": "jsondataendtime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "JsonDataEndTime",
+          "x-ms-read-only": true
+        },
+        "jsondatastarttime": {
+          "type": "string",
+          "title": "Start Time",
+          "x-ms-dataverse-attribute": "jsondatastarttime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "JsonDataStartTime",
+          "x-ms-read-only": true
+        },
+        "lookback": {
+          "type": "string",
+          "title": "Lookback",
+          "x-ms-dataverse-attribute": "lookback",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "Lookback",
+          "enum": [
+            "2H",
+            "48H",
+            "7D",
+            "30D"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "4fa1d9e1-3091-4827-aef2-7dab96d47a5a",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Lookback",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "lookbackname": {
+          "type": "string",
+          "title": "lookbackname",
+          "x-ms-dataverse-attribute": "lookbackname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "LookbackName",
+          "x-ms-read-only": true
+        },
+        "metrictype": {
+          "type": "string",
+          "title": "Metric Type",
+          "x-ms-dataverse-attribute": "metrictype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "MetricType",
+          "enum": [
+            "Time Series",
+            "Category"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "16a1f65c-544b-45e5-b276-4817f1d921f8",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "SavedOrgInsightsConfiguration Metric Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "metrictypename": {
+          "type": "string",
+          "title": "metrictypename",
+          "x-ms-dataverse-attribute": "metrictypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "MetricTypeName",
+          "x-ms-read-only": true
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "name": {
+          "type": "string",
+          "title": "Display name for the saved organization insights configuration",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "maxLength": 1000
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "parameters": {
+          "type": "string",
+          "title": "Parameters needed for data retrieval",
+          "x-ms-dataverse-attribute": "parameters",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Parameters",
+          "maxLength": 1000
+        },
+        "plotoption": {
+          "type": "string",
+          "title": "Plot Option",
+          "x-ms-dataverse-attribute": "plotoption",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "PlotOption",
+          "enum": [
+            "Line",
+            "Column",
+            "Area",
+            "Pie",
+            "Bar",
+            "Donut",
+            "Infocard",
+            "List",
+            "DoubleDonut",
+            "LinearGauge",
+            "Bubble"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "fbdeeb3d-95e9-42ed-9581-295721dedbb6",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Plot Option",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "plotoptionname": {
+          "type": "string",
+          "title": "plotoptionname",
+          "x-ms-dataverse-attribute": "plotoptionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "PlotOptionName",
+          "x-ms-read-only": true
+        },
+        "savedorginsightsconfigurationid": {
+          "type": "string",
+          "title": "SavedOrgInsightsConfigurationId",
+          "x-ms-dataverse-attribute": "savedorginsightsconfigurationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SavedOrgInsightsConfigurationId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "isdefault",
+        "isdrilldown",
+        "organizationid",
+        "organizationidname",
+        "savedorginsightsconfigurationid"
+      ]
+    }
+  }
+}

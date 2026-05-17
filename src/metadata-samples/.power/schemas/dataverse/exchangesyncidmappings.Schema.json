@@ -1,0 +1,252 @@
+{
+  "name": "exchangesyncidmapping",
+  "title": "Exchange Sync Id Mappings",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "exchangesyncidmappings",
+      "x-ms-dataverse-primary-id": "exchangesyncidmappingid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "exchangeentryid": {
+          "type": "string",
+          "title": "Exchange Id",
+          "x-ms-dataverse-attribute": "exchangeentryid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ExchangeEntryId",
+          "maxLength": 1024
+        },
+        "exchangesyncidmappingid": {
+          "type": "string",
+          "title": "exchangesyncidmappingid",
+          "x-ms-dataverse-attribute": "exchangesyncidmappingid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ExchangeSyncIdmappingId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "fromcrmchangetype": {
+          "type": "string",
+          "title": "fromcrmchangetype",
+          "x-ms-dataverse-attribute": "fromcrmchangetype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "FromCrmChangeType"
+        },
+        "isdeletedinexchange": {
+          "type": "string",
+          "title": "isdeletedinexchange",
+          "x-ms-dataverse-attribute": "isdeletedinexchange",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsDeletedInExchange",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "71bc8bba-d3a8-e011-91da-00155d1dd929",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "IsDeletedInExchange",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isunlinkedincrm": {
+          "type": "string",
+          "title": "isunlinkedincrm",
+          "x-ms-dataverse-attribute": "isunlinkedincrm",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsUnlinkedInCRM",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "4da27feb-d3a8-e011-91da-00155d1dd929",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Unlinked in CRM",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "itemsubject": {
+          "type": "string",
+          "title": "Item Subject",
+          "x-ms-dataverse-attribute": "itemsubject",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ItemSubject",
+          "maxLength": 2048
+        },
+        "lastsyncerror": {
+          "type": "string",
+          "title": "Sync Error",
+          "x-ms-dataverse-attribute": "lastsyncerror",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "LastSyncError",
+          "maxLength": 2048
+        },
+        "lastsyncerrorcode": {
+          "type": "string",
+          "title": "lastsyncerrorcode",
+          "x-ms-dataverse-attribute": "lastsyncerrorcode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "LastSyncErrorCode"
+        },
+        "lastsyncerroroccurredon": {
+          "type": "string",
+          "title": "Last Sync Error Time",
+          "x-ms-dataverse-attribute": "lastsyncerroroccurredon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "LastSyncErrorOccurredOn"
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "objectid": {
+          "type": "string",
+          "title": "Crm Id",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ObjectId"
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "Object Type Code",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectTypeCode"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "owningbusinessunit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "owningteam",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "owninguser",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "retries": {
+          "type": "string",
+          "title": "retries",
+          "x-ms-dataverse-attribute": "retries",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Retries"
+        },
+        "tocrmchangetype": {
+          "type": "string",
+          "title": "tocrmchangetype",
+          "x-ms-dataverse-attribute": "tocrmchangetype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ToCrmChangeType"
+        },
+        "userdecision": {
+          "type": "string",
+          "title": "userdecision",
+          "x-ms-dataverse-attribute": "userdecision",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UserDecision"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "exchangesyncidmappingid",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame"
+      ]
+    }
+  }
+}

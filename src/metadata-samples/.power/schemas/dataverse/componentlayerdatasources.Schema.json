@@ -1,0 +1,38 @@
+{
+  "name": "msdyn_componentlayerdatasource",
+  "title": "Component Layer Data Sources",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_componentlayerdatasources",
+      "x-ms-dataverse-primary-id": "msdyn_componentlayerdatasourceid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "msdyn_componentlayerdatasourceid": {
+          "type": "string",
+          "title": "Component Layer Data Source",
+          "x-ms-dataverse-attribute": "msdyn_componentlayerdatasourceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_componentlayerdatasourceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "msdyn_componentlayerdatasourceid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_msdyn_personalmessage_msdyn_octag",
+  "title": "msdyn_msdyn_personalmessage_msdyn_octag",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_msdyn_personalmessage_msdyn_octagset",
+      "x-ms-dataverse-primary-id": "msdyn_msdyn_personalmessage_msdyn_octagid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_msdyn_personalmessage_msdyn_octagid": {
+          "type": "string",
+          "title": "msdyn_msdyn_personalmessage_msdyn_octagid",
+          "x-ms-dataverse-attribute": "msdyn_msdyn_personalmessage_msdyn_octagid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_msdyn_personalmessage_msdyn_octagId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_octagid": {
+          "type": "string",
+          "title": "msdyn_octagid",
+          "x-ms-dataverse-attribute": "msdyn_octagid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_octagid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_personalmessageid": {
+          "type": "string",
+          "title": "msdyn_personalmessageid",
+          "x-ms-dataverse-attribute": "msdyn_personalmessageid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_personalmessageid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_msdyn_personalmessage_msdyn_octagid",
+        "msdyn_octagid",
+        "msdyn_personalmessageid"
+      ]
+    }
+  }
+}

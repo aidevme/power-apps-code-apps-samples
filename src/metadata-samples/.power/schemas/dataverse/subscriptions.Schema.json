@@ -1,0 +1,161 @@
+{
+  "name": "subscription",
+  "title": "Subscriptions",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "subscriptions",
+      "x-ms-dataverse-primary-id": "subscriptionid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "clientversion": {
+          "type": "string",
+          "title": "Client Version.",
+          "x-ms-dataverse-attribute": "clientversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ClientVersion",
+          "x-ms-read-only": true,
+          "maxLength": 48
+        },
+        "completedsyncstartedon": {
+          "type": "string",
+          "title": "completedsyncstartedon",
+          "x-ms-dataverse-attribute": "completedsyncstartedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CompletedSyncStartedOn",
+          "x-ms-read-only": true
+        },
+        "completedsyncversionnumber": {
+          "type": "string",
+          "title": "completedsyncversionnumber",
+          "x-ms-dataverse-attribute": "completedsyncversionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "CompletedSyncVersionNumber",
+          "x-ms-read-only": true
+        },
+        "lastsyncstartedon": {
+          "type": "string",
+          "title": "lastsyncstartedon",
+          "x-ms-dataverse-attribute": "lastsyncstartedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "LastSyncStartedOn",
+          "x-ms-read-only": true
+        },
+        "machinename": {
+          "type": "string",
+          "title": "machinename",
+          "x-ms-dataverse-attribute": "machinename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "MachineName",
+          "maxLength": 200
+        },
+        "reinitialize": {
+          "type": "string",
+          "title": "reinitialize",
+          "x-ms-dataverse-attribute": "reinitialize",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ReInitialize",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "94ab58e9-2b27-420b-8579-44305401f645",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "resetforcreate": {
+          "type": "string",
+          "title": "resetforcreate",
+          "x-ms-dataverse-attribute": "resetforcreate",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ResetForCreate",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "7d31ec9a-84af-4778-baf7-b10064881178",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "subscriptionid": {
+          "type": "string",
+          "title": "subscriptionid",
+          "x-ms-dataverse-attribute": "subscriptionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SubscriptionId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "subscriptiontype": {
+          "type": "string",
+          "title": "subscriptiontype",
+          "x-ms-dataverse-attribute": "subscriptiontype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "SubscriptionType"
+        },
+        "syncentrytablename": {
+          "type": "string",
+          "title": "syncentrytablename",
+          "x-ms-dataverse-attribute": "syncentrytablename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SyncEntryTableName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 128
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "systemuserid",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SystemUserId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "timezoneruleversionnumber",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "utcconversiontimezonecode",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        }
+      },
+      "required": [
+        "reinitialize",
+        "resetforcreate",
+        "subscriptionid",
+        "syncentrytablename",
+        "systemuserid"
+      ]
+    }
+  }
+}

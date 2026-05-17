@@ -1,0 +1,58 @@
+{
+  "name": "package_solution",
+  "title": "package_solution",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "package_solutionset",
+      "x-ms-dataverse-primary-id": "package_solutionid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "package_solutionid": {
+          "type": "string",
+          "title": "package_solutionid",
+          "x-ms-dataverse-attribute": "package_solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "package_solutionId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "packageid": {
+          "type": "string",
+          "title": "packageid",
+          "x-ms-dataverse-attribute": "packageid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "packageid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "solutionid",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "solutionid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "package_solutionid",
+        "packageid",
+        "solutionid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "name": "postregarding",
+  "title": "Post Regarding",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "postregardings",
+      "x-ms-dataverse-primary-id": "postregardingid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "latestautopostmodifiedon": {
+          "type": "string",
+          "title": "Latest Auto Post",
+          "x-ms-dataverse-attribute": "latestautopostmodifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "LatestAutoPostModifiedOn",
+          "x-ms-read-only": true
+        },
+        "latestmanualpostmodifiedon": {
+          "type": "string",
+          "title": "Latest Manual Post",
+          "x-ms-dataverse-attribute": "latestmanualpostmodifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "LatestManualPostModifiedOn",
+          "x-ms-read-only": true
+        },
+        "postregardingid": {
+          "type": "string",
+          "title": "PostRegardingId",
+          "x-ms-dataverse-attribute": "postregardingid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "PostRegardingId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "regardingobjectid": {
+          "type": "string",
+          "title": "RegardingObjectId",
+          "x-ms-dataverse-attribute": "regardingobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "RegardingObjectId"
+        },
+        "regardingobjectidname": {
+          "type": "string",
+          "title": "regardingobjectidname",
+          "x-ms-dataverse-attribute": "regardingobjectidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "regardingobjectidyominame": {
+          "type": "string",
+          "title": "regardingobjectidyominame",
+          "x-ms-dataverse-attribute": "regardingobjectidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RegardingObjectIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "regardingobjectownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "regardingobjectownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "RegardingObjectOwnerId"
+        },
+        "regardingobjectowneridtype": {
+          "type": "string",
+          "title": "RegardingObjectOwnerIdType",
+          "x-ms-dataverse-attribute": "regardingobjectowneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectOwnerIdType"
+        },
+        "regardingobjectowningbusinessunit": {
+          "type": "string",
+          "title": "Regarding object owning Business Unit",
+          "x-ms-dataverse-attribute": "regardingobjectowningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "RegardingObjectOwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "regardingobjecttypecode": {
+          "type": "string",
+          "title": "RegardingObjectTypeCode",
+          "x-ms-dataverse-attribute": "regardingobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectTypeCode",
+          "required": true
+        },
+        "regardingobjecttypecodeforsharing": {
+          "type": "string",
+          "title": "RegardingObjectTypeCodeForSharing",
+          "x-ms-dataverse-attribute": "regardingobjecttypecodeforsharing",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "RegardingObjectTypeCodeForSharing",
+          "x-ms-read-only": true,
+          "required": true
+        }
+      },
+      "required": [
+        "postregardingid",
+        "regardingobjecttypecode",
+        "regardingobjecttypecodeforsharing"
+      ]
+    }
+  }
+}

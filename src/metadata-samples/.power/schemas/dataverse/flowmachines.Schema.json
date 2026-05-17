@@ -1,0 +1,659 @@
+{
+  "name": "flowmachine",
+  "title": "Flow Machines",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "flowmachines",
+      "x-ms-dataverse-primary-id": "flowmachineid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "agentversion": {
+          "type": "string",
+          "title": "Agent Version",
+          "x-ms-dataverse-attribute": "agentversion",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AgentVersion",
+          "required": true,
+          "maxLength": 100
+        },
+        "connectivityconfiguration": {
+          "type": "string",
+          "title": "Connectivity Configuration",
+          "x-ms-dataverse-attribute": "connectivityconfiguration",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "ConnectivityConfiguration",
+          "required": true,
+          "maxLength": 25000
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 2000
+        },
+        "flowmachinegroupid": {
+          "type": "string",
+          "title": "Flow Machine Group",
+          "x-ms-dataverse-attribute": "flowmachinegroupid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "FlowMachineGroupId",
+          "required": true
+        },
+        "flowmachinegroupidname": {
+          "type": "string",
+          "title": "flowmachinegroupidname",
+          "x-ms-dataverse-attribute": "flowmachinegroupidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FlowMachineGroupIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "flowmachineid": {
+          "type": "string",
+          "title": "Flow Machine",
+          "x-ms-dataverse-attribute": "flowmachineid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "flowmachineId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "flowmachineimageversionid": {
+          "type": "string",
+          "title": "Flow Machine Image Version",
+          "x-ms-dataverse-attribute": "flowmachineimageversionid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "FlowMachineImageVersionId"
+        },
+        "flowmachineimageversionidname": {
+          "type": "string",
+          "title": "flowmachineimageversionidname",
+          "x-ms-dataverse-attribute": "flowmachineimageversionidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FlowMachineImageVersionIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "flowmachinenetworkid": {
+          "type": "string",
+          "title": "Flow Machine Network",
+          "x-ms-dataverse-attribute": "flowmachinenetworkid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "FlowMachineNetworkId"
+        },
+        "flowmachinenetworkidname": {
+          "type": "string",
+          "title": "flowmachinenetworkidname",
+          "x-ms-dataverse-attribute": "flowmachinenetworkidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FlowMachineNetworkIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "hostedmachineerror": {
+          "type": "string",
+          "title": "Hosted flow machine error.",
+          "x-ms-dataverse-attribute": "hostedmachineerror",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "HostedMachineError",
+          "maxLength": 100000
+        },
+        "hostedmachinestate": {
+          "type": "string",
+          "title": "Hosted Machine State",
+          "x-ms-dataverse-attribute": "hostedmachinestate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "HostedMachineState",
+          "required": true,
+          "enum": [
+            "Disabled",
+            "Enabled",
+            "Error"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "e6ebb539-3d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Hosted Machine State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "hostedmachinestatename": {
+          "type": "string",
+          "title": "hostedmachinestatename",
+          "x-ms-dataverse-attribute": "hostedmachinestatename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "hostedmachinestateName",
+          "x-ms-read-only": true
+        },
+        "hostingtype": {
+          "type": "string",
+          "title": "Flow Machine Hosting Type",
+          "x-ms-dataverse-attribute": "hostingtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "HostingType",
+          "required": true,
+          "enum": [
+            "Customer",
+            "Hosted",
+            "CloudPc"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "e3ebb539-3d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Flow Machine Hosting Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "hostingtypename": {
+          "type": "string",
+          "title": "hostingtypename",
+          "x-ms-dataverse-attribute": "hostingtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "hostingtypeName",
+          "x-ms-read-only": true
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "keydeliverystatus": {
+          "type": "string",
+          "title": "Machine Key Delivery Status",
+          "x-ms-dataverse-attribute": "keydeliverystatus",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "KeyDeliveryStatus",
+          "enum": [
+            "Default",
+            "PendingNewKey",
+            "KeyExpired"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "eaebb539-3d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Machine Key Delivery Status",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "keydeliverystatusname": {
+          "type": "string",
+          "title": "keydeliverystatusname",
+          "x-ms-dataverse-attribute": "keydeliverystatusname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "keydeliverystatusName",
+          "x-ms-read-only": true
+        },
+        "keyreceiveddate": {
+          "type": "string",
+          "title": "Machine Key Received Date",
+          "x-ms-dataverse-attribute": "keyreceiveddate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "KeyReceivedDate"
+        },
+        "lastheartbeatdate": {
+          "type": "string",
+          "title": "Last heartbeat date",
+          "x-ms-dataverse-attribute": "lastheartbeatdate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "LastHeartbeatDate"
+        },
+        "lastknownpictureinpicturesupport": {
+          "type": "string",
+          "title": "Last known picture-in-picture support",
+          "x-ms-dataverse-attribute": "lastknownpictureinpicturesupport",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "LastKnownPictureInPictureSupport",
+          "required": true,
+          "enum": [
+            "Unknown",
+            "Disabled",
+            "Enabled"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "edebb539-3d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Last known picture-in-picture support enumeration",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "lastknownpictureinpicturesupportname": {
+          "type": "string",
+          "title": "lastknownpictureinpicturesupportname",
+          "x-ms-dataverse-attribute": "lastknownpictureinpicturesupportname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "lastknownpictureinpicturesupportName",
+          "x-ms-read-only": true
+        },
+        "machinemetadata": {
+          "type": "string",
+          "title": "Machine Metadata",
+          "x-ms-dataverse-attribute": "machinemetadata",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "MachineMetadata",
+          "maxLength": 25000
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overcapacitysince": {
+          "type": "string",
+          "title": "Overcapacity since",
+          "x-ms-dataverse-attribute": "overcapacitysince",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OvercapacitySince"
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "sessioncapacity": {
+          "type": "string",
+          "title": "Session Capacity",
+          "x-ms-dataverse-attribute": "sessioncapacity",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "SessionCapacity",
+          "required": true
+        },
+        "snapshotstartedat": {
+          "type": "string",
+          "title": "Snapshot started at",
+          "x-ms-dataverse-attribute": "snapshotstartedat",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "SnapshotStartedAt"
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive",
+            "Maintenance"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b0ebb539-3d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive",
+            "RequiresReconnection",
+            "ManualMaintenance",
+            "DrainMode",
+            "ToDelete",
+            "Temporary",
+            "Error",
+            "Disabled",
+            "Provisioning",
+            "RequiresGroupKey",
+            "ProvisionedWithError",
+            "HostedMachineOvercapacity",
+            "HostedMachineOvercapacityDeleted",
+            "HostedMachineOvercapacityDisabled"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "baebb539-3d19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "agentversion",
+        "connectivityconfiguration",
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "flowmachinegroupid",
+        "flowmachineid",
+        "hostedmachinestate",
+        "hostingtype",
+        "lastknownpictureinpicturesupport",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "name",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "owningbusinessunitname",
+        "sessioncapacity",
+        "statecode"
+      ]
+    }
+  }
+}

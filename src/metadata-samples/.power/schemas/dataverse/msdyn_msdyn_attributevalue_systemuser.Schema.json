@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_msdyn_attributevalue_systemuser",
+  "title": "msdyn_msdyn_attributevalue_systemuser",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_msdyn_attributevalue_systemuserset",
+      "x-ms-dataverse-primary-id": "msdyn_msdyn_attributevalue_systemuserid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_attributevalueid": {
+          "type": "string",
+          "title": "msdyn_attributevalueid",
+          "x-ms-dataverse-attribute": "msdyn_attributevalueid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_attributevalueid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_msdyn_attributevalue_systemuserid": {
+          "type": "string",
+          "title": "msdyn_msdyn_attributevalue_systemuserid",
+          "x-ms-dataverse-attribute": "msdyn_msdyn_attributevalue_systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_msdyn_attributevalue_systemuserId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "systemuserid",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "systemuserid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_attributevalueid",
+        "msdyn_msdyn_attributevalue_systemuserid",
+        "systemuserid"
+      ]
+    }
+  }
+}

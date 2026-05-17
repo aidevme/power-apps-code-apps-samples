@@ -1,0 +1,121 @@
+{
+  "name": "statusmap",
+  "title": "Status Maps",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "statusmaps",
+      "x-ms-dataverse-primary-id": "statusmapid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "isdefault": {
+          "type": "string",
+          "title": "isdefault",
+          "x-ms-dataverse-attribute": "isdefault",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsDefault",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "f0657184-061d-41ba-9f9e-1b9a83e2f081",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isdefaultname": {
+          "type": "string",
+          "title": "isdefaultname",
+          "x-ms-dataverse-attribute": "isdefaultname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IsDefaultName",
+          "x-ms-read-only": true
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "objecttypecode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "d194fe42-6b3c-4646-b351-fbfa8ba7e82e",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Picklist"
+        },
+        "objecttypecodename": {
+          "type": "string",
+          "title": "objecttypecodename",
+          "x-ms-dataverse-attribute": "objecttypecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ObjectTypeCodeName",
+          "x-ms-read-only": true
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "organizationid",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "state": {
+          "type": "string",
+          "title": "state",
+          "x-ms-dataverse-attribute": "state",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "State",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "status": {
+          "type": "string",
+          "title": "status",
+          "x-ms-dataverse-attribute": "status",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Status",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "statusmapid": {
+          "type": "string",
+          "title": "statusmapid",
+          "x-ms-dataverse-attribute": "statusmapid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "StatusMapId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "objecttypecode",
+        "organizationid",
+        "state",
+        "status",
+        "statusmapid"
+      ]
+    }
+  }
+}

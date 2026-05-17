@@ -1,0 +1,58 @@
+{
+  "name": "indexattributes",
+  "title": "Index Attributes",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "indexattributes",
+      "x-ms-dataverse-primary-id": "indexattributeid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "indexattributeid": {
+          "type": "string",
+          "title": "Index Attribute Id",
+          "x-ms-dataverse-attribute": "indexattributeid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "IndexAttributeId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "indexid": {
+          "type": "string",
+          "title": "Index Id",
+          "x-ms-dataverse-attribute": "indexid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "IndexId",
+          "required": true
+        },
+        "recordid": {
+          "type": "string",
+          "title": "Record Id",
+          "x-ms-dataverse-attribute": "recordid",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "RecordId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true,
+          "required": true
+        }
+      },
+      "required": [
+        "indexattributeid",
+        "indexid",
+        "recordid",
+        "versionnumber"
+      ]
+    }
+  }
+}

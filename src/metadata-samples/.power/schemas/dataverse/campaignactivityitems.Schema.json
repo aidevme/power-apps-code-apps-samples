@@ -1,0 +1,179 @@
+{
+  "name": "campaignactivityitem",
+  "title": "Campaign Activity Items",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "campaignactivityitems",
+      "x-ms-dataverse-primary-id": "campaignactivityitemid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "campaignactivityid": {
+          "type": "string",
+          "title": "campaignactivityid",
+          "x-ms-dataverse-attribute": "campaignactivityid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CampaignActivityId",
+          "required": true
+        },
+        "campaignactivityidname": {
+          "type": "string",
+          "title": "campaignactivityidname",
+          "x-ms-dataverse-attribute": "campaignactivityidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CampaignActivityIdName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "campaignactivityidtype": {
+          "type": "string",
+          "title": "campaignactivityidtype",
+          "x-ms-dataverse-attribute": "campaignactivityidtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "CampaignActivityIdType"
+        },
+        "campaignactivityidyominame": {
+          "type": "string",
+          "title": "campaignactivityidyominame",
+          "x-ms-dataverse-attribute": "campaignactivityidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CampaignActivityIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 4000
+        },
+        "campaignactivityitemid": {
+          "type": "string",
+          "title": "campaignactivityitemid",
+          "x-ms-dataverse-attribute": "campaignactivityitemid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "CampaignActivityItemId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "itemid": {
+          "type": "string",
+          "title": "itemid",
+          "x-ms-dataverse-attribute": "itemid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ItemId",
+          "required": true
+        },
+        "itemobjecttypecode": {
+          "type": "string",
+          "title": "itemobjecttypecode",
+          "x-ms-dataverse-attribute": "itemobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ItemObjectTypeCode",
+          "required": true,
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "af1b3aeb-7b19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "campaignactivityitem_itemobjecttypecode",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "itemobjecttypecodename": {
+          "type": "string",
+          "title": "itemobjecttypecodename",
+          "x-ms-dataverse-attribute": "itemobjecttypecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ItemObjectTypeCodeName",
+          "x-ms-read-only": true
+        },
+        "name": {
+          "type": "string",
+          "title": "name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "owningbusinessunit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "owninguser",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "campaignactivityid",
+        "campaignactivityitemid",
+        "itemid",
+        "itemobjecttypecode",
+        "name",
+        "ownerid",
+        "owneridtype"
+      ]
+    }
+  }
+}

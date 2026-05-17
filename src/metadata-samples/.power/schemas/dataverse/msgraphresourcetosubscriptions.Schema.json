@@ -1,0 +1,189 @@
+{
+  "name": "msgraphresourcetosubscription",
+  "title": "Ms Graph Resource To Subscriptions",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msgraphresourcetosubscriptions",
+      "x-ms-dataverse-primary-id": "msgraphresourcetosubscriptionid",
+      "x-ms-dataverse-primary-name": "resourceid",
+      "properties": {
+        "createdingraphon": {
+          "type": "string",
+          "title": "Created In Graph On",
+          "x-ms-dataverse-attribute": "createdingraphon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedInGraphOn",
+          "required": true
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "msgraphresourcetosubscriptionid": {
+          "type": "string",
+          "title": "Ms Graph Resource To Subscription",
+          "x-ms-dataverse-attribute": "msgraphresourcetosubscriptionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "MsGraphResourceToSubscriptionId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "resourceid": {
+          "type": "string",
+          "title": "Resource Id",
+          "x-ms-dataverse-attribute": "resourceid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ResourceId",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "resourcetype": {
+          "type": "string",
+          "title": "Resource Type",
+          "x-ms-dataverse-attribute": "resourcetype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ResourceType",
+          "required": true,
+          "enum": [
+            "Teams Chat Messages"
+          ],
+          "x-ms-enum-values": [
+            0
+          ],
+          "Color": [
+            null
+          ],
+          "x-ms-optionsetmetadataid": "f52dc212-5119-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Resource Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "resourcetypename": {
+          "type": "string",
+          "title": "resourcetypename",
+          "x-ms-dataverse-attribute": "resourcetypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "resourcetypeName",
+          "x-ms-read-only": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c22dc212-5119-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "cc2dc212-5119-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "subscriptionid": {
+          "type": "string",
+          "title": "Subscription Id",
+          "x-ms-dataverse-attribute": "subscriptionid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SubscriptionId",
+          "required": true,
+          "maxLength": 100
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "createdingraphon",
+        "msgraphresourcetosubscriptionid",
+        "resourceid",
+        "resourcetype",
+        "statecode",
+        "subscriptionid"
+      ]
+    }
+  }
+}

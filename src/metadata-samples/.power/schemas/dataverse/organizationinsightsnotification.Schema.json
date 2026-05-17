@@ -1,0 +1,83 @@
+{
+  "name": "orginsightsnotification",
+  "title": "Organization Insights Notification",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "orginsightsnotifications",
+      "x-ms-dataverse-primary-id": "orginsightsnotificationid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "internalname": {
+          "type": "string",
+          "title": "Name of the notification that is used for retrieving the data",
+          "x-ms-dataverse-attribute": "internalname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "InternalName",
+          "maxLength": 160
+        },
+        "jsondata": {
+          "type": "string",
+          "title": "Notification Data in Json format",
+          "x-ms-dataverse-attribute": "jsondata",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "JsonData",
+          "x-ms-read-only": true,
+          "maxLength": 2000
+        },
+        "name": {
+          "type": "string",
+          "title": "Legend Name used wile displaying the notification",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "maxLength": 160
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "orginsightsnotificationid": {
+          "type": "string",
+          "title": "orginsightsnotificationid",
+          "x-ms-dataverse-attribute": "orginsightsnotificationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OrgInsightsNotificationId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "organizationid",
+        "organizationidname",
+        "orginsightsnotificationid"
+      ]
+    }
+  }
+}

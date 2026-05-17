@@ -1,0 +1,61 @@
+{
+  "name": "subscriptionstatisticsoffline",
+  "title": "Subscription Statistics Offline",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "subscriptionstatisticsofflineset",
+      "x-ms-dataverse-primary-id": "subscriptionid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "fullsyncrequired": {
+          "type": "string",
+          "title": "FullSyncRequired",
+          "x-ms-dataverse-attribute": "fullsyncrequired",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "FullSyncRequired",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "5ca3b430-a66b-4bfe-aba9-5b48636f61e0",
+          "x-ms-isGlobal": true,
+          "x-ms-optionSetType": "Boolean"
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "ObjectTypeCode",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "required": true
+        },
+        "subscriptionid": {
+          "type": "string",
+          "title": "SubscriptionId",
+          "x-ms-dataverse-attribute": "subscriptionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SubscriptionId",
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "fullsyncrequired",
+        "objecttypecode",
+        "subscriptionid"
+      ]
+    }
+  }
+}

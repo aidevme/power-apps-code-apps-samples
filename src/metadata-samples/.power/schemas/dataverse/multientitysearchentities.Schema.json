@@ -1,0 +1,69 @@
+{
+  "name": "multientitysearchentities",
+  "title": "multientitysearchentities",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "multientitysearchentitiescollection",
+      "x-ms-dataverse-primary-id": "multientitysearchentityid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "entityname": {
+          "type": "string",
+          "title": "Entity Name",
+          "x-ms-dataverse-attribute": "entityname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EntityName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 128
+        },
+        "entityorder": {
+          "type": "string",
+          "title": "Entity Order",
+          "x-ms-dataverse-attribute": "entityorder",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "EntityOrder",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "multientitysearchentityid": {
+          "type": "string",
+          "title": "multientitysearchentityid",
+          "x-ms-dataverse-attribute": "multientitysearchentityid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "MultiEntitySearchEntityId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "multientitysearchid": {
+          "type": "string",
+          "title": "MultiEntitySearchId",
+          "x-ms-dataverse-attribute": "multientitysearchid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "MultiEntitySearchId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "entityname",
+        "entityorder",
+        "multientitysearchentityid",
+        "multientitysearchid"
+      ]
+    }
+  }
+}

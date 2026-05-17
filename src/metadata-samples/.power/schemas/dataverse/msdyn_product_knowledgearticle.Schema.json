@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_product_knowledgearticle",
+  "title": "msdyn_product_knowledgearticle",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_product_knowledgearticleset",
+      "x-ms-dataverse-primary-id": "msdyn_product_knowledgearticleid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "knowledgearticleid": {
+          "type": "string",
+          "title": "knowledgearticleid",
+          "x-ms-dataverse-attribute": "knowledgearticleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "knowledgearticleid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "msdyn_product_knowledgearticleid": {
+          "type": "string",
+          "title": "msdyn_product_knowledgearticleid",
+          "x-ms-dataverse-attribute": "msdyn_product_knowledgearticleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_product_knowledgearticleId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "productid": {
+          "type": "string",
+          "title": "productid",
+          "x-ms-dataverse-attribute": "productid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "productid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "knowledgearticleid",
+        "msdyn_product_knowledgearticleid",
+        "productid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "name": "dataperformance",
+  "title": "Data Performance Collection",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "dataperformances",
+      "x-ms-dataverse-primary-id": "dataperformanceid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "anyoptimizationapplied": {
+          "type": "string",
+          "title": "Any Optimization Applied",
+          "x-ms-dataverse-attribute": "anyoptimizationapplied",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "AnyOptimizationApplied",
+          "x-ms-read-only": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "1954e31b-0f48-44b7-9af2-835447bb4c19",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Any Optimization Applied",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "anyoptimizationappliedname": {
+          "type": "string",
+          "title": "anyoptimizationappliedname",
+          "x-ms-dataverse-attribute": "anyoptimizationappliedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "AnyOptimizationAppliedName",
+          "x-ms-read-only": true
+        },
+        "anyoptimizationavailable": {
+          "type": "string",
+          "title": "Any Optimization Available",
+          "x-ms-dataverse-attribute": "anyoptimizationavailable",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "AnyOptimizationAvailable",
+          "x-ms-read-only": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "8aa26aaf-14d2-43b7-8178-a7f0c3a38982",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Optimization Available",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "anyoptimizationavailablename": {
+          "type": "string",
+          "title": "anyoptimizationavailablename",
+          "x-ms-dataverse-attribute": "anyoptimizationavailablename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "AnyOptimizationAvailableName",
+          "x-ms-read-only": true
+        },
+        "component": {
+          "type": "string",
+          "title": "Component",
+          "x-ms-dataverse-attribute": "component",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Component",
+          "x-ms-read-only": true,
+          "maxLength": 100000
+        },
+        "count": {
+          "type": "string",
+          "title": "Count",
+          "x-ms-dataverse-attribute": "count",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "Count",
+          "x-ms-read-only": true
+        },
+        "dataperformanceid": {
+          "type": "string",
+          "title": "Id",
+          "x-ms-dataverse-attribute": "dataperformanceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "DataPerformanceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "entity": {
+          "type": "string",
+          "title": "Entity",
+          "x-ms-dataverse-attribute": "entity",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Entity",
+          "x-ms-read-only": true,
+          "maxLength": 100000
+        },
+        "estimatedoptimizationimpact": {
+          "type": "string",
+          "title": "Estimated Optimization Impact",
+          "x-ms-dataverse-attribute": "estimatedoptimizationimpact",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "EstimatedOptimizationImpact",
+          "x-ms-read-only": true
+        },
+        "executionperiod": {
+          "type": "string",
+          "title": "Execution Period",
+          "x-ms-dataverse-attribute": "executionperiod",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ExecutionPeriod",
+          "x-ms-read-only": true,
+          "maxLength": 50
+        },
+        "lastactionresult": {
+          "type": "string",
+          "title": "Last Action Result",
+          "x-ms-dataverse-attribute": "lastactionresult",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "LastActionResult",
+          "x-ms-read-only": true,
+          "maxLength": 50
+        },
+        "lastoptimizationdate": {
+          "type": "string",
+          "title": "Last Optimization Date",
+          "x-ms-dataverse-attribute": "lastoptimizationdate",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "LastOptimizationDate",
+          "x-ms-read-only": true
+        },
+        "maxtime": {
+          "type": "string",
+          "title": "Max Time",
+          "x-ms-dataverse-attribute": "maxtime",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "MaxTime",
+          "x-ms-read-only": true
+        },
+        "mediantime": {
+          "type": "string",
+          "title": "Median Time",
+          "x-ms-dataverse-attribute": "mediantime",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "MedianTime",
+          "x-ms-read-only": true
+        },
+        "mintime": {
+          "type": "string",
+          "title": "Min Time",
+          "x-ms-dataverse-attribute": "mintime",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "MinTime",
+          "x-ms-read-only": true
+        },
+        "operation": {
+          "type": "string",
+          "title": "Operation",
+          "x-ms-dataverse-attribute": "operation",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Operation",
+          "x-ms-read-only": true,
+          "maxLength": 100000
+        },
+        "optimizationstatus": {
+          "type": "string",
+          "title": "Optimization Status",
+          "x-ms-dataverse-attribute": "optimizationstatus",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OptimizationStatus",
+          "x-ms-read-only": true,
+          "maxLength": 50
+        },
+        "optimizationstorage": {
+          "type": "string",
+          "title": "Optimization Storage",
+          "x-ms-dataverse-attribute": "optimizationstorage",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "OptimizationStorage",
+          "x-ms-read-only": true
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "organizationid",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "realizedoptimizationimpact": {
+          "type": "string",
+          "title": "Optimization Impact (%)",
+          "x-ms-dataverse-attribute": "realizedoptimizationimpact",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RealizedOptimizationImpact",
+          "x-ms-read-only": true,
+          "maxLength": 50
+        },
+        "solution": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solution",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Solution",
+          "x-ms-read-only": true,
+          "maxLength": 100000
+        },
+        "weight": {
+          "type": "string",
+          "title": "Weight",
+          "x-ms-dataverse-attribute": "weight",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "Weight",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "dataperformanceid",
+        "organizationid"
+      ]
+    }
+  }
+}

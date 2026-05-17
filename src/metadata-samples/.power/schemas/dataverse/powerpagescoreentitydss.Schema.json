@@ -1,0 +1,38 @@
+{
+  "name": "mspp_powerpagescoreentityds",
+  "title": "Power Pages Core Entity DSs",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mspp_powerpagescoreentitydses",
+      "x-ms-dataverse-primary-id": "mspp_powerpagescoreentitydsid",
+      "x-ms-dataverse-primary-name": "mspp_name",
+      "properties": {
+        "mspp_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "mspp_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "mspp_name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "mspp_powerpagescoreentitydsid": {
+          "type": "string",
+          "title": "Power Pages Core Entity DS",
+          "x-ms-dataverse-attribute": "mspp_powerpagescoreentitydsid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_powerpagescoreentitydsId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "mspp_powerpagescoreentitydsid"
+      ]
+    }
+  }
+}

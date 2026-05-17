@@ -1,0 +1,70 @@
+{
+  "name": "emailsearch",
+  "title": "Email Searches",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "emailsearches",
+      "x-ms-dataverse-primary-id": "emailsearchid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "emailaddress": {
+          "type": "string",
+          "title": "emailaddress",
+          "x-ms-dataverse-attribute": "emailaddress",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EmailAddress",
+          "required": true,
+          "maxLength": 100
+        },
+        "emailcolumnnumber": {
+          "type": "string",
+          "title": "Email Column Number",
+          "x-ms-dataverse-attribute": "emailcolumnnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "EmailColumnNumber"
+        },
+        "emailsearchid": {
+          "type": "string",
+          "title": "emailsearchid",
+          "x-ms-dataverse-attribute": "emailsearchid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "EmailSearchId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "parentobjectid": {
+          "type": "string",
+          "title": "Parent",
+          "x-ms-dataverse-attribute": "parentobjectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ParentObjectId",
+          "required": true
+        },
+        "parentobjecttypecode": {
+          "type": "string",
+          "title": "Parent Object Type",
+          "x-ms-dataverse-attribute": "parentobjecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ParentObjectTypeCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "emailaddress",
+        "emailsearchid",
+        "parentobjectid"
+      ]
+    }
+  }
+}

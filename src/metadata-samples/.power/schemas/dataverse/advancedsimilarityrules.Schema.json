@@ -1,0 +1,493 @@
+{
+  "name": "advancedsimilarityrule",
+  "title": "Advanced Similarity Rules",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "advancedsimilarityrules",
+      "x-ms-dataverse-primary-id": "advancedsimilarityruleid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "advancedsimilarityruleid": {
+          "type": "string",
+          "title": "Advanced Similarity Rule",
+          "x-ms-dataverse-attribute": "advancedsimilarityruleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AdvancedSimilarityRuleId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "advancedsimilarityruleidunique": {
+          "type": "string",
+          "title": "Advanced Similarity Rule Unique Id",
+          "x-ms-dataverse-attribute": "advancedsimilarityruleidunique",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "AdvancedSimilarityRuleIdUnique",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "azureserviceconnectionid": {
+          "type": "string",
+          "title": "Connection",
+          "x-ms-dataverse-attribute": "azureserviceconnectionid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "AzureServiceConnectionId",
+          "required": true
+        },
+        "azureserviceconnectionidname": {
+          "type": "string",
+          "title": "azureserviceconnectionidname",
+          "x-ms-dataverse-attribute": "azureserviceconnectionidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AzureServiceConnectionIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 2000
+        },
+        "entity": {
+          "type": "string",
+          "title": "Target Entity",
+          "x-ms-dataverse-attribute": "entity",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Entity",
+          "required": true,
+          "maxLength": 100
+        },
+        "exactmatchlist": {
+          "type": "string",
+          "title": "For internal use only.",
+          "x-ms-dataverse-attribute": "exactmatchlist",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "ExactMatchList",
+          "maxLength": 500000
+        },
+        "fetchxmllist": {
+          "type": "string",
+          "title": "For internal use only.",
+          "x-ms-dataverse-attribute": "fetchxmllist",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "FetchXmlList",
+          "maxLength": 500000
+        },
+        "filterresultbystatus": {
+          "type": "string",
+          "title": "Filter Result By Status",
+          "x-ms-dataverse-attribute": "filterresultbystatus",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "FilterResultByStatus",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c840d8d8-5c61-41ff-b30e-205328ca8532",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Filter Result By Status",
+          "x-ms-optionSetType": "Status"
+        },
+        "filterresultbystatusdisplayname": {
+          "type": "string",
+          "title": "Filter Result By Status",
+          "x-ms-dataverse-attribute": "filterresultbystatusdisplayname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "FilterResultByStatusDisplayName",
+          "maxLength": 50
+        },
+        "filterresultbystatusname": {
+          "type": "string",
+          "title": "filterresultbystatusname",
+          "x-ms-dataverse-attribute": "filterresultbystatusname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "FilterResultByStatusName",
+          "x-ms-read-only": true
+        },
+        "isazuremlrequired": {
+          "type": "string",
+          "title": "Use Text Analytics for Target Match",
+          "x-ms-dataverse-attribute": "isazuremlrequired",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsAzureMLRequired",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "6df9d061-3153-465a-bd5e-a9fbc5d293ee",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Use Text Analytics for Target Match",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismanaged": {
+          "type": "string",
+          "title": "State",
+          "x-ms-dataverse-attribute": "ismanaged",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsManaged",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Unmanaged",
+            "Managed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9d04e035-5408-4c1d-a5aa-20445a02f691",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Component Managed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "maxnumberkeyphrases": {
+          "type": "string",
+          "title": "Maximum Number of Key Phrases",
+          "x-ms-dataverse-attribute": "maxnumberkeyphrases",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "MaxNumberKeyphrases",
+          "required": true
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "ngramsize": {
+          "type": "string",
+          "title": "Maximum Key Phrase Words",
+          "x-ms-dataverse-attribute": "ngramsize",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "NgramSize"
+        },
+        "noisekeyphraseslist": {
+          "type": "string",
+          "title": "Noise Key Phrases",
+          "x-ms-dataverse-attribute": "noisekeyphraseslist",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "NoiseKeyphraseslist",
+          "maxLength": 2000
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "sourceentity": {
+          "type": "string",
+          "title": "Source Entity",
+          "x-ms-dataverse-attribute": "sourceentity",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "SourceEntity",
+          "required": true,
+          "enum": [
+            "Case"
+          ],
+          "x-ms-enum-values": [
+            112
+          ],
+          "Color": [
+            null
+          ],
+          "x-ms-optionsetmetadataid": "8f3c3dbc-3314-497b-bc46-be79275211b6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Source Entity",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "sourceentityname": {
+          "type": "string",
+          "title": "sourceentityname",
+          "x-ms-dataverse-attribute": "sourceentityname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "SourceEntityName",
+          "x-ms-read-only": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "StateCode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "966505bf-0a92-4ee2-bcbf-e8f5aa10c59a",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "StateCodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "StatusCode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9521c1f0-e6b3-4fa4-aedc-43222479bf2c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "StatusCodeName",
+          "x-ms-read-only": true
+        },
+        "supportingsolutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "supportingsolutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SupportingSolutionId",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "advancedsimilarityruleid",
+        "advancedsimilarityruleidunique",
+        "azureserviceconnectionid",
+        "componentstate",
+        "createdonbehalfbyyominame",
+        "entity",
+        "ismanaged",
+        "maxnumberkeyphrases",
+        "name",
+        "organizationid",
+        "organizationidname",
+        "overwritetime",
+        "solutionid",
+        "sourceentity",
+        "statecode"
+      ]
+    }
+  }
+}

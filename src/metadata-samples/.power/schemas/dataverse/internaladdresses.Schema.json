@@ -1,0 +1,404 @@
+{
+  "name": "internaladdress",
+  "title": "Internal Addresses",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "internaladdresses",
+      "x-ms-dataverse-primary-id": "internaladdressid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "addressnumber": {
+          "type": "string",
+          "title": "Address Number",
+          "x-ms-dataverse-attribute": "addressnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "AddressNumber"
+        },
+        "addresstypecode": {
+          "type": "string",
+          "title": "Address Type",
+          "x-ms-dataverse-attribute": "addresstypecode",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "AddressTypeCode",
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "f1c50361-42a7-4f25-9c3f-819bc34ab22b",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Picklist"
+        },
+        "addresstypecodename": {
+          "type": "string",
+          "title": "addresstypecodename",
+          "x-ms-dataverse-attribute": "addresstypecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "AddressTypeCodeName",
+          "x-ms-read-only": true
+        },
+        "businessunitid": {
+          "type": "string",
+          "title": "businessunitid",
+          "x-ms-dataverse-attribute": "businessunitid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "BusinessUnitId",
+          "x-ms-read-only": true
+        },
+        "city": {
+          "type": "string",
+          "title": "City",
+          "x-ms-dataverse-attribute": "city",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "City",
+          "maxLength": 128
+        },
+        "composite": {
+          "type": "string",
+          "title": "Address",
+          "x-ms-dataverse-attribute": "composite",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "Composite",
+          "x-ms-read-only": true,
+          "maxLength": 1000
+        },
+        "country": {
+          "type": "string",
+          "title": "Country/Region",
+          "x-ms-dataverse-attribute": "country",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Country",
+          "maxLength": 128
+        },
+        "county": {
+          "type": "string",
+          "title": "County",
+          "x-ms-dataverse-attribute": "county",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "County",
+          "maxLength": 50
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "fax": {
+          "type": "string",
+          "title": "Fax",
+          "x-ms-dataverse-attribute": "fax",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Fax",
+          "maxLength": 64
+        },
+        "internaladdressid": {
+          "type": "string",
+          "title": "Internal Address",
+          "x-ms-dataverse-attribute": "internaladdressid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "InternalAddressId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "latitude": {
+          "type": "string",
+          "title": "Latitude",
+          "x-ms-dataverse-attribute": "latitude",
+          "x-ms-dataverse-type": "DoubleType",
+          "x-ms-schema-name": "Latitude"
+        },
+        "line1": {
+          "type": "string",
+          "title": "Street 1",
+          "x-ms-dataverse-attribute": "line1",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Line1",
+          "maxLength": 1024
+        },
+        "line2": {
+          "type": "string",
+          "title": "Street 2",
+          "x-ms-dataverse-attribute": "line2",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Line2",
+          "maxLength": 250
+        },
+        "line3": {
+          "type": "string",
+          "title": "Street 3",
+          "x-ms-dataverse-attribute": "line3",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Line3",
+          "maxLength": 250
+        },
+        "longitude": {
+          "type": "string",
+          "title": "Longitude",
+          "x-ms-dataverse-attribute": "longitude",
+          "x-ms-dataverse-type": "DoubleType",
+          "x-ms-schema-name": "Longitude"
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "name": {
+          "type": "string",
+          "title": "Address Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "maxLength": 200
+        },
+        "objecttypecode": {
+          "type": "string",
+          "title": "Object Type",
+          "x-ms-dataverse-attribute": "objecttypecode",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "ObjectTypeCode",
+          "required": true,
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "18ba08c0-51ef-4d41-a036-33d043845bfd",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Picklist"
+        },
+        "objecttypecodename": {
+          "type": "string",
+          "title": "objecttypecodename",
+          "x-ms-dataverse-attribute": "objecttypecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ObjectTypeCodeName",
+          "x-ms-read-only": true
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "organizationid",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "parentid": {
+          "type": "string",
+          "title": "Parent",
+          "x-ms-dataverse-attribute": "parentid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ParentId",
+          "required": true
+        },
+        "postalcode": {
+          "type": "string",
+          "title": "ZIP/Postal Code",
+          "x-ms-dataverse-attribute": "postalcode",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PostalCode",
+          "maxLength": 40
+        },
+        "postofficebox": {
+          "type": "string",
+          "title": "Post Office Box",
+          "x-ms-dataverse-attribute": "postofficebox",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "PostOfficeBox",
+          "maxLength": 20
+        },
+        "shippingmethodcode": {
+          "type": "string",
+          "title": "Shipping Method",
+          "x-ms-dataverse-attribute": "shippingmethodcode",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ShippingMethodCode",
+          "enum": [],
+          "x-ms-enum-values": [],
+          "Color": [],
+          "x-ms-optionsetmetadataid": "9f7adc65-fde7-4b57-b96d-4b3ff5f15cfc",
+          "x-ms-isGlobal": false,
+          "x-ms-optionSetType": "Picklist"
+        },
+        "shippingmethodcodename": {
+          "type": "string",
+          "title": "shippingmethodcodename",
+          "x-ms-dataverse-attribute": "shippingmethodcodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ShippingMethodCodeName",
+          "x-ms-read-only": true
+        },
+        "stateorprovince": {
+          "type": "string",
+          "title": "State/Province",
+          "x-ms-dataverse-attribute": "stateorprovince",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "StateOrProvince",
+          "maxLength": 128
+        },
+        "telephone1": {
+          "type": "string",
+          "title": "Main Phone",
+          "x-ms-dataverse-attribute": "telephone1",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Telephone1",
+          "maxLength": 64
+        },
+        "telephone2": {
+          "type": "string",
+          "title": "Phone 2",
+          "x-ms-dataverse-attribute": "telephone2",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Telephone2",
+          "maxLength": 50
+        },
+        "telephone3": {
+          "type": "string",
+          "title": "Phone 3",
+          "x-ms-dataverse-attribute": "telephone3",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Telephone3",
+          "maxLength": 50
+        },
+        "upszone": {
+          "type": "string",
+          "title": "UPS Zone",
+          "x-ms-dataverse-attribute": "upszone",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "UPSZone",
+          "maxLength": 4
+        },
+        "utcoffset": {
+          "type": "string",
+          "title": "UTC Offset",
+          "x-ms-dataverse-attribute": "utcoffset",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCOffset"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "internaladdressid",
+        "objecttypecode",
+        "parentid"
+      ]
+    }
+  }
+}

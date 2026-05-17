@@ -1,0 +1,40 @@
+{
+  "name": "gitorganization",
+  "title": "Git Organizations",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "gitorganizations",
+      "x-ms-dataverse-primary-id": "gitorganizationid",
+      "x-ms-dataverse-primary-name": "organizationname",
+      "properties": {
+        "gitorganizationid": {
+          "type": "string",
+          "title": "Git Organization",
+          "x-ms-dataverse-attribute": "gitorganizationid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "GitOrganizationId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "organizationname": {
+          "type": "string",
+          "title": "Git Organization Name",
+          "x-ms-dataverse-attribute": "organizationname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationName",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "gitorganizationid",
+        "organizationname"
+      ]
+    }
+  }
+}

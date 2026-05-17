@@ -1,0 +1,49 @@
+{
+  "name": "timestampdatemapping",
+  "title": "Time Stamp Date Mappings",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "timestampdatemappings",
+      "x-ms-dataverse-primary-id": "timestampdatemappingid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "date": {
+          "type": "string",
+          "title": "date",
+          "x-ms-dataverse-attribute": "date",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "Date",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "timestamp": {
+          "type": "string",
+          "title": "timestamp",
+          "x-ms-dataverse-attribute": "timestamp",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "TimeStamp",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "timestampdatemappingid": {
+          "type": "string",
+          "title": "timestampdatemappingid",
+          "x-ms-dataverse-attribute": "timestampdatemappingid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "TimeStampDateMappingId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        }
+      },
+      "required": [
+        "date",
+        "timestamp",
+        "timestampdatemappingid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "msdyn_flow_actionapprovalmodel_systemuser",
+  "title": "msdyn_flow_actionapprovalmodel_systemuser",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_flow_actionapprovalmodel_systemuserset",
+      "x-ms-dataverse-primary-id": "msdyn_flow_actionapprovalmodel_systemuserid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "msdyn_flow_actionapprovalmodel_systemuserid": {
+          "type": "string",
+          "title": "msdyn_flow_actionapprovalmodel_systemuserid",
+          "x-ms-dataverse-attribute": "msdyn_flow_actionapprovalmodel_systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_flow_actionapprovalmodel_systemuserId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_flow_actionapprovalmodelid": {
+          "type": "string",
+          "title": "msdyn_flow_actionapprovalmodelid",
+          "x-ms-dataverse-attribute": "msdyn_flow_actionapprovalmodelid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_flow_actionapprovalmodelid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "systemuserid": {
+          "type": "string",
+          "title": "systemuserid",
+          "x-ms-dataverse-attribute": "systemuserid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "systemuserid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "msdyn_flow_actionapprovalmodel_systemuserid",
+        "msdyn_flow_actionapprovalmodelid",
+        "systemuserid"
+      ]
+    }
+  }
+}

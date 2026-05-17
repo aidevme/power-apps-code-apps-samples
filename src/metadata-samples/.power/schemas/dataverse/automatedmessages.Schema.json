@@ -1,0 +1,814 @@
+{
+  "name": "msdyn_ocsystemmessage",
+  "title": "Automated Messages",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_ocsystemmessages",
+      "x-ms-dataverse-primary-id": "msdyn_ocsystemmessageid",
+      "x-ms-dataverse-primary-name": "msdyn_name",
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_defaultlanguage": {
+          "type": "string",
+          "title": "Default language",
+          "x-ms-dataverse-attribute": "msdyn_defaultlanguage",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_defaultlanguage",
+          "required": true
+        },
+        "msdyn_defaultlanguagename": {
+          "type": "string",
+          "title": "msdyn_defaultlanguagename",
+          "x-ms-dataverse-attribute": "msdyn_defaultlanguagename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_defaultlanguageName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_instanceid": {
+          "type": "string",
+          "title": "Instance ID",
+          "x-ms-dataverse-attribute": "msdyn_instanceid",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_instanceid",
+          "maxLength": 2000
+        },
+        "msdyn_isrecurring": {
+          "type": "string",
+          "title": "Is Recurring",
+          "x-ms-dataverse-attribute": "msdyn_isrecurring",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isrecurring",
+          "required": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "8c61c539-d119-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Recurring",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isrecurringname": {
+          "type": "string",
+          "title": "msdyn_isrecurringname",
+          "x-ms-dataverse-attribute": "msdyn_isrecurringname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isrecurringName",
+          "x-ms-read-only": true
+        },
+        "msdyn_isrepeatlimited": {
+          "type": "string",
+          "title": "Is Recurring",
+          "x-ms-dataverse-attribute": "msdyn_isrepeatlimited",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "msdyn_isrepeatlimited",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "8961c539-d119-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Is Recurring",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "msdyn_isrepeatlimitedname": {
+          "type": "string",
+          "title": "msdyn_isrepeatlimitedname",
+          "x-ms-dataverse-attribute": "msdyn_isrepeatlimitedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_isrepeatlimitedName",
+          "x-ms-read-only": true
+        },
+        "msdyn_messagedescription": {
+          "type": "string",
+          "title": "Message description",
+          "x-ms-dataverse-attribute": "msdyn_messagedescription",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_messagedescription",
+          "maxLength": 2000
+        },
+        "msdyn_messageinterval": {
+          "type": "string",
+          "title": "Message Interval",
+          "x-ms-dataverse-attribute": "msdyn_messageinterval",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_messageinterval",
+          "required": true
+        },
+        "msdyn_messagereceiver": {
+          "type": "string",
+          "title": "Message recipient",
+          "x-ms-dataverse-attribute": "msdyn_messagereceiver",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_messagereceiver",
+          "required": true,
+          "enum": [
+            "Agent",
+            "Customer"
+          ],
+          "x-ms-enum-values": [
+            192350000,
+            192350001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "a059d1a9-17e9-4f9a-8060-6a4ea8a11e56",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Message Receiver",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_messagereceivername": {
+          "type": "string",
+          "title": "msdyn_messagereceivername",
+          "x-ms-dataverse-attribute": "msdyn_messagereceivername",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_messagereceiverName",
+          "x-ms-read-only": true
+        },
+        "msdyn_messagetemplatetrigger": {
+          "type": "string",
+          "title": "Message template trigger",
+          "x-ms-dataverse-attribute": "msdyn_messagetemplatetrigger",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_messagetemplatetrigger",
+          "required": true,
+          "enum": [
+            "Outside 24-hour conversation window"
+          ],
+          "x-ms-enum-values": [
+            1
+          ],
+          "Color": [
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "9b1e5bbc-01d7-4245-9492-f1a9514101e9",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Message template trigger",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_messagetemplatetriggername": {
+          "type": "string",
+          "title": "msdyn_messagetemplatetriggername",
+          "x-ms-dataverse-attribute": "msdyn_messagetemplatetriggername",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_messagetemplatetriggerName",
+          "x-ms-read-only": true
+        },
+        "msdyn_messagetext": {
+          "type": "string",
+          "title": "Automated Message",
+          "x-ms-dataverse-attribute": "msdyn_messagetext",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_messagetext",
+          "required": true,
+          "maxLength": 2000
+        },
+        "msdyn_messagetype": {
+          "type": "string",
+          "title": "Message type",
+          "x-ms-dataverse-attribute": "msdyn_messagetype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_messagetype",
+          "enum": [
+            "Automated Message",
+            "Message Template"
+          ],
+          "x-ms-enum-values": [
+            2,
+            3
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "af8897c3-a318-4e7b-9e48-1aba39e41094",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "System Message Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_messagetypename": {
+          "type": "string",
+          "title": "msdyn_messagetypename",
+          "x-ms-dataverse-attribute": "msdyn_messagetypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_messagetypeName",
+          "x-ms-read-only": true
+        },
+        "msdyn_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "msdyn_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_ocsystemmessageid": {
+          "type": "string",
+          "title": "Message",
+          "x-ms-dataverse-attribute": "msdyn_ocsystemmessageid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_ocsystemmessageId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_repeatcount": {
+          "type": "string",
+          "title": "Repeat Count",
+          "x-ms-dataverse-attribute": "msdyn_repeatcount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_repeatcount",
+          "required": true
+        },
+        "msdyn_startdelay": {
+          "type": "string",
+          "title": "Start delay in seconds",
+          "x-ms-dataverse-attribute": "msdyn_startdelay",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "msdyn_startdelay"
+        },
+        "msdyn_streamsource": {
+          "type": "string",
+          "title": "Channel Type",
+          "x-ms-dataverse-attribute": "msdyn_streamsource",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_streamsource",
+          "required": true,
+          "enum": [
+            "Entity Records"
+          ],
+          "x-ms-enum-values": [
+            192350000
+          ],
+          "Color": [
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "fa71bd04-cb4f-4bb2-84cd-26168be43348",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Stream source",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_streamsourcename": {
+          "type": "string",
+          "title": "msdyn_streamsourcename",
+          "x-ms-dataverse-attribute": "msdyn_streamsourcename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_streamsourceName",
+          "x-ms-read-only": true
+        },
+        "msdyn_systemmessageeventtype": {
+          "type": "string",
+          "title": "Message trigger",
+          "x-ms-dataverse-attribute": "msdyn_systemmessageeventtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "msdyn_systemmessageeventtype",
+          "required": true,
+          "enum": [
+            "Agent joined conversation",
+            "Consult accepted",
+            "Transfer to agent accepted",
+            "Consult started",
+            "Consult request failed",
+            "Transfer to agent requested",
+            "Transfer to agent failed",
+            "Consult rejected",
+            "Transfer to agent rejected",
+            "Consult request timed out",
+            "Transfer to agent timed out",
+            "Transfer to queue started",
+            "Transfer to queue failed",
+            "Agent disconnected from conversation",
+            "Agent ended conversation",
+            "Session ended",
+            "Consult session ended",
+            "Agent assigned to conversation",
+            "Agent couldn't be assigned to conversation",
+            "Customer ended conversation",
+            "Customer disconnected",
+            "Customer's position in queue",
+            "Agent's message couldn't be sent",
+            "Customer's message couldn't be sent: Outside of operation hours",
+            "Customer is next in line",
+            "Message couldn't be delivered: Unsupported message type",
+            "Voice call requested",
+            "Voice call accepted",
+            "Voice call declined",
+            "Message couldn't be sent: Outside allowed timeframe",
+            "Average wait time for customers: Minutes",
+            "Average wait time for customers: Hours",
+            "Average wait time for customers: Hours and minutes",
+            "Voice call ended",
+            "Message couldn’t be sent: A channel account can’t message another account within Omnichannel",
+            "Holiday message to customer",
+            "Out of operating hour message to customer",
+            "Couldn’t find the channel account in Omnichannel",
+            "Customer's file couldn't be attached because it's too big",
+            "Transfer to out of operating hour queue",
+            "Message couldn’t be sent: File couldn’t be attached",
+            "Leave as many messages as you’d like and we’ll get back to you as soon as possible. We’ll save your chat history, so you can leave and come back anytime.",
+            "Customer put on hold.",
+            "Customer no longer on hold.",
+            "Message or attachment failed to send. Providing error details including error code, reason for failure, message id, timestamp, and transaction id",
+            "Transcription started.",
+            "Transcription paused.",
+            "Transcription resumed.",
+            "Transcription stopped.",
+            "Recording and transcription started.",
+            "Recording and transcription paused.",
+            "Recording and transcription resumed.",
+            "Recording and transcription stopped.",
+            "Trial usage limit exceeded",
+            "Trial conversation time limit exceeded",
+            "End conversation due to overflow",
+            "Greeting Message for Async Channels and Voice",
+            "Customer has opted out from Async Conversation",
+            "Agent left consult conversation",
+            "Agent left customer conversation",
+            "Agent accepted consult conversation",
+            "Agent joined customer conversation",
+            "Agent ended consult conversation",
+            "Agent removed from consult conversation",
+            "Not enough data for average wait time",
+            "Waiting time for agent when customer is disconnected",
+            "Invalid Apple OAuth response",
+            "Supervisor force closed the conversation",
+            "Offer customer callback",
+            "Customer callback response",
+            "Consult with queue or user group is initiated",
+            "Consult with queue or user group is cancelled",
+            "No service representatives found for consult with queue or user group",
+            "Consult request failed due to system failure",
+            "Consult to queue or user group failed due to out of operating hours",
+            "Customer's message couldn't be sent: Service is down.",
+            "Please wait a moment to give us feedback about your experience..",
+            "This survey has timed out. To start a new conversation, reopen this chat window.",
+            "Conversation closed due to new notification request.",
+            "Estimated wait time notification.",
+            "Customer authenticated during active conversation"
+          ],
+          "x-ms-enum-values": [
+            192350000,
+            192350001,
+            192350002,
+            192350003,
+            192350004,
+            192350005,
+            192350006,
+            192350007,
+            192350008,
+            192350009,
+            192350010,
+            192350011,
+            192350012,
+            192350013,
+            192350014,
+            192350015,
+            192350016,
+            192350017,
+            192350018,
+            192350019,
+            192350020,
+            192350021,
+            192350022,
+            192350023,
+            192350024,
+            192350025,
+            192350026,
+            192350027,
+            192350028,
+            192350029,
+            192350030,
+            192350031,
+            192350032,
+            192350033,
+            192350034,
+            192350035,
+            192350036,
+            192350037,
+            192350038,
+            192350039,
+            192350040,
+            192350041,
+            192350042,
+            192350043,
+            192350044,
+            192350045,
+            192350046,
+            192350047,
+            192350048,
+            192350049,
+            192350050,
+            192350051,
+            192350052,
+            192350053,
+            192350054,
+            192350055,
+            192350056,
+            192350057,
+            192350058,
+            192350059,
+            192350060,
+            192350061,
+            192350062,
+            192350063,
+            192350064,
+            192350070,
+            192350071,
+            192350072,
+            192350073,
+            192350074,
+            192350075,
+            192350076,
+            192350077,
+            192350078,
+            192350079,
+            192370001,
+            192370002,
+            192370003,
+            192370006,
+            192370007,
+            192370009
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "e67d2284-7ddd-4480-9cf6-988e8698b056",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "System Message Event Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "msdyn_systemmessageeventtypename": {
+          "type": "string",
+          "title": "msdyn_systemmessageeventtypename",
+          "x-ms-dataverse-attribute": "msdyn_systemmessageeventtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "msdyn_systemmessageeventtypeName",
+          "x-ms-read-only": true
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "6e42fb4e-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "7842fb4e-b319-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "msdyn_defaultlanguage",
+        "msdyn_isrecurring",
+        "msdyn_messageinterval",
+        "msdyn_messagereceiver",
+        "msdyn_messagetemplatetrigger",
+        "msdyn_messagetext",
+        "msdyn_name",
+        "msdyn_ocsystemmessageid",
+        "msdyn_repeatcount",
+        "msdyn_streamsource",
+        "msdyn_systemmessageeventtype",
+        "organizationidname",
+        "statecode"
+      ]
+    }
+  }
+}

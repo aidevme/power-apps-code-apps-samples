@@ -1,0 +1,1062 @@
+{
+  "name": "msdyn_mobileapp",
+  "title": "Mobile App",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "msdyn_mobileapps",
+      "x-ms-dataverse-primary-id": "msdyn_mobileappid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "componentidunique": {
+          "type": "string",
+          "title": "Row id unique",
+          "x-ms-dataverse-attribute": "componentidunique",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ComponentIdUnique",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "componentstate": {
+          "type": "string",
+          "title": "Component State",
+          "x-ms-dataverse-attribute": "componentstate",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ComponentState",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Published",
+            "Unpublished",
+            "Deleted",
+            "Deleted Unpublished"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "faece09f-cefc-11de-8150-00155da18b00",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Component State",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "componentstatename": {
+          "type": "string",
+          "title": "componentstatename",
+          "x-ms-dataverse-attribute": "componentstatename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "componentstateName",
+          "x-ms-read-only": true
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "iscustomizable": {
+          "type": "string",
+          "title": "Is Customizable",
+          "x-ms-dataverse-attribute": "iscustomizable",
+          "x-ms-dataverse-type": "ManagedPropertyType",
+          "x-ms-schema-name": "IsCustomizable",
+          "required": true
+        },
+        "ismanaged": {
+          "type": "string",
+          "title": "Is Managed",
+          "x-ms-dataverse-attribute": "ismanaged",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsManaged",
+          "x-ms-read-only": true,
+          "required": true,
+          "enum": [
+            "Unmanaged",
+            "Managed"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9d04e035-5408-4c1d-a5aa-20445a02f691",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Component Managed",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "ismanagedname": {
+          "type": "string",
+          "title": "ismanagedname",
+          "x-ms-dataverse-attribute": "ismanagedname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ismanagedName",
+          "x-ms-read-only": true
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "msdyn_actionbuttonhighlight": {
+          "type": "string",
+          "title": "Action Button Highlight",
+          "x-ms-dataverse-attribute": "msdyn_actionbuttonhighlight",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_actionButtonHighlight",
+          "maxLength": 5000
+        },
+        "msdyn_adalclientid": {
+          "type": "string",
+          "title": "Active Directory Authentication Library Id",
+          "x-ms-dataverse-attribute": "msdyn_adalclientid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_adalClientId",
+          "maxLength": 5000
+        },
+        "msdyn_adalredirecturi": {
+          "type": "string",
+          "title": "Active Directory Authentication Library redirect URI",
+          "x-ms-dataverse-attribute": "msdyn_adalredirecturi",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_adalRedirectUri",
+          "maxLength": 100
+        },
+        "msdyn_androidappcenterapitoken": {
+          "type": "string",
+          "title": "Android App center API token",
+          "x-ms-dataverse-attribute": "msdyn_androidappcenterapitoken",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_AndroidAppCenterAPIToken",
+          "maxLength": 5000
+        },
+        "msdyn_androidappcenterapitokensaved": {
+          "type": "string",
+          "title": "AndroidAppCenterAPITokenSaved",
+          "x-ms-dataverse-attribute": "msdyn_androidappcenterapitokensaved",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_AndroidAppCenterAPITokenSaved",
+          "maxLength": 5000
+        },
+        "msdyn_appcenterappidaab": {
+          "type": "string",
+          "title": "App Center AppId Aab",
+          "x-ms-dataverse-attribute": "msdyn_appcenterappidaab",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appCenterAppIdAab",
+          "maxLength": 100
+        },
+        "msdyn_appcenterappidapk": {
+          "type": "string",
+          "title": "App Center AppId Apk",
+          "x-ms-dataverse-attribute": "msdyn_appcenterappidapk",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appCenterAppIdApk",
+          "maxLength": 100
+        },
+        "msdyn_appcenterappidipa": {
+          "type": "string",
+          "title": "IOS App Center Id",
+          "x-ms-dataverse-attribute": "msdyn_appcenterappidipa",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appCenterAppIdIpa",
+          "maxLength": 100
+        },
+        "msdyn_appicon1024x1024": {
+          "type": "string",
+          "title": "IOS App Icon 1024x1024",
+          "x-ms-dataverse-attribute": "msdyn_appicon1024x1024",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIcon1024x1024",
+          "x-ms-read-only": true
+        },
+        "msdyn_appicon1024x1024_name": {
+          "type": "string",
+          "title": "msdyn_appicon1024x1024_name",
+          "x-ms-dataverse-attribute": "msdyn_appicon1024x1024_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIcon1024x1024_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_appicon120x120": {
+          "type": "string",
+          "title": "IOS App Icon 120x120",
+          "x-ms-dataverse-attribute": "msdyn_appicon120x120",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIcon120x120",
+          "x-ms-read-only": true
+        },
+        "msdyn_appicon120x120_name": {
+          "type": "string",
+          "title": "msdyn_appicon120x120_name",
+          "x-ms-dataverse-attribute": "msdyn_appicon120x120_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIcon120x120_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_appicon152x152": {
+          "type": "string",
+          "title": "IOS App Icon 152x152",
+          "x-ms-dataverse-attribute": "msdyn_appicon152x152",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIcon152x152",
+          "x-ms-read-only": true
+        },
+        "msdyn_appicon152x152_name": {
+          "type": "string",
+          "title": "msdyn_appicon152x152_name",
+          "x-ms-dataverse-attribute": "msdyn_appicon152x152_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIcon152x152_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_appicon167x167": {
+          "type": "string",
+          "title": "IOS App Icon 167x167",
+          "x-ms-dataverse-attribute": "msdyn_appicon167x167",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIcon167x167",
+          "x-ms-read-only": true
+        },
+        "msdyn_appicon167x167_name": {
+          "type": "string",
+          "title": "msdyn_appicon167x167_name",
+          "x-ms-dataverse-attribute": "msdyn_appicon167x167_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIcon167x167_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_appicon180x180": {
+          "type": "string",
+          "title": "IOS App Icon 180x180",
+          "x-ms-dataverse-attribute": "msdyn_appicon180x180",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIcon180x180",
+          "x-ms-read-only": true
+        },
+        "msdyn_appicon180x180_name": {
+          "type": "string",
+          "title": "msdyn_appicon180x180_name",
+          "x-ms-dataverse-attribute": "msdyn_appicon180x180_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIcon180x180_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_appiconhdpi": {
+          "type": "string",
+          "title": "Android App Icon Hdpi",
+          "x-ms-dataverse-attribute": "msdyn_appiconhdpi",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIconHdpi",
+          "x-ms-read-only": true
+        },
+        "msdyn_appiconhdpi_name": {
+          "type": "string",
+          "title": "msdyn_appiconhdpi_name",
+          "x-ms-dataverse-attribute": "msdyn_appiconhdpi_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIconHdpi_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_appiconmdpi": {
+          "type": "string",
+          "title": "Android App Icon Mdpi",
+          "x-ms-dataverse-attribute": "msdyn_appiconmdpi",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIconMdpi",
+          "x-ms-read-only": true
+        },
+        "msdyn_appiconmdpi_name": {
+          "type": "string",
+          "title": "msdyn_appiconmdpi_name",
+          "x-ms-dataverse-attribute": "msdyn_appiconmdpi_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIconMdpi_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_appiconxdpi": {
+          "type": "string",
+          "title": "Android App Icon Xdpi",
+          "x-ms-dataverse-attribute": "msdyn_appiconxdpi",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIconXdpi",
+          "x-ms-read-only": true
+        },
+        "msdyn_appiconxdpi_name": {
+          "type": "string",
+          "title": "msdyn_appiconxdpi_name",
+          "x-ms-dataverse-attribute": "msdyn_appiconxdpi_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIconXdpi_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_appiconxxhdpi": {
+          "type": "string",
+          "title": "Android App Icon XXdpi",
+          "x-ms-dataverse-attribute": "msdyn_appiconxxhdpi",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIconXxhdpi",
+          "x-ms-read-only": true
+        },
+        "msdyn_appiconxxhdpi_name": {
+          "type": "string",
+          "title": "msdyn_appiconxxhdpi_name",
+          "x-ms-dataverse-attribute": "msdyn_appiconxxhdpi_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIconXxhdpi_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_appiconxxxhdpi": {
+          "type": "string",
+          "title": "Android App Icon XXXdpi",
+          "x-ms-dataverse-attribute": "msdyn_appiconxxxhdpi",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_appIconXxxhdpi",
+          "x-ms-read-only": true
+        },
+        "msdyn_appiconxxxhdpi_name": {
+          "type": "string",
+          "title": "msdyn_appiconxxxhdpi_name",
+          "x-ms-dataverse-attribute": "msdyn_appiconxxxhdpi_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_appIconXxxhdpi_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_azureblobstorageaccountname": {
+          "type": "string",
+          "title": "Azure Blob Storage Account Name",
+          "x-ms-dataverse-attribute": "msdyn_azureblobstorageaccountname",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_azureBlobStorageAccountName",
+          "maxLength": 5000
+        },
+        "msdyn_azureblobstoragecontainername": {
+          "type": "string",
+          "title": "Azure Blob Storage Container Name",
+          "x-ms-dataverse-attribute": "msdyn_azureblobstoragecontainername",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_azureBlobStorageContainerName",
+          "maxLength": 5000
+        },
+        "msdyn_branch": {
+          "type": "string",
+          "title": "Branch",
+          "x-ms-dataverse-attribute": "msdyn_branch",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_branch",
+          "maxLength": 5000
+        },
+        "msdyn_builddetails": {
+          "type": "string",
+          "title": "Build Details",
+          "x-ms-dataverse-attribute": "msdyn_builddetails",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_buildDetails",
+          "maxLength": 1073741823
+        },
+        "msdyn_bundleidentifier": {
+          "type": "string",
+          "title": "Bundle Identifier for App",
+          "x-ms-dataverse-attribute": "msdyn_bundleidentifier",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_bundleIdentifier",
+          "maxLength": 100
+        },
+        "msdyn_buttoncolor": {
+          "type": "string",
+          "title": "Button Color",
+          "x-ms-dataverse-attribute": "msdyn_buttoncolor",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_buttonColor",
+          "maxLength": 100
+        },
+        "msdyn_customdimensions": {
+          "type": "string",
+          "title": "Custom Dimensions",
+          "x-ms-dataverse-attribute": "msdyn_customdimensions",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_customDimensions",
+          "maxLength": 1073741823
+        },
+        "msdyn_displayname": {
+          "type": "string",
+          "title": "Display Name",
+          "x-ms-dataverse-attribute": "msdyn_displayname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_displayName",
+          "maxLength": 5000
+        },
+        "msdyn_fillcolor": {
+          "type": "string",
+          "title": "Fill Color",
+          "x-ms-dataverse-attribute": "msdyn_fillcolor",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_fillColor",
+          "maxLength": 5000
+        },
+        "msdyn_headingtextcolor": {
+          "type": "string",
+          "title": "Heading Text Color",
+          "x-ms-dataverse-attribute": "msdyn_headingtextcolor",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_headingTextColor",
+          "maxLength": 100
+        },
+        "msdyn_hyperlinkcolor": {
+          "type": "string",
+          "title": "Hyper Link Color",
+          "x-ms-dataverse-attribute": "msdyn_hyperlinkcolor",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_hyperLinkColor",
+          "maxLength": 5000
+        },
+        "msdyn_iosappcenterapitoken": {
+          "type": "string",
+          "title": "IOS App Center API token",
+          "x-ms-dataverse-attribute": "msdyn_iosappcenterapitoken",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_IOSAppCenterAPIToken",
+          "maxLength": 5000
+        },
+        "msdyn_iosappcenterapitokensaved": {
+          "type": "string",
+          "title": "IOSAppCenterAPITokenSaved",
+          "x-ms-dataverse-attribute": "msdyn_iosappcenterapitokensaved",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_IOSAppCenterAPITokenSaved",
+          "maxLength": 5000
+        },
+        "msdyn_iosenterprisesigningenabled": {
+          "type": "string",
+          "title": "iOS Enterprise Signing Enabled",
+          "x-ms-dataverse-attribute": "msdyn_iosenterprisesigningenabled",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_iosEnterpriseSigningEnabled",
+          "maxLength": 5000
+        },
+        "msdyn_isappsigningenabled": {
+          "type": "string",
+          "title": "Is App Signing Enabled",
+          "x-ms-dataverse-attribute": "msdyn_isappsigningenabled",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_isAppSigningEnabled",
+          "maxLength": 5000
+        },
+        "msdyn_keyvaulturi": {
+          "type": "string",
+          "title": "Key Vault Uri",
+          "x-ms-dataverse-attribute": "msdyn_keyvaulturi",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_keyVaultUri",
+          "maxLength": 5000
+        },
+        "msdyn_launchappresources": {
+          "type": "string",
+          "title": "Launch App Resources",
+          "x-ms-dataverse-attribute": "msdyn_launchappresources",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_launchAppResources",
+          "x-ms-read-only": true
+        },
+        "msdyn_launchappresources_name": {
+          "type": "string",
+          "title": "msdyn_launchappresources_name",
+          "x-ms-dataverse-attribute": "msdyn_launchappresources_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_launchAppResources_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_mobileappdefinitionandroid": {
+          "type": "string",
+          "title": "Mobile App Definition Android",
+          "x-ms-dataverse-attribute": "msdyn_mobileappdefinitionandroid",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_mobileAppDefinitionAndroid",
+          "x-ms-read-only": true
+        },
+        "msdyn_mobileappdefinitionandroid_name": {
+          "type": "string",
+          "title": "msdyn_mobileappdefinitionandroid_name",
+          "x-ms-dataverse-attribute": "msdyn_mobileappdefinitionandroid_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_mobileAppDefinitionAndroid_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_mobileappdefinitionios": {
+          "type": "string",
+          "title": "Mobile App Definition IOS",
+          "x-ms-dataverse-attribute": "msdyn_mobileappdefinitionios",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_mobileAppDefinitionIOS",
+          "x-ms-read-only": true
+        },
+        "msdyn_mobileappdefinitionios_name": {
+          "type": "string",
+          "title": "msdyn_mobileappdefinitionios_name",
+          "x-ms-dataverse-attribute": "msdyn_mobileappdefinitionios_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_mobileAppDefinitionIOS_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_mobileappid": {
+          "type": "string",
+          "title": "Mobile App Id",
+          "x-ms-dataverse-attribute": "msdyn_mobileappid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "msdyn_mobileappId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "msdyn_orgname": {
+          "type": "string",
+          "title": "Organization Name",
+          "x-ms-dataverse-attribute": "msdyn_orgname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_orgName",
+          "maxLength": 5000
+        },
+        "msdyn_platformtype": {
+          "type": "string",
+          "title": "Platform Type",
+          "x-ms-dataverse-attribute": "msdyn_platformtype",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_platformType",
+          "maxLength": 1048576
+        },
+        "msdyn_primarypublishedappname": {
+          "type": "string",
+          "title": "Primary Published Canvas App",
+          "x-ms-dataverse-attribute": "msdyn_primarypublishedappname",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "msdyn_primaryPublishedAppName",
+          "required": true
+        },
+        "msdyn_primarypublishedappnamename": {
+          "type": "string",
+          "title": "msdyn_primarypublishedappnamename",
+          "x-ms-dataverse-attribute": "msdyn_primarypublishedappnamename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_primaryPublishedAppNameName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "msdyn_prodev_custompackage": {
+          "type": "string",
+          "title": "Pro Dev Custom Package",
+          "x-ms-dataverse-attribute": "msdyn_prodev_custompackage",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_proDev_customPackage",
+          "x-ms-read-only": true
+        },
+        "msdyn_prodev_custompackage_name": {
+          "type": "string",
+          "title": "msdyn_prodev_custompackage_name",
+          "x-ms-dataverse-attribute": "msdyn_prodev_custompackage_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_proDev_customPackage_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_pushnotificationsandroidjson": {
+          "type": "string",
+          "title": "Push Notifications Android JSON",
+          "x-ms-dataverse-attribute": "msdyn_pushnotificationsandroidjson",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_pushNotificationsAndroidJson",
+          "x-ms-read-only": true
+        },
+        "msdyn_pushnotificationsandroidjson_name": {
+          "type": "string",
+          "title": "msdyn_pushnotificationsandroidjson_name",
+          "x-ms-dataverse-attribute": "msdyn_pushnotificationsandroidjson_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_pushNotificationsAndroidJson_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_pushnotificationsenabled_android": {
+          "type": "string",
+          "title": "Push Notifications Enabled Android",
+          "x-ms-dataverse-attribute": "msdyn_pushnotificationsenabled_android",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_pushNotificationsEnabled_android",
+          "maxLength": 5000
+        },
+        "msdyn_pushnotificationsenabled_ios": {
+          "type": "string",
+          "title": "Push Notifications Enabled iOS",
+          "x-ms-dataverse-attribute": "msdyn_pushnotificationsenabled_ios",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_pushNotificationsEnabled_ios",
+          "maxLength": 5000
+        },
+        "msdyn_pushnotificationsiosplist": {
+          "type": "string",
+          "title": "Push Notifications iOS Plist",
+          "x-ms-dataverse-attribute": "msdyn_pushnotificationsiosplist",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_pushNotificationsIosPlist",
+          "x-ms-read-only": true
+        },
+        "msdyn_pushnotificationsiosplist_name": {
+          "type": "string",
+          "title": "msdyn_pushnotificationsiosplist_name",
+          "x-ms-dataverse-attribute": "msdyn_pushnotificationsiosplist_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_pushNotificationsIosPlist_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_recentbuild": {
+          "type": "string",
+          "title": "Recent build",
+          "x-ms-dataverse-attribute": "msdyn_recentbuild",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_recentBuild",
+          "maxLength": 1073741823
+        },
+        "msdyn_secondaryapps": {
+          "type": "string",
+          "title": "Secondary Apps used for Wrap",
+          "x-ms-dataverse-attribute": "msdyn_secondaryapps",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_secondaryApps",
+          "maxLength": 1073741823
+        },
+        "msdyn_secondarypublishedappnames": {
+          "type": "string",
+          "title": "Secondary Published App Names",
+          "x-ms-dataverse-attribute": "msdyn_secondarypublishedappnames",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_secondaryPublishedAppNames",
+          "maxLength": 1048576
+        },
+        "msdyn_statusbarcontentcolormode": {
+          "type": "string",
+          "title": "Status Bar Content Color Mode",
+          "x-ms-dataverse-attribute": "msdyn_statusbarcontentcolormode",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_statusBarContentColorMode",
+          "maxLength": 1048576
+        },
+        "msdyn_storagetypeforupload": {
+          "type": "string",
+          "title": "Storage Type For Upload",
+          "x-ms-dataverse-attribute": "msdyn_storagetypeforupload",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "msdyn_storageTypeForUpload",
+          "maxLength": 5000
+        },
+        "msdyn_tenantsplashimage": {
+          "type": "string",
+          "title": "Tenant Splash Image",
+          "x-ms-dataverse-attribute": "msdyn_tenantsplashimage",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_tenantSplashImage",
+          "x-ms-read-only": true
+        },
+        "msdyn_tenantsplashimage_name": {
+          "type": "string",
+          "title": "msdyn_tenantsplashimage_name",
+          "x-ms-dataverse-attribute": "msdyn_tenantsplashimage_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_tenantSplashImage_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_tenantwelcomeimage": {
+          "type": "string",
+          "title": "Tenant Welcome Image",
+          "x-ms-dataverse-attribute": "msdyn_tenantwelcomeimage",
+          "x-ms-dataverse-type": "FileType",
+          "x-ms-schema-name": "msdyn_tenantWelcomeImage",
+          "x-ms-read-only": true
+        },
+        "msdyn_tenantwelcomeimage_name": {
+          "type": "string",
+          "title": "msdyn_tenantwelcomeimage_name",
+          "x-ms-dataverse-attribute": "msdyn_tenantwelcomeimage_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_tenantWelcomeImage_Name",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "msdyn_uniquename": {
+          "type": "string",
+          "title": "Unique Name",
+          "x-ms-dataverse-attribute": "msdyn_uniquename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "msdyn_UniqueName",
+          "required": true,
+          "maxLength": 128
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "overwritetime": {
+          "type": "string",
+          "title": "Record Overwrite Time",
+          "x-ms-dataverse-attribute": "overwritetime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverwriteTime",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "3a1db98c-5a19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "441db98c-5a19-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "supportingsolutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "supportingsolutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SupportingSolutionId",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "componentidunique",
+        "componentstate",
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "iscustomizable",
+        "ismanaged",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "msdyn_mobileappid",
+        "msdyn_primarypublishedappname",
+        "msdyn_uniquename",
+        "name",
+        "overwritetime",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "owningbusinessunitname",
+        "solutionid",
+        "statecode"
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "multiselectattributeoptionvalues",
+  "title": "Multi Select Option Values",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "multiselectattributeoptionvaluescollection",
+      "x-ms-dataverse-primary-id": "multiselectfulltextidkey",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "multiselectfulltextidkey": {
+          "type": "string",
+          "title": "multiselectfulltextidkey",
+          "x-ms-dataverse-attribute": "multiselectfulltextidkey",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "MultiSelectFullTextIdKey",
+          "x-ms-read-only": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "objectcolumnnumber": {
+          "type": "string",
+          "title": "objectcolumnnumber",
+          "x-ms-dataverse-attribute": "objectcolumnnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectColumnNumber",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "objectid": {
+          "type": "string",
+          "title": "objectid",
+          "x-ms-dataverse-attribute": "objectid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ObjectId",
+          "required": true
+        },
+        "objectidtypecode": {
+          "type": "string",
+          "title": "objectidtypecode",
+          "x-ms-dataverse-attribute": "objectidtypecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ObjectIdTypeCode",
+          "required": true
+        },
+        "selectedoptionvalues": {
+          "type": "string",
+          "title": "selectedoptionvalues",
+          "x-ms-dataverse-attribute": "selectedoptionvalues",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "SelectedOptionValues",
+          "required": true,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "multiselectfulltextidkey",
+        "objectcolumnnumber",
+        "objectid",
+        "objectidtypecode",
+        "selectedoptionvalues"
+      ]
+    }
+  }
+}

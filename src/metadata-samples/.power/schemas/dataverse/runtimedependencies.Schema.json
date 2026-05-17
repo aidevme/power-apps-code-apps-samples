@@ -1,0 +1,88 @@
+{
+  "name": "runtimedependency",
+  "title": "RuntimeDependencies",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "runtimedependencies",
+      "x-ms-dataverse-primary-id": "dependencyid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "createdtime": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdtime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedTime",
+          "x-ms-read-only": true
+        },
+        "dependencyid": {
+          "type": "string",
+          "title": "Dependency Identifier",
+          "x-ms-dataverse-attribute": "dependencyid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "DependencyId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "dependentcomponentnodeid": {
+          "type": "string",
+          "title": "Dependent Component",
+          "x-ms-dataverse-attribute": "dependentcomponentnodeid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "DependentComponentNodeId",
+          "required": true
+        },
+        "dependentcomponenttype": {
+          "type": "string",
+          "title": "Dependent Component Node Type",
+          "x-ms-dataverse-attribute": "dependentcomponenttype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "DependentComponentType"
+        },
+        "ispublished": {
+          "type": "string",
+          "title": "IsPublished",
+          "x-ms-dataverse-attribute": "ispublished",
+          "x-ms-dataverse-type": "ManagedPropertyType",
+          "x-ms-schema-name": "IsPublished",
+          "required": true
+        },
+        "requiredcomponentmodifiedtime": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "requiredcomponentmodifiedtime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "RequiredComponentModifiedTime",
+          "x-ms-read-only": true
+        },
+        "requiredcomponentnodeid": {
+          "type": "string",
+          "title": "Required Component",
+          "x-ms-dataverse-attribute": "requiredcomponentnodeid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RequiredComponentNodeId",
+          "required": true,
+          "maxLength": 300
+        },
+        "requiredcomponenttype": {
+          "type": "string",
+          "title": "Required Component Node Type",
+          "x-ms-dataverse-attribute": "requiredcomponenttype",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "RequiredComponentType"
+        }
+      },
+      "required": [
+        "dependencyid",
+        "dependentcomponentnodeid",
+        "ispublished",
+        "requiredcomponentnodeid"
+      ]
+    }
+  }
+}

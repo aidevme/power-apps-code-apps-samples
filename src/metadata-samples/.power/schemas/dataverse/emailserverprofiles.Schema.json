@@ -1,0 +1,1550 @@
+{
+  "name": "emailserverprofile",
+  "title": "Email Server Profiles",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "emailserverprofiles",
+      "x-ms-dataverse-primary-id": "emailserverprofileid",
+      "x-ms-dataverse-primary-name": "name",
+      "properties": {
+        "aadresourceid": {
+          "type": "string",
+          "title": "Microsoft Entra resource ID",
+          "x-ms-dataverse-attribute": "aadresourceid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "AadResourceId",
+          "maxLength": 1024
+        },
+        "acsemailservicename": {
+          "type": "string",
+          "title": "ACS Email Service Name",
+          "x-ms-dataverse-attribute": "acsemailservicename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ACSEmailServiceName",
+          "maxLength": 200
+        },
+        "acsenabledforoutgoingemail": {
+          "type": "string",
+          "title": "ACS Enabled for Outgoing Email",
+          "x-ms-dataverse-attribute": "acsenabledforoutgoingemail",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "ACSEnabledForOutgoingEmail",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "55569d9e-5119-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "ACS Enabled for Outgoing Email",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "acsenabledforoutgoingemailname": {
+          "type": "string",
+          "title": "acsenabledforoutgoingemailname",
+          "x-ms-dataverse-attribute": "acsenabledforoutgoingemailname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "acsenabledforoutgoingemailName",
+          "x-ms-read-only": true
+        },
+        "acsendpointurl": {
+          "type": "string",
+          "title": "ACS Endpoint Url",
+          "x-ms-dataverse-attribute": "acsendpointurl",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ACSEndpointUrl",
+          "maxLength": 300
+        },
+        "acsmanagedidentityid": {
+          "type": "string",
+          "title": "ACS Managed Identity",
+          "x-ms-dataverse-attribute": "acsmanagedidentityid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ACSManagedIdentityId"
+        },
+        "acsmanagedidentityidname": {
+          "type": "string",
+          "title": "acsmanagedidentityidname",
+          "x-ms-dataverse-attribute": "acsmanagedidentityidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "acsmanagedidentityidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "acsresourcegroupname": {
+          "type": "string",
+          "title": "ACS Resource Group Name",
+          "x-ms-dataverse-attribute": "acsresourcegroupname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ACSResourceGroupName",
+          "maxLength": 200
+        },
+        "acssubscriptionid": {
+          "type": "string",
+          "title": "ACS SubscriptionId",
+          "x-ms-dataverse-attribute": "acssubscriptionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "ACSSubscriptionId"
+        },
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "defaultserverlocation": {
+          "type": "string",
+          "title": "Default Email Server Location",
+          "x-ms-dataverse-attribute": "defaultserverlocation",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DefaultServerLocation",
+          "maxLength": 2084
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "description",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "Description",
+          "maxLength": 2000
+        },
+        "emailserverprofileid": {
+          "type": "string",
+          "title": "EmailServerProfile",
+          "x-ms-dataverse-attribute": "emailserverprofileid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "EmailServerProfileId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "emailservertypename": {
+          "type": "string",
+          "title": "Email Server Type Name",
+          "x-ms-dataverse-attribute": "emailservertypename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EmailServerTypeName",
+          "x-ms-read-only": true,
+          "maxLength": 250
+        },
+        "encodingcodepage": {
+          "type": "string",
+          "title": "Encoding Code Page",
+          "x-ms-dataverse-attribute": "encodingcodepage",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EncodingCodePage",
+          "maxLength": 100
+        },
+        "entityimage": {
+          "type": "string",
+          "title": "Entity Image",
+          "x-ms-dataverse-attribute": "entityimage",
+          "x-ms-dataverse-type": "ImageType",
+          "x-ms-schema-name": "EntityImage"
+        },
+        "entityimage_timestamp": {
+          "type": "string",
+          "title": "entityimage_timestamp",
+          "x-ms-dataverse-attribute": "entityimage_timestamp",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "EntityImage_Timestamp",
+          "x-ms-read-only": true
+        },
+        "entityimage_url": {
+          "type": "string",
+          "title": "entityimage_url",
+          "x-ms-dataverse-attribute": "entityimage_url",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "EntityImage_URL",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "entityimageid": {
+          "type": "string",
+          "title": "Entity Image Id",
+          "x-ms-dataverse-attribute": "entityimageid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "EntityImageId",
+          "x-ms-read-only": true
+        },
+        "exchangeonlinetenantid": {
+          "type": "string",
+          "title": "Exchange Online Tenant Id",
+          "x-ms-dataverse-attribute": "exchangeonlinetenantid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ExchangeOnlineTenantId",
+          "maxLength": 36
+        },
+        "exchangeversion": {
+          "type": "string",
+          "title": "Exchange Version",
+          "x-ms-dataverse-attribute": "exchangeversion",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ExchangeVersion",
+          "enum": [
+            "Exchange 2007",
+            "Exchange 2007 SP1",
+            "Exchange 2010",
+            "Exchange 2010 SP1",
+            "Exchange 2010 SP2",
+            "Exchange 2013"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "a461f060-cca9-494f-8af0-f73a894faa12",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Exchange Version",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "exchangeversionname": {
+          "type": "string",
+          "title": "exchangeversionname",
+          "x-ms-dataverse-attribute": "exchangeversionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ExchangeVersionName",
+          "x-ms-read-only": true
+        },
+        "incomingauthenticationprotocol": {
+          "type": "string",
+          "title": "Incoming Authentication Protocol",
+          "x-ms-dataverse-attribute": "incomingauthenticationprotocol",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "IncomingAuthenticationProtocol",
+          "enum": [
+            "Auto Detect",
+            "Negotiate",
+            "NTLM",
+            "Basic",
+            "OAuth"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "65205fd5-30ea-400b-8395-8cf446674fb4",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Authentication Protocol",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "incomingauthenticationprotocolname": {
+          "type": "string",
+          "title": "incomingauthenticationprotocolname",
+          "x-ms-dataverse-attribute": "incomingauthenticationprotocolname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IncomingAuthenticationProtocolName",
+          "x-ms-read-only": true
+        },
+        "incomingcredentialretrieval": {
+          "type": "string",
+          "title": "Incoming Email Credential Retrieval",
+          "x-ms-dataverse-attribute": "incomingcredentialretrieval",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "IncomingCredentialRetrieval",
+          "enum": [
+            "Credentials Specified by a User or Queue",
+            "Credentials Specified in Email Server Profile",
+            "Server to Server Authentication",
+            "Windows Integrated Authentication",
+            "Without Credentials (Anonymous)",
+            "Gmail OAuth",
+            "Exchange Hybrid Modern Auth (HMA)",
+            "OAuth with Microsoft Entra ID",
+            "Power Platform Managed Identity Auth (PPMI)"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "4e840858-d80d-465b-8c04-77da60564010",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Credential retrieval method",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "incomingcredentialretrievalname": {
+          "type": "string",
+          "title": "incomingcredentialretrievalname",
+          "x-ms-dataverse-attribute": "incomingcredentialretrievalname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IncomingCredentialRetrievalName",
+          "x-ms-read-only": true
+        },
+        "incomingpartnerapplication": {
+          "type": "string",
+          "title": "Incoming Partner Application",
+          "x-ms-dataverse-attribute": "incomingpartnerapplication",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "IncomingPartnerApplication",
+          "x-ms-read-only": true
+        },
+        "incomingpartnerapplicationname": {
+          "type": "string",
+          "title": "incomingpartnerapplicationname",
+          "x-ms-dataverse-attribute": "incomingpartnerapplicationname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "IncomingPartnerApplicationName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "incomingpassword": {
+          "type": "string",
+          "title": "Incoming Email Password",
+          "x-ms-dataverse-attribute": "incomingpassword",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "IncomingPassword",
+          "maxLength": 250
+        },
+        "incomingportnumber": {
+          "type": "string",
+          "title": "Incoming Email Port",
+          "x-ms-dataverse-attribute": "incomingportnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "IncomingPortNumber"
+        },
+        "incomingserverlocation": {
+          "type": "string",
+          "title": "Incoming Email Server Location",
+          "x-ms-dataverse-attribute": "incomingserverlocation",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "IncomingServerLocation",
+          "maxLength": 2084
+        },
+        "incominguseimpersonation": {
+          "type": "string",
+          "title": "Use Impersonation for Incoming Email",
+          "x-ms-dataverse-attribute": "incominguseimpersonation",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IncomingUseImpersonation",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "0a56c654-0df7-49d3-9b24-cc831f073378",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Use Impersonation for Incoming Email",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "incominguseimpersonationname": {
+          "type": "string",
+          "title": "incominguseimpersonationname",
+          "x-ms-dataverse-attribute": "incominguseimpersonationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IncomingUseImpersonationName",
+          "x-ms-read-only": true
+        },
+        "incomingusername": {
+          "type": "string",
+          "title": "Incoming Email User Name",
+          "x-ms-dataverse-attribute": "incomingusername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "IncomingUserName",
+          "maxLength": 250
+        },
+        "incomingusessl": {
+          "type": "string",
+          "title": "Use SSL for Incoming Email",
+          "x-ms-dataverse-attribute": "incomingusessl",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IncomingUseSSL",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "4a66ca4b-546d-4a25-b9a0-0a1c31f363e0",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Use SSL",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "incomingusesslname": {
+          "type": "string",
+          "title": "incomingusesslname",
+          "x-ms-dataverse-attribute": "incomingusesslname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "IncomingUseSslName",
+          "x-ms-read-only": true
+        },
+        "isincomingpasswordset": {
+          "type": "string",
+          "title": "isincomingpasswordset",
+          "x-ms-dataverse-attribute": "isincomingpasswordset",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsIncomingPasswordSet",
+          "x-ms-read-only": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "308a9725-d926-4620-8af4-0a8839cb12c3",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Encrypted Attribute Value Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isoauthclientsecretset": {
+          "type": "string",
+          "title": "isoauthclientsecretset",
+          "x-ms-dataverse-attribute": "isoauthclientsecretset",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsOauthClientSecretSet",
+          "x-ms-read-only": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "308a9725-d926-4620-8af4-0a8839cb12c3",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Encrypted Attribute Value Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "isoutgoingpasswordset": {
+          "type": "string",
+          "title": "isoutgoingpasswordset",
+          "x-ms-dataverse-attribute": "isoutgoingpasswordset",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "IsOutgoingPasswordSet",
+          "x-ms-read-only": true,
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "308a9725-d926-4620-8af4-0a8839cb12c3",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Is Encrypted Attribute Value Set",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "keyvaultreferenceid": {
+          "type": "string",
+          "title": "Key Vault Reference Id",
+          "x-ms-dataverse-attribute": "keyvaultreferenceid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "keyvaultreferenceid"
+        },
+        "keyvaultreferenceidname": {
+          "type": "string",
+          "title": "keyvaultreferenceidname",
+          "x-ms-dataverse-attribute": "keyvaultreferenceidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "keyvaultreferenceidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "lastauthorizationstatus": {
+          "type": "string",
+          "title": "Last Test Authorization Status",
+          "x-ms-dataverse-attribute": "lastauthorizationstatus",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "LastAuthorizationStatus",
+          "enum": [
+            "Failure",
+            "Success"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "d06e7880-c891-46f3-ac9e-195244b15cd9",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Select the status of the Test",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "lastcrmmessage": {
+          "type": "string",
+          "title": "Last Dynamics 365 Message",
+          "x-ms-dataverse-attribute": "lastcrmmessage",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "LastCrmMessage",
+          "maxLength": 2084
+        },
+        "lasttestexecutionstatus": {
+          "type": "string",
+          "title": "Last Test Execution Status",
+          "x-ms-dataverse-attribute": "lasttestexecutionstatus",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "LastTestExecutionStatus",
+          "enum": [
+            "Failure",
+            "Success",
+            "Warning"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b4e8d659-be15-47da-93f8-b03538fba3ae",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Select the status of the Test",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "lasttestrequest": {
+          "type": "string",
+          "title": "Last Test Request",
+          "x-ms-dataverse-attribute": "lasttestrequest",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "LastTestRequest",
+          "maxLength": 2084
+        },
+        "lasttestresponse": {
+          "type": "string",
+          "title": "Last Test Response",
+          "x-ms-dataverse-attribute": "lasttestresponse",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "LastTestResponse",
+          "maxLength": 2084
+        },
+        "lastteststarttime": {
+          "type": "string",
+          "title": "Last Test Time",
+          "x-ms-dataverse-attribute": "lastteststarttime",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "LastTestStartTime"
+        },
+        "lasttesttotalexecutiontime": {
+          "type": "string",
+          "title": "Last Test Time Taken",
+          "x-ms-dataverse-attribute": "lasttesttotalexecutiontime",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "LastTestTotalExecutionTime"
+        },
+        "lasttestvalidationstatus": {
+          "type": "string",
+          "title": "Last Test Validation Status",
+          "x-ms-dataverse-attribute": "lasttestvalidationstatus",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "LastTestValidationStatus",
+          "enum": [
+            "Failure",
+            "Success"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "1d0a81e2-9b91-40aa-91fa-3914d77076c1",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Select the status of the Test",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "managedidentityid": {
+          "type": "string",
+          "title": "Managed Identity Id",
+          "x-ms-dataverse-attribute": "managedidentityid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "managedidentityid"
+        },
+        "managedidentityidname": {
+          "type": "string",
+          "title": "managedidentityidname",
+          "x-ms-dataverse-attribute": "managedidentityidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "managedidentityidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "maxconcurrentconnections": {
+          "type": "string",
+          "title": "Maximum Concurrent Connections",
+          "x-ms-dataverse-attribute": "maxconcurrentconnections",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "MaxConcurrentConnections"
+        },
+        "minpollingintervalinminutes": {
+          "type": "string",
+          "title": "Minimum Polling Interval In Minutes",
+          "x-ms-dataverse-attribute": "minpollingintervalinminutes",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "MinPollingIntervalInMinutes"
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "moveundeliveredemails": {
+          "type": "string",
+          "title": "Move Undelivered Emails to the Undeliverable Folder",
+          "x-ms-dataverse-attribute": "moveundeliveredemails",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "MoveUndeliveredEmails",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "db7133ed-7c8c-4a14-8bb3-2927524c2956",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Allow Email Connector to move failed emails to Undeliverable folder in Exchange.",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "moveundeliveredemailsname": {
+          "type": "string",
+          "title": "moveundeliveredemailsname",
+          "x-ms-dataverse-attribute": "moveundeliveredemailsname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "MoveUndeliveredEmailsName",
+          "x-ms-read-only": true
+        },
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "Name",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "oauthclientid": {
+          "type": "string",
+          "title": "Oauth ClientId",
+          "x-ms-dataverse-attribute": "oauthclientid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OauthClientId",
+          "maxLength": 1024
+        },
+        "oauthclientsecret": {
+          "type": "string",
+          "title": "OAuth Client Secret",
+          "x-ms-dataverse-attribute": "oauthclientsecret",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OauthClientSecret",
+          "maxLength": 1024
+        },
+        "organizationid": {
+          "type": "string",
+          "title": "Organization Id",
+          "x-ms-dataverse-attribute": "organizationid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OrganizationId",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "organizationidname": {
+          "type": "string",
+          "title": "organizationidname",
+          "x-ms-dataverse-attribute": "organizationidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "outgoingauthenticationprotocol": {
+          "type": "string",
+          "title": "Outgoing Authentication Protocol",
+          "x-ms-dataverse-attribute": "outgoingauthenticationprotocol",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "OutgoingAuthenticationProtocol",
+          "enum": [
+            "Auto Detect",
+            "Negotiate",
+            "NTLM",
+            "Basic",
+            "OAuth"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "65205fd5-30ea-400b-8395-8cf446674fb4",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Authentication Protocol",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "outgoingauthenticationprotocolname": {
+          "type": "string",
+          "title": "outgoingauthenticationprotocolname",
+          "x-ms-dataverse-attribute": "outgoingauthenticationprotocolname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "OutgoingAuthenticationProtocolName",
+          "x-ms-read-only": true
+        },
+        "outgoingautograntdelegateaccess": {
+          "type": "string",
+          "title": "Auto Grant Delegate Access for Outgoing Email.",
+          "x-ms-dataverse-attribute": "outgoingautograntdelegateaccess",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "OutgoingAutoGrantDelegateAccess",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "011ed067-6d9f-4a44-88f6-e6b5cc1dbf8b",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Auto Grant Delegate Access for Outgoing Email",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "outgoingautograntdelegateaccessname": {
+          "type": "string",
+          "title": "outgoingautograntdelegateaccessname",
+          "x-ms-dataverse-attribute": "outgoingautograntdelegateaccessname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "OutgoingAutoGrantDelegateAccessName",
+          "x-ms-read-only": true
+        },
+        "outgoingcredentialretrieval": {
+          "type": "string",
+          "title": "Outgoing Email Credential Retrieval",
+          "x-ms-dataverse-attribute": "outgoingcredentialretrieval",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "OutgoingCredentialRetrieval",
+          "enum": [
+            "Credentials Specified by a User or Queue",
+            "Credentials Specified in Email Server Profile",
+            "Server to Server Authentication",
+            "Windows Integrated Authentication",
+            "Without Credentials (Anonymous)",
+            "Gmail OAuth",
+            "Exchange Hybrid Modern Auth (HMA)",
+            "OAuth with Microsoft Entra ID",
+            "Power Platform Managed Identity Auth (PPMI)"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "24ca053c-d086-4351-8cc6-e295fb3f059b",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Use Windows Authentication for Outgoing",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "outgoingcredentialretrievalname": {
+          "type": "string",
+          "title": "outgoingcredentialretrievalname",
+          "x-ms-dataverse-attribute": "outgoingcredentialretrievalname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "OutgoingCredentialRetrievalName",
+          "x-ms-read-only": true
+        },
+        "outgoingpartnerapplication": {
+          "type": "string",
+          "title": "Outgoing Partner Application",
+          "x-ms-dataverse-attribute": "outgoingpartnerapplication",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OutgoingPartnerApplication",
+          "x-ms-read-only": true
+        },
+        "outgoingpartnerapplicationname": {
+          "type": "string",
+          "title": "outgoingpartnerapplicationname",
+          "x-ms-dataverse-attribute": "outgoingpartnerapplicationname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OutgoingPartnerApplicationName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "outgoingpassword": {
+          "type": "string",
+          "title": "Outgoing Email Password",
+          "x-ms-dataverse-attribute": "outgoingpassword",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OutgoingPassword",
+          "maxLength": 250
+        },
+        "outgoingportnumber": {
+          "type": "string",
+          "title": "Outgoing Email Port",
+          "x-ms-dataverse-attribute": "outgoingportnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "OutgoingPortNumber"
+        },
+        "outgoingserverlocation": {
+          "type": "string",
+          "title": "Outgoing Email Server Location",
+          "x-ms-dataverse-attribute": "outgoingserverlocation",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OutgoingServerLocation",
+          "maxLength": 2084
+        },
+        "outgoinguseimpersonation": {
+          "type": "string",
+          "title": "Use Impersonation for Outgoing Email",
+          "x-ms-dataverse-attribute": "outgoinguseimpersonation",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "OutgoingUseImpersonation",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c0b1fa46-59f6-403d-848f-0f60185e39b2",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Use Impersonation for Outgoing Email",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "outgoinguseimpersonationname": {
+          "type": "string",
+          "title": "outgoinguseimpersonationname",
+          "x-ms-dataverse-attribute": "outgoinguseimpersonationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "OutgoingUseImpersonationName",
+          "x-ms-read-only": true
+        },
+        "outgoingusername": {
+          "type": "string",
+          "title": "Outgoing Email User Name",
+          "x-ms-dataverse-attribute": "outgoingusername",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OutgoingUsername",
+          "maxLength": 250
+        },
+        "outgoingusessl": {
+          "type": "string",
+          "title": "Use SSL for Outgoing Email",
+          "x-ms-dataverse-attribute": "outgoingusessl",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "OutgoingUseSSL",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "649a66d8-d1ed-4ada-aeba-b0175ffd0ff8",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Use SSL",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "outgoingusesslname": {
+          "type": "string",
+          "title": "outgoingusesslname",
+          "x-ms-dataverse-attribute": "outgoingusesslname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "OutgoingUseSslName",
+          "x-ms-read-only": true
+        },
+        "owneremailaddress": {
+          "type": "string",
+          "title": "Email Server Profile Owner's email address",
+          "x-ms-dataverse-attribute": "owneremailaddress",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerEmailAddress",
+          "maxLength": 100
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "powerplatformmanagedidentityid": {
+          "type": "string",
+          "title": "Power Platform Managed Identity",
+          "x-ms-dataverse-attribute": "powerplatformmanagedidentityid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "PowerPlatformManagedIdentityId"
+        },
+        "powerplatformmanagedidentityidname": {
+          "type": "string",
+          "title": "powerplatformmanagedidentityidname",
+          "x-ms-dataverse-attribute": "powerplatformmanagedidentityidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "powerplatformmanagedidentityidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "processemailsreceivedafter": {
+          "type": "string",
+          "title": "Process Emails Received After",
+          "x-ms-dataverse-attribute": "processemailsreceivedafter",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ProcessEmailsReceivedAfter"
+        },
+        "purviewmanagedidentityid": {
+          "type": "string",
+          "title": "Purview Managed Identity",
+          "x-ms-dataverse-attribute": "purviewmanagedidentityid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "PurviewManagedIdentityId"
+        },
+        "purviewmanagedidentityidname": {
+          "type": "string",
+          "title": "purviewmanagedidentityidname",
+          "x-ms-dataverse-attribute": "purviewmanagedidentityidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "purviewmanagedidentityidName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "sendemailalert": {
+          "type": "string",
+          "title": "Send an alert email to the owner of the email server profile reporting on major events",
+          "x-ms-dataverse-attribute": "sendemailalert",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "SendEmailAlert",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "155810dd-c827-45f4-b91a-a541833dd96c",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Send an Email Alert to the System Administrators",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "sendemailalertname": {
+          "type": "string",
+          "title": "sendemailalertname",
+          "x-ms-dataverse-attribute": "sendemailalertname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "SendEmailAlertName",
+          "x-ms-read-only": true
+        },
+        "serverauthority": {
+          "type": "string",
+          "title": "Email server authority",
+          "x-ms-dataverse-attribute": "serverauthority",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ServerAuthority",
+          "required": true,
+          "enum": [
+            "Public (+GCC) (https://login.microsoftonline.com)",
+            "US Government (GCC High and DoD) (https://login.microsoftonline.us)",
+            "China (21Vianet) (https://login.chinacloudapi.cn)",
+            "Automatic (determined by Dynamics 365 cloud)"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "52569d9e-5119-f111-8341-6045bd07e2cb",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Email server authority",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "serverauthorityname": {
+          "type": "string",
+          "title": "serverauthorityname",
+          "x-ms-dataverse-attribute": "serverauthorityname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "serverauthorityName",
+          "x-ms-read-only": true
+        },
+        "servertype": {
+          "type": "string",
+          "title": "Email Server Type",
+          "x-ms-dataverse-attribute": "servertype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "ServerType",
+          "required": true,
+          "enum": [
+            "Exchange Server",
+            "Other (POP3/SMTP)",
+            "Exchange Server (Hybrid)",
+            "Exchange Online (Hybrid)",
+            "IMAP/SMTP"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "Color": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "80f89039-d711-4ec5-b6a7-412773cdbc17",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Email Server Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "servertypename": {
+          "type": "string",
+          "title": "servertypename",
+          "x-ms-dataverse-attribute": "servertypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "ServerTypeName",
+          "x-ms-read-only": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "StateCode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b636705f-e268-e011-90ca-00155d7b441f",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "StateCodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "StatusCode",
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            1,
+            2
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "c036705f-e268-e011-90ca-00155d7b441f",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "StatusCodeName",
+          "x-ms-read-only": true
+        },
+        "timeoutmailboxconnection": {
+          "type": "string",
+          "title": "Timeout Mailbox Connection to Exchange",
+          "x-ms-dataverse-attribute": "timeoutmailboxconnection",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "TimeoutMailboxConnection",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "20eb43cf-d502-49d8-a84e-8abf0c1c51a6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Timeout Mailbox Connection to Exchange",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "timeoutmailboxconnectionafteramount": {
+          "type": "string",
+          "title": "Timeout a Single Mailbox Connection After this Amount of Milliseconds",
+          "x-ms-dataverse-attribute": "timeoutmailboxconnectionafteramount",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeoutMailboxConnectionAfterAmount"
+        },
+        "timeoutmailboxconnectionname": {
+          "type": "string",
+          "title": "timeoutmailboxconnectionname",
+          "x-ms-dataverse-attribute": "timeoutmailboxconnectionname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "TimeoutMailboxConnectionName",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "useautodiscover": {
+          "type": "string",
+          "title": "Auto Discover Server Location",
+          "x-ms-dataverse-attribute": "useautodiscover",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "UseAutoDiscover",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "d2eeea1d-e468-e011-90ca-00155d7b441f",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Auto discover Server Location",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "useautodiscovername": {
+          "type": "string",
+          "title": "useautodiscovername",
+          "x-ms-dataverse-attribute": "useautodiscovername",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "UseAutoDiscoverName",
+          "x-ms-read-only": true
+        },
+        "usedefaulttenantid": {
+          "type": "string",
+          "title": "Use Default Tenant Id",
+          "x-ms-dataverse-attribute": "usedefaulttenantid",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "UseDefaultTenantId",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "f93d72b3-d6c0-46e5-8059-25c235bfda7a",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Use Default Tenant Id",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "usedefaulttenantidname": {
+          "type": "string",
+          "title": "usedefaulttenantidname",
+          "x-ms-dataverse-attribute": "usedefaulttenantidname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "UseDefaultTenantIdName",
+          "x-ms-read-only": true
+        },
+        "usesamesettingsforoutgoingconnections": {
+          "type": "string",
+          "title": "Use Same Settings for Outgoing Connection",
+          "x-ms-dataverse-attribute": "usesamesettingsforoutgoingconnections",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "UseSameSettingsForOutgoingConnections",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "9f3c6964-9461-4013-8044-551df84e92ff",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Use the same settings for the incoming and outgoing connection",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "usesamesettingsforoutgoingconnectionsname": {
+          "type": "string",
+          "title": "usesamesettingsforoutgoingconnectionsname",
+          "x-ms-dataverse-attribute": "usesamesettingsforoutgoingconnectionsname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "UseSameSettingsForOutgoingConnectionsName",
+          "x-ms-read-only": true
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "emailserverprofileid",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "name",
+        "organizationid",
+        "organizationidname",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "serverauthority",
+        "servertype",
+        "statecode"
+      ]
+    }
+  }
+}

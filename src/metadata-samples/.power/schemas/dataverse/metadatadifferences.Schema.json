@@ -1,0 +1,82 @@
+{
+  "name": "metadatadifference",
+  "title": "Metadata Differences",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "metadatadifferences",
+      "x-ms-dataverse-primary-id": "metadatadifferenceid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "differencexml": {
+          "type": "string",
+          "title": "differencexml",
+          "x-ms-dataverse-attribute": "differencexml",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "DifferenceXml",
+          "required": true,
+          "maxLength": 100
+        },
+        "introducedversion": {
+          "type": "string",
+          "title": "introducedversion",
+          "x-ms-dataverse-attribute": "introducedversion",
+          "x-ms-dataverse-type": "DoubleType",
+          "x-ms-schema-name": "IntroducedVersion",
+          "required": true
+        },
+        "introducedversionstring": {
+          "type": "string",
+          "title": "Introduced Version String",
+          "x-ms-dataverse-attribute": "introducedversionstring",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "IntroducedVersionString",
+          "maxLength": 48
+        },
+        "metadatadifferenceid": {
+          "type": "string",
+          "title": "metadatadifferenceid",
+          "x-ms-dataverse-attribute": "metadatadifferenceid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "MetadataDifferenceId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "solutionid": {
+          "type": "string",
+          "title": "Solution",
+          "x-ms-dataverse-attribute": "solutionid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "SolutionId",
+          "x-ms-read-only": true,
+          "required": true
+        }
+      },
+      "required": [
+        "differencexml",
+        "introducedversion",
+        "metadatadifferenceid",
+        "solutionid"
+      ]
+    }
+  }
+}

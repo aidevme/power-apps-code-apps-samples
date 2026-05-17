@@ -1,0 +1,80 @@
+{
+  "name": "gitbranch",
+  "title": "Git Branches",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "gitbranches",
+      "x-ms-dataverse-primary-id": "gitbranchid",
+      "x-ms-dataverse-primary-name": "branchname",
+      "properties": {
+        "branchname": {
+          "type": "string",
+          "title": "Git Branch Name",
+          "x-ms-dataverse-attribute": "branchname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "BranchName",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 4000
+        },
+        "gitbranchid": {
+          "type": "string",
+          "title": "Git Branch",
+          "x-ms-dataverse-attribute": "gitbranchid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "GitBranchId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "gitcommitid": {
+          "type": "string",
+          "title": "Current Git Commit Id",
+          "x-ms-dataverse-attribute": "gitcommitid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "GitCommitId",
+          "maxLength": 1000
+        },
+        "organizationname": {
+          "type": "string",
+          "title": "Git Organization Name",
+          "x-ms-dataverse-attribute": "organizationname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationName",
+          "maxLength": 1000
+        },
+        "projectname": {
+          "type": "string",
+          "title": "Git Project Name",
+          "x-ms-dataverse-attribute": "projectname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ProjectName",
+          "maxLength": 1000
+        },
+        "repositoryname": {
+          "type": "string",
+          "title": "Git Repository Name",
+          "x-ms-dataverse-attribute": "repositoryname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "RepositoryName",
+          "maxLength": 1000
+        },
+        "upstreambranchname": {
+          "type": "string",
+          "title": "Git upstream branch name",
+          "x-ms-dataverse-attribute": "upstreambranchname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "UpstreamBranchName",
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "branchname",
+        "gitbranchid"
+      ]
+    }
+  }
+}

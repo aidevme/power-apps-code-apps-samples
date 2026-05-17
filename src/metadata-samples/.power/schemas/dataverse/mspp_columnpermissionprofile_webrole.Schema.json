@@ -1,0 +1,58 @@
+{
+  "name": "mspp_columnpermissionprofile_webrole",
+  "title": "mspp_columnpermissionprofile_webrole",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "mspp_columnpermissionprofile_webroleset",
+      "x-ms-dataverse-primary-id": "mspp_columnpermissionprofile_webroleid",
+      "x-ms-dataverse-primary-name": null,
+      "properties": {
+        "mspp_columnpermissionprofile_webroleid": {
+          "type": "string",
+          "title": "mspp_columnpermissionprofile_webroleid",
+          "x-ms-dataverse-attribute": "mspp_columnpermissionprofile_webroleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_columnpermissionprofile_webroleId",
+          "x-ms-read-only": true,
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "mspp_columnpermissionprofileid": {
+          "type": "string",
+          "title": "mspp_columnpermissionprofileid",
+          "x-ms-dataverse-attribute": "mspp_columnpermissionprofileid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_columnpermissionprofileid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "mspp_webroleid": {
+          "type": "string",
+          "title": "mspp_webroleid",
+          "x-ms-dataverse-attribute": "mspp_webroleid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "mspp_webroleid",
+          "x-ms-read-only": true,
+          "required": true
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "versionnumber",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "mspp_columnpermissionprofile_webroleid",
+        "mspp_columnpermissionprofileid",
+        "mspp_webroleid"
+      ]
+    }
+  }
+}

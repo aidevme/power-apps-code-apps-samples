@@ -1,0 +1,48 @@
+{
+  "name": "gitproject",
+  "title": "Git Projects",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "gitprojects",
+      "x-ms-dataverse-primary-id": "gitprojectid",
+      "x-ms-dataverse-primary-name": "projectname",
+      "properties": {
+        "gitprojectid": {
+          "type": "string",
+          "title": "Git Project",
+          "x-ms-dataverse-attribute": "gitprojectid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "GitProjectId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "organizationname": {
+          "type": "string",
+          "title": "Git Organization Name",
+          "x-ms-dataverse-attribute": "organizationname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OrganizationName",
+          "maxLength": 1000
+        },
+        "projectname": {
+          "type": "string",
+          "title": "Git Project Name",
+          "x-ms-dataverse-attribute": "projectname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ProjectName",
+          "x-ms-dataverse-primary-name": true,
+          "required": true,
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "gitprojectid",
+        "projectname"
+      ]
+    }
+  }
+}
