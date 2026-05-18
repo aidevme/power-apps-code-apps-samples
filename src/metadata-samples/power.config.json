@@ -4,7 +4,7 @@
   "appDisplayName": "Dataverse Metadata Sample App",
   "region": "prod",
   "environmentId": "8a15a5d2-99b7-e4a6-9d7b-d595c9131107",
-  "description": " ",
+  "description": "Demonstrates how to read Dataverse entity metadata — table definitions, column types, relationships, and option sets — using PAC CLI–generated typed services.",
   "buildPath": "./dist",
   "buildEntryPoint": "index.html",
   "localAppUrl": "http://localhost:3000",
