@@ -7,6 +7,9 @@ export { ERDDiagramApp } from './apps/metadata/erddiagram/ERDDiagramApp'
 export { default as MainApp } from './apps/main'
 export { MetadataApp } from './apps/metadata/MetadataApp'
 export { MetadataBrowserApp } from './apps/metadata/metadatabrowser/MetadataBrowserApp'
+export type { IMetadataBrowserAppProps } from './apps/metadata/metadatabrowser/MetadataBrowserApp'
+export { MetadataDetailsApp } from './apps/metadata/metadatadetails/MetadataDetailsApp'
+export type { IMetadataDetailsAppProps } from './apps/metadata/metadatadetails/MetadataDetailsApp'
 export { ReferenceApp } from './apps/reference/ReferenceApp'
 
 // cards
@@ -24,7 +27,7 @@ export { MetadataDialog } from './ui/dialogs/metadatadialog'
 export type { IMetadataDialogProps } from './ui/dialogs/metadatadialog'
 
 // footer
-export { Footer } from './ui/footer'
+export { Footer, FOOTER_DESCRIPTION, FOOTER_SOURCE_LABEL, FOOTER_SOURCE_URL } from './ui/footer'
 export type { IFooterProps } from './ui/footer'
 
 // header

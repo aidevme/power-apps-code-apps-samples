@@ -5,17 +5,19 @@
 //   - consumer: src/App.tsx (rendered as the sole child of the React root)
 
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useMatch } from 'react-router-dom'
 import { FluentProvider, webLightTheme, webDarkTheme } from '@fluentui/react-components'
 import { TableRegular, BookRegular } from '@fluentui/react-icons'
 import {
   Header, Footer, NavigationBar,
   SectionCardsList,
-  ReferenceApp, MetadataApp, ERDDiagramApp, MetadataBrowserApp,
+  ReferenceApp, MetadataApp, ERDDiagramApp, MetadataBrowserApp, MetadataDetailsApp,
   MetadataDialog, MetadataCardsList, Notes,
+  FOOTER_DESCRIPTION, FOOTER_SOURCE_LABEL, FOOTER_SOURCE_URL,
 } from '../..'
 import type { ISectionCardsListItem, ISectionCardsGroup, MetadataStrategy } from '../..'
 import { ROUTES } from '../../../tools'
+import { useMetadataCache } from '../../../hooks'
 import '../../../App.css'
 
 const SECTION_GROUPS: ISectionCardsGroup[] = [
@@ -64,6 +66,10 @@ export default function MainApp() {
   const [isDark, setIsDark] = useState(false)
   const [search, setSearch] = useState('')
   const [, setSettingsOpen] = useState(false)
+  // AI-CONTEXT: Metadata cache built from all 27 entity metadata hooks — passed down to routes that need entity data.
+  const { metadataCache, tableInfoCache, columnsCache, oneToManyCache, manyToOneCache, manyToManyCache, privilegesCache, solutionsCache } = useMetadataCache()
+  // AI-CONTEXT: Match the details route to extract the logicalName param for the NavigationBar dynamicLabel.
+  const detailsMatch = useMatch(`${ROUTES.METADATA_DETAILS}/:logicalName`)
   // AI-CONTEXT: Dialog is open on first render — set to true so it shows immediately on startup.
   const [dialogOpen, setDialogOpen] = useState(true)
   // AI-CONTEXT: Stores the strategy the user picked from MetadataCardsList; null until first selection.
@@ -101,20 +107,21 @@ export default function MainApp() {
           onSearchChange={setSearch}
         />
 
-        <NavigationBar />
+        <NavigationBar dynamicLabel={detailsMatch?.params.logicalName} />
 
         <Routes>
           <Route path="/" element={<SectionCardsList items={SECTION_CARDS} groups={SECTION_GROUPS} />} />
           <Route path="/reference" element={<ReferenceApp />} />
           <Route path="/metadata" element={<MetadataApp />} />
           <Route path="/metadata/erd" element={<ERDDiagramApp />} />
-          <Route path="/metadata/browser" element={<MetadataBrowserApp />} />
+          <Route path="/metadata/browser" element={<MetadataBrowserApp metadataCache={metadataCache} />} />
+          <Route path="/metadata/details/:logicalName" element={<MetadataDetailsApp tableInfoCache={tableInfoCache} columnsCache={columnsCache} oneToManyCache={oneToManyCache} manyToOneCache={manyToOneCache} manyToManyCache={manyToManyCache} privilegesCache={privilegesCache} solutionsCache={solutionsCache} />} />
         </Routes>
 
         <Footer
-          description="This app demonstrates how to read Dataverse entity metadata — table definitions, column types, relationships, and option sets — using PAC CLI–generated typed services."
-          sourceLabel="aidevme/power-apps-code-apps-samples/metadata-samples"
-          sourceUrl="https://github.com/aidevme/power-apps-code-apps-samples/tree/main/src/metadata-samples"
+          description={FOOTER_DESCRIPTION}
+          sourceLabel={FOOTER_SOURCE_LABEL}
+          sourceUrl={FOOTER_SOURCE_URL}
         />
       </div>
     </FluentProvider>

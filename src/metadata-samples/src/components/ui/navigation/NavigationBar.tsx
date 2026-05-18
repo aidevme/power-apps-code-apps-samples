@@ -6,6 +6,7 @@
 // AI-PATTERN: To add a new breadcrumb level, add the route to ROUTES, routeLabels, and routeParents in tools/routes.ts — no changes needed here.
 // AI-CONSTRAINT: Pure presentational component — no state, no service calls.
 
+import { Fragment } from 'react'
 import {
   Breadcrumb,
   BreadcrumbDivider,
@@ -68,11 +69,24 @@ export function NavigationBar({ homeLabel = 'Home', dynamicLabel }: INavigationB
   const { pathname } = useLocation()
   const navigate = useNavigate()
 
+  // AI-CONTEXT: For parameterised routes like /metadata/details/:logicalName, the exact pathname won't
+  // be in routeLabels — strip the last segment to find the canonical section path.
+  const canonicalPath = routeLabels[pathname] !== undefined
+    ? pathname
+    : (pathname.substring(0, pathname.lastIndexOf('/')) || '/')
+
   // AI-CONTEXT: currentLabel is null on the home route — Home crumb is marked current in that case.
-  const currentLabel = dynamicLabel ?? routeLabels[pathname] ?? null
-  const isHome       = currentLabel === null
-  const parentPath   = routeParents[pathname] ?? null
-  const parentLabel  = parentPath ? (routeLabels[parentPath] ?? null) : null
+  const currentLabel = dynamicLabel ?? routeLabels[canonicalPath] ?? null
+  const isHome = currentLabel === null
+
+  // AI-CONTEXT: Walk routeParents from canonicalPath upward to build the full ancestor chain in render order.
+  const ancestors: { path: string; label: string }[] = []
+  let cursor: string | null = routeParents[canonicalPath] ?? null
+  while (cursor !== null) {
+    const label = routeLabels[cursor]
+    if (label) ancestors.unshift({ path: cursor, label })
+    cursor = routeParents[cursor] ?? null
+  }
 
   return (
     <nav className={styles.root}>
@@ -91,19 +105,19 @@ export function NavigationBar({ homeLabel = 'Home', dynamicLabel }: INavigationB
           }
         </BreadcrumbItem>
 
-        {/* Optional parent crumb */}
-        {parentLabel !== null && parentPath !== null && (
-          <>
+        {/* Ancestor crumbs — all intermediate levels derived from the routeParents chain */}
+        {ancestors.map(({ path, label }) => (
+          <Fragment key={path}>
             <BreadcrumbDivider />
             <BreadcrumbItem>
-              <Tooltip content={`Go back to ${parentLabel}`} relationship="description" positioning="below" withArrow>
-                <BreadcrumbButton current={false} onClick={() => navigate(parentPath)} className={styles.crumb}>
-                  {parentLabel}
+              <Tooltip content={`Go back to ${label}`} relationship="description" positioning="below" withArrow>
+                <BreadcrumbButton current={false} onClick={() => navigate(path)} className={styles.crumb}>
+                  {label}
                 </BreadcrumbButton>
               </Tooltip>
             </BreadcrumbItem>
-          </>
-        )}
+          </Fragment>
+        ))}
 
         {/* Current page crumb — not rendered on home route */}
         {!isHome && (

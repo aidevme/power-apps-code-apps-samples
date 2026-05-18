@@ -3,6 +3,7 @@
 //   - consumer: src/components/apps/metadata/MetadataApp.tsx                           (METADATA_NOTE_*)
 //   - consumer: src/components/apps/metadata/erddiagram/ERDDiagramApp.tsx              (ERD_NOTE_*)
 //   - consumer: src/components/apps/metadata/metadatabrowser/MetadataBrowserApp.tsx    (BROWSER_NOTE_*)
+//   - consumer: src/components/apps/metadata/metadatadetails/MetadataDetailsApp.tsx    (DETAILS_NOTE_*)
 //   - consumer: src/components/apps/reference/ReferenceApp.tsx                         (REFERENCE_NOTE_*)
 // AI-CONSTRAINT: Pure constants — no imports, no React, no side effects.
 
@@ -21,3 +22,7 @@ export const BROWSER_NOTE_LINK = 'https://learn.microsoft.com/power-apps/develop
 export const REFERENCE_NOTE_TEXT = 'Quick-reference guide for Dataverse Web API conventions used across this sample — OData query options, column type mappings, and Custom API calling patterns.'
 export const REFERENCE_NOTE_INFO = 'All API calls in this sample use the Dataverse Web API v9.2 endpoint. Authentication is handled transparently by the PAC CLI connector — no tokens are required in app code.'
 export const REFERENCE_NOTE_LINK = 'https://learn.microsoft.com/power-apps/developer/data-platform/webapi/overview'
+
+export const DETAILS_NOTE_TEXT = 'View column definitions, option sets, and relationship metadata for the selected Dataverse entity.'
+export const DETAILS_NOTE_INFO = 'Entity detail metadata is fetched via PAC CLI–generated typed service classes. Navigate back to the Metadata Browser to select a different entity.'
+export const DETAILS_NOTE_LINK = 'https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/entitydefinitions'

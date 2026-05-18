@@ -18,6 +18,7 @@ export const ROUTES = {
   METADATA:         '/metadata',
   METADATA_ERD:     '/metadata/erd',
   METADATA_BROWSER: '/metadata/browser',
+  METADATA_DETAILS: '/metadata/details',
 } as const
 
 /**
@@ -34,6 +35,7 @@ export const ROUTES = {
 export const routeParents: Partial<Record<string, string>> = {
   [ROUTES.METADATA_ERD]:     ROUTES.METADATA,
   [ROUTES.METADATA_BROWSER]: ROUTES.METADATA,
+  [ROUTES.METADATA_DETAILS]: ROUTES.METADATA_BROWSER,
 }
 
 /**
@@ -48,4 +50,5 @@ export const routeLabels: Record<string, string> = {
   [ROUTES.METADATA]:         'Metadata',
   [ROUTES.METADATA_ERD]:     'ERD Diagram',
   [ROUTES.METADATA_BROWSER]: 'Metadata Browser',
+  [ROUTES.METADATA_DETAILS]: 'Metadata Details',
 }

@@ -2,3 +2,4 @@
 // AI-CONSTRAINT: No React imports here — tools/ is framework-agnostic.
 
 export { ROUTES, routeLabels, routeParents } from './routes'
+export type { IEntityMetadataCacheEntry } from './metadataCache.types'

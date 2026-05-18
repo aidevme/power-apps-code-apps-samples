@@ -11,10 +11,15 @@ import { makeStyles, tokens } from '@fluentui/react-components'
  * | Class           | Purpose                                                                 |
  * |---|---|
  * | `solutionField` | Constrains the solution `Lookup` to a readable max width                |
+ * | `tableWrapper`  | Scroll container for the entity metadata table                          |
  */
 export const useMetadataBrowserAppStyles = makeStyles({
   solutionField: {
     marginTop: tokens.spacingVerticalM,
     maxWidth: '400px',
+  },
+  tableWrapper: {
+    marginTop: tokens.spacingVerticalL,
+    overflowX: 'auto',
   },
 })

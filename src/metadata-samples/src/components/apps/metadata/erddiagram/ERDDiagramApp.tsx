@@ -83,6 +83,8 @@ export function ERDDiagramApp() {
         <div className={styles.leftColumn}>
           {/* AI-CONTEXT: Publisher selector — filters the ERD diagram entities by publisher prefix. */}
           <Lookup
+            entityType='publisher'
+            viewId=''
             isDisabled={isLoadingPublishers}
             label="Publisher"
             placeholder="Select a publisher"
@@ -93,6 +95,8 @@ export function ERDDiagramApp() {
 
           {/* AI-CONTEXT: Solution selector — scopes the ERD diagram to a specific solution's components. */}
           <Lookup
+            entityType='solution'
+            viewId=''
             isDisabled={isLoadingSolutions}
             label="Solution"
             placeholder="Select a solution"

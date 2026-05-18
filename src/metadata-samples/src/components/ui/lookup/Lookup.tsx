@@ -47,6 +47,20 @@ export interface ILookupProps {
    * @param key - The `key` of the selected item.
    */
   onOptionSelect?: (key: string) => void
+  /**
+   * Dataverse entity logical name that this lookup targets (e.g. `'account'`, `'contact'`).
+   * Used by the parent hook to query the correct table and resolve display names.
+   */
+  entityType?: string
+  /**
+   * Optional Dataverse saved-query (system view) GUID used to scope the list of selectable items.
+   * When omitted, the component renders all provided `items` without view filtering.
+   *
+   * @remarks
+   * Format: lowercase UUID string, e.g. `'00000000-0000-0000-00aa-000010001001'`.
+   * The parent hook is responsible for fetching and filtering items by this view ID.
+   */
+  viewId?: string
 }
 
 /**
